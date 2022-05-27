@@ -1,1 +1,3 @@
-# IBM-cyber-security
+# IBM-cybersecurity
+
+Dendron published notes: https://tysonnguyen.github.io/IBM-cybersecurity/
