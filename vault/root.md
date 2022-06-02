@@ -1,15 +1,16 @@
 ---
 id: 3ipqfkgudo2s73dwa256ca0
-title: Root
+title: Brain
 desc: ''
-updated: 1653032746635
+updated: 1654212603514
 created: 1651706375099
 ---
-# Welcome to Dendron
+# Welcome to Tyson's Vault!
 
-This is the root of your dendron vault. If you decide to publish your entire vault, this will be your landing page. You are free to customize any part of this page except the frontmatter on top.
+This is my place store all my cool knowledge.
 
 ![[cybersecurity]]
+
 
 ## Lookup
 
