@@ -1,0 +1,23 @@
+{
+    "cSpell.ignoreWords": [
+        "0kj8xnsfecw7wnis65jbzok",
+        "9k9gs0zqcs40mq2fsi5nesj",
+        "xnsfecw"
+    ],
+    "cSpell.words": [
+        "enumshares",
+        "fuzzers",
+        "LHOST",
+        "LPORT",
+        "Metasploit",
+        "Meterpreter",
+        "msfconsole",
+        "msfdb",
+        "Msfencode",
+        "Msfpayload",
+        "msfvenom",
+        "Nmap",
+        "portscan",
+        "RHOSTS"
+    ]
+}
