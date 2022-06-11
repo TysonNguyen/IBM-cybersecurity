@@ -81,7 +81,6 @@ preview:
     automaticallyShowPreview: false
 publishing:
     siteUrl: https://tysonnguyen.github.io/IBM-cybersecurity/
-    assetsPrefix: /IBM-cybersecurity
     enableFMTitle: true
     enableNoteTitleForLink: true
     enableMermaid: true
@@ -91,7 +90,7 @@ publishing:
     siteHierarchies:
         - root
     writeStubs: false
-    siteRootDir: /
+    siteRootDir: docs
     seo:
         title: Cybersecurity
         description: Personal Knowledge Space
