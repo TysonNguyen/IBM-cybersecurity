@@ -91,9 +91,9 @@ publishing:
     siteHierarchies:
         - root
     writeStubs: false
-    siteRootDir: docs
+    siteRootDir: /
     seo:
-        title: Dendron
+        title: Cybersecurity
         description: Personal Knowledge Space
     github:
         enableEditLink: true
