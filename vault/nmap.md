@@ -2,7 +2,7 @@
 id: zegnyfq64amprq2yq9rnu3e
 title: Nmap
 desc: ''
-updated: 1654979869369
+updated: 1655599671365
 created: 1654835317617
 ---
 
@@ -37,7 +37,7 @@ We begin any attack with a port scan using a tool called nmap. Nmap will connect
 - `-oA` = Save the nmap results in three major formats
 - `-oN` = Save nmap results in a 'normal' format
     - `-oG` = A useful output to save results in a 'grepable' format
-- `-A` = Aggresive mode to activate service detection, operating system detection, traceroute and common script scanning.
+- `-A` = Aggressive mode to activate service detection, operating system detection, traceroute and common script scanning.
 - `-T5` = Set timing template to increase the speed scans run at to level 5.
 - `-p 80` = Scan only port 80
 - `-p 1000-1500` = Scan ports 1000-1500
