@@ -2,7 +2,7 @@
 id: 32cujyc2fzndqns6719xs81
 title: Web Applications
 desc: ''
-updated: 1656568322884
+updated: 1656764728122
 created: 1656566156592
 ---
 
@@ -42,6 +42,8 @@ The user's perspective will only see an elegant online shop where all the techni
 Many companies offer bug bounty programs. A bug bounty program allows the company to offer a reward for anyone who discovers a security vulnerability (weakness) in the company’s systems.
 
 ## Security Risks
+
+https://owasp.org/www-project-top-ten/
 
 Expectations of an online shop to function can some times be attacked.
 
