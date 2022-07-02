@@ -2,7 +2,7 @@
 id: 8ml5picmbrjw3u887mag9dz
 title: Digital Forensics
 desc: ''
-updated: 1653180162256
+updated: 1656764396687
 created: 1653180146923
 ---
 
@@ -129,10 +129,19 @@ A case summary is meant to form the basis of opinions. While there are a variety
 
 [Intro to Report Writing for Digital Forensics Example](https://www.sans.org/blog/intro-to-report-writing-for-digital-forensics/)
 
-##### SANS Institute Best Practices
+##### SANS Institute - General Best Practices
 
 1. Take screenshots
 2. Bookmark evidence via forensic application of choice
 3. Use built-in logging/reporting options within your forensic tool
 4. Highlight and exporting data items into .csv or .txt files
 5. Use a digital audio recorder vs. handwritten notes when necessary
+
+According to the former director of the Defense Computer Forensics Laboratory, Ken Zatyko, digital forensics includes:
+
+- **Proper search authority**: Investigators cannot commence without the proper legal authority.
+- **Chain of custody**: Necessary to keep track of who was holding the evidence at any time.
+- **Use of validated tools**: Tools used in digital forensics should be validated to ensure they work correctly.
+  - Creating an image of a disk should ensure the forensic image is identical to the data on the disk.
+- **Repeatability**: The findings of digital forensics can be reproduced with the proper skills and tools are available.
+- **Reporting**: Investigation is concluded with a report that shows the evidence related to the case that was discovered.
