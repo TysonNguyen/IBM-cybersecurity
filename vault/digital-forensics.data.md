@@ -2,7 +2,7 @@
 id: 2tx6kae8dfako6nl9lbcyup
 title: Data
 desc: ''
-updated: 1653180173737
+updated: 1656764538094
 created: 1653180168836
 ---
 
@@ -69,7 +69,7 @@ Investigators can search out evidence by analyzing the following important locat
 
 Mac OS X is the UNIX-based operating system that contains a Mach 3 micro-kernel and a FreeBSD based subsystem. Its user interface is Apple like, whereas the underlying architecture is UNIX like.
 
-- Mac OS X offers a novel technique to create a forensic duplicate. To do so, the perpetrator's computer should be placed into a "Target Disk Mode." Using this mode, the forensic examiner creates a forensic duplicate of perpetrator's hard disk with the help of a Firewire cable connection between the two PCs.
+- Mac OS X offers a novel technique to create a forensic duplicate. To do so, the perpetrator's computer should be placed into a "Target Disk Mode." Using this mode, the forensic examiner creates a forensic duplicate of perpetrator's hard disk with the help of a FireWire cable connection between the two PCs.
 
 - HFS+
 - APFS
