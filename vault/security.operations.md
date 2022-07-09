@@ -2,7 +2,7 @@
 id: l9xnppid7xhd6dbt1uus1dj
 title: Operations
 desc: ''
-updated: 1656763168059
+updated: 1657351706582
 created: 1656743430201
 ---
 
@@ -67,4 +67,4 @@ One role in a SOC is the SOC analyst. A SOC analyst is responsible for network s
   - Found out the computer was infected after visiting a malicious website by reviewing the computer logs.
   - The laptop is cleaned, and threat hunting starts to ensure that no other computers are infected.
 
-[[More information about SOC and SIEM|SIEM]]
+### [[More information about SOC and SIEM|SIEM#SIEM]]
