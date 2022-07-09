@@ -2,7 +2,7 @@
 id: 017vb349bxpq76wq69sai1u
 title: Cybersecurity
 desc: ''
-updated: 1653055750394
+updated: 1656853141028
 created: 1653022030878
 ---
 
@@ -12,7 +12,7 @@ created: 1653022030878
 
 - [ ] Describe the history of cybersecurity and what events brought it into the national spotlight in the United States.
 
-- [ ] Describe why critical thinking is such an important skill for the security analyst to posses in the rapidly evolving cyberattack landscape.
+- [ ] Describe why critical thinking is such an important skill for the security analyst to posses in the rapidly evolving cyber-attack landscape.
 
 - [ ] Describe why it is so hard to secure online resources and what organizations and resources are available to help.
 
