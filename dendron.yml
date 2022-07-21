@@ -73,7 +73,9 @@ workspace:
     enableHandlebarTemplates: false
     templateHierarchy: template
     enableSmartRefs: true
+    dendronVersion: 0.83.0
 preview:
+    theme: dark
     enableFMTitle: true
     enableNoteTitleForLink: true
     enableFrontmatterTags: true
@@ -83,6 +85,7 @@ preview:
     enableKatex: true
     automaticallyShowPreview: false
 publishing:
+    theme: dark
     siteUrl: https://tysonnguyen.github.io
     assetsPrefix: /IBM-cybersecurity
     enableFMTitle: true
