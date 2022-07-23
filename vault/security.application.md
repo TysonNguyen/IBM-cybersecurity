@@ -2,7 +2,7 @@
 id: vewpabhrh45ba5ic00kqet3
 title: Application
 desc: ''
-updated: 1653181066889
+updated: 1658531185310
 created: 1653181053325
 ---
 
@@ -56,17 +56,25 @@ Iterative
 Provides the attackers with detailed information about the system to target.
 
 - Bypasses many reconnaissance steps normally precedes attacks, shortening the time of the attack, and increasing the likelihood that it will find security flaws.
+- Process usually done by a software developer who knows programming and application logic. Will be testing internal components of the applications of the application or piece of software, ensuring that specific functions work correctly and within a reasonable time.
+- Tester will have **full** knowledge of the application and its expected behavior and more time consuming than black-box testing.
 
 ### Black Box Testing
 
 Does not provide attackers with any information prior to the attack.
 
 - Simulates an external attacker trying to gain access to information about the business and technical environment before engaging in an attack.
+- The tester acts as a regular user testing the functionality and interaction of the application or piece of software.
+- Significantly increases the amount of time spent during the information gathering and enumeration phase to understand the attack surface of the target.
 
 ### Gray Box Testing
 
 Known as partial knowledge tests, are sometimes chosen to balance the advantages and disadvantages of white and black box penetration tests.
 
+- The most popular testing process for things such as penetration testing.
+- A combination of both black-box and white-box testing.
+- The tester will have some limited knowledge of the internal components of the application or piece of software.
+- Limited knowledge saves times, and is often chosen for extremely-well-hardened attack surfaces.
 
 ### Source Code Analysis Tools
 
