@@ -1,0 +1,308 @@
+<h1 id="incident-response"><a aria-hidden="true" class="anchor-heading icon-link" href="#incident-response"></a>Incident Response</h1>
+<h1 id="incident-response-overview"><a aria-hidden="true" class="anchor-heading icon-link" href="#incident-response-overview"></a>Incident Response Overview</h1>
+<ul class="contains-task-list">
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Describe the various phases of an incident response including preparation, detection, analysis, eradication, recovery, and post incident activities.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Explain the importance of documentation in Incident Response.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Be able to discuss the components of an incident response policy and how that can help members of a IR team.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn about incident response policies.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Review the resources needed for incident response teams to be successful.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn about the recommended practices for securing networks, systems, and applications.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Preparation Checklist.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn the difference between Precursors and Indicators and their common sources.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn about the different types of monitoring systems used for detection.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn about the importance of prioritization and documentation.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Review the possible communication channels needed.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn what to take into consideration when selecting a containment strategy.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn why backup and forensics are key for containment.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Review goals of eradication and recovery.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Review Sans Institute Checklist.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn what a "Lessons Learned" review and meetings are.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Review other situational activities.</p>
+</li>
+</ul>
+<hr>
+<h2 id="what-is-incident-response"><a aria-hidden="true" class="anchor-heading icon-link" href="#what-is-incident-response"></a>What is Incident Response?</h2>
+<p>Events
+: An event can be something as benign and unremarkable as typing on a keyboard or receiving an email.</p>
+<ul>
+<li>In some cases, if there is an Intrusion Detection System (IDS), the alert can be considered an event until validated as a threat.</li>
+</ul>
+<p>Incidents
+: An event that negatively affects IT systems and impacts on the business. It is an unplanned interruption or reduction in quality of an IT service.</p>
+<ul>
+<li>An event can lead to an incident, but no the other way around.</li>
+</ul>
+<h3 id="importance-of-incident-response"><a aria-hidden="true" class="anchor-heading icon-link" href="#importance-of-incident-response"></a>Importance of Incident Response</h3>
+<p>One of the benefits of having an incident response is that it support responding to incidents systematically so that the appropriate actions are taken, it helps personnel to minimize loss or theft of information and disruption of services caused by incidents, and to use information gained during incident handling to better prepare for handling future incidents.</p>
+<h2 id="ir-team-models"><a aria-hidden="true" class="anchor-heading icon-link" href="#ir-team-models"></a>IR Team Models</h2>
+<ul>
+<li>Central (small company)</li>
+<li>Distributed (large company with many resources)</li>
+<li>Coordinating (advice / assisting team)</li>
+</ul>
+<h3 id="coordinating-teams"><a aria-hidden="true" class="anchor-heading icon-link" href="#coordinating-teams"></a>Coordinating Teams</h3>
+<p>Incidents do not occur in a vacuum and can have an impact on multiple parts of a business. Establish relationships with the following teams:</p>
+<ul>
+<li>Management → Information Assurance → IT Support → Legal ↓ Physical Security &#x26; Facilities Management
+↓ </li>
+<li>Public Affairs &#x26; Media Relations → Human Resources → Business Continuity Planning → Physical Security &#x26; Facilities Management</li>
+</ul>
+<h2 id="common-vector-attacks"><a aria-hidden="true" class="anchor-heading icon-link" href="#common-vector-attacks"></a>Common Vector Attacks</h2>
+<p>Organizations should be generally prepared to handle any incident but should focus on being prepared to handle incidents that use common attack vectors.</p>
+<ul>
+<li>External/Removable Media</li>
+<li>Intrusion</li>
+<li>Web</li>
+<li>Email</li>
+<li>Impersonation</li>
+<li>Loss or Theft of Equipment</li>
+</ul>
+<h2 id="baseline-questions"><a aria-hidden="true" class="anchor-heading icon-link" href="#baseline-questions"></a>Baseline Questions</h2>
+<p><strong>Knowing the answers to these will help coordination with other teams and the media.</strong></p>
+<ul>
+<li>Who attacked you? Why?</li>
+<li>When did it happen? How did it happen?</li>
+<li>Did this happen because you have poor security processes?</li>
+<li>How widespread is the incident?</li>
+<li>What steps are you taking to determine what happened and to prevent future occurrences?</li>
+<li>What is the impact of the incident?</li>
+<li>Was any personally identifiable information exposed?</li>
+<li>What is the estimated cost of this incident?</li>
+</ul>
+<h2 id="incident-response-phases"><a aria-hidden="true" class="anchor-heading icon-link" href="#incident-response-phases"></a>Incident Response Phases</h2>
+<h3 id="preparation"><a aria-hidden="true" class="anchor-heading icon-link" href="#preparation"></a>Preparation</h3>
+<h4 id="incident-response-policy"><a aria-hidden="true" class="anchor-heading icon-link" href="#incident-response-policy"></a>Incident Response Policy</h4>
+<p>IR Team
+: The composition of the incident response team within the organization.</p>
+<p>Roles
+: The role of each of the team members.</p>
+<p>Means, Tools, Resources
+: The technological means, tools, and resources that will be used to identify and recover compromised data.</p>
+<p>Policy Testing
+: The persons responsible for testing the policy.</p>
+<p>Action Plan
+: How to put the policy into action.</p>
+<h4 id="resources"><a aria-hidden="true" class="anchor-heading icon-link" href="#resources"></a>Resources</h4>
+<h5 id="incident-handler-communications-and-facilities"><a aria-hidden="true" class="anchor-heading icon-link" href="#incident-handler-communications-and-facilities"></a>Incident Handler Communications and Facilities</h5>
+<ul>
+<li>Contact information</li>
+<li>On-call information</li>
+<li>Incident reporting mechanisms</li>
+<li>Issue tracking system</li>
+<li>Smartphones</li>
+<li>Encryption software</li>
+<li>War room</li>
+<li>Secure storage facility</li>
+</ul>
+<h5 id="incident-analysis-hardware-and-software"><a aria-hidden="true" class="anchor-heading icon-link" href="#incident-analysis-hardware-and-software"></a>Incident Analysis Hardware and Software</h5>
+<ul>
+<li>Digital forensic workstations and/or backup devices</li>
+<li>Laptops</li>
+<li>Spare workstations, servers, and networking equipment</li>
+<li>Blank removable media</li>
+<li>Portable printer</li>
+<li>Packet sniffers and protocol analyzers</li>
+<li>Digital forensic software</li>
+<li>Removable media</li>
+<li>Evidence gathering accessories</li>
+</ul>
+<h5 id="incident-analysis-resources"><a aria-hidden="true" class="anchor-heading icon-link" href="#incident-analysis-resources"></a>Incident Analysis Resources</h5>
+<ul>
+<li>Port lists</li>
+<li>Documentation</li>
+<li>Network diagrams and lists of critical assets</li>
+<li>Current baselines</li>
+<li>Cryptographic hashes</li>
+</ul>
+<h4 id="the-best-offense"><a aria-hidden="true" class="anchor-heading icon-link" href="#the-best-offense"></a>The Best Offense</h4>
+<p>Keeping the number of incidents reasonably low is very important to protect the business processes of the organization. If security controls are insufficient, higher volumes of incidents may occur, overwhelming the incident response team.</p>
+<p>Risk Assessment
+: Periodic risk assessments of systems and apps should determine what risk are posed by combinations of threats and vulnerabilities.</p>
+<p>Host Security
+: All hosts should be hardened appropriately using standard configurations, adhere to strict ACLs, and be monitored continuously.</p>
+<p>Network Security
+: The network perimeter should be configured to deny all activity that is not expressly permitted.</p>
+<p>Malware Prevention
+: Software to detect and stop malware should be deployed throughout the organization.</p>
+<p>User Awareness and Training
+: Users should be made aware of policies and procedures regarding appropriate use of networks, systems, and applications.</p>
+<h4 id="checklist"><a aria-hidden="true" class="anchor-heading icon-link" href="#checklist"></a>Checklist</h4>
+<ul>
+<li>Are all members aware of the security policies of the organization?</li>
+<li>Do all members of the Computer Incident Response Team know whom to contact?</li>
+<li>Do all incident responders have access to journals and access to incident response toolkit to perform the actual incident response process?</li>
+<li>Have all members participated in incident response drills to practice the incident response process and to improve overall proficiency on a regularly established basis?</li>
+</ul>
+<h3 id="detection--analysis"><a aria-hidden="true" class="anchor-heading icon-link" href="#detection--analysis"></a>Detection &#x26; Analysis</h3>
+<h4 id="precursors--indicators"><a aria-hidden="true" class="anchor-heading icon-link" href="#precursors--indicators"></a>Precursors &#x26; Indicators</h4>
+<p>Precursors
+: A sign that an incident may occur in the future.</p>
+<ul>
+<li>Web server log entries that show the usage of a vulnerability scanner.</li>
+<li>An announcement of a new exploit that targets a vulnerability of the organization's mail server.</li>
+<li>A threat from a group stating that the group will attack the organization.</li>
+</ul>
+<p>Indicators
+: A sign that an incident may have occurred or may be occurring now.</p>
+<ul>
+<li>Antivirus software alerts when it detects that a host is infected with malware.</li>
+<li>A system administrator sees a filename with unusual characters.</li>
+<li>A host records auditing configuration change in its log.</li>
+<li>An application logs multiple failed login attempts from an unfamiliar remote system.</li>
+<li>An email administrator sees a large number of bounced emails with suspicious content.</li>
+<li>A network administrator notices an unusual deviation from typical network traffic flows.</li>
+</ul>
+<h4 id="monitoring-systems"><a aria-hidden="true" class="anchor-heading icon-link" href="#monitoring-systems"></a>Monitoring Systems</h4>
+<ul>
+<li>Monitoring systems are crucial for early detection of threats.</li>
+<li>These systems are not mutually exclusive and still require an IR team to document and analyze the data.</li>
+</ul>
+<p>IDS vs IPS
+: Intrusion Detection Systems (IDS) and Intrusion Prevention Systems (IPS) are both parts of the network infrastructure. The main difference between them is that IDS is a monitoring system, while IPS is a control system.</p>
+<p>DLP
+: Data loss prevention (DLP) is a set of tools and processes used to ensure that sensitive data is not lost, misused, or accessed by unauthorized users.</p>
+<p>SIEM
+: Security Information and Event Management solutions combine Security Event Management (SEM) - which carries out analysis of event and log data in real-time with Security Information Management (SIM).</p>
+<h4 id="documentation"><a aria-hidden="true" class="anchor-heading icon-link" href="#documentation"></a>Documentation</h4>
+<p>Regardless of the monitoring system, highly detailed, thorough documentation is needed for the current and future incidents.</p>
+<ol>
+<li>The current status of the incident.</li>
+<li>A summary of the incident.</li>
+<li>Indicators related to the incident.</li>
+<li>Other incidents related to this incident.</li>
+<li>Actions taken by all incident handlers on this incident.</li>
+<li>Chain of custody, if applicable.</li>
+<li>Impact assessments related to the incident.</li>
+<li>Contact information for other involved parties.</li>
+<li>A list of evidence gathered during the incident investigation.</li>
+<li>Comments from incident handlers.</li>
+<li>Next steps to be taken (e.g. rebuild the host, upgrade an application).</li>
+</ol>
+<h5 id="functional-impact-categories"><a aria-hidden="true" class="anchor-heading icon-link" href="#functional-impact-categories"></a>Functional Impact Categories</h5>
+<p>None
+: No effect to the organization's ability to provide all services to all users.</p>
+<p>Low
+: Minimal effect; the organization can still provide all critical services to all users but has lost efficiency.</p>
+<p>Medium
+: Organization has lost the ability to provide a critical service to a subset of system users.</p>
+<p>High
+: Organization is no longer able to provide some critical services to any users.</p>
+<h5 id="information-impact-categories"><a aria-hidden="true" class="anchor-heading icon-link" href="#information-impact-categories"></a>Information Impact Categories</h5>
+<p>None
+: No information was exfiltrated, changed, deleted, or otherwise compromised.</p>
+<p>Privacy Breach
+: Sensitive personally identifiable information (PII) of taxpayers, employees, beneficiaries, etc. was access or exfiltrated.</p>
+<p>Proprietary Breach
+: Unclassified proprietary information, such as protected critical infrastructure information (PCII), was accessed or exfiltrated.</p>
+<p>Integrity Loss
+: Sensitive or proprietary information was changed or deleted.</p>
+<h5 id="recoverability-effort-categories"><a aria-hidden="true" class="anchor-heading icon-link" href="#recoverability-effort-categories"></a>Recoverability Effort Categories</h5>
+<p>Regular
+: Time to recovery is predictable with existing resources.</p>
+<p>Supplemented
+: Time to recovery is predictable with additional resources.</p>
+<p>Extended
+: Time to recovery is unpredictable; additional resources and outside help are needed.</p>
+<p>Not Recoverable
+: Recovery from the incident is not possible (e.g, sensitive data exfiltrated and posted publicly); launch investigation.</p>
+<h5 id="notifications"><a aria-hidden="true" class="anchor-heading icon-link" href="#notifications"></a>Notifications</h5>
+<p>Alert anyone that is possibly involved with incident.</p>
+<ul>
+<li>CIO</li>
+<li>Local and Head of information security</li>
+<li>Other incident response teams within the organization</li>
+<li>External incident response teams (if appropriate)</li>
+<li>System owner</li>
+<li>Human resources</li>
+<li>Public affairs</li>
+<li>Legal department</li>
+<li>Law enforcement (if appropriate)</li>
+</ul>
+<h3 id="containment-eradication--recovery"><a aria-hidden="true" class="anchor-heading icon-link" href="#containment-eradication--recovery"></a>Containment, Eradication &#x26; Recovery</h3>
+<p>Containment is important before an incident overwhelms resources or increases damage. Containment strategies vary based on the type of incident. For example. the strategy for containing an email-born malware infection is quite different from that of a network-based DDoS attack.</p>
+<p>An essential part of containment is decision-making. Such decisions are much easier to make if there are predetermined strategies and procedures for containing the incident.</p>
+<ol>
+<li>Potential damage to and theft of resources.</li>
+<li>Need for evidence preservation.</li>
+<li>Service availability.</li>
+<li>Time and resources needed to implement the strategy.</li>
+<li>Duration of the solution.</li>
+</ol>
+<h4 id="forensics-in-incident-response"><a aria-hidden="true" class="anchor-heading icon-link" href="#forensics-in-incident-response"></a>Forensics in Incident Response</h4>
+<p>Evidence should be collected according to procedures that meet all applicable laws and regulations that have been developed from previous discussions with legal staff and appropriate law enforcement agencies so that any evidence can be admissible in court. - NIST 800-61</p>
+<ol>
+<li>Capture a backup image of the system as-is.</li>
+<li>Gather evidence.</li>
+<li>Follow Chain of Custody protocols.</li>
+</ol>
+<h4 id="eradication--recovery"><a aria-hidden="true" class="anchor-heading icon-link" href="#eradication--recovery"></a>Eradication &#x26; Recovery</h4>
+<ol>
+<li>After an incident has been contained, eradication may be necessary to eliminate components of the incident, such as deleting malware and disabling breached user accounts, as well as identifying and mitigating all vulnerabilities that were exploited.</li>
+<li>Recovery may involve such actions such as restoring systems from clean backups, rebuilding systems from scratch, replacing compromised files with clean versions, installing patches, changing passwords, and tightening network perimeter security (e.g., firewall rule sets, boundary router access control lists).</li>
+<li>High level of testing and monitoring are often deployed to ensure restored systems are no longer impacted by the incident. This could take weeks or months depending on how long it takes to bring back compromised systems into production.</li>
+</ol>
+<h4 id="checklist-1"><a aria-hidden="true" class="anchor-heading icon-link" href="#checklist-1"></a>Checklist</h4>
+<ul>
+<li>Can the problem be isolated? Are all affected systems isolated from non-affected systems? Have forensics copies of affected systems been created for further analysis?</li>
+<li>If possible, can the system be re-imaged and then hardened with patches and/or other countermeasures to prevent or reduce the risk of attacks? Have all malware and other artifacts left behind by the attackers been removed and the affected systems hardened against further attacks?</li>
+<li>What tools are you going to use to test, monitor, and verify that the systems being restored to productions are not compromised by the same methods that cause the original incident?</li>
+</ul>
+<p><a href="https://learn.saylor.org/mod/book/tool/print/index.php?id=29706">https://learn.saylor.org/mod/book/tool/print/index.php?id=29706</a></p>
+<h3 id="post-incident-activity"><a aria-hidden="true" class="anchor-heading icon-link" href="#post-incident-activity"></a>Post-Incident Activity</h3>
+<h4 id="lessons-learned"><a aria-hidden="true" class="anchor-heading icon-link" href="#lessons-learned"></a>Lessons Learned</h4>
+<ul>
+<li>Exactly what happened, and at what times?</li>
+<li>How well did staff and management perform in dealing with the incident? Were the documented procedures followed? Were they adequate?</li>
+<li>What information was needed sooner?</li>
+<li>Were any steps or actions taken that might have inhibited the recovery?</li>
+<li>What would the staff and management do differently the next time a similar incident occurs?</li>
+<li>How could information sharing with other organizations have been improved?</li>
+<li>What corrective actions can prevent similar incidents in the future?</li>
+<li>What precursors or indicators should be watched for in the future to detect similar incidents?</li>
+</ul>
+<h4 id="utilizing-data-collected"><a aria-hidden="true" class="anchor-heading icon-link" href="#utilizing-data-collected"></a>Utilizing data collected</h4>
+<h4 id="evidence-retention"><a aria-hidden="true" class="anchor-heading icon-link" href="#evidence-retention"></a>Evidence retention</h4>
+<h4 id="documentation-1"><a aria-hidden="true" class="anchor-heading icon-link" href="#documentation-1"></a>Documentation</h4>
+<hr>
+<strong>Children</strong>
+<ol>
+<li><a href="/IBM-cybersecurity/notes/tf7vn30fxe1zpo1bohdpmxt">Management</a></li>
+</ol>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/IBM-cybersecurity/notes/nuj3aqp0hv7sf09tj7fr9qf">Response</a></li>
+</ul>

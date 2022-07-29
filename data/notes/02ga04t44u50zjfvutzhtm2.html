@@ -1,0 +1,199 @@
+<h1 id="classifications"><a aria-hidden="true" class="anchor-heading icon-link" href="#classifications"></a>Classifications</h1>
+<h1 id="architects-perspective-on-attack-classifications"><a aria-hidden="true" class="anchor-heading icon-link" href="#architects-perspective-on-attack-classifications"></a>Architect's Perspective on Attack Classifications</h1>
+<ul class="contains-task-list">
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Describe the various attack classifications such as passive attacks and active attacks.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Discuss the various types of security services and the technical implementation of security policies.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Discuss the various types of security services and the technical implementation of security policies.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Identify and classify the various forms of active and passive attacks.</p>
+</li>
+</ul>
+<hr>
+<p>There are two major types of attacks:</p>
+<p><strong>Passive Attacks</strong> are essentially eavesdropping styles of attacks.</p>
+<ul>
+<li>
+<p>Benefits is not easy detectable so eavesdropping could occur for a long time.</p>
+<ul>
+<li>There is no evidence messages or evidence is being intercepted or changed.</li>
+</ul>
+</li>
+<li>
+<p>Second class is traffic analysis.</p>
+</li>
+</ul>
+<p><strong>Active Attacks</strong> are explicit interception and modification. The attacker attempts to alter or control data and/or the hardware it resides on.</p>
+<ul>
+<li>Several classes of these attacks exist.
+<ul>
+<li><em>Masquerade</em> - Imitating someone else's identity and using legitimate sources to carry out attacks in the victim's name.</li>
+<li><em>Replay</em> - Intercept communications and then fraudulently delays or resend it to misdirect the receiver into doing what the hacker wants.</li>
+<li><em>Modification</em> - Tampering with the asset or message.</li>
+<li><em>Denial of Service</em> - Deny users to access information systems, devices, or other network resources.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="security-services"><a aria-hidden="true" class="anchor-heading icon-link" href="#security-services"></a>Security Services</h2>
+<p><em>Security services</em>:</p>
+<ul>
+<li>A processing or communication service that is provided by a system.</li>
+<li>To give a specific kind of protection to a system resource.</li>
+<li>Security services implement security policies.</li>
+<li>Are implemented by security mechanisms.</li>
+</ul>
+<p><em>The purpose of a security service</em>:</p>
+<ul>
+<li>Enhance security data processing systems and information transfer of an organization.</li>
+<li>Intended to counter security attacks.</li>
+<li>Using one or more security mechanisms.</li>
+<li>Often replicates functions normally associated with physical documents.
+<ul>
+<li>For example, have signatures, dates; need protection from disclosure, tampering, or destruction; be notarized or witnessed; be recorded or licensed.</li>
+</ul>
+</li>
+</ul>
+<h3 id="international-telecommunication-union-united-nations-to-maintain-international-standards-for-telecommunication"><a aria-hidden="true" class="anchor-heading icon-link" href="#international-telecommunication-union-united-nations-to-maintain-international-standards-for-telecommunication"></a><em>International Telecommunication Union (United Nations to maintain international standards for telecommunication)</em></h3>
+<h4 id="x800"><a aria-hidden="true" class="anchor-heading icon-link" href="#x800"></a><strong>X.800</strong></h4>
+<p>A service provided by a protocol layer of communicating open systems, which ensures adequate security of the systems or of data transfers.</p>
+<ul>
+<li><strong>Authentication</strong> - Assurance that communicating entity is the one claimed.
+<ul>
+<li>Have both peer-entity &#x26; data origin authentication.</li>
+</ul>
+</li>
+<li><strong>Access Control</strong> - Prevention of the unauthorized use of a resource.</li>
+<li><strong>Data Confidentiality</strong> - Protection of data from unauthorized disclosure.</li>
+<li><strong>Data Integrity</strong> - Assurance that received is as sent by an authorized entity.</li>
+<li><strong>Non-Repudiation</strong> - Protection against denial by one of the parties in a communication.</li>
+<li><strong>Availability</strong> - Resource accessible/usable.</li>
+</ul>
+<h4 id="rfc-2828"><a aria-hidden="true" class="anchor-heading icon-link" href="#rfc-2828"></a><strong>RFC 2828</strong></h4>
+<p>A processing or communication service provided by a system to give a specific kind of protection to system resources.</p>
+<hr>
+<h2 id="security-mechanisms"><a aria-hidden="true" class="anchor-heading icon-link" href="#security-mechanisms"></a>Security Mechanisms</h2>
+<p>Security mechanisms are:</p>
+<ul>
+<li>Combination of hardware, software, and processes.</li>
+<li>They implement a specific security policy.
+<ul>
+<li>Protocol suppression, ID and authentication, for example.</li>
+</ul>
+</li>
+<li>Mechanisms use security services to enforce security policy.</li>
+<li>Business policy describes what to going to do - Not how they are doing it.</li>
+</ul>
+<p>Security mechanisms from X.800:</p>
+<ul>
+<li>
+<p><strong>Specific</strong> security mechanisms:</p>
+<ul>
+<li>Cryptography</li>
+<li>Digital signatures</li>
+<li>Access controls</li>
+<li>Data integrity</li>
+<li>Authentication exchange</li>
+<li>Traffic padding</li>
+<li>Routing control</li>
+<li>Notarization</li>
+</ul>
+</li>
+<li>
+<p><strong>Pervasive</strong> security mechanisms:</p>
+<ul>
+<li>Trusted functionality</li>
+<li>Security labels</li>
+<li>Event detection</li>
+<li>Security audit trails</li>
+<li>Security recovery</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="network-security-model"><a aria-hidden="true" class="anchor-heading icon-link" href="#network-security-model"></a>Network Security Model</h2>
+<p><img src="https://binaryterms.com/wp-content/uploads/2020/05/Network-Security-Model.jpg" alt="Network Security Model"></p>
+<p>This model requires us to:</p>
+<ol>
+<li>Design a suitable algorithm for the security transformation.</li>
+<li>Generate the secret information (keys) used by the algorithm.</li>
+<li>Develop methods to distribute and share the secret information.</li>
+<li>Specify a protocol enabling the principals to use the transformation and secret information for a security service.</li>
+</ol>
+<h3 id="x800-a22-and-a23---security-architecture-and-motivation"><a aria-hidden="true" class="anchor-heading icon-link" href="#x800-a22-and-a23---security-architecture-and-motivation"></a>X.800 A.2.2 and A.2.3 - Security Architecture and Motivation</h3>
+<p>A.2.2
+: The motivation for security in open systems.</p>
+<p>CCITT has identified a need for a series of Recommendations to enhance security within the Open Systems Interconnection architecture:</p>
+<ul>
+<li>Society's increasing dependence on computers that are accessed by, or linked by, data communications and which require protection against various threats.</li>
+<li>The appearance in several countries of "data protection" legislation which obliges suppliers to demonstrate system integrity and privacy.</li>
+<li>The wish of various organizations to use OSI recommendations, enhanced as needed, for existing and future secure systems.</li>
+</ul>
+<p>A.2.3
+: What is to be protected?</p>
+<p>In general, the following may require protection:</p>
+<ul>
+<li><em>Information</em> and <em>data</em> (including software and passive data related to security measures such as passwords).</li>
+<li>Communication and data processing <em>services</em>.</li>
+<li><em>Equipment</em> and <em>facilities</em>.</li>
+</ul>
+<hr>
+<h2 id="organizational-threats"><a aria-hidden="true" class="anchor-heading icon-link" href="#organizational-threats"></a>Organizational Threats</h2>
+<p>Threats to a data communication system include the following:</p>
+<ul>
+<li><strong>Destruction</strong> of information and/or other resources;</li>
+<li><strong>Corruption</strong> or <strong>modification</strong> of information;</li>
+<li><strong>Theft</strong>, <strong>removal</strong> or <strong>loss</strong> of information and/or other resources;</li>
+<li><strong>Disclosure</strong> of information; and</li>
+<li><strong>Interruption</strong> of services.</li>
+</ul>
+<p>More on threats:</p>
+<ul>
+<li><strong>Accidental</strong> threats do not involve malicious intent.</li>
+<li><strong>Intentional</strong> threats require human with intent to violate security.
+<ul>
+<li>If an intentional threat results in action, it becomes an <strong>attack</strong>.</li>
+</ul>
+</li>
+<li><strong>Passive</strong> threats do not involve any (non-trivial) change to a system.</li>
+<li><strong>Active</strong> threats involve some significant change to a system.</li>
+</ul>
+<h2 id="attacks"><a aria-hidden="true" class="anchor-heading icon-link" href="#attacks"></a>Attacks</h2>
+<p>An attack is an action by a human with intent to violate security. It does not matter if the attack succeeds. It is still considered an attack even if it fails.</p>
+<h3 id="2-forms-of-passive-attacks"><a aria-hidden="true" class="anchor-heading icon-link" href="#2-forms-of-passive-attacks"></a>2 Forms of Passive Attacks</h3>
+<ul>
+<li>
+<p><strong>Disclosure</strong> (release of message contents)
+: The content of a message is revealed to the unauthorized parties. An attack on the <em>confidentiality</em> of a message.</p>
+</li>
+<li>
+<p><strong>Traffic analysis</strong> (or traffic flow analysis). Even if an opponent cannot read the message content, information about the message may be useful information to the opponent. Also an attack on the <em>confidentiality</em> of the message.</p>
+</li>
+</ul>
+<h3 id="4-forms-of-passive-attacks"><a aria-hidden="true" class="anchor-heading icon-link" href="#4-forms-of-passive-attacks"></a>4 Forms of Passive Attacks</h3>
+<ul>
+<li><strong>Masquerade</strong>
+: An opponent impersonates a known or authorized person or system. This is an attack on the <em>authentication</em> of the authorized entity's <em>identity</em>. An attack on the <em>authentication</em> of the <em>origin</em> of the message.</li>
+</ul>
+<h2 id="security-architecture-attacks"><a aria-hidden="true" class="anchor-heading icon-link" href="#security-architecture-attacks"></a>Security Architecture Attacks</h2>
+<p><strong>Replay</strong>
+: A copy of legitimate message is captured by an opponent and re-transmitted. This is an attack on the <em>integrity</em> of the system's data.</p>
+<p><strong>Modification</strong>
+: The content of a legitimate message is altered. This is an attack on the <em>integrity</em> of the message.</p>
+<p><strong>Denial of Service (DoS)</strong>
+: An opponent prevents authorized users from accessing a system. This is an attack on the <em>availability</em> of the system.</p>
+<hr>
+<h3 id="security-architecture-attack-models"><a aria-hidden="true" class="anchor-heading icon-link" href="#security-architecture-attack-models"></a>Security Architecture-Attack Models</h3>
+<p>Normally, information flows directly from the source to the destination.</p>
+<ul>
+<li>The information never arrives at the destination = <em>Active Attack (denial of service)</em>.</li>
+<li>The information arrives but an opponent obtains a copy = <em>Passive attack (disclosure).</em></li>
+<li>An opponent intercepts the original message and forwards a modified version that appears to come from the original source = <em>Active attack (masquerade).</em></li>
+<li>An opponent creates a message which appears to have come from the legitimate source = <em>Active attack (masquerade, denial of service).</em></li>
+<li>The message never arrives at the destination but an opponent obtains a copy = <em>Active attack (denial of service).</em></li>
+</ul>

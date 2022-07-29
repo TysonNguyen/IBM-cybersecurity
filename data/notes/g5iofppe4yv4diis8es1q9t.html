@@ -1,0 +1,62 @@
+<h1 id="ports"><a aria-hidden="true" class="anchor-heading icon-link" href="#ports"></a>Ports</h1>
+<h1 id="port-scanning"><a aria-hidden="true" class="anchor-heading icon-link" href="#port-scanning"></a>Port Scanning</h1>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Describe what port scanning is.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Learn what information can be gained from port scanning.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Learn about NMAP and ZenMap port scanning applications.</li>
+</ul>
+<hr>
+<blockquote>
+<p>Network port and service identification involves using a port scanner to identify network ports and services operating on active hosts - such as FTP and HTTP - and the application that is running each identified service, such as Microsoft Internet Information Server (ISS) or Apache for the HTTP service... All basic scanners can help identify active hosts and open ports, but some scanners are also able to provide additional information on the scanned hosts.</p>
+</blockquote>
+<h2 id="what-is-a-port"><a aria-hidden="true" class="anchor-heading icon-link" href="#what-is-a-port"></a>What is a Port?</h2>
+<p>Port
+: Computer ports are the central docking point for the flow of information from a program or the internet to a device or another computer in the network and vice versa. It is the parking spot for the data to be exchanged through electronic, software, or programming-related mechanisms.</p>
+<ul>
+<li>Port 20 (UDP) File Transfer Protocol (FTP) used for data transfer.</li>
+<li>Port 22 (TCP) Secure Shell (SSH) protocol for secure logins, ftp, and port forwarding.</li>
+<li>Port 53 (UDP) Domain Name System (DNS) which translates names to IP addresses.</li>
+<li>Port 80 (TCP) World Wide Web HTTP.</li>
+</ul>
+<h2 id="responses"><a aria-hidden="true" class="anchor-heading icon-link" href="#responses"></a>Responses</h2>
+<p>A port scanner is a simple computer program that checks all of those doors - start calling ports - and responds with one of three possible responses:</p>
+<ul>
+<li>Open, Accepted</li>
+<li>Closed, Not Listening</li>
+<li>Filtered, Dropped, Blocked</li>
+</ul>
+<h2 id="types-of-scans"><a aria-hidden="true" class="anchor-heading icon-link" href="#types-of-scans"></a>Types of Scans</h2>
+<p>Port scanning is a method of determining which ports on a network are open and could be receiving or sending data. It is also a process for sending packets to specific ports on a host and analyzing responses to identify vulnerabilities.</p>
+<ul>
+<li><strong>Ping</strong> - Simplest port scan sending ICMP echo requests to see who is responding.</li>
+<li><strong>TCP/Half Open</strong> - A popular, deceptive scan also known as SYN scan.
+<ul>
+<li>It notes the connection and leaves the target hanging.</li>
+</ul>
+</li>
+<li><strong>TCP Connect</strong> - Completing the TCP connection and makes it slower and noisier than half open.</li>
+<li><strong>UDP</strong> - Send an empty packet or a packet that has a different payload per port, and will only get a response if the port is closed.
+<ul>
+<li>Faster than TCP but doesn't contain as much data.</li>
+</ul>
+</li>
+<li><strong>Stealth</strong> - TCP scans are quieter than the other options and can get past firewalls. They will still get picked up by the most recent IDS.</li>
+</ul>
+<h2 id="tools"><a aria-hidden="true" class="anchor-heading icon-link" href="#tools"></a>Tools</h2>
+<h3 id="nmap"><a aria-hidden="true" class="anchor-heading icon-link" href="#nmap"></a>NMAP</h3>
+<p>Nmap ("Network Mapper") is an open source tool for network exploration and security auditing.</p>
+<ul>
+<li>Designed to rapidly scan large networks, and works fine against single hosts.</li>
+<li>Nmap uses raw IP packets in novel ways to determine what hosts are available on the network. 
+<ul>
+<li>Services (application name and version) those hosts are offering.</li>
+<li>Type of packet filters/firewalls are in use.</li>
+<li>Dozens of other characteristics...</li>
+</ul>
+</li>
+<li>Commonly used for security audits.
+<ul>
+<li>Also good for many systems and network administrators for routine tasks such as network inventory, managing service upgrade schedules, and monitoring host or service uptime.</li>
+</ul>
+</li>
+</ul>

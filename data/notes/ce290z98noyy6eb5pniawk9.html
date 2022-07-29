@@ -1,0 +1,185 @@
+<h1 id="active-directory"><a aria-hidden="true" class="anchor-heading icon-link" href="#active-directory"></a>Active Directory</h1>
+<p>A directory service for Windows Domain Networks used by many companies.</p>
+<h2 id="what-is-active-directory"><a aria-hidden="true" class="anchor-heading icon-link" href="#what-is-active-directory"></a>What is Active Directory?</h2>
+<p>Active Directory
+: A collection of machines and servers connected inside of domains, that are a collective part of bigger forest of domains, make up the Active Directory network.</p>
+<ul>
+<li>Domain Controllers</li>
+<li>Forests, Trees, Domains</li>
+<li>Users + Groups</li>
+<li>Trusts</li>
+<li>Policies</li>
+<li>Domain Services</li>
+</ul>
+<p>All these parts of Active Directory make up a big network of machines and servers.</p>
+<h3 id="why-use-active-directory"><a aria-hidden="true" class="anchor-heading icon-link" href="#why-use-active-directory"></a>Why Use Active Directory?</h3>
+<p>Many large companies use Active Directory because it allows for the control and monitoring of the user's computers through a single domain controller. Allows for any user in the company to use any machine that the company owns, without having to set up multiple users on a machine.</p>
+<h4 id="physical-active-directory"><a aria-hidden="true" class="anchor-heading icon-link" href="#physical-active-directory"></a>Physical Active Directory</h4>
+<ul>
+<li>Servers and machines on-premises or anything from domain controllers and storage to user machines.</li>
+</ul>
+<p>Domain Controllers
+: A Windows server that has Active Directory Domain Services (AD DS) installed and has been promoted to a domain controller in the forest.</p>
+<ul>
+<li>Holds the AD DS data store</li>
+<li>Handles the authentication and authorization services</li>
+<li>Replicate updates from other domain controllers in the forest</li>
+<li>Allows admin access to manage domain resources</li>
+</ul>
+<h4 id="ad-ds-data-store"><a aria-hidden="true" class="anchor-heading icon-link" href="#ad-ds-data-store"></a>AD DS Data Store</h4>
+<p>Active Directory Data Store
+: Holds the databases and processes needed to store and manage directory information such as users, groups, and services.</p>
+<ul>
+<li>Contains the NTDS.dit - a database that contains all of the information of an Active Directory domain controller as well as password hashes for domain users.</li>
+<li>Stored by default in %SystemRoot%\NTDS</li>
+<li>Accessible only by the domain controller</li>
+</ul>
+<h2 id="the-forest"><a aria-hidden="true" class="anchor-heading icon-link" href="#the-forest"></a>The Forest</h2>
+<p>Defines everything; it is the container that holds all of the other bits and pieces of the network together - without the forest, all the other trees and domains would not be able to interact.</p>
+<ul>
+<li>The "forest" is to describe the connection created between these trees and domains by the network.
+<ul>
+<li>A collection of one or more domain trees inside of an Active Directory network:
+<ul>
+<li><strong>Trees</strong> - Hierarchy of domains in Active Directory Domain Services</li>
+<li><strong>Domains</strong> - Used to group and manage objects</li>
+<li><strong>Organizational Units (OUs)</strong> - Containers for groups, computers, users, printers and other OUs</li>
+<li><strong>Trusts</strong> - Allows user to access resources in other domains</li>
+<li><strong>Objects</strong> - Users, groups, printers, computers, shares</li>
+<li><strong>Domain Services</strong> - DNS server, LLMNR, IPv6</li>
+<li><strong>Domain Schema</strong> - Rules for object creation</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="users--groups"><a aria-hidden="true" class="anchor-heading icon-link" href="#users--groups"></a>Users + Groups</h2>
+<p>Users and groups are inside of an Active Directory. When a domain controller is created, has default groups and two default users: Administrator and guest.</p>
+<h3 id="users"><a aria-hidden="true" class="anchor-heading icon-link" href="#users"></a>Users</h3>
+<p>Users are the main component to Active Directory. There are four main types of users and there could be more depending on the permissions of its users:</p>
+<ul>
+<li><strong>Domain Admins</strong> - Control the domains and only access to the domain controller</li>
+<li><strong>Service Accounts</strong> (can be Domain Admins) - Required by Windows for services such as SQL to pair a service with a service account</li>
+<li><strong>Local Administrators</strong> - These users can make changes to local machines as an administrator but cannot access the domain controller</li>
+<li><strong>Domain Users</strong> - Everyday users in the organization</li>
+</ul>
+<h3 id="groups"><a aria-hidden="true" class="anchor-heading icon-link" href="#groups"></a>Groups</h3>
+<p>Groups make it easier to give permissions to users and objects by organizing them into groups with specified permissions. </p>
+<ul>
+<li><strong>Security Groups</strong> - Used to specify permissions for a large number of users.</li>
+<li><strong>Distribution Groups</strong> - Used to specify email distribution lists.</li>
+</ul>
+<h4 id="default-security-groups"><a aria-hidden="true" class="anchor-heading icon-link" href="#default-security-groups"></a>Default Security Groups</h4>
+<p><strong>Domain Controllers</strong>
+: All domain controllers in the domain</p>
+<p><strong>Domain Guests</strong>
+: All domain guests</p>
+<p><strong>Domain Users</strong>
+: All domain users</p>
+<p><strong>Domain Computers</strong>
+: All workstations and servers joined to the domain</p>
+<p><strong>Domain Admins</strong>
+: Designated administrators of the domain</p>
+<p><strong>Enterprise Admins</strong>
+: Designated administrators of the enterprise</p>
+<p><strong>Schema Admins</strong>
+: Designated administrators of the schema</p>
+<p><strong>DNS Admins</strong>
+: DNS administrators of the group</p>
+<p><strong>DNS Update Proxy</strong>
+: DNS clients who are permitted to perform dynamic updates on behalf of some other clients (such as DHCP servers)</p>
+<p><strong>Allowed RODC Password Replication Group</strong>
+: Members in this group can have their passwords replicated to all read-only domain controllers in the domain</p>
+<p><strong>Group Policy Creator Owners</strong>
+: Members can modify group policy for the domain</p>
+<p><strong>Denied RODC Password Replication Group</strong>
+: Members cannot have their passwords replicated to any read-only domain controllers</p>
+<p><strong>Protected Users</strong>
+: Members are afforded additional protections against authentication security threats</p>
+<p><strong>Cert Publishers</strong>
+: Members are permitted to publish certificates to the directory</p>
+<p><strong>Read-Only Domain Controllers</strong>
+: Members are Read-Only Domain Controllers in the domain</p>
+<p><strong>Enterprise Read-Only Domain Controllers</strong>
+: Members are Read-Only Domain Controllers in the enterprise</p>
+<p><strong>Key Admins</strong>
+: Members can perform administrative actions on key objects within the domain</p>
+<p><strong>Enterprise Key Admins</strong>
+: Members can perform administrative actions on key objects within the forest</p>
+<p><strong>Cloneable Domain Controllers</strong>
+: Members that are domain controllers may be cloned</p>
+<p><strong>RAS and IAS Servers</strong>
+: Servers can access remote access properties of users</p>
+<h2 id="trusts--policies"><a aria-hidden="true" class="anchor-heading icon-link" href="#trusts--policies"></a>Trusts + Policies</h2>
+<p>Help the domain and trees communicate with each other and maintain 'security' inside of the network.</p>
+<h3 id="domain-trusts"><a aria-hidden="true" class="anchor-heading icon-link" href="#domain-trusts"></a>Domain Trusts</h3>
+<p>Trusts are mechanisms in place for users in the network to gain access to other resources in the domain. Trusts outline how domains inside of a forest communicate to each other, and some can be extended to external domains and forests in some cases.</p>
+<ul>
+<li><strong>Directional</strong> - The direction of the trust flows from a trusting domain to a trusted domain</li>
+<li><strong>Transitive</strong> - Trust relationship expands beyond two domains to include other trusted domains</li>
+</ul>
+<h3 id="domain-policies"><a aria-hidden="true" class="anchor-heading icon-link" href="#domain-policies"></a>Domain Policies</h3>
+<p>Policies dictate how the server updates and what rules it will and will not follow. They act as a rule book for Active Directory that a domain admin can modify and alter as necessary to keep the network running smoothly and securely.</p>
+<ul>
+<li>Disable Windows Defender - Disables windows defender across all machine on the domain</li>
+<li>Digitally Sign Communication (Always) - Disable or enable SMB signing on the domain controller</li>
+</ul>
+<h2 id="active-directory-domain-services--authentication"><a aria-hidden="true" class="anchor-heading icon-link" href="#active-directory-domain-services--authentication"></a>Active Directory Domain Services + Authentication</h2>
+<p>The Active Directory domain services are the core functions of an Active Directory network.</p>
+<p>They allow for management of the domain, security certificates, LDAPs, and much more.</p>
+<h3 id="domain-services"><a aria-hidden="true" class="anchor-heading icon-link" href="#domain-services"></a>Domain Services</h3>
+<p>Services that the domain controller provides to the rest of the domain or tree. There is a wide range of various services that can be added to a domain controller.</p>
+<p>The default domain services:</p>
+<p><strong>LDAP</strong> - Lightweight Directory Access Protocol provides communication between applications and directory services.</p>
+<p><strong>Certificate Services</strong> - Allows the domain controller to create, validate, and revoke public key certificates.</p>
+<p><strong>DNS, LLMNR, NBT-NS</strong> - Domain Name Services for identifying IP hostnames</p>
+<h3 id="domain-authentication"><a aria-hidden="true" class="anchor-heading icon-link" href="#domain-authentication"></a>Domain Authentication</h3>
+<p>There are two types of main types of authentication in place for Active Directory: NTLM and Kerberos.</p>
+<ul>
+<li><strong>Kerberos</strong> - The default authentication service for Active Directory uses ticket-granting tickets and service tickets to authenticate users and give users access to other resources across the domain.</li>
+</ul>
+<p><strong>NTLM</strong> - Default Windows authentication protocol uses an encrypted challenge/response protocol</p>
+<p>The Active Directory domain services are the main access point for attackers and contain some of the most vulnerable protocols for Active Directory.</p>
+<h2 id="active-directory-in-the-cloud"><a aria-hidden="true" class="anchor-heading icon-link" href="#active-directory-in-the-cloud"></a>Active Directory in the Cloud</h2>
+<p>Companies have been shifting Active Directory to cloud networks.</p>
+<h3 id="azure-ad"><a aria-hidden="true" class="anchor-heading icon-link" href="#azure-ad"></a>Azure AD</h3>
+<p>Azure is the most notable cloud provider and its default settings are much more secure than an on-premise physical Active Directory network; however the cloud AD may still have vulnerabilities.</p>
+<p>Azure acts as the middle man between physical Active Directory and users' sign on.</p>
+<h3 id="cloud-security"><a aria-hidden="true" class="anchor-heading icon-link" href="#cloud-security"></a>Cloud Security</h3>
+<p>A comparison table with a cloud Active Directory environment and a physical network.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Windows Server AD</th><th>Azure AD</th></tr></thead><tbody><tr><td>LDAP</td><td>Rest APIs</td></tr><tr><td>NTLM</td><td>OAuth/SAML</td></tr><tr><td>Kerberos</td><td>OpenID</td></tr><tr><td>OU Tree</td><td>Flat Structure</td></tr><tr><td>Domains and Forests</td><td>Tenants</td></tr><tr><td>Trusts</td><td>Guests</td></tr></tbody></table>
+<h2 id="active-directory-commands"><a aria-hidden="true" class="anchor-heading icon-link" href="#active-directory-commands"></a>Active Directory Commands</h2>
+<p><a href="https://activedirectorypro.com/powershell-commands/">https://activedirectorypro.com/powershell-commands/</a></p>

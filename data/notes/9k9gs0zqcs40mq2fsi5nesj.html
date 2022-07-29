@@ -1,0 +1,78 @@
+<h1 id="metasploit"><a aria-hidden="true" class="anchor-heading icon-link" href="#metasploit"></a>Metasploit</h1>
+<h1 id="introduction-to-metasploit"><a aria-hidden="true" class="anchor-heading icon-link" href="#introduction-to-metasploit"></a>Introduction to Metasploit</h1>
+<p>Metasploit in the most widely exploitation framework - A powerful tool that can support all phases of penetration testing, from information gathering to post-exploitation.</p>
+<p>Two main versions:</p>
+<ol>
+<li><strong>Metasploit Pro</strong>: The commercial version that facilitates the automation and management of tasks.</li>
+<li><strong>Metasploit Framework</strong>: The open-source version that works from the command line.</li>
+</ol>
+<p>The Metasploit Framework is a set of tools that allow information gathering, scanning, exploitation, exploit development, post-exploitation, and more.</p>
+<p>The main components summarized below:</p>
+<ul>
+<li><strong>msfconsole</strong>: The main command-line interface.</li>
+<li><strong>Modules</strong>: Supporting modules such as exploits, scanners, payloads, etc.</li>
+<li><strong>Tools</strong>: Stand-alone tools that will vulnerability research, vulnerability assessment, or penetration testing.</li>
+</ul>
+<h2 id="main-components-of-metasploit"><a aria-hidden="true" class="anchor-heading icon-link" href="#main-components-of-metasploit"></a>Main Components of Metasploit</h2>
+<p><strong>Exploit</strong>
+: A piece of code that uses a vulnerability present on the target system.</p>
+<p><strong>Vulnerability</strong>
+: A design, coding, or logic flaw affecting the target system.</p>
+<p><strong>Payload</strong>
+: An exploit will take advantage of a vulnerability via a payload. Payloads are the code that will run on the target system.</p>
+<h3 id="auxiliary"><a aria-hidden="true" class="anchor-heading icon-link" href="#auxiliary"></a>Auxiliary</h3>
+<p>Any supporting module, such as scanners, crawlers and fuzzers.</p>
+<h3 id="encoders"><a aria-hidden="true" class="anchor-heading icon-link" href="#encoders"></a>Encoders</h3>
+<p>Allow to encode the exploit and payload in the hope that a signature-based antivirus solution may miss them.</p>
+<p>Signature-based antivirus and security solutions have a database of known threats.</p>
+<ul>
+<li>They detect by comparing suspicious files to a database and raise an alert if there is a match.</li>
+</ul>
+<h3 id="evasion"><a aria-hidden="true" class="anchor-heading icon-link" href="#evasion"></a>Evasion</h3>
+<p>While encoders will encode the payload, they should not be considered a direct attempt to evade antivirus software.</p>
+<ul>
+<li>'Evasion' modules will try with more or less success.</li>
+</ul>
+<h3 id="exploits"><a aria-hidden="true" class="anchor-heading icon-link" href="#exploits"></a>Exploits</h3>
+<p>Exploits neatly organized by the target system.</p>
+<h3 id="nops-no-operation"><a aria-hidden="true" class="anchor-heading icon-link" href="#nops-no-operation"></a>NOPs (No OPeration)</h3>
+<p>Intel x86 CPU represented with 0x90, to tell the CPU do nothing for one cycle.</p>
+<ul>
+<li>Used as a buffer to achieve consistent payload sizes.</li>
+</ul>
+<h3 id="payloads"><a aria-hidden="true" class="anchor-heading icon-link" href="#payloads"></a>Payloads</h3>
+<p>Code that will run on the target system. Examples could be:</p>
+<ul>
+<li>Getting a shell</li>
+<li>Loading a malware or backdoor</li>
+<li>Running a command</li>
+</ul>
+<p>Running a command on the target system to allow Metasploit to send different payloads that can open shells on the target system.</p>
+<h4 id="singles"><a aria-hidden="true" class="anchor-heading icon-link" href="#singles"></a>Singles</h4>
+<p>Self-contained payloads (add user, launch notepad.exe, etc.) that do not need to download any additional component to run.</p>
+<h4 id="stagers"><a aria-hidden="true" class="anchor-heading icon-link" href="#stagers"></a>Stagers</h4>
+<p>Responsible for setting up a connection channel between Metasploit and the target system.</p>
+<ul>
+<li>Provides some advantages as the initial size of the payload will be relatively small compared to the the full payload sent at once.</li>
+</ul>
+<h4 id="stages"><a aria-hidden="true" class="anchor-heading icon-link" href="#stages"></a>Stages</h4>
+<p>Downloaded by the stager to allow larger sized payloads.</p>
+<h3 id="post"><a aria-hidden="true" class="anchor-heading icon-link" href="#post"></a>Post</h3>
+<p>Post modules will be useful on the final stage of penetration testing process.</p>
+<h2 id="msfconsole"><a aria-hidden="true" class="anchor-heading icon-link" href="#msfconsole"></a>Msfconsole</h2>
+<p><code>msfconsole</code> command on terminal or any system with the Metasploit Framework is installed on to activate.</p>
+<ul>
+<li>The Metasploit console can be used just like a regular command-line shell.</li>
+</ul>
+<h3 id="working-with-modules"><a aria-hidden="true" class="anchor-heading icon-link" href="#working-with-modules"></a>Working with Modules</h3>
+<hr>
+<strong>Children</strong>
+<ol>
+<li><a href="/IBM-cybersecurity/notes/0kj8xnsfecw7wnis65jbzok">Exploitation</a></li>
+<li><a href="/IBM-cybersecurity/notes/5jlm4r7fxj9qpp2xtelvktu">Meterpreter</a></li>
+</ol>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/IBM-cybersecurity/notes/ixopv5geql8hlgkwk20pxow">Shells</a></li>
+</ul>

@@ -1,0 +1,167 @@
+<h1 id="crypto"><a aria-hidden="true" class="anchor-heading icon-link" href="#crypto"></a>Crypto</h1>
+<h1 id="introduction-to-cryptography"><a aria-hidden="true" class="anchor-heading icon-link" href="#introduction-to-cryptography"></a>Introduction to Cryptography</h1>
+<ul class="contains-task-list">
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Explain the role of cryptography in cybersecurity, how it is used and how it can be attacked.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Describe the purpose or use of cryptography in cybersecurity.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Describe how cryptography is used to assure the key cybersecurity tenants of confidentiality, integrity, authentication and non-repudiation.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Describe the three encryption types used in modern cryptography, including typical uses and advantages of each:</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Symmetric</li>
+<li class="task-list-item"><input type="checkbox" disabled> Asymmetric</li>
+<li class="task-list-item"><input type="checkbox" disabled> Hash</li>
+</ul>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Describe the 5 common forms of cryptographic attacks:</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Brute force</li>
+<li class="task-list-item"><input type="checkbox" disabled> Rainbow tables</li>
+<li class="task-list-item"><input type="checkbox" disabled> Social engineering</li>
+<li class="task-list-item"><input type="checkbox" disabled> Known plaintext</li>
+<li class="task-list-item"><input type="checkbox" disabled> Known ciphertext</li>
+</ul>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Describe important cryptography terms such as:</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Plaintext</li>
+<li class="task-list-item"><input type="checkbox" disabled> Ciphertext</li>
+<li class="task-list-item"><input type="checkbox" disabled> Symmetric key</li>
+<li class="task-list-item"><input type="checkbox" disabled> Public key</li>
+<li class="task-list-item"><input type="checkbox" disabled> Substitution cipher</li>
+<li class="task-list-item"><input type="checkbox" disabled> DES: Data Encryption Standard</li>
+</ul>
+</li>
+</ul>
+<hr>
+<ul>
+<li>Cryptography is secret writing.</li>
+<li>Secure communication that may be understood by the intended recipient only.</li>
+<li>There is data in motion and data at rest. Both need to be secured.</li>
+<li>Been used for thousands of years by Egyptians Hieroglyphics, Spartan Scytale, Caesar Cipher, are examples of ancient cryptography.</li>
+</ul>
+<h2 id="key-concepts"><a aria-hidden="true" class="anchor-heading icon-link" href="#key-concepts"></a>Key Concepts</h2>
+<p>Confidentiality
+: Process of assuring that only the intended parties can read and understand the message.</p>
+<p>Integrity
+: Process of detecting if the message has been changed, where the message should not be altered in any way in the process of being transmitted.</p>
+<p>Authentication
+: Process of identifying are authenticated with someone or something it is actually to do something.</p>
+<p>Non-repudiation
+: Process of detecting if something or someone has done something, and that someone cannot deny that action or that message which was sent by him or her.</p>
+<p>Cryptoanalysis
+: Process of analyzing ciphers in cryptographic algorithms. Allows scientists and mathematicians to determine if a cryptographic algorithm is secure or not.</p>
+<p>Cipher
+: An algorithm that encrypts a message.</p>
+<p>Plaintext
+: Basic text that is human readable.</p>
+<p>Ciphertext
+: Plaintext gone through the cipher, which is basically the cipher has been applied to a plaintext and ciphertext is not humanly readable.</p>
+<p>Encryption
+: Process of transforming plaintext into ciphertext.</p>
+<p>Decryption
+: Process of transforming the ciphertext into a plaintext using the cipher.</p>
+<h2 id="cryptographic-strength"><a aria-hidden="true" class="anchor-heading icon-link" href="#cryptographic-strength"></a>Cryptographic Strength</h2>
+<ul>
+<li>Relies on math, not secrecy.</li>
+<li>Ciphers that have stood the test of time are public algorithms.</li>
+<li>Mono-alphabetic &#x3C; Poly-alphabetic Ciphers</li>
+<li>Modern ciphers use Modular math.</li>
+<li>Exclusive Or (XOR) is the "secret sauce" behind modern encryption.
+<img src="https://img.phemex.com/wp-content/uploads/2021/07/19091947/xor.jpg" alt="XOR table"></li>
+</ul>
+<h2 id="stream-cipher-and-block-cipher"><a aria-hidden="true" class="anchor-heading icon-link" href="#stream-cipher-and-block-cipher"></a>Stream Cipher and Block Cipher</h2>
+<p>Stream Cipher
+: Encrypt or decrypt bit per bit.</p>
+<p>Block Cipher
+: Encrypt or decrypt in blocks or several sizes, depending on the algorithm.</p>
+<hr>
+<h2 id="types-of-cryptography"><a aria-hidden="true" class="anchor-heading icon-link" href="#types-of-cryptography"></a>Types of Cryptography</h2>
+<p>There are three primary types for modern encryption:</p>
+<ul>
+<li>Symmetric</li>
+<li>Asymmetric</li>
+<li>Hash</li>
+</ul>
+<h3 id="symmetric-encryption"><a aria-hidden="true" class="anchor-heading icon-link" href="#symmetric-encryption"></a>Symmetric Encryption</h3>
+<ul>
+<li>Use the same key to encrypt and decrypt.</li>
+<li>Security depends on keeping the key secret at all times.</li>
+<li>Strengths include speed and cryptographic strength  per bit of key.</li>
+<li>The bigger the key, the stronger the algorithm.</li>
+<li>Key need to be shared using a secure, out-of-band method.</li>
+<li>DES, Triples DES, AES are examples of symmetric encryption.</li>
+</ul>
+<h3 id="asymmetric-encryption"><a aria-hidden="true" class="anchor-heading icon-link" href="#asymmetric-encryption"></a>Asymmetric Encryption</h3>
+<ul>
+<li>Whitfield Diffie and Martin Hellman are pioneers of asymmetric encryption, created the Diffie-Hellman.</li>
+<li>Uses two keys.</li>
+<li>One key can be made public, called <em>public key</em>. The other one needs to be kept private, called <em>private key</em>.</li>
+<li>One for encryption and one for decryption.</li>
+<li>Used in digital certificates, Public Key Infrastructure - PKI.</li>
+<li>Uses "one-way" algorithms to generate the two keys.</li>
+<li>Slower than symmetric encryption.</li>
+</ul>
+<h3 id="hash-functions"><a aria-hidden="true" class="anchor-heading icon-link" href="#hash-functions"></a>Hash Functions</h3>
+<ul>
+<li>A hash function provides encryption using an algorithm and no key.</li>
+<li>A variable-length plaintext is "hashed" into a fixed-length hash value, often called a "message digest" or simply a "hash".</li>
+<li>If the hash of a plaintext changes, the plaintext itself has changed = Provides integrity verification.</li>
+<li>SHA-1, MD5, older algorithms prone to collisions (two different plaintext having the same hash)/</li>
+<li>SHA-2 is the newer and recommended alternative.</li>
+</ul>
+<hr>
+<h2 id="cryptographic-attacks"><a aria-hidden="true" class="anchor-heading icon-link" href="#cryptographic-attacks"></a>Cryptographic Attacks</h2>
+<p>Brute force
+: Attack based on trial and error through submission of many passwords to guess correctly.</p>
+<p>Rainbow tables
+: Similar to brute force, but they use a limited amount of information or entity, or files, and they contain three hash passwords to check against hash customers to make attacks a lot faster.</p>
+<p>Social engineering
+: Non-technical methods to obtain a user information or password.</p>
+<p>Known Plaintext
+: Having only plain text and doing analysis based on the plain text to understand how the cipher works.</p>
+<p>Known ciphertext
+: Process of having only ciphertext. Similar to plaintext attack but only have ciphertext to defer the key used in the cipher to encrypt and decrypt information.</p>
+<hr>
+<h2 id="a-different-perspective-from-a-security-architect"><a aria-hidden="true" class="anchor-heading icon-link" href="#a-different-perspective-from-a-security-architect"></a>A Different Perspective from a Security Architect</h2>
+<p><img src="https://in.element14.com/wcsstore/ExtendedSitesCatalogAssetStore/cms/asset/images/common/campaign/internet_of_things/the-language.png" alt="The Language of Cryptography"></p>
+<h3 id="symmetric-encryption-visual"><a aria-hidden="true" class="anchor-heading icon-link" href="#symmetric-encryption-visual"></a>Symmetric Encryption Visual</h3>
+<p><img src="https://d1jnx9ba8s6j9r.cloudfront.net/blog/wp-content/uploads/2018/07/symmetric-key-what-is-cryptography-edureka.png" alt="Symmetric Cryptography"></p>
+<h3 id="asymmetric-encryption-visual"><a aria-hidden="true" class="anchor-heading icon-link" href="#asymmetric-encryption-visual"></a>Asymmetric Encryption Visual</h3>
+<p><img src="https://sectigostore.com/blog/wp-content/uploads/2020/11/asymmetric-encryption.png" alt="Asymmetric Cryptography"></p>
+<h4 id="des-data-encryption-standard"><a aria-hidden="true" class="anchor-heading icon-link" href="#des-data-encryption-standard"></a>DES (Data Encryption Standard)</h4>
+<ul>
+<li>US encryption standard [NIST 1993]</li>
+<li>56-bit symmetric key, 64-bit plaintext input.
+<ul>
+<li>56-bit-key-encrypted phrase ("Strong cryptography makes the world a safer place") decrypted (brute force) in 4 months.</li>
+<li>No known "backdoor" decryption approach.</li>
+<li>DES MORE SECURE:
+<ul>
+<li>Use three keys sequentially (3-DES) on each datum.</li>
+<li>Use cipher-block chaining.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://assets.omscs.io/notes/5CC2B27E-728F-44B1-871D-3CBDC4BAE48F.png" alt="DES"></p>
+<h3 id="substitution-cipher"><a aria-hidden="true" class="anchor-heading icon-link" href="#substitution-cipher"></a>Substitution Cipher</h3>
+<p>Substitution Cipher
+: Substituting one thing for another.
+<em>Monoalphabetic cipher</em>: Substitute one letter for another.</p>
+<p><img src="https://www.researchgate.net/profile/Ahtisham-Hashmi/publication/323081658/figure/download/fig2/AS:592450070532097@1518262512719/Mono-Alphabetic-Substitution-Cipher.png" alt="Monoalphabetic cipher"></p>
+<h3 id="aes-advanced-encryption-standard"><a aria-hidden="true" class="anchor-heading icon-link" href="#aes-advanced-encryption-standard"></a>AES: Advanced Encryption Standard</h3>
+<ul>
+<li>New (November 2001) symmetric-key NIST standard, replacing DES.</li>
+<li>Processes data in 128 bit blocks.</li>
+<li>128, 192, or 256 bit keys.</li>
+<li>Brute force decryption (try each key) taking 1 sec on DES, takes 149 trillion years for AES.</li>
+</ul>

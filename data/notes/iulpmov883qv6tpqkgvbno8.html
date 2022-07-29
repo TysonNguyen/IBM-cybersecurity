@@ -1,0 +1,154 @@
+<h1 id="dev-sec-ops"><a aria-hidden="true" class="anchor-heading icon-link" href="#dev-sec-ops"></a>Dev Sec Ops</h1>
+<h1 id="devsecops--security-automation"><a aria-hidden="true" class="anchor-heading icon-link" href="#devsecops--security-automation"></a>DevSecOps &#x26; Security Automation</h1>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Understand the concept of DevOps and Automation and its effect on Application Security.</li>
+</ul>
+<hr>
+<p>DevOps became a development for teams primarily focused on producing new systems, applications. functionality, and making them available to consumers as quickly as possible.</p>
+<ul>
+<li>Both DevOps and security engineers want easily deployable, vulnerability free releases.</li>
+</ul>
+<p>DevSecOps is now integrated, automated, continuous security: always.</p>
+<p><img src="https://image.slidesharecdn.com/securityintodevops-differentviewsjul182017-170718191437/95/integrate-security-into-devops-secdevops-19-638.jpg?cb=1500405759" alt="dev"></p>
+<h2 id="define-operating-and-governance-model"><a aria-hidden="true" class="anchor-heading icon-link" href="#define-operating-and-governance-model"></a>Define Operating and Governance Model</h2>
+<ul>
+<li>Define strategy up front &#x26; apply it throughout.</li>
+<li>Consider any data sovereignty requirements.</li>
+<li>Address any audit &#x26; compliance requirements.</li>
+<li>Establish your risk management process.</li>
+<li>Automated checks for continuous assurance.</li>
+</ul>
+<h2 id="people--culture"><a aria-hidden="true" class="anchor-heading icon-link" href="#people--culture"></a>People &#x26; Culture</h2>
+<p>A successful program starts with the people &#x26; culture.</p>
+<ul>
+<li>Training &#x26; awareness.</li>
+<li>Explain &#x26; embrace new ways of working.</li>
+<li>Equip teams &#x26; individuals with the right level of ownership &#x26; tools.</li>
+</ul>
+<h2 id="learning"><a aria-hidden="true" class="anchor-heading icon-link" href="#learning"></a>Learning</h2>
+<p>Continuous improvement and feedback.</p>
+<ul>
+<li>Lessons learned.</li>
+<li>Coding &#x26; tooling best practices level-set.</li>
+<li>Ongoing collaboration.</li>
+<li>Blameless post-mortem.</li>
+</ul>
+<h2 id="develop-securely-plan"><a aria-hidden="true" class="anchor-heading icon-link" href="#develop-securely-plan"></a>Develop Securely: Plan</h2>
+<p>Use tools and techniques to ensure security is integral to the design, development and operation of all systems.</p>
+<ul>
+<li><strong>Threat Modeling &#x26; Risk Analysis</strong> - Model the threats with experimentation &#x26; validation. Analyze risks to your system.
+<ul>
+<li>Validate</li>
+<li>Experiment</li>
+<li>Analysis</li>
+<li>Treatment</li>
+<li>Data Protection</li>
+<li>Privacy Design</li>
+</ul>
+</li>
+<li><strong>Security Backlog</strong> - Produce security epics informed by abuse cases. Add to to project backlog.
+<ul>
+<li>Common Abuse Cases (e.g OWASP)</li>
+<li>Context Abuse cases</li>
+<li>Compliance Requirements</li>
+</ul>
+</li>
+<li><strong>Architecture &#x26; Design</strong> - Informed architecture &#x26; design with security at its core.
+<ul>
+<li>Layered Protection</li>
+<li>Integrated Security</li>
+</ul>
+</li>
+</ul>
+<h3 id="code--build"><a aria-hidden="true" class="anchor-heading icon-link" href="#code--build"></a>Code &#x26; Build</h3>
+<p>Apply the model to Everything-as-Code:</p>
+<ul>
+<li>Containers</li>
+<li>Apps</li>
+<li>Platform</li>
+<li>Machines</li>
+</ul>
+<p>Detect issues &#x26; fix them, earlier in the lifecycle.</p>
+<ul>
+<li><strong>Secure Application Code</strong> - Secure coding best practice guidance. Real-time code feedback. Catch before commit.</li>
+<li><strong>Secure Infrastructure Config</strong> - Secure infrastructure configuration best practice guidance. Image hardening.</li>
+<li><strong>OSS / COTS Validation</strong> - Vulnerability &#x26; license scanning. Remedial guidance before commit.</li>
+</ul>
+<h2 id="test"><a aria-hidden="true" class="anchor-heading icon-link" href="#test"></a>Test</h2>
+<ul>
+<li><strong>Internal / External Testing</strong> - Integrate &#x26; automate security testing seamlessly with DevOps activities.</li>
+<li><strong>Continuous Assurance</strong> - Automated checks to ensure systems are always protected and conform with requirements.</li>
+<li><strong>Compliance Checking</strong> - Address industry-specific accreditation.</li>
+</ul>
+<h2 id="devsecops-deployment---release-deploy--decommission"><a aria-hidden="true" class="anchor-heading icon-link" href="#devsecops-deployment---release-deploy--decommission"></a>DevSecOps Deployment - Release, Deploy &#x26; Decommission</h2>
+<ul>
+<li><strong>Continuous Component Control</strong> - Monitor and act on changes to component security. Block vulnerable component deployment.</li>
+<li><strong>App and Infra Orchestration</strong> - Orchestrate and automate the deployment of secure application and underlying infrastructure.</li>
+<li><strong>Data Cleansing &#x26; Retention</strong> - Build data cleansing into decommissioning activities.</li>
+</ul>
+<h3 id="release"><a aria-hidden="true" class="anchor-heading icon-link" href="#release"></a>Release</h3>
+<ul>
+<li>Continuous component controls.</li>
+<li>Versioning of infrastructure.</li>
+</ul>
+<h3 id="deploy"><a aria-hidden="true" class="anchor-heading icon-link" href="#deploy"></a>Deploy</h3>
+<ul>
+<li>Cloud provider security patches IAM policies, encryption, inventory.</li>
+<li>CI/CD Toolchain is sole deployment mechanism.</li>
+<li>Repeatable, parameterized infra-as-code patterns for environment creation.</li>
+<li>Immutable images (containers, virtual machines).</li>
+<li>Centralized Key-Value &#x26; secret stores.</li>
+<li>Data sovereignty.</li>
+</ul>
+<h3 id="decommission"><a aria-hidden="true" class="anchor-heading icon-link" href="#decommission"></a>Decommission</h3>
+<ul>
+<li>Pets vs. Cattle; Destroy &#x26; create again.</li>
+<li>Infrastructure-as-code tools manage removal of compute instance &#x26; persistent storage.</li>
+<li>De-registration to update inventory and ensure clean removal of secrets.</li>
+<li>IAM controls to regulate authorization.</li>
+<li>SaaS data removal requests &#x26; policies.</li>
+<li>Data backup cleansing.</li>
+<li>Crypto-shredding.</li>
+</ul>
+<h2 id="operate--monitor"><a aria-hidden="true" class="anchor-heading icon-link" href="#operate--monitor"></a>Operate &#x26; Monitor</h2>
+<p>If you don't detect it, you can't fix it.</p>
+<ul>
+<li><strong>Detect and Visualize</strong> - Visualization of environments add context &#x26; clarity.</li>
+<li><strong>Respond &#x26; Recover</strong> - Playbooks drive response and recovery efforts.</li>
+</ul>
+<h3 id="detect--visualize"><a aria-hidden="true" class="anchor-heading icon-link" href="#detect--visualize"></a>Detect &#x26; Visualize</h3>
+<ul>
+<li>Catalogue</li>
+<li>Inventory</li>
+<li>Compliance</li>
+<li>User Behavior Analytics</li>
+<li>RASP</li>
+<li>Configuration Monitoring</li>
+<li>Continuous scanning of container, infrastructure and network</li>
+</ul>
+<h3 id="respond"><a aria-hidden="true" class="anchor-heading icon-link" href="#respond"></a>Respond</h3>
+<ul>
+<li>Virtual patching</li>
+<li>Automated remediation</li>
+<li>Reporting</li>
+<li>Feedback loop from production to engineering</li>
+<li>Blue vs Red team game days</li>
+</ul>
+<h3 id="recover"><a aria-hidden="true" class="anchor-heading icon-link" href="#recover"></a>Recover</h3>
+<ul>
+<li>Maximize service</li>
+<li>Root cause analysis</li>
+<li>Attack-driven defense</li>
+<li>Shift from MTBF to MTTR</li>
+<li>Chaos engineering</li>
+</ul>
+<h2 id="why-devsecops"><a aria-hidden="true" class="anchor-heading icon-link" href="#why-devsecops"></a>Why DevSecOps</h2>
+<ul>
+<li>Reduce risk &#x26; cost</li>
+<li>Increase quality - Continuous monitoring &#x26; scanning.</li>
+<li>Improve team synergy - Increase collaboration &#x26; productivity.</li>
+<li>Enhance visibility - Threat management integration.</li>
+<li>Meet compliance - Address critical compliance requirements.</li>
+<li>Accelerate development - Security automation integrated into CI/CD pipeline.</li>
+<li>Secure, rapid innovation - Satisfy DevOps and CISO requirements.</li>
+</ul>

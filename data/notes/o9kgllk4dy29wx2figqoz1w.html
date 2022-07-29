@@ -1,0 +1,403 @@
+<h1 id="siem"><a aria-hidden="true" class="anchor-heading icon-link" href="#siem"></a>SIEM</h1>
+<h1 id="siem-concepts"><a aria-hidden="true" class="anchor-heading icon-link" href="#siem-concepts"></a>SIEM Concepts</h1>
+<ul class="contains-task-list">
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Explore and understand the key terms of SIEM.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Explore the role of a SIEM in the network.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Understand the role of a SIEM in modern SOC.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Explore different SIEM vendors and their components.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Deep drive of QRadar from a Security Analysts point of view.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Describe User Behavior Analytics (UBA) use cases.</p>
+</li>
+</ul>
+<hr>
+<h2 id="siem-1"><a aria-hidden="true" class="anchor-heading icon-link" href="#siem-1"></a>SIEM</h2>
+<p>SIEM (System Information Event Management)
+: A data aggregator, search, and reporting system. SIEM gathers immense amounts of data from entire networked environment, consolidates and makes that data human accessible. With the data categorized and laid out, you can research data security breaches with as much detail as needed.</p>
+<p>Key Terms:</p>
+<ul>
+<li>Log Collection</li>
+<li>Normalization</li>
+<li>Correlation</li>
+<li>Aggregation</li>
+<li>Reporting</li>
+</ul>
+<ol>
+<li>A SIEM system collects logs and other security-related documentation for analysis.</li>
+<li>The core function is to manage network security by monitoring flows and events.</li>
+<li>It consolidates log events and network flow data from thousands of devices, endpoints and applications distributed throughout a network. It then uses an advanced Sense Analytics engine to normalize and correlate this data and identifies security offenses requiring investigation.</li>
+<li>A SIEM system cane be ruled-based or employ a statistical correlation engine to establish relationships between event log entries.</li>
+<li>Capture log event and network flow data in near real time and apply advanced analytics to reveal security offenses.</li>
+<li>It can be available on premises and in a cloud environment.</li>
+</ol>
+<h3 id="events--flows"><a aria-hidden="true" class="anchor-heading icon-link" href="#events--flows"></a>Events &#x26; Flows</h3>
+<p>Event
+: Typically a log of a specific action such as a user login, or a FW permit, occurs at a specific time and the event is logged at that time.</p>
+<p>Flows
+: A record of network activity between two hosts that can last for seconds to days depending on the activity within the session.</p>
+<ul>
+<li>For example, a web request might download multiple files such as images, ads, video, and last for 5 to 10 seconds, or a user who watches a Netflix movie might be in a network session that last up to a few hours.</li>
+</ul>
+<h3 id="data-collection"><a aria-hidden="true" class="anchor-heading icon-link" href="#data-collection"></a>Data Collection</h3>
+<p>Data Collection
+: The process of collecting flows and logs from different sources into a common repository.</p>
+<ul>
+<li>It can be performed by sending data directly into the SIEM or an external device can collect log data from the source and move it into the SIEM system on demand or scheduled.</li>
+<li>Consider CPU, memory, storage capacity, license, and number of sources.</li>
+</ul>
+<h3 id="normalization"><a aria-hidden="true" class="anchor-heading icon-link" href="#normalization"></a>Normalization</h3>
+<p>Normalization
+: Process involves turning raw data into a format that has fields such as IP address that the SIEM can use.</p>
+<ul>
+<li>Normalization involves parsing raw event data and preparing the data to display readable information.</li>
+<li>Normalization allows for predictable and consistent storage for all records, and indexes those records for fast searching and sorting.</li>
+</ul>
+<h3 id="license-throttling"><a aria-hidden="true" class="anchor-heading icon-link" href="#license-throttling"></a>License Throttling</h3>
+<p>License Throttling
+: Monitors the number of incoming events to the system to mange input queues and EPS licensing.</p>
+<h3 id="coalescing"><a aria-hidden="true" class="anchor-heading icon-link" href="#coalescing"></a>Coalescing</h3>
+<ul>
+<li>Events are parsed and then coalesced based on common attributes across events.
+<ul>
+<li>QRadar: Event coalescing starts after three events have been found with matching properties within a 10 second period.</li>
+</ul>
+</li>
+<li>Event data received by QRader is processed in to normalized fields, along with the original payload. Five properties are evaluated:
+<ul>
+<li>QID</li>
+<li>Source IP</li>
+<li>Destination IP</li>
+<li>Destination port</li>
+<li>Username</li>
+</ul>
+</li>
+</ul>
+<h3 id="offenses"><a aria-hidden="true" class="anchor-heading icon-link" href="#offenses"></a>Offenses</h3>
+<h4 id="event-correlation"><a aria-hidden="true" class="anchor-heading icon-link" href="#event-correlation"></a>Event Correlation</h4>
+<ul>
+<li>Logs</li>
+<li>IP Reputation</li>
+<li>Flows</li>
+<li>Geo Location</li>
+</ul>
+<h4 id="activity-baseline--anomaly-detection"><a aria-hidden="true" class="anchor-heading icon-link" href="#activity-baseline--anomaly-detection"></a>Activity Baseline &#x26; Anomaly Detection</h4>
+<ul>
+<li>User Activity</li>
+<li>Database Activity</li>
+<li>Application Activity</li>
+<li>Network Activity</li>
+</ul>
+<h4 id="offense-identification"><a aria-hidden="true" class="anchor-heading icon-link" href="#offense-identification"></a>Offense Identification</h4>
+<ul>
+<li>Credibility</li>
+<li>Severity</li>
+</ul>
+<h2 id="siem-deployment"><a aria-hidden="true" class="anchor-heading icon-link" href="#siem-deployment"></a>SIEM Deployment</h2>
+<h3 id="considerations"><a aria-hidden="true" class="anchor-heading icon-link" href="#considerations"></a>Considerations</h3>
+<ul>
+<li>Compliance</li>
+<li>Cost-Benefit</li>
+<li>Cybersecurity</li>
+</ul>
+<h3 id="events"><a aria-hidden="true" class="anchor-heading icon-link" href="#events"></a>Events</h3>
+<p>Event Collector
+: Collects event from local and remote log sources, and normalizes raw log source events to format for use by QRadar. The Event Collector bundles or coalesces identical events to conserve system usage and sends the data to the Event Processor.</p>
+<ul>
+<li>Can use bandwidth limiters and schedules to send events to the Event Processor to overcome WAN limitations such as intermittent connectivity.</li>
+<li>Bundles or coalesces identical events to conserve system usage and sends the data to the Event Processor.</li>
+</ul>
+<p>Event Processor
+: Processes events that are collected from one or more Event Collector components.</p>
+<ul>
+<li>Processes event by using the Custom Rules Engine (CRE).</li>
+</ul>
+<h3 id="flows"><a aria-hidden="true" class="anchor-heading icon-link" href="#flows"></a>Flows</h3>
+<p>Flow Collector
+: Generates flow data from raw packets that are collected from monitor ports such as SPANs, TAPs and monitor sessions, or from external flow sources such as netflow, sflow, jflow.</p>
+<ul>
+<li>Data is then converted to QRadar flow format and sent down the pipeline for processing.</li>
+</ul>
+<h4 id="flow-processor"><a aria-hidden="true" class="anchor-heading icon-link" href="#flow-processor"></a>Flow Processor</h4>
+<p>Flow De-duplication
+: A process that removes duplicate flows when multiple Flow Collectors provide data to Flow Processors appliances.</p>
+<p>Asymmetric Recombination
+: Responsible for combining two sides of each flow when data is provided asymmetrically. This process can recognize flows from each side and combine them in to one record. However, sometimes only one side of the flow exists.</p>
+<p>License Throttling
+: Monitors the number of incoming flows to the system to manage input queues and licensing.</p>
+<p>Forwarding
+: Applies routing rules for the system, such as sending flow data to offsite targets, external Syslog systems, JSON systems, and other SIEMs.</p>
+<h3 id="reasons-to-add-event-or-flow-collectors-to-all-in-one-deployment"><a aria-hidden="true" class="anchor-heading icon-link" href="#reasons-to-add-event-or-flow-collectors-to-all-in-one-deployment"></a>Reasons to Add Event or Flow Collectors to All-in-One Deployment</h3>
+<ul>
+<li>Data collection requirements exceed the collection capability of processor.</li>
+<li>Must collect events and flows at a different location than processor is installed.</li>
+<li>Monitoring packet-based flow sources.</li>
+<li>As deployment grows, the workload exceeds the processing capacity of the All-in-One appliance.</li>
+<li>Security operations center employs more analysts who do more concurrent searches.</li>
+<li>The types of monitored data, and the retention period for that data increases, which increases processing and storage requirements.</li>
+<li>As security analyst team grows, requires better search performance.</li>
+</ul>
+<h3 id="security-operations-center-soc"><a aria-hidden="true" class="anchor-heading icon-link" href="#security-operations-center-soc"></a>Security Operations Center (SOC)</h3>
+<p>Triad of security operations: People, Process and Technology</p>
+<p><img src="https://lh3.googleusercontent.com/XkV9_pyKmRnuXUzAFDdFggJIad1YDxzfoVf9grhfqKJNXEDqMttRH0792TeKZjEyP0ZLK_WOz-r8kNrjUBCgv5s1JvnvhoQ-9rZ_rdjcHkUkpjGBAACeS928xGryEycAV9POW8f8l8Ub4iFAvQ" alt="SOC"></p>
+<h2 id="siem-solutions---vendors"><a aria-hidden="true" class="anchor-heading icon-link" href="#siem-solutions---vendors"></a>SIEM Solutions - Vendors</h2>
+<blockquote>
+<p>The security information and event management (SIEM) market is defined by customers' need to analyze security event data in real time, which supports the early detection of attacks and breaches. SIEM systems collect, store, investigate, support mitigation and report on security data for incident response, forensics and regulatory compliance. The vendors included in this Magic Quadrant have products designed for this purpose, which they actively market and sell to the security buying center. </p>
+<ul>
+<li>2020 Garter.com Magic Quadrant Report</li>
+</ul>
+</blockquote>
+<h3 id="gartners-magic-quadrant-2022"><a aria-hidden="true" class="anchor-heading icon-link" href="#gartners-magic-quadrant-2022"></a>Gartner's Magic Quadrant (2022)</h3>
+<p><img src="https://aware-commons.s3.ap-south-1.amazonaws.com/static-files/sf-website/news/magic-quadrant-graph.png" alt="quad"></p>
+<h3 id="deployment"><a aria-hidden="true" class="anchor-heading icon-link" href="#deployment"></a>Deployment</h3>
+<h4 id="small"><a aria-hidden="true" class="anchor-heading icon-link" href="#small"></a>Small</h4>
+<p>Gartner defines a small deployment as one with around 300 log sources and about 1500 EPS (events per second).</p>
+<h4 id="medium"><a aria-hidden="true" class="anchor-heading icon-link" href="#medium"></a>Medium</h4>
+<p>A midsize deployment is considered to have up to 1000 log sources and 7000 EPS.</p>
+<h4 id="large"><a aria-hidden="true" class="anchor-heading icon-link" href="#large"></a>Large</h4>
+<p>A large deployment generally covers more than 1000 log sources with approximately 15000 EPS.</p>
+<h3 id="important-concepts"><a aria-hidden="true" class="anchor-heading icon-link" href="#important-concepts"></a>Important Concepts</h3>
+<p>SIEM
+: Combines security information (SIM) and security event management (SEM) to provide real-time analysis of security alerts generated by network hardware and applications.</p>
+<p>Rule
+: A programmed procedure that attempts to correlate events and generates new events that report on correlation when it occurs.</p>
+<p>Rule Threshold
+: The point at which a rule is triggered and a correlation event generated.</p>
+<p>Event Threshold
+: The number of times the event must occur before triggering the rule threshold.</p>
+<p>Rule Action
+: An automatic procedure that occurs when all rule conditions and threshold settings have been met.</p>
+<p>Trend
+: A resource that defines how and over what time period data will be aggregated and evaluated for trends. A trend executes a specified query on a defined schedule and time duration.</p>
+<p>Event
+: A log of a specific action such as a user login, or a FW permit, occurs at a specific time and the event is logged at that time.</p>
+<p>Flow
+: A record of network activity that can last for seconds, minutes, hours, or days, depending on the activity within the session.</p>
+<p>Data Collection
+: The process of collecting flows and logs from different sources into a common repository.</p>
+<p>Normalization
+: Involves turning raw data into a format that has fields such as an IP address that the SIEM can use.</p>
+<p>Licensing Throttling
+: Monitors the number of incoming events to the system to manage EPS and FPS licensing.</p>
+<p>Coalescing
+: Events are grouped based on common attributes.</p>
+<h3 id="ibm-qradar"><a aria-hidden="true" class="anchor-heading icon-link" href="#ibm-qradar"></a>IBM QRadar</h3>
+<ul>
+<li>Year 2004-205, Q1 Labs entered into the SIEm market modifying their NBAD platform (QFLOW) and in 2012, IBM bought them.</li>
+<li>Proprietary based on Ariel Data store and probably Ariel Query Language (AQL).</li>
+<li>Log correlation, Network Forensics, Intelligence Feeds, Vulnerability Management, Risk Manager.</li>
+</ul>
+<h4 id="vulnerability-manager"><a aria-hidden="true" class="anchor-heading icon-link" href="#vulnerability-manager"></a>Vulnerability Manager</h4>
+<ul>
+<li>
+<p>IBM® QRadar® Vulnerability Manager is a network scanning platform that detects vulnerabilities within the applications, systems, and devices on your network or within your DMZ.</p>
+</li>
+<li>
+<p>QRadar Vulnerability Manager uses security intelligence to help you manage and prioritize your network vulnerabilities. </p>
+<ul>
+<li>For example, you can use QRadar Vulnerability Manager to continuously monitor vulnerabilities, improve resource configuration, and identify software patches. You can also, prioritize security gaps by correlating vulnerability data with network flows, log data, firewall, and intrusion prevention system (IPS) data.</li>
+</ul>
+</li>
+</ul>
+<h4 id="user-behavior-analytics"><a aria-hidden="true" class="anchor-heading icon-link" href="#user-behavior-analytics"></a>User Behavior Analytics</h4>
+<ul>
+<li>
+<p>IBM® QRadar® User Behavior Analytics (UBA) analyzes user activity to detect malicious insiders and determine if a user’s credentials have been compromised. Security analysts can easily see risky users, view their anomalous activities and drill down into the underlying log and flow data that contributed to a user’s risk score.</p>
+</li>
+<li>
+<p>As an integrated component of the QRadar Security Intelligence Platform, UBA leverages out of the box behavioral rules and machine learning (ML) models to add user context to network, log, vulnerability and threat data to more quickly and accurately detect attacks.</p>
+</li>
+</ul>
+<h4 id="network-insights"><a aria-hidden="true" class="anchor-heading icon-link" href="#network-insights"></a>Network Insights</h4>
+<ul>
+<li>Analyzes network data in real-time to uncover an attacker's footprints and expose hidden security threats in many scenarios before they can damage your organization, including:
+<ul>
+<li>Phishing e-mails</li>
+<li>Malware</li>
+<li>Data Exfiltration</li>
+<li>Lateral movement</li>
+<li>DNS and other application abuse</li>
+<li>Compliance gaps</li>
+</ul>
+</li>
+</ul>
+<h3 id="arcsight-esm"><a aria-hidden="true" class="anchor-heading icon-link" href="#arcsight-esm"></a>ArcSight ESM</h3>
+<p>ArcSight ESM is a Security Information and Event Management (SIEM) solution that combines event correlation and security analytics to identify and prioritize threats in real-time and remediate incidents early. It is able to concentrate, normalize, analyze, and report the results of its analysis of security event data generated by various Intrusion Detection System (IDS) sensors and scanners in the operational environment. ArcSight ESM allows users to monitor events in real-time, correlate events.</p>
+<ul>
+<li>ArcSight Manager</li>
+<li>CORR-Engine (Correlation Optimized Retention and Retrieval Engine)</li>
+<li>ArcSight Console</li>
+<li>ArcSight Command Center (ACC)</li>
+<li>ESM Service Layer APIs</li>
+</ul>
+<h3 id="splunk"><a aria-hidden="true" class="anchor-heading icon-link" href="#splunk"></a>Splunk</h3>
+<p>Splunk software has been around since 2006 and the company has since grown to become and industry leader. Splunk's vision is to make machine data accessible, usable and valuable to everybody. The company offers a wide range of products to turn machine data into valuable information by monitoring and analyzing all activities. This is known as Operational Intelligence and is the unique value proposition of Splunk.</p>
+<ul>
+<li>Splunk offers many free technology add-ons that provides real value immediately.
+<ul>
+<li>For example, the Distributed Management Console (DMC) helps pull all the Splunk architecture management together in one set of dashboards.</li>
+</ul>
+</li>
+</ul>
+<h3 id="logrhythms-security-intelligence-platform"><a aria-hidden="true" class="anchor-heading icon-link" href="#logrhythms-security-intelligence-platform"></a>LogRhythm's Security Intelligence Platform</h3>
+<ul>
+<li>Platform Manager (PM) supports centralized management and administration for the LogRhythm implementation.</li>
+<li>Data Processor (DP) performs log collection and management.</li>
+<li>Data Indexer (DX) indexes data and metadata.</li>
+<li>AI Engine (AI) provides correlation and analysis capabilities.</li>
+<li>All-In-One (XM) combines the PM, DP, DX, and AI components.</li>
+<li>Network Monitor (NM) specializes in deep analysis of network traffic contents.</li>
+<li>Data Collector (DC) collects log data from remote systems and prepares it for secure transfer to the centralized LogRhythm Security Intelligence Platform implementation.</li>
+</ul>
+<h2 id="qradar-siem---industry-example"><a aria-hidden="true" class="anchor-heading icon-link" href="#qradar-siem---industry-example"></a>QRadar SIEM - Industry Example</h2>
+<p>Automated threat detection and prioritization and securing the cloud.</p>
+<ul>
+<li>Real-time correlation and behavioral anomaly detection.</li>
+<li>Threat intelligence and vulnerability insight.</li>
+<li>Machine learning, service and user profiling.</li>
+</ul>
+<h3 id="solve-challenges"><a aria-hidden="true" class="anchor-heading icon-link" href="#solve-challenges"></a>Solve Challenges</h3>
+<ul>
+<li>Protect any critical data.</li>
+<li>Effectively respond to incidents.</li>
+<li>Prove compliance.</li>
+</ul>
+<h3 id="automate-intelligence"><a aria-hidden="true" class="anchor-heading icon-link" href="#automate-intelligence"></a>Automate Intelligence</h3>
+<ul>
+<li>Apply automated analytics to detect, connect, prioritize and investigate threats with IBM Watson.</li>
+</ul>
+<h3 id="see-everything"><a aria-hidden="true" class="anchor-heading icon-link" href="#see-everything"></a>See Everything</h3>
+<ul>
+<li>Collect data across the entire environment.</li>
+</ul>
+<h3 id="deployment-models"><a aria-hidden="true" class="anchor-heading icon-link" href="#deployment-models"></a>Deployment Models</h3>
+<ul>
+<li>On PREM
+<ul>
+<li>HW, SW, VM</li>
+</ul>
+</li>
+<li>AS A SERVICE
+<ul>
+<li>SaaS, Managed Service</li>
+</ul>
+</li>
+<li>CLOUD
+<ul>
+<li>AWS, Azure, Google Cloud</li>
+</ul>
+</li>
+<li>HYBRID
+<ul>
+<li>On-prem, SaaS, IaaS</li>
+</ul>
+</li>
+</ul>
+<h2 id="user-behavior-analytics-1"><a aria-hidden="true" class="anchor-heading icon-link" href="#user-behavior-analytics-1"></a>User Behavior Analytics</h2>
+<h3 id="security-ecosystem"><a aria-hidden="true" class="anchor-heading icon-link" href="#security-ecosystem"></a>Security Ecosystem</h3>
+<p>Detecting insider threat requires a 360 degree view of both logs and flows.</p>
+<ul>
+<li>Threat Intel</li>
+<li>Network</li>
+<li>Cloud</li>
+<li>Identity &#x26; access</li>
+<li>Data</li>
+<li>Apps</li>
+<li>Mobile</li>
+<li>Endpoint</li>
+</ul>
+<h3 id="advantages-of-ibm-qradar-uba"><a aria-hidden="true" class="anchor-heading icon-link" href="#advantages-of-ibm-qradar-uba"></a>Advantages of IBM QRadar UBA</h3>
+<ul>
+<li>Complete visibility across end point, network and cloud infrastructure with both log and flow data.</li>
+<li>Avoids reloading and curating data faster time to insights, lowers operating cost, frees valuable resources.</li>
+<li>Out-of-the-box analytic models that leverage and extend the security operations platform.</li>
+<li>Single Security operation processes with integration of workflow system and other security solutions.</li>
+<li>Easily extend to third-party analytic models including existing insider threats use cases already implemented.</li>
+<li>Leverage UBA insights in other integrated security analytics solutions.</li>
+<li>Get more from QRadar ecosystem.</li>
+</ul>
+<h4 id="ibm-qradar-uba"><a aria-hidden="true" class="anchor-heading icon-link" href="#ibm-qradar-uba"></a>IBM QRadar UBA</h4>
+<p>160+ rule and ML driven use cases addressing 3 major insider vector threats.</p>
+<ul>
+<li>Compromised or stolen credentials.</li>
+<li>Careless or malicious insiders.</li>
+<li>Malware takeover of user accounts.</li>
+</ul>
+<h4 id="into-user-behavioral-analytics"><a aria-hidden="true" class="anchor-heading icon-link" href="#into-user-behavioral-analytics"></a>Into User Behavioral Analytics</h4>
+<p>Getting started with:</p>
+<ul>
+<li>Log sources input; parsing properly</li>
+<li>LDAP setup: reference maps</li>
+<li>User ID coalescing</li>
+<li>KYC &#x26; Align with Biz needs</li>
+<li>Config and tune UC</li>
+</ul>
+<p>Analytic Outcomes</p>
+<ol>
+<li>Focus on accounts and access.
+<ol>
+<li>Account anomalies</li>
+<li>Access deviations</li>
+</ol>
+</li>
+<li>Expand to user views with network &#x26; session data.
+<ol>
+<li>Surface abnormal user behavior</li>
+</ol>
+</li>
+<li>Build and compare to peer group
+<ol>
+<li>Detect users deviating from self or from peer groups</li>
+</ol>
+</li>
+</ol>
+<p>Data Intelligence</p>
+<ul>
+<li>LDAP, AD, Authentication Logs</li>
+<li>Proxy, Firewall, Web GW, VPN, IPDS, Flow</li>
+<li>Endpoint, SaaS Apps, Cloud</li>
+</ul>
+<h4 id="value-to-soc"><a aria-hidden="true" class="anchor-heading icon-link" href="#value-to-soc"></a>Value to SOC</h4>
+<h5 id="analyst-effectiveness"><a aria-hidden="true" class="anchor-heading icon-link" href="#analyst-effectiveness"></a>Analyst Effectiveness</h5>
+<ul>
+<li>Detect known and unknown threats.</li>
+<li>Reduce time to detection.</li>
+<li>Identify activities of interest quickly.</li>
+</ul>
+<h5 id="analyst-efficiency"><a aria-hidden="true" class="anchor-heading icon-link" href="#analyst-efficiency"></a>Analyst Efficiency</h5>
+<ul>
+<li>Expedite investigations.</li>
+<li>Reduce time to respond.</li>
+<li>Reduce deep data expertise.</li>
+</ul>
+<h5 id="roi"><a aria-hidden="true" class="anchor-heading icon-link" href="#roi"></a>ROI</h5>
+<ul>
+<li>Get more from investments.</li>
+<li>Leverage existing QRadar skills.</li>
+<li>Available at no charge.</li>
+</ul>
+<h5 id="time-to-value"><a aria-hidden="true" class="anchor-heading icon-link" href="#time-to-value"></a>Time to Value</h5>
+<ul>
+<li>Easy to acquire.</li>
+<li>Quick to deploy and configure.</li>
+<li>Easy to tune.</li>
+</ul>
+<hr>
+<strong>Children</strong>
+<ol>
+<li><a href="/IBM-cybersecurity/notes/2zlg7h80489ixsa5o7tayrj">AI</a></li>
+</ol>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/IBM-cybersecurity/notes/l9xnppid7xhd6dbt1uus1dj">Operations</a></li>
+</ul>

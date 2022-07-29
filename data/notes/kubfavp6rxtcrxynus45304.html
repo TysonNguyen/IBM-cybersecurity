@@ -1,0 +1,149 @@
+<h1 id="architecture"><a aria-hidden="true" class="anchor-heading icon-link" href="#architecture"></a>Architecture</h1>
+<h1 id="security-architecture-concepts"><a aria-hidden="true" class="anchor-heading icon-link" href="#security-architecture-concepts"></a>Security Architecture Concepts</h1>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Explain the characteristics of a security architecture.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Understand the different types of high-level architectural models and when to use them.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Understand how to describe solutions as they are decomposed to identify threats and specify security controls.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Discuss how security patterns can help accelerate the development of security for infrastructure and applications.</li>
+</ul>
+<hr>
+<h2 id="characteristics"><a aria-hidden="true" class="anchor-heading icon-link" href="#characteristics"></a>Characteristics</h2>
+<p>The foundation of robust security is a clearly communicated with a systematic analysis of the threats and controls.</p>
+<ul>
+<li>Build with a clearly communicated structure.</li>
+<li>As IT systems increase in complexity, they require a standard set of techniques, tools and communication.</li>
+</ul>
+<p>Architectural thinking is about creating and communicating good structure and behavior with the intent of avoiding chaos. Architecture needs to be:</p>
+<ul>
+<li>Described before it can be created.</li>
+<li>With different levels of elaboration for communication.</li>
+<li>Include a solution for implementation and operations.</li>
+<li>That is affordable.</li>
+<li>And secure.</li>
+</ul>
+<p>Architecture
+: A system describes its overall <em>static structure</em> and <em>dynamic behavior</em>. It models the system's elements (which for IT systems are software, hardware and its human users), the externally manifested properties of those elements, and the static and dynamic relationships among them.</p>
+<ul>
+<li>ISO/IEC 42010: 20071 defines architecture as the "fundamental organization of a system, embodied in its components, their relationships to each other and the environment, and the principles governing its design and evolution".</li>
+</ul>
+<h2 id="high-level-architectural-models"><a aria-hidden="true" class="anchor-heading icon-link" href="#high-level-architectural-models"></a>High-Level Architectural Models</h2>
+<h3 id="general-features-of-building-blocks"><a aria-hidden="true" class="anchor-heading icon-link" href="#general-features-of-building-blocks"></a>General features of building blocks:</h3>
+<ul>
+<li>Package of function defined to meet a business need.</li>
+<li>Could be an actor, business service, application or data entity.</li>
+<li>Defined boundary, but can work with other building blocks.</li>
+<li>Interface/boundary loosely coupled from implementation.</li>
+</ul>
+<h3 id="enterprise-architecture"><a aria-hidden="true" class="anchor-heading icon-link" href="#enterprise-architecture"></a>Enterprise Architecture</h3>
+<ul>
+<li>Considers the needs of the whole "enterprise" that is within scope.
+<ul>
+<li>Could be an entire organization or a large single department.</li>
+</ul>
+</li>
+<li>Maps the main "components" of problem space and solution at a very high level.</li>
+<li>Shows how the main components interrelate with each other and interlink to external organizations.</li>
+<li>Does not describe the internals the main components or how they will be implemented.
+<ul>
+<li>A model showing generic business processes.</li>
+<li>A model showing proposed generic IT components that provide high-level business services.</li>
+</ul>
+</li>
+</ul>
+<h4 id="architecture-building-blocks-abbs"><a aria-hidden="true" class="anchor-heading icon-link" href="#architecture-building-blocks-abbs"></a>Architecture Building Blocks (ABBs)</h4>
+<ul>
+<li>Capture and define architecture requirements (function, data, application).</li>
+<li>Product and vendor neutral.</li>
+<li>Guide the development of a Solution Architecture.</li>
+</ul>
+<h5 id="examples-of-abbs"><a aria-hidden="true" class="anchor-heading icon-link" href="#examples-of-abbs"></a>Examples of ABBs</h5>
+<ul>
+<li>Data Security</li>
+<li>Application Security</li>
+<li>Identity and Access management</li>
+<li>Infrastructure and Endpoint security</li>
+<li>Detect and Respond</li>
+</ul>
+<h3 id="solution"><a aria-hidden="true" class="anchor-heading icon-link" href="#solution"></a>Solution</h3>
+<ul>
+<li>Describes the main elements of the solution showing their internal architecture, stored data and the use of any reusable or off-the-shelf components/patterns.</li>
+<li>Describes how specific products or technologies are used.</li>
+<li>Adds a content that might describe the different environments.</li>
+<li>Adds some technology perspectives to provide further detail.</li>
+<li>More detailed than the Enterprise architecture.</li>
+</ul>
+<h4 id="solution-building-blocks-sbbs"><a aria-hidden="true" class="anchor-heading icon-link" href="#solution-building-blocks-sbbs"></a>Solution Building Blocks (SBBs)</h4>
+<ul>
+<li>Specify technical components to implement a function.</li>
+<li>Add context of the platforms and environments.</li>
+<li>They may be product/vendor aware.</li>
+</ul>
+<h5 id="examples-of-sbbs"><a aria-hidden="true" class="anchor-heading icon-link" href="#examples-of-sbbs"></a>Examples of SBBs</h5>
+<ul>
+<li>Key Security Manager</li>
+<li>Certificate Authority</li>
+<li>HSM</li>
+<li>Web Application Firewall (WAF)</li>
+<li>Static Application Security Test (SAST)</li>
+<li>Directory</li>
+<li>Privilege Access Manager</li>
+<li>Hardware Token</li>
+<li>Virus Protection</li>
+<li>Application Firewall</li>
+<li>Spam Filter</li>
+<li>Network Intrusion Prevention System</li>
+<li>Incident Workflow Manager</li>
+</ul>
+<h2 id="solution-architecture"><a aria-hidden="true" class="anchor-heading icon-link" href="#solution-architecture"></a>Solution Architecture</h2>
+<ol>
+<li>Start with a solution architecture with an architecture overview giving an overview of the system being developed.</li>
+<li>Continue by clearly defining the external context describing the boundary, actors &#x26; use cases that process data.</li>
+<li>Examine the system internally looking at the functional components and examine the threats to the data flows.</li>
+<li>Finally look at where the function is hosted, the security zones and the specific protection required to protect data.</li>
+</ol>
+<h2 id="additional-levels-of-abstraction"><a aria-hidden="true" class="anchor-heading icon-link" href="#additional-levels-of-abstraction"></a>Additional Levels of Abstraction</h2>
+<h4 id="enterprise-architecture-contextual"><a aria-hidden="true" class="anchor-heading icon-link" href="#enterprise-architecture-contextual"></a>Enterprise Architecture (Contextual)</h4>
+<ul>
+<li>High-level Building Blocks giving context.</li>
+<li>Does not identify direct connectivity.</li>
+<li>Does not identify technology or products (other than at a high level).</li>
+</ul>
+<h4 id="architecture-overview"><a aria-hidden="true" class="anchor-heading icon-link" href="#architecture-overview"></a>Architecture Overview</h4>
+<ul>
+<li>Provides Structure at high level.</li>
+<li>Starts to bring environment/platform context.</li>
+</ul>
+<h4 id="system-context"><a aria-hidden="true" class="anchor-heading icon-link" href="#system-context"></a>System Context</h4>
+<ul>
+<li>Identifies the boundaries of a system.</li>
+<li>Describes the external actors.</li>
+<li>Used to identify use cases and data.</li>
+</ul>
+<h4 id="functionalcomponent-model"><a aria-hidden="true" class="anchor-heading icon-link" href="#functionalcomponent-model"></a>Functional/Component Model</h4>
+<ul>
+<li>Definition of functional components.</li>
+<li>Includes data flows and dependencies between components within a system.</li>
+</ul>
+<h4 id="operational-model"><a aria-hidden="true" class="anchor-heading icon-link" href="#operational-model"></a>Operational Model</h4>
+<ul>
+<li>Definition of physical nodes.</li>
+<li>Includes physical connections between nodes.</li>
+</ul>
+<p><em>Define what is required and how it will be delivered.</em></p>
+<p>Who? - Stakeholders include the client, end users of the system, auditors, third parties and regulators.
+Where? - Locations for IT applications include access points for end users, connections to any third parties and the data centers.
+When? - An IT system may be required to support a new product launch or to an organizational change.
+Why? - Understanding the business rationale for an IT system is critical.
+What? - Includes words, tables and pictures to describe the functional requirements e.g. a requirements catalogue supported by use-case diagrams and tables of detailed business rules.
+How? - Describes the proposed solution in words and pictures, e.g. conceptual and physical models which decompose the solution into components.</p>
+<h2 id="security-patterns"><a aria-hidden="true" class="anchor-heading icon-link" href="#security-patterns"></a>Security Patterns</h2>
+<p><em>The use of security architecture patterns accelerate the creation of a solution architecture.</em></p>
+<p>Security Architecture Pattern is:</p>
+<ul>
+<li>Reusable solution to a commonly occurring problem.</li>
+<li>A description or template how to solve a problem that can be used in many different situations.</li>
+<li>Not a finished design as it needs context.</li>
+<li>Can be represented in many different formats.</li>
+<li>Vendor specific or agnostic.</li>
+<li>Available at all levels of abstraction.</li>
+</ul>

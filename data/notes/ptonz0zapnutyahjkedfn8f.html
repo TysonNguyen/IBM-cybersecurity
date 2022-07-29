@@ -1,0 +1,143 @@
+<h1 id="scripting"><a aria-hidden="true" class="anchor-heading icon-link" href="#scripting"></a>Scripting</h1>
+<h1 id="scripting-overview"><a aria-hidden="true" class="anchor-heading icon-link" href="#scripting-overview"></a>Scripting Overview</h1>
+<ul class="contains-task-list">
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn about the history of scripting languages.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn about the common uses of scripting today.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn about the different concepts related to scripting languages.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn about the different scripting languages.</p>
+</li>
+</ul>
+<hr>
+<p>IBM's Job Control Language (JCL) is often cited as one of the first scripting languages. But while scripting languages were functional, their response time wasn't nearly as fast as modern computers - often took at least a day to get results!</p>
+<h2 id="history-of-scripting"><a aria-hidden="true" class="anchor-heading icon-link" href="#history-of-scripting"></a>History of Scripting</h2>
+<ul>
+<li>The first interactive shells were developed in the 1960s to enable remote operation of the first time-sharing systems. These used shell scripts, which controlled running computer programs within a computer program, the shell.</li>
+<li>Calvin Mooers in his TRAC language is generally credited with inventing command substitution, the ability to embed commands in scripts that when interpreted insert a character string into the script.</li>
+<li>One innovation in the Unix shells was the ability to send the output of one program into the input of another, making it possible to do complex tasks in one line of shell code.</li>
+</ul>
+<h2 id="script-usage"><a aria-hidden="true" class="anchor-heading icon-link" href="#script-usage"></a>Script Usage</h2>
+<p>Scripts have multiple uses, but automation is the name of the game.</p>
+<ul>
+<li>Image rollovers</li>
+<li>Validation</li>
+<li>Backup</li>
+<li>Testing</li>
+</ul>
+<h2 id="concepts"><a aria-hidden="true" class="anchor-heading icon-link" href="#concepts"></a>Concepts</h2>
+<h3 id="scripts"><a aria-hidden="true" class="anchor-heading icon-link" href="#scripts"></a>Scripts</h3>
+<ul>
+<li>Small interpreted programs.</li>
+<li>Script can use functions, procedures, external calls, variables, etc.</li>
+</ul>
+<h3 id="variables"><a aria-hidden="true" class="anchor-heading icon-link" href="#variables"></a>Variables</h3>
+<ul>
+<li>Most scripts need to calculate a result or execute a series of instructions and a great way to do so is storing any information we need a variable.</li>
+<li>A variable is a memory address paired with a symbolic name (identifier) which contain a value.
+<ul>
+<li>Can be used to reference, manipulate, replace or delete, the value.</li>
+</ul>
+</li>
+<li>Memory space needed for a variable may be allocated only when the variable is first used and freed when it is no longer needed.</li>
+</ul>
+<h3 id="arguments---parameters"><a aria-hidden="true" class="anchor-heading icon-link" href="#arguments---parameters"></a>Arguments /  Parameters</h3>
+<ul>
+<li>Parameters are pre-established variables which will be used to perform the related process of our function.</li>
+<li>Parameters appear in procedure definitions; arguments appear in procedure calls.
+<ul>
+<li>In the function definition <code>f(x) = x*x</code>, the variable x is a parameter.</li>
+<li>In the function call f(2), the value 2 is the argument of the function.</li>
+</ul>
+</li>
+<li>Although parameters are also commonly referred to as arguments, arguments are sometimes thought of as the actual values or references assigned to the parameter variables when the subroutine is called at run-time.</li>
+</ul>
+<h3 id="if-statement"><a aria-hidden="true" class="anchor-heading icon-link" href="#if-statement"></a>If Statement</h3>
+<ul>
+<li>The if-then construct (sometimes called if-then-else) is common across many programming languages. Although the syntax varies from language to language, the basic structure looks like this:
+<ul>
+<li>If (boolean condition) Then (consequent) Else (alternative) End If.</li>
+</ul>
+</li>
+</ul>
+<h3 id="loops"><a aria-hidden="true" class="anchor-heading icon-link" href="#loops"></a>Loops</h3>
+<ul>
+<li>For Loop</li>
+<li>While Loop</li>
+<li>Until Loop</li>
+</ul>
+<h2 id="scripting-languages"><a aria-hidden="true" class="anchor-heading icon-link" href="#scripting-languages"></a>Scripting Languages</h2>
+<h3 id="javascript"><a aria-hidden="true" class="anchor-heading icon-link" href="#javascript"></a>JavaScript</h3>
+<p>JavaScript
+: An object oriented scripting language developed in 1995 by Netscape Communications.</p>
+<ul>
+<li>Although it can be used server or client sided, its most popular use by is its client side.</li>
+<li>A multi-paradigm language, JavaScript supports event-driven, functional, and imperative (including object-oriented and prototype-based) programming styles. It has APIs for working with text, arrays, dates, regular expressions, and the DOM, but the language itself does not include any I/O, such as networking, storage, or graphics facilities. It relies upon the host environment in which it is embedded to provide these features.</li>
+</ul>
+<p>Variables in JavaScript can be defined using either the var, let or const keywords.</p>
+<ul>
+<li><code>let x</code> // declares the variable x and assigns to it the special value "undefined".</li>
+<li><code>let y = 2;</code> // declares the variable y and assigns to it the value 2.</li>
+<li><code>let z = "Hello, World!";</code> // declares the variable z and assigns to it a string containing "Hello, World!".</li>
+</ul>
+<h3 id="bash"><a aria-hidden="true" class="anchor-heading icon-link" href="#bash"></a>Bash</h3>
+<p>Bash
+: GNU Bash or simply bash is Unix shell and command language written by Brian Fox for GNU Project as a free software replacement for the Bourne shell. First released in 1989, it has been used widely as the default login shell for most Linux distributions and Apple's macOS Mojave and earlier versions.</p>
+<ul>
+<li>Bash is a command processor that typically runs in a text window where the user types commands that cause actions. Bash can also read and execute commands from a file, called a shell script.</li>
+<li>Supports filename globbing (wildcard matching), piping, here documents, command substitution, variables, and control structures for condition-testing and iteration.</li>
+<li>Bash is a POSIX-compliant shell, but with a number of extensions.</li>
+</ul>
+<p>Here is an example:</p>
+<pre class="language-bash"><code class="language-bash"><span class="token shebang important">#!/bin/bash</span>
+<span class="token assign-left variable">myvariable</span><span class="token operator">=</span>Hello
+<span class="token assign-left variable">anothervar</span><span class="token operator">=</span>Fred
+<span class="token builtin class-name">echo</span> <span class="token variable">$myvariable</span> <span class="token variable">$anothervar</span>
+<span class="token builtin class-name">echo</span>
+<span class="token assign-left variable">sampledir</span><span class="token operator">=</span>/etc
+<span class="token function">ls</span> <span class="token variable">$sampledir</span>
+</code></pre>
+<h3 id="perl"><a aria-hidden="true" class="anchor-heading icon-link" href="#perl"></a>Perl</h3>
+<p>Perl
+: Larry Wall began work on Perl in 1987, while working as a programmer at Unisys, and released version 1.0 to the comp.sources.misc newsgroup on December 18, 1987.</p>
+<ul>
+<li>Perl 2, released in 1988, featured a better regular expression engine.</li>
+<li>Perl 3, released in 1989, added support for binary data streams.</li>
+</ul>
+<p>Originally, the only documentation for Perl was a single lengthy man page. In 1991, Programming Perl, known to many Perl programmers as the "Camel Book" because of its cover, was published and became the reference for the language.</p>
+<p>Perl variables do not have to be explicitly declared to reserve memory space. The declaration happens automatically when you assign a value to a variable. The equal sign (=) is used to assign values to a variables.</p>
+<ul>
+<li><code>$age = 25; # An integer assignment</code></li>
+<li><code>$name = "John Paul"; # A string</code></li>
+<li><code>$salary = 1445.50; # A floating point</code></li>
+</ul>
+<h3 id="powershell"><a aria-hidden="true" class="anchor-heading icon-link" href="#powershell"></a>PowerShell</h3>
+<p>PowerShell
+: A task automation and configuration management from Microsoft, consisting of command-line shell and associated scripting language. Initially, a Windows component only, known as Windows PowerShell, it was made open-source and cross-platform on 18 August 2016 with the introduction of PowerShell Core. The former is built on .NET Framework while the latter on .NET Core.</p>
+<ul>
+<li>Administrative tasks are generally performed by cmdlets (pronounced command-lets), which are specialized .NET classes implementing a particular operation. These work by accessing data in different data stores, like the file system or registry, which are made available to PowerShell via providers. Third-party developers can add cmdlets and providers to PowerShell. Cmdlets may be used by scripts and scripts may be packaged into modules.</li>
+</ul>
+<h3 id="binary"><a aria-hidden="true" class="anchor-heading icon-link" href="#binary"></a>Binary</h3>
+<p>Binary
+: Code represents text, computer processor instructions, or any other data using a two-symbol system. Often "0" and "1" from the binary number system. The binary code assigns a pattern of binary digits, also known as bits, to each character, instruction, etc. A binary string of eight bights can represent any of 256 possible values and can, therefore, represent a wide variety of different items.</p>
+<ul>
+<li>In computing and telecommunications, binary codes are used for various methods of encoding data, such as character strings, into bit strings. Those methods may use fixed-width strings. In fixed-width binary code, each letter, digit, or other character is represented by a bit string of the same length; that big string, interpreted as a binary number, is usually displayed in code tables in octal, decimal or hexadecimal notation.</li>
+</ul>
+<h3 id="hex"><a aria-hidden="true" class="anchor-heading icon-link" href="#hex"></a>Hex</h3>
+<p>Hex
+: Advanced hex editors have scripting systems that let the user create macro like functionality as a sequence of user interface commands for automating common tasks.</p>
+<ul>
+<li>Can be used for providing scripts that automatically patch files (e.g., game cheating, modding, or product fixes provided by community) or to write more complex/intelligent templates.</li>
+<li>Scripting languages vary widely, often being product specific languages resembling MS-DOS batch files, to systems that support fully-fledged scripting languages such as Lua or Python.</li>
+</ul>
+<hr>
+<strong>Children</strong>
+<ol>
+<li><a href="/IBM-cybersecurity/notes/9580eaxs80sdsmko50z0kh2">Cross Site</a></li>
+<li><a href="/IBM-cybersecurity/notes/zgnlnwhkc5699kp1myzjann">Python</a></li>
+</ol>

@@ -1,0 +1,143 @@
+<h1 id="command-injection"><a aria-hidden="true" class="anchor-heading icon-link" href="#command-injection"></a>Command Injection</h1>
+<h1 id="what-is-command-injection"><a aria-hidden="true" class="anchor-heading icon-link" href="#what-is-command-injection"></a>What is Command Injection?</h1>
+<ul>
+<li>How to discover the command injection vulnerability.</li>
+<li>How to test and exploit this vulnerability using payloads designed for different operating systems.</li>
+<li>How to prevent this vulnerability in an application.</li>
+</ul>
+<p>Command injection the abuse of an application's behavior to execute commands on the operating system, using the same privileges that the application on a device is running with. If a web server running as a user named <em>joe</em>, it will execute commands under the user and any permissions the account has.</p>
+<ul>
+<li>Command injection vulnerability is also known as "Remote Code Execution" (RCE) because an attacker can trick the application into executing a series of payloads without direct access to the machine.</li>
+<li>Command injection was one of the top ten vulnerabilities reported by Contrast Security's AppSec intelligence report in 2019 and OWASP framework of a web application.</li>
+</ul>
+<h2 id="discovering-command-injection"><a aria-hidden="true" class="anchor-heading icon-link" href="#discovering-command-injection"></a>Discovering Command Injection</h2>
+<p>This vulnerability exists because applications often use functions in programming languages such as PHP, Python, and NodeJS to pass data to an to make system calls on the machine's operating system. For example, taking input from a field and searching for an entry into a file.</p>
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5de96d9ca744773ea7ef8c00/room-content/a54a09f7c4efa1d340ab678ece230c44.png" alt="php-injection"></p>
+<ol>
+<li>The application stores MP3 files in a directory contained on the operating system.</li>
+<li>The user inputs the song title to search for. The application stores this input into the <code>$title</code> variable.</li>
+<li>The data <code>$title</code> variable is passed to the command <code>grep</code> to search for a text file named <em>songtitle.txt</em> for the entry the user searched for.</li>
+<li>The output of this search of <em>songtitle.txt</em> will determine whether the application informs the user that the song exists or not.</li>
+</ol>
+<p>An attacker could abuse the application by injecting their own commands for the application to execute.</p>
+<ul>
+<li>Rather than use <code>grep</code> to search for an entry in <code>songtitle.txt</code>, they could ask the application to read data from a more sensitive file.</li>
+</ul>
+<p>Abusing applications can be possible no matter the programming language the application uses.</p>
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5de96d9ca744773ea7ef8c00/room-content/04a1cb87fad0a9b47761afddc48e0bf2.png" alt="python-injection"></p>
+<ol>
+<li>The 'flask' package is used to set up a web server.</li>
+<li>A function that uses the 'subprocess' package to execute a command on the device.</li>
+<li>Use a route in the webserver that will execute whatever is provided.</li>
+</ol>
+<h2 id="exploiting-command-injection"><a aria-hidden="true" class="anchor-heading icon-link" href="#exploiting-command-injection"></a>Exploiting Command Injection</h2>
+<p>Applications that use user input to populate system commands with data can often be combined in unintended behavior. For example, the shell operators <code>;</code>, <code>&#x26;</code>, and <code>&#x26;&#x26;</code> will combine two (or more) system commands and execute them both.</p>
+<p>Command injection can be detected in two ways:</p>
+<ol>
+<li><strong>Blind command injection</strong>: There is no direct output from the application when testing payloads. You will have to investigate the behaviors of the application to determine whether or not the payload was successful.</li>
+<li><strong>Verbose command injection</strong>: There is direct feedback from the application once you have tested a payload. For example, running the <code>whoami</code> command to see what user the application is running under. The web application will output the username on the page directly.</li>
+</ol>
+<h3 id="detecting-blind-command-injection"><a aria-hidden="true" class="anchor-heading icon-link" href="#detecting-blind-command-injection"></a>Detecting Blind Command Injection</h3>
+<p>There is no output visible, so it is not immediately noticeable when command command injection occurs. A command is executed, but the web application outputs no message.</p>
+<p>Must use payloads that will cause some time delay. For example, the <code>ping</code> and <code>sleep</code> commands are significant payloads to test with.</p>
+<ul>
+<li>Using <code>ping</code>, the application will hang for x amount of seconds in relation to how many pings specified.</li>
+<li>Another method to detect blind command injection is by forcing output using redirection operators such as <code>></code>.
+<ul>
+<li>The web application will execute commands such as <code>whoami</code> and redirect to a file and use <code>cat</code> to read newly created file content.</li>
+</ul>
+</li>
+<li>The <code>curl</code> command is great to test for command injection. <code>curl</code> is used to deliver data to and from an application in your payload.
+<ul>
+<li><code>curl http://vulnerable.app/process.php%3Fsearch%3DThe%20Beatles%3B%20whoami</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="detecting-verbose-command-injection"><a aria-hidden="true" class="anchor-heading icon-link" href="#detecting-verbose-command-injection"></a>Detecting Verbose Command Injection</h3>
+<p>Detecting command injection is the easiest method because the application gives you feedback or output to what is happening or being executed.</p>
+<ul>
+<li>The output of commands such as <code>ping</code> or <code>whoami</code> is directly displayed on the web application.</li>
+</ul>
+<h3 id="useful-payloads---linux--windows"><a aria-hidden="true" class="anchor-heading icon-link" href="#useful-payloads---linux--windows"></a>Useful Payloads - Linux &#x26; Windows</h3>
+<h4 id="linux-payloads"><a aria-hidden="true" class="anchor-heading icon-link" href="#linux-payloads"></a>Linux Payloads</h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Payload</th><th>Description</th></tr></thead><tbody><tr><td>whoami</td><td>See what user the application is running under.</td></tr><tr><td>ls</td><td>List the contents of the current directory.</td></tr><tr><td>ping</td><td>Invoke the application to hang. Useful for testing blind command injection.</td></tr><tr><td>sleep</td><td>Useful for blind command injection where the machine does not have <code>ping</code> installed.</td></tr><tr><td>nc</td><td>Netcat can be used to spawn a reverse shell onto the vulnerable application and escalate</td></tr></tbody></table>
+<h4 id="windows-payloads"><a aria-hidden="true" class="anchor-heading icon-link" href="#windows-payloads"></a>Windows Payloads</h4>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Payload</th><th>Description</th></tr></thead><tbody><tr><td>whoami</td><td>See what user the application is running under.</td></tr><tr><td>dir</td><td>List the contents of the current directory.</td></tr><tr><td>ping</td><td>Invoke the application to hang. Useful for testing blind command injection.</td></tr><tr><td>timeout</td><td>Invoke the application to hang for blind testing blind command injection if <code>ping</code> is not installed.</td></tr></tbody></table>
+<h2 id="remediating-command-injection"><a aria-hidden="true" class="anchor-heading icon-link" href="#remediating-command-injection"></a>Remediating Command Injection</h2>
+<p>Command injection can be prevented in a variety of ways. Everything from minimal use of potentially dangerous functions or libraries in a programming language to filtering input without relying on user's input.</p>
+<h3 id="vulnerable-functions"><a aria-hidden="true" class="anchor-heading icon-link" href="#vulnerable-functions"></a>Vulnerable Functions</h3>
+<p>Below are examples of PHP language, however, the same principles can be extended to many other languages. In PHP, many functions interact with the operating system to execute commands via shell:</p>
+<ul>
+<li>Exec</li>
+<li>Passthru</li>
+<li>System</li>
+</ul>
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5de96d9ca744773ea7ef8c00/room-content/14acf436361fcfb7efced4b2f416b3d5.png" alt="PHP-function"></p>
+<ol>
+<li>The application will only accept a specific pattern of characters (the digits 0-9).</li>
+<li>The application will then only proceed to execute this data which is all numerical.</li>
+</ol>
+<p>These functions take input such as string or user data and will execute whatever is provided on the system. Any application that uses these functions without proper checks will be vulnerable to command injection.</p>
+<h3 id="input-sanitization"><a aria-hidden="true" class="anchor-heading icon-link" href="#input-sanitization"></a>Input Sanitization</h3>
+<p>Sanitizing any input from a user that an application uses is a great way to prevent command injection. This is a process of specifying the formats or types of data that a user can submit from numerical data or removing any special characters.</p>
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5de96d9ca744773ea7ef8c00/room-content/06e83dfe3791664ed0bb9bc9ffd3e581.png" alt="PHP-sanitization"></p>
+<p>The <code>filter_input</code> PHP function is used to check whether or no any data submitted via an input form is a number. If it is not a number, it must be a invalid input.</p>
+<h3 id="bypassing-filters"><a aria-hidden="true" class="anchor-heading icon-link" href="#bypassing-filters"></a>Bypassing Filters</h3>
+<p>Applications will employ numerous techniques in filtering and sanitizing data from a user's input. We can abuse the logic behind an application to bypass these filters.</p>
+<ul>
+<li>An application may strip out quotation marks - Instead, use the hexadecimal value of this to achieve the same result.</li>
+</ul>

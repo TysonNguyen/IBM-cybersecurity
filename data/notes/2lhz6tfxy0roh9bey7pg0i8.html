@@ -1,0 +1,102 @@
+<h1 id="windows"><a aria-hidden="true" class="anchor-heading icon-link" href="#windows"></a>Windows</h1>
+<h1 id="file-systems-and-directory-structure"><a aria-hidden="true" class="anchor-heading icon-link" href="#file-systems-and-directory-structure"></a>File Systems and Directory Structure</h1>
+<ul class="contains-task-list">
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Describe the NTFS and FAT file systems used by Windows.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Describe the Windows directory structure and how Windows handles the separation of 32-bit and 64-bit applications.</p>
+</li>
+</ul>
+<hr>
+<h2 id="file-systems"><a aria-hidden="true" class="anchor-heading icon-link" href="#file-systems"></a>File Systems</h2>
+<p>A file system enables applications to store and retrieve files on storage devices, such as a hard drive (HDD).</p>
+<ul>
+<li>Files are placed in a hierarchical structure. The file system specifies naming conventions for files and the format for specifying the path to a file in the tree structure.
+<ul>
+<li>A <em>file</em> is a unit of data in the file system that a user can access and manage. A file must have a unique name in its directory.</li>
+<li>A <em>directory</em> is a hierarchical collection of directories and files.</li>
+</ul>
+</li>
+</ul>
+<h3 id="types-of-file-systems"><a aria-hidden="true" class="anchor-heading icon-link" href="#types-of-file-systems"></a>Types of File Systems</h3>
+<h4 id="ntfs-new-technology-file-system"><a aria-hidden="true" class="anchor-heading icon-link" href="#ntfs-new-technology-file-system"></a>NTFS (New Technology File System)</h4>
+<ul>
+<li>Introduced in 1993.</li>
+<li>Most common file system for Windows end user systems.</li>
+<li>Most Windows server use NTFS as well.</li>
+</ul>
+<h4 id="fatxx-file-allocation-table"><a aria-hidden="true" class="anchor-heading icon-link" href="#fatxx-file-allocation-table"></a>FATxx (File Allocation Table)</h4>
+<ul>
+<li>Simple file system used since the 80s.</li>
+<li>Numbers proceeding FAT refer to the number of bits used to enumerate a file system block.
+<ul>
+<li>FAT16</li>
+<li>FAT32</li>
+</ul>
+</li>
+<li>Now mainly used for removable storage devices under 32GB capacity.</li>
+</ul>
+<hr>
+<h2 id="directory-structure"><a aria-hidden="true" class="anchor-heading icon-link" href="#directory-structure"></a>Directory Structure</h2>
+<h3 id="windows-directory-structure"><a aria-hidden="true" class="anchor-heading icon-link" href="#windows-directory-structure"></a>Windows Directory Structure</h3>
+<p>In DOS, Windows, and OS/2, the root directory is <em>drive:/</em>.</p>
+<ul>
+<li>Usually the root directory is usually <code>C:\</code>.</li>
+<li>Physical and virtual drives are named by a drive letter.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Folder</th><th>Description</th></tr></thead><tbody><tr><td>\PerfLogs</td><td>May hold Windows performance logs, but on a default configuration, it is empty.</td></tr><tr><td>\Program Files</td><td><strong>32-bit architecture</strong>: All programs (both 16-bit and 32-bit) are installed in this folder.</td></tr><tr><td></td><td><strong>64-bit architecture</strong>: 64-bit programs are installed in this folder.</td></tr><tr><td>\Program Files(x86)</td><td>Appears on 64-bit editions of Windows. 32-bit and 160bit programs are default installed here</td></tr><tr><td>\ProgramData (Hidden)</td><td>Contains program data that is expected to be accessed by computer programs regardless of the user account.</td></tr><tr><td>\Users</td><td>User profile folders containing one subfolder for each user that has logged onto the system at least once.</td></tr><tr><td>\Public</td><td>This folder serves as a buffer for users of a computer to share files. By default this folder is accessible to all users that can log on to the computer and shared over the network.</td></tr><tr><td>(username)\AppData (hidden)</td><td>Folder stores per-user application data and settings.</td></tr><tr><td>\Windows</td><td>Windows itself is installed into this folder</td></tr><tr><td>\System, System32, SysWOW64</td><td>Store dynamic-link library (DLL) files that implement the core features of Windows and Windows API.</td></tr><tr><td>\WinSxS</td><td>Called "Windows Component store" and constitutes the majority of Windows. A copy of Windows components, updates, and service packs.</td></tr></tbody></table>
+<p><a href="https://en.wikipedia.org/wiki/Directory_structure">https://en.wikipedia.org/wiki/Directory_structure</a></p>

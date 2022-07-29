@@ -1,0 +1,44 @@
+<h1 id="os-security"><a aria-hidden="true" class="anchor-heading icon-link" href="#os-security"></a>Os Security</h1>
+<h1 id="user-and-kernel-mode"><a aria-hidden="true" class="anchor-heading icon-link" href="#user-and-kernel-mode"></a>User and Kernel Mode</h1>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Describe the Windows components User mode and Kernel mode and how they differ.</li>
+</ul>
+<hr>
+<h2 id="microsoft-windows"><a aria-hidden="true" class="anchor-heading icon-link" href="#microsoft-windows"></a>Microsoft Windows</h2>
+<p>Windows OS, computer operating system (OS) developed by Microsoft Corporation to run personal computers (PCs).</p>
+<ul>
+<li>The first graphical user interface (GUI) for IBM-compatible PCs.</li>
+<li>Approximately 90% of PCs run some version of Windows.</li>
+</ul>
+<h3 id="windows-components"><a aria-hidden="true" class="anchor-heading icon-link" href="#windows-components"></a>Windows Components</h3>
+<ul>
+<li>User Mode and Kernel Mode</li>
+<li>Drivers call routine that are exported by various kernel components.</li>
+<li>Drivers must respond to specific calls from the operating system and can respond to other system calls.</li>
+</ul>
+<p><img src="https://docs.microsoft.com/en-us/windows-hardware/drivers/kernel/images/ntarch.png" alt="Components"></p>
+<h4 id="user-mode"><a aria-hidden="true" class="anchor-heading icon-link" href="#user-mode"></a>User Mode</h4>
+<p>When you start a user-mode application, Windows create a process for the application.</p>
+<ul>
+<li>Private virtual address space.</li>
+<li>Private handle table.</li>
+<li>Each application runs in isolation, and if an application crashes, the crash is limited to that one application.</li>
+</ul>
+<h3 id="kernel-mode"><a aria-hidden="true" class="anchor-heading icon-link" href="#kernel-mode"></a>Kernel Mode</h3>
+<p>All code that runs in kernel mode shares a single virtual address space.</p>
+<ul>
+<li>If a kernel-mode driver accidentally writes to the wrong virtual address, data that belongs to the operating system or another driver could be compromised.
+<ul>
+<li>If a kernel-mode driver crashes, the entire operating system crashes.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<strong>Children</strong>
+<ol>
+<li><a href="/IBM-cybersecurity/notes/mtsenam27xp8mxi6iq74l8v">Keyboard Shortcuts</a></li>
+<li><a href="/IBM-cybersecurity/notes/qntjmghadkr322bxl4ige7s">Linux</a></li>
+<li><a href="/IBM-cybersecurity/notes/vxbi3i0e35z2g1ypdbm536b">Mac</a></li>
+<li><a href="/IBM-cybersecurity/notes/arqbizze7pa6gzhqau86x9h">Systems Directories</a></li>
+<li><a href="/IBM-cybersecurity/notes/jqcd6wxxyf4enzbzznkbb77">Virtualization</a></li>
+</ol>

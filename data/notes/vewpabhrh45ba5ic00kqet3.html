@@ -1,0 +1,641 @@
+<h1 id="application"><a aria-hidden="true" class="anchor-heading icon-link" href="#application"></a>Application</h1>
+<h1 id="application-security-techniques-and-risks"><a aria-hidden="true" class="anchor-heading icon-link" href="#application-security-techniques-and-risks"></a>Application Security Techniques and Risks</h1>
+<ul class="contains-task-list">
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Describe the pros and cons of various Software Development Life-cycles.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Explore application security risks.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Discuss application security techniques, dynamic analysis, static source code analysis and industry tools.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Explore standards and regulations for application security.</p>
+</li>
+</ul>
+<hr>
+<h2 id="application-security-fundamentals"><a aria-hidden="true" class="anchor-heading icon-link" href="#application-security-fundamentals"></a>Application Security Fundamentals</h2>
+<blockquote>
+<p>Application security encompasses measures taken to improve the security of an application often by finding, fixing and preventing security vulnerabilities. Different techniques are used to surface such security vulnerabilities at different stages of an applications lifecycle such as design, development, upgrade, and maintenance.</p>
+</blockquote>
+<h3 id="network-security-vs-application-security"><a aria-hidden="true" class="anchor-heading icon-link" href="#network-security-vs-application-security"></a>Network Security vs Application Security</h3>
+<p>Network security is the protection of systems and information assets at the network level involving areas such as routers / switches, servers, workstations, and wireless networks.</p>
+<p>Application security is the protection of application front ends, source code, and information assets at the software level involving systems such as website, databases, mobile apps, and client and server applications.</p>
+<ul>
+<li>Both network security and application security are components of an overall information security program that includes policy procedures, incident response, and disaster recovery.</li>
+</ul>
+<h2 id="software-development-lifecycle"><a aria-hidden="true" class="anchor-heading icon-link" href="#software-development-lifecycle"></a>Software Development Lifecycle</h2>
+<ol>
+<li>Plan</li>
+<li>Develop</li>
+<li>Tests</li>
+<li>Deploy</li>
+<li>Maintain</li>
+</ol>
+<p>Common software development methodologies:</p>
+<p>Waterfall
+: Top-down approach is a simple and easy to follow, but not very flexible and design flaws can be costly if discovered after the application is deployed.</p>
+<p>Agile and Scrum
+: Consists of short bursts of analysis, design, coding, and testing. Allows team to be responsive and motivates the team to be productive.</p>
+<ul>
+<li>However, due to cycle deadlines, it is easy to forget about application security testing.</li>
+</ul>
+<p>Spiral
+: Focuses on minimizing risk, which makes it possible to evaluate security at the end of each cycle. However, not as quick as Agile, and may increase the cost of the software development.</p>
+<p>Iterative
+: Breaks up development into smaller prototypes through repeated cycles, which allows lessons to be learned from earlier iterations.</p>
+<h3 id="white-box-testing"><a aria-hidden="true" class="anchor-heading icon-link" href="#white-box-testing"></a>White Box Testing</h3>
+<p>Provides the attackers with detailed information about the system to target.</p>
+<ul>
+<li>Bypasses many reconnaissance steps normally precedes attacks, shortening the time of the attack, and increasing the likelihood that it will find security flaws.</li>
+<li>Process usually done by a software developer who knows programming and application logic. Will be testing internal components of the applications of the application or piece of software, ensuring that specific functions work correctly and within a reasonable time.</li>
+<li>Tester will have <strong>full</strong> knowledge of the application and its expected behavior and more time consuming than black-box testing.</li>
+</ul>
+<h3 id="black-box-testing"><a aria-hidden="true" class="anchor-heading icon-link" href="#black-box-testing"></a>Black Box Testing</h3>
+<p>Does not provide attackers with any information prior to the attack.</p>
+<ul>
+<li>Simulates an external attacker trying to gain access to information about the business and technical environment before engaging in an attack.</li>
+<li>The tester acts as a regular user testing the functionality and interaction of the application or piece of software.</li>
+<li>Significantly increases the amount of time spent during the information gathering and enumeration phase to understand the attack surface of the target.</li>
+</ul>
+<h3 id="gray-box-testing"><a aria-hidden="true" class="anchor-heading icon-link" href="#gray-box-testing"></a>Gray Box Testing</h3>
+<p>Known as partial knowledge tests, are sometimes chosen to balance the advantages and disadvantages of white and black box penetration tests.</p>
+<ul>
+<li>The most popular testing process for things such as penetration testing.</li>
+<li>A combination of both black-box and white-box testing.</li>
+<li>The tester will have some limited knowledge of the internal components of the application or piece of software.</li>
+<li>Limited knowledge saves times, and is often chosen for extremely-well-hardened attack surfaces.</li>
+</ul>
+<h3 id="source-code-analysis-tools"><a aria-hidden="true" class="anchor-heading icon-link" href="#source-code-analysis-tools"></a>Source Code Analysis Tools</h3>
+<p>Static Application Security Testing (SAST)
+: Analyzes source code for security vulnerabilities prior to the launch of an application and is used to strengthen code.</p>
+<ul>
+<li>Produces fewer false positives, but more implementations require access to the application source code and requires expert configurations and lots of processing power.</li>
+</ul>
+<p>Dynamic Application Security Testing (DAST)
+: Find visible vulnerabilities by feeding the URL into an automated scanner. This method is highly scalable, easily integrated, and quick.</p>
+<ul>
+<li>Requires expert configuration.</li>
+<li>High possibility of false positives and negatives.</li>
+</ul>
+<p>Interactive Application Security Testing (IAST)
+: A solution that assesses applications from within using software instrumentation. This technique allows us to combine the strengths of both SAST and DAST methods as well as providing access to code, HTTP traffic, library information, back-end connections, and configuration information.</p>
+<h2 id="application-security-threats-and-attacks"><a aria-hidden="true" class="anchor-heading icon-link" href="#application-security-threats-and-attacks"></a>Application Security Threats and Attacks</h2>
+<p>Before an organization selects any third-part software, an application security professional should assess the risk and ask questions about the security standards used to develop the software.</p>
+<h3 id="third-party-software-and-supplier-risk-assessment"><a aria-hidden="true" class="anchor-heading icon-link" href="#third-party-software-and-supplier-risk-assessment"></a>Third Party Software and Supplier Risk Assessment</h3>
+<p>Third party software standards, patching, and testing.</p>
+<ul>
+<li>Identify how any risks would impact your organizations business.
+<ul>
+<li>Financial</li>
+<li>Operational</li>
+<li>Strategic</li>
+</ul>
+</li>
+<li>Next step would be to determine the likelihood the risk would interrupt the business.</li>
+<li>Finally, there is a need to identify how the risk would impact the business.</li>
+</ul>
+<h4 id="web-application-firewall-waf"><a aria-hidden="true" class="anchor-heading icon-link" href="#web-application-firewall-waf"></a>Web Application Firewall (WAF)</h4>
+<p>A web application firewall filters, monitors, and blacks HTTP traffic to and and from a web application.</p>
+<ul>
+<li>WAF is able to filter the content of specific web applications while regular firewall serve as a safety gate between servers.</li>
+<li>By inspecting HTTP traffic, it can prevent attack stemming from web application security flaws such as SQL injection, cross-site scripting, viral inclusion, and security misconfigurations.</li>
+</ul>
+<h3 id="input-validation"><a aria-hidden="true" class="anchor-heading icon-link" href="#input-validation"></a>Input Validation</h3>
+<ul>
+<li>Buffer overflow</li>
+<li>Cross-site scripting</li>
+<li>SQL injection</li>
+<li>Canonicalization - The process of converting data that involves more than one representation into a standard approved format.</li>
+</ul>
+<h3 id="authentication"><a aria-hidden="true" class="anchor-heading icon-link" href="#authentication"></a>Authentication</h3>
+<ul>
+<li>Network eavesdropping</li>
+<li>Brute force attack</li>
+<li>Dictionary attacks</li>
+<li>Cookie replay</li>
+<li>Credential theft</li>
+</ul>
+<h3 id="authorization"><a aria-hidden="true" class="anchor-heading icon-link" href="#authorization"></a>Authorization</h3>
+<ul>
+<li>Elevation of privilege</li>
+<li>Disclosure of confidential data</li>
+<li>Data tampering</li>
+<li>Luring attacks</li>
+</ul>
+<h3 id="configuration-management"><a aria-hidden="true" class="anchor-heading icon-link" href="#configuration-management"></a>Configuration Management</h3>
+<ul>
+<li>Unauthorized access to administration interfaces</li>
+<li>Unauthorized access to configuration stores</li>
+<li>Retrieval of clear text configuration data</li>
+<li>Lack of individual accountability; over-privileged process and service accounts.</li>
+</ul>
+<h3 id="exception-management"><a aria-hidden="true" class="anchor-heading icon-link" href="#exception-management"></a>Exception Management</h3>
+<ul>
+<li>Information disclosure</li>
+<li>Denial of service</li>
+</ul>
+<h3 id="auditing-and-logging"><a aria-hidden="true" class="anchor-heading icon-link" href="#auditing-and-logging"></a>Auditing and Logging</h3>
+<ul>
+<li>User denies performing an operation</li>
+<li>Attacker exploits an application without trace</li>
+<li>Attacker covers his or her tracks</li>
+</ul>
+<h3 id="owasp-top-10-web-application-security-risks"><a aria-hidden="true" class="anchor-heading icon-link" href="#owasp-top-10-web-application-security-risks"></a>OWASP Top 10 Web Application Security Risks</h3>
+<p>Top 10 is a standard awareness document for developers and web application security. It Represents a broad consensus about the most critical security risk to web applications.</p>
+<ol>
+<li><strong>Injection</strong> - When untrusted data is sent to an interpreter as part of a command or query to trick interpreter into executing unintended commands.</li>
+<li><strong>Broken Authentication</strong> - Application related to authentication and session management issues allowing the attackers to compromise passwords, keys, or session tokens to exploit other users identities temporarily or permanently.</li>
+<li><strong>Sensitive Data Exposure</strong> - Attackers may steal or modify protected data to conduct credit card fraud, identity theft, or other crimes.</li>
+<li><strong>XML External Entities (XXE)</strong> - Poorly configured XML processors evaluate external entity references within XML documents.</li>
+<li><strong>Broken Access Control</strong> - Restrictions on what authenticated users are allowed to are often not properly enforced.</li>
+<li><strong>Security Misconfigurations</strong> - Most common seen issue result of insecure default configurations, incomplete, or Ad-hoc configurations.</li>
+<li><strong>Cross-site Scripting XSS</strong> - Occurs whenever an application includes untrusted data in a new webpage without proper validation or updates an existing webpage with users data using a browser API that can create HTML or Javascript.
+<ul>
+<li>Allows hackers to execute scripts in the victim's browser to hijack sessions, deface websites, or redirect the user to malicious sites.</li>
+</ul>
+</li>
+<li><strong>Insecure De-serialization</strong> - Leads to remote code execution. Can be used to perform attacks including replay attacks, injection attacks, and privilege escalation attacks.</li>
+<li><strong>Using components with known vulnerabilities</strong> - A vulnerable component can be exploited for serious data loss or server takeover.</li>
+<li><strong>Insufficient Logging &#x26; Monitoring</strong> - Missing or ineffective integration with incident response allows attackers to further attack systems, maintain persistence, pivot to more systems, extract or destroy data.
+<ul>
+<li>Most breach studies show time to detect a breach is over 200 days, typically detected by external parties rater than internal processes or monitoring.</li>
+</ul>
+</li>
+</ol>
+<h2 id="application-security-standards-and-regulations"><a aria-hidden="true" class="anchor-heading icon-link" href="#application-security-standards-and-regulations"></a>Application Security Standards and Regulations</h2>
+<h3 id="threat-modeling"><a aria-hidden="true" class="anchor-heading icon-link" href="#threat-modeling"></a>Threat Modeling</h3>
+<p>Threat Modeling
+: A process by which potential threats, such as structural vulnerabilities or the absence of appropriate safeguards, can be identified, enumerated, and mitigation can be prioritized.</p>
+<ul>
+<li>The purpose of threat modeling is to provide defenders with a systematic analysis of what controls or defenses need to be included, given the nature of the system, the probable attacker's profile, the most likely attack vectors, and the assets most desired by an attacker.</li>
+</ul>
+<p>The threat modelling process is very similar to a risk assessment made in workplaces for employees and customers. The principles all return to:</p>
+<ul>
+<li>Preparation</li>
+<li>Identification</li>
+<li>Mitigation</li>
+<li>Review</li>
+</ul>
+<p>However, a complex process needs constant review and discussion with a dedicated team. An effective threat model includes:</p>
+<ul>
+<li>Threat intelligence</li>
+<li>Asset identification</li>
+<li>Mitigation capabilities</li>
+<li>Risk assessment</li>
+</ul>
+<p>To help with this, there are frameworks:</p>
+<ul>
+<li><strong>STRIDE(Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of privileges) methodology</strong> - Introduced in 1999 at Microsoft for developers to find threats in products.
+<ul>
+<li><em>Spoofing</em>: Requires to authenticate requests and users accessing a system. Spoofing involves a malicious party falsely identifying itself as another.
+<ul>
+<li>Access keys (such as API keys) or signatures via encryption helps remediate this threat.</li>
+</ul>
+</li>
+<li><em>Tampering</em>: Help provide integrity to the data. Data that is accessed must be kept integral and accurate.</li>
+<li><em>Repudiation</em>: Dictates the use of services such as logging of activity for a system or application to track.</li>
+<li><em>Information Disclosure:</em> Applications or services that handle information of multiple users need to be appropriately configured to only show information relevant to the owner is shown.</li>
+<li><strong>Denial of Service</strong>: Applications and services use up system resources, and measures in place so that the abuse of application/service won't result in down time.</li>
+<li><strong>Elevation of Privileges</strong>: The worst-case scenario for an application or service. It means that a user who was able to escalate their authorization to that of a higher level of an administrator. This often leads to further exploitation or information disclosure.</li>
+</ul>
+</li>
+<li><strong>P.A.S.T.A</strong> - Stands for process for attack simulation and threat analysis, which is a 7-step methodology.</li>
+<li><strong>TRIKE</strong> - Using threat models as a risk management tool to satisfy the security auditing process, threat models are based on requirements model.
+<ul>
+<li>Establish the stakeholder defined acceptable level of risk assigned to each asset class.</li>
+<li>Analysis of the requirements model yields a threat model for which threats are enumerated and assigned risk values.</li>
+</ul>
+</li>
+<li><strong>VAST</strong> - Visual agile and simple threat modeling and necessity of scaling the threat modeling process across the infrastructure and entire SDLC into Agile software development.</li>
+</ul>
+<p></p><p></p><div class="portal-container">
+<div class="portal-head">
+<div class="portal-backlink">
+<div class="portal-title">From <span class="portal-text-title">Response</span></div>
+<a href="/IBM-cybersecurity/notes/nuj3aqp0hv7sf09tj7fr9qf" class="portal-arrow">Go to text <span class="right-arrow">→</span></a>
+</div>
+</div>
+<div id="portal-parent-anchor" class="portal-parent" markdown="1">
+<div class="portal-parent-fader-top"></div>
+<div class="portal-parent-fader-bottom"></div><h2 id="incident-response"><a aria-hidden="true" class="anchor-heading icon-link" href="#incident-response"></a>Incident Response</h2>
+<p>A breach of security is known as an incident. Despite all threat models and secure system designs, incidents do happen. Actions taken to resolve and remediate the threat are known as Incident Response (IR) and are a whole career path in cybersecurity.</p>
+<p>Incidents are classified using a rating of urgency and impact. Urgency will be determined by the type of attack, where the impact will be determined by the affected system and what impact that has on business operations.</p>
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5de96d9ca744773ea7ef8c00/room-content/ab0cc8478b0bce9a400187f559d36dd6.png" alt="urgency-impact"></p>
+<p>An incident is responded to by a Computer Security Incident Response Team (CSIRT), which is a group of employees with technical knowledge about the systems and/or current incident.</p>
+<p>Incident Management
+: Computer security incident management involves the monitoring and detection of security events on a computer or a computer network and the execution of proper resources to those events. Means the information security or the incident management team will regularly check and monitor the security events occurring on a computer or in our network.</p>
+<h3 id="key-components"><a aria-hidden="true" class="anchor-heading icon-link" href="#key-components"></a>Key Components</h3>
+<p>Events
+: An observed change to the normal behavior of a system, environment, process, workflow, or person. Examples: router, ACLs were updated, firewall policy was pushed.</p>
+<p>Incident
+:  An event that negatively effects the confidentiality, integrity, and/or availability (CIA) at an organization in a way that impacts the business.</p>
+<p>Response team - Computer Security Incident Response Team
+: A team that receives reports of security breaches, conducts analyses of the reports and responds to the senders. A CSIRT may be an established group or an ad hoc assembly.</p>
+<p>Investigation
+: The investigation seeks to determine the circumstances of the incident. Every incident will warrant or require an investigation. Collect evidence and keep in mind the chain of custody.</p>
+<h3 id="key-concepts"><a aria-hidden="true" class="anchor-heading icon-link" href="#key-concepts"></a>Key Concepts</h3>
+<p>E-Discovery
+: Data inventory helps to understand the current tech status, data classification, data management, use automated systems. Understand how to control data retention and backup.</p>
+<p>Automated Systems
+: Using SIEM, SOA, UBA, big data analysis, honeypots/honey-tokens, artificial intelligence or other technologies could enhance the mechanism to detect and control incidents that could compromise the tech environment.</p>
+<p>BCP (Business Continuity Plan) &#x26; Disaster Recovery
+: Understand the company in order to prepare the BCP. A BIA (Business Impact Analysis) is also good to have a clear understanding of the critical business areas. Also indicate if a security incident will trigger the BCP or the disaster recovery.</p>
+<p>Post-Incident
+: Root-cause analysis, understand the difference between error, problem and isolated incident. Lessons learned and reports are key.</p>
+<h3 id="incident-response-process"><a aria-hidden="true" class="anchor-heading icon-link" href="#incident-response-process"></a>Incident Response Process</h3>
+<h4 id="1-prepare"><a aria-hidden="true" class="anchor-heading icon-link" href="#1-prepare"></a>1. Prepare</h4>
+<p>The first phase about setting up appropriate procedures with the right tools before the occurrence of an incident.</p>
+<ol>
+<li>Conduct a criticality assessment for the organization.</li>
+<li>Carry out a cyber security threat analysis, supported by realistic scenarios.</li>
+<li>Consider the implications of people, process, technology and information.</li>
+<li>Create an appropriate control framework.</li>
+<li>Review your state of readiness in cyber security incident response.</li>
+</ol>
+<h4 id="2-respond"><a aria-hidden="true" class="anchor-heading icon-link" href="#2-respond"></a>2. Respond</h4>
+<p>Identification of the actual incident to look at the affected areas of the network or the system.</p>
+<ol>
+<li>Identify cyber security incident.</li>
+<li>Define objectives and investigate situation.</li>
+<li>Take appropriate action.</li>
+<li>Recover systems, data, and connectivity.</li>
+</ol>
+<h4 id="3-follow-up"><a aria-hidden="true" class="anchor-heading icon-link" href="#3-follow-up"></a>3. Follow Up</h4>
+<ol>
+<li>Investigate incident more thoroughly.</li>
+<li>Report incident to relevant stakeholders.</li>
+<li>Carry out a post incident review.</li>
+<li>Communicate and build on lessons learned.</li>
+<li>Update key information, controls and processes.</li>
+<li>Perform trend analysis.</li>
+</ol>
+<p></p><p></p><div class="portal-container">
+<div class="portal-head">
+<div class="portal-backlink">
+<div class="portal-title">From <span class="portal-text-title">Incident Response</span></div>
+<a href="/IBM-cybersecurity/notes/pd3512leoloo1qll6fr2j0o" class="portal-arrow">Go to text <span class="right-arrow">→</span></a>
+</div>
+</div>
+<div id="portal-parent-anchor" class="portal-parent" markdown="1">
+<div class="portal-parent-fader-top"></div>
+<div class="portal-parent-fader-bottom"></div><h1 id="incident-response-overview"><a aria-hidden="true" class="anchor-heading icon-link" href="#incident-response-overview"></a>Incident Response Overview</h1>
+<ul class="contains-task-list">
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Describe the various phases of an incident response including preparation, detection, analysis, eradication, recovery, and post incident activities.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Explain the importance of documentation in Incident Response.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Be able to discuss the components of an incident response policy and how that can help members of a IR team.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn about incident response policies.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Review the resources needed for incident response teams to be successful.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn about the recommended practices for securing networks, systems, and applications.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Preparation Checklist.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn the difference between Precursors and Indicators and their common sources.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn about the different types of monitoring systems used for detection.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn about the importance of prioritization and documentation.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Review the possible communication channels needed.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn what to take into consideration when selecting a containment strategy.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn why backup and forensics are key for containment.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Review goals of eradication and recovery.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Review Sans Institute Checklist.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn what a "Lessons Learned" review and meetings are.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Review other situational activities.</p>
+</li>
+</ul>
+<hr>
+<h2 id="what-is-incident-response"><a aria-hidden="true" class="anchor-heading icon-link" href="#what-is-incident-response"></a>What is Incident Response?</h2>
+<p>Events
+: An event can be something as benign and unremarkable as typing on a keyboard or receiving an email.</p>
+<ul>
+<li>In some cases, if there is an Intrusion Detection System (IDS), the alert can be considered an event until validated as a threat.</li>
+</ul>
+<p>Incidents
+: An event that negatively affects IT systems and impacts on the business. It is an unplanned interruption or reduction in quality of an IT service.</p>
+<ul>
+<li>An event can lead to an incident, but no the other way around.</li>
+</ul>
+<h3 id="importance-of-incident-response"><a aria-hidden="true" class="anchor-heading icon-link" href="#importance-of-incident-response"></a>Importance of Incident Response</h3>
+<p>One of the benefits of having an incident response is that it support responding to incidents systematically so that the appropriate actions are taken, it helps personnel to minimize loss or theft of information and disruption of services caused by incidents, and to use information gained during incident handling to better prepare for handling future incidents.</p>
+<h2 id="ir-team-models"><a aria-hidden="true" class="anchor-heading icon-link" href="#ir-team-models"></a>IR Team Models</h2>
+<ul>
+<li>Central (small company)</li>
+<li>Distributed (large company with many resources)</li>
+<li>Coordinating (advice / assisting team)</li>
+</ul>
+<h3 id="coordinating-teams"><a aria-hidden="true" class="anchor-heading icon-link" href="#coordinating-teams"></a>Coordinating Teams</h3>
+<p>Incidents do not occur in a vacuum and can have an impact on multiple parts of a business. Establish relationships with the following teams:</p>
+<ul>
+<li>Management → Information Assurance → IT Support → Legal ↓ Physical Security &#x26; Facilities Management
+↓ </li>
+<li>Public Affairs &#x26; Media Relations → Human Resources → Business Continuity Planning → Physical Security &#x26; Facilities Management</li>
+</ul>
+<h2 id="common-vector-attacks"><a aria-hidden="true" class="anchor-heading icon-link" href="#common-vector-attacks"></a>Common Vector Attacks</h2>
+<p>Organizations should be generally prepared to handle any incident but should focus on being prepared to handle incidents that use common attack vectors.</p>
+<ul>
+<li>External/Removable Media</li>
+<li>Intrusion</li>
+<li>Web</li>
+<li>Email</li>
+<li>Impersonation</li>
+<li>Loss or Theft of Equipment</li>
+</ul>
+<h2 id="baseline-questions"><a aria-hidden="true" class="anchor-heading icon-link" href="#baseline-questions"></a>Baseline Questions</h2>
+<p><strong>Knowing the answers to these will help coordination with other teams and the media.</strong></p>
+<ul>
+<li>Who attacked you? Why?</li>
+<li>When did it happen? How did it happen?</li>
+<li>Did this happen because you have poor security processes?</li>
+<li>How widespread is the incident?</li>
+<li>What steps are you taking to determine what happened and to prevent future occurrences?</li>
+<li>What is the impact of the incident?</li>
+<li>Was any personally identifiable information exposed?</li>
+<li>What is the estimated cost of this incident?</li>
+</ul>
+<h2 id="incident-response-phases"><a aria-hidden="true" class="anchor-heading icon-link" href="#incident-response-phases"></a>Incident Response Phases</h2>
+<h3 id="preparation"><a aria-hidden="true" class="anchor-heading icon-link" href="#preparation"></a>Preparation</h3>
+<h4 id="incident-response-policy"><a aria-hidden="true" class="anchor-heading icon-link" href="#incident-response-policy"></a>Incident Response Policy</h4>
+<p>IR Team
+: The composition of the incident response team within the organization.</p>
+<p>Roles
+: The role of each of the team members.</p>
+<p>Means, Tools, Resources
+: The technological means, tools, and resources that will be used to identify and recover compromised data.</p>
+<p>Policy Testing
+: The persons responsible for testing the policy.</p>
+<p>Action Plan
+: How to put the policy into action.</p>
+<h4 id="resources"><a aria-hidden="true" class="anchor-heading icon-link" href="#resources"></a>Resources</h4>
+<h5 id="incident-handler-communications-and-facilities"><a aria-hidden="true" class="anchor-heading icon-link" href="#incident-handler-communications-and-facilities"></a>Incident Handler Communications and Facilities</h5>
+<ul>
+<li>Contact information</li>
+<li>On-call information</li>
+<li>Incident reporting mechanisms</li>
+<li>Issue tracking system</li>
+<li>Smartphones</li>
+<li>Encryption software</li>
+<li>War room</li>
+<li>Secure storage facility</li>
+</ul>
+<h5 id="incident-analysis-hardware-and-software"><a aria-hidden="true" class="anchor-heading icon-link" href="#incident-analysis-hardware-and-software"></a>Incident Analysis Hardware and Software</h5>
+<ul>
+<li>Digital forensic workstations and/or backup devices</li>
+<li>Laptops</li>
+<li>Spare workstations, servers, and networking equipment</li>
+<li>Blank removable media</li>
+<li>Portable printer</li>
+<li>Packet sniffers and protocol analyzers</li>
+<li>Digital forensic software</li>
+<li>Removable media</li>
+<li>Evidence gathering accessories</li>
+</ul>
+<h5 id="incident-analysis-resources"><a aria-hidden="true" class="anchor-heading icon-link" href="#incident-analysis-resources"></a>Incident Analysis Resources</h5>
+<ul>
+<li>Port lists</li>
+<li>Documentation</li>
+<li>Network diagrams and lists of critical assets</li>
+<li>Current baselines</li>
+<li>Cryptographic hashes</li>
+</ul>
+<h4 id="the-best-offense"><a aria-hidden="true" class="anchor-heading icon-link" href="#the-best-offense"></a>The Best Offense</h4>
+<p>Keeping the number of incidents reasonably low is very important to protect the business processes of the organization. If security controls are insufficient, higher volumes of incidents may occur, overwhelming the incident response team.</p>
+<p>Risk Assessment
+: Periodic risk assessments of systems and apps should determine what risk are posed by combinations of threats and vulnerabilities.</p>
+<p>Host Security
+: All hosts should be hardened appropriately using standard configurations, adhere to strict ACLs, and be monitored continuously.</p>
+<p>Network Security
+: The network perimeter should be configured to deny all activity that is not expressly permitted.</p>
+<p>Malware Prevention
+: Software to detect and stop malware should be deployed throughout the organization.</p>
+<p>User Awareness and Training
+: Users should be made aware of policies and procedures regarding appropriate use of networks, systems, and applications.</p>
+<h4 id="checklist"><a aria-hidden="true" class="anchor-heading icon-link" href="#checklist"></a>Checklist</h4>
+<ul>
+<li>Are all members aware of the security policies of the organization?</li>
+<li>Do all members of the Computer Incident Response Team know whom to contact?</li>
+<li>Do all incident responders have access to journals and access to incident response toolkit to perform the actual incident response process?</li>
+<li>Have all members participated in incident response drills to practice the incident response process and to improve overall proficiency on a regularly established basis?</li>
+</ul>
+<h3 id="detection--analysis"><a aria-hidden="true" class="anchor-heading icon-link" href="#detection--analysis"></a>Detection &#x26; Analysis</h3>
+<h4 id="precursors--indicators"><a aria-hidden="true" class="anchor-heading icon-link" href="#precursors--indicators"></a>Precursors &#x26; Indicators</h4>
+<p>Precursors
+: A sign that an incident may occur in the future.</p>
+<ul>
+<li>Web server log entries that show the usage of a vulnerability scanner.</li>
+<li>An announcement of a new exploit that targets a vulnerability of the organization's mail server.</li>
+<li>A threat from a group stating that the group will attack the organization.</li>
+</ul>
+<p>Indicators
+: A sign that an incident may have occurred or may be occurring now.</p>
+<ul>
+<li>Antivirus software alerts when it detects that a host is infected with malware.</li>
+<li>A system administrator sees a filename with unusual characters.</li>
+<li>A host records auditing configuration change in its log.</li>
+<li>An application logs multiple failed login attempts from an unfamiliar remote system.</li>
+<li>An email administrator sees a large number of bounced emails with suspicious content.</li>
+<li>A network administrator notices an unusual deviation from typical network traffic flows.</li>
+</ul>
+<h4 id="monitoring-systems"><a aria-hidden="true" class="anchor-heading icon-link" href="#monitoring-systems"></a>Monitoring Systems</h4>
+<ul>
+<li>Monitoring systems are crucial for early detection of threats.</li>
+<li>These systems are not mutually exclusive and still require an IR team to document and analyze the data.</li>
+</ul>
+<p>IDS vs IPS
+: Intrusion Detection Systems (IDS) and Intrusion Prevention Systems (IPS) are both parts of the network infrastructure. The main difference between them is that IDS is a monitoring system, while IPS is a control system.</p>
+<p>DLP
+: Data loss prevention (DLP) is a set of tools and processes used to ensure that sensitive data is not lost, misused, or accessed by unauthorized users.</p>
+<p>SIEM
+: Security Information and Event Management solutions combine Security Event Management (SEM) - which carries out analysis of event and log data in real-time with Security Information Management (SIM).</p>
+<h4 id="documentation"><a aria-hidden="true" class="anchor-heading icon-link" href="#documentation"></a>Documentation</h4>
+<p>Regardless of the monitoring system, highly detailed, thorough documentation is needed for the current and future incidents.</p>
+<ol>
+<li>The current status of the incident.</li>
+<li>A summary of the incident.</li>
+<li>Indicators related to the incident.</li>
+<li>Other incidents related to this incident.</li>
+<li>Actions taken by all incident handlers on this incident.</li>
+<li>Chain of custody, if applicable.</li>
+<li>Impact assessments related to the incident.</li>
+<li>Contact information for other involved parties.</li>
+<li>A list of evidence gathered during the incident investigation.</li>
+<li>Comments from incident handlers.</li>
+<li>Next steps to be taken (e.g. rebuild the host, upgrade an application).</li>
+</ol>
+<h5 id="functional-impact-categories"><a aria-hidden="true" class="anchor-heading icon-link" href="#functional-impact-categories"></a>Functional Impact Categories</h5>
+<p>None
+: No effect to the organization's ability to provide all services to all users.</p>
+<p>Low
+: Minimal effect; the organization can still provide all critical services to all users but has lost efficiency.</p>
+<p>Medium
+: Organization has lost the ability to provide a critical service to a subset of system users.</p>
+<p>High
+: Organization is no longer able to provide some critical services to any users.</p>
+<h5 id="information-impact-categories"><a aria-hidden="true" class="anchor-heading icon-link" href="#information-impact-categories"></a>Information Impact Categories</h5>
+<p>None
+: No information was exfiltrated, changed, deleted, or otherwise compromised.</p>
+<p>Privacy Breach
+: Sensitive personally identifiable information (PII) of taxpayers, employees, beneficiaries, etc. was access or exfiltrated.</p>
+<p>Proprietary Breach
+: Unclassified proprietary information, such as protected critical infrastructure information (PCII), was accessed or exfiltrated.</p>
+<p>Integrity Loss
+: Sensitive or proprietary information was changed or deleted.</p>
+<h5 id="recoverability-effort-categories"><a aria-hidden="true" class="anchor-heading icon-link" href="#recoverability-effort-categories"></a>Recoverability Effort Categories</h5>
+<p>Regular
+: Time to recovery is predictable with existing resources.</p>
+<p>Supplemented
+: Time to recovery is predictable with additional resources.</p>
+<p>Extended
+: Time to recovery is unpredictable; additional resources and outside help are needed.</p>
+<p>Not Recoverable
+: Recovery from the incident is not possible (e.g, sensitive data exfiltrated and posted publicly); launch investigation.</p>
+<h5 id="notifications"><a aria-hidden="true" class="anchor-heading icon-link" href="#notifications"></a>Notifications</h5>
+<p>Alert anyone that is possibly involved with incident.</p>
+<ul>
+<li>CIO</li>
+<li>Local and Head of information security</li>
+<li>Other incident response teams within the organization</li>
+<li>External incident response teams (if appropriate)</li>
+<li>System owner</li>
+<li>Human resources</li>
+<li>Public affairs</li>
+<li>Legal department</li>
+<li>Law enforcement (if appropriate)</li>
+</ul>
+<h3 id="containment-eradication--recovery"><a aria-hidden="true" class="anchor-heading icon-link" href="#containment-eradication--recovery"></a>Containment, Eradication &#x26; Recovery</h3>
+<p>Containment is important before an incident overwhelms resources or increases damage. Containment strategies vary based on the type of incident. For example. the strategy for containing an email-born malware infection is quite different from that of a network-based DDoS attack.</p>
+<p>An essential part of containment is decision-making. Such decisions are much easier to make if there are predetermined strategies and procedures for containing the incident.</p>
+<ol>
+<li>Potential damage to and theft of resources.</li>
+<li>Need for evidence preservation.</li>
+<li>Service availability.</li>
+<li>Time and resources needed to implement the strategy.</li>
+<li>Duration of the solution.</li>
+</ol>
+<h4 id="forensics-in-incident-response"><a aria-hidden="true" class="anchor-heading icon-link" href="#forensics-in-incident-response"></a>Forensics in Incident Response</h4>
+<p>Evidence should be collected according to procedures that meet all applicable laws and regulations that have been developed from previous discussions with legal staff and appropriate law enforcement agencies so that any evidence can be admissible in court. - NIST 800-61</p>
+<ol>
+<li>Capture a backup image of the system as-is.</li>
+<li>Gather evidence.</li>
+<li>Follow Chain of Custody protocols.</li>
+</ol>
+<h4 id="eradication--recovery"><a aria-hidden="true" class="anchor-heading icon-link" href="#eradication--recovery"></a>Eradication &#x26; Recovery</h4>
+<ol>
+<li>After an incident has been contained, eradication may be necessary to eliminate components of the incident, such as deleting malware and disabling breached user accounts, as well as identifying and mitigating all vulnerabilities that were exploited.</li>
+<li>Recovery may involve such actions such as restoring systems from clean backups, rebuilding systems from scratch, replacing compromised files with clean versions, installing patches, changing passwords, and tightening network perimeter security (e.g., firewall rule sets, boundary router access control lists).</li>
+<li>High level of testing and monitoring are often deployed to ensure restored systems are no longer impacted by the incident. This could take weeks or months depending on how long it takes to bring back compromised systems into production.</li>
+</ol>
+<h4 id="checklist-1"><a aria-hidden="true" class="anchor-heading icon-link" href="#checklist-1"></a>Checklist</h4>
+<ul>
+<li>Can the problem be isolated? Are all affected systems isolated from non-affected systems? Have forensics copies of affected systems been created for further analysis?</li>
+<li>If possible, can the system be re-imaged and then hardened with patches and/or other countermeasures to prevent or reduce the risk of attacks? Have all malware and other artifacts left behind by the attackers been removed and the affected systems hardened against further attacks?</li>
+<li>What tools are you going to use to test, monitor, and verify that the systems being restored to productions are not compromised by the same methods that cause the original incident?</li>
+</ul>
+<p><a href="https://learn.saylor.org/mod/book/tool/print/index.php?id=29706">https://learn.saylor.org/mod/book/tool/print/index.php?id=29706</a></p>
+<h3 id="post-incident-activity"><a aria-hidden="true" class="anchor-heading icon-link" href="#post-incident-activity"></a>Post-Incident Activity</h3>
+<h4 id="lessons-learned"><a aria-hidden="true" class="anchor-heading icon-link" href="#lessons-learned"></a>Lessons Learned</h4>
+<ul>
+<li>Exactly what happened, and at what times?</li>
+<li>How well did staff and management perform in dealing with the incident? Were the documented procedures followed? Were they adequate?</li>
+<li>What information was needed sooner?</li>
+<li>Were any steps or actions taken that might have inhibited the recovery?</li>
+<li>What would the staff and management do differently the next time a similar incident occurs?</li>
+<li>How could information sharing with other organizations have been improved?</li>
+<li>What corrective actions can prevent similar incidents in the future?</li>
+<li>What precursors or indicators should be watched for in the future to detect similar incidents?</li>
+</ul>
+<h4 id="utilizing-data-collected"><a aria-hidden="true" class="anchor-heading icon-link" href="#utilizing-data-collected"></a>Utilizing data collected</h4>
+<h4 id="evidence-retention"><a aria-hidden="true" class="anchor-heading icon-link" href="#evidence-retention"></a>Evidence retention</h4>
+<h4 id="documentation-1"><a aria-hidden="true" class="anchor-heading icon-link" href="#documentation-1"></a>Documentation</h4>
+</div></div><p></p><p></p>
+</div></div><p></p><p></p>
+<h3 id="standards"><a aria-hidden="true" class="anchor-heading icon-link" href="#standards"></a>Standards</h3>
+<h4 id="cert-secure-coding"><a aria-hidden="true" class="anchor-heading icon-link" href="#cert-secure-coding"></a>CERT Secure Coding</h4>
+<ul>
+<li>Computer Emergency Response Team or CERT, for the software engineering Institute is a non-profit United States federally funded research and development center.</li>
+<li>Software coding standard for the C programming language, developed by the CERT Coordination Center.</li>
+<li>Used to improve the safety, reliability, and security of software systems.</li>
+</ul>
+<h4 id="common-weakness-enumeration-cwe"><a aria-hidden="true" class="anchor-heading icon-link" href="#common-weakness-enumeration-cwe"></a>Common Weakness Enumeration (CWE)</h4>
+<ul>
+<li>Software weaknesses and vulnerabilities.</li>
+<li>Sustained by a community project with the goals of understanding flaws in software.</li>
+<li>Project is sponsored by the National Cybersecurity FFRDC (Federally Funded Research and Development Center).</li>
+</ul>
+<h4 id="disa-stig---defense-information-systems-agency"><a aria-hidden="true" class="anchor-heading icon-link" href="#disa-stig---defense-information-systems-agency"></a>DISA-STIG - Defense Information Systems Agency</h4>
+<ul>
+<li>A security technical implementation guide as a cybersecurity methodology for standardizing security protocols within networks, servers, and computers, to enhance overall security.</li>
+</ul>
+<h4 id="iso-2703424772"><a aria-hidden="true" class="anchor-heading icon-link" href="#iso-2703424772"></a>ISO 27034/24772</h4>
+<ul>
+<li>Another set of standards for application security are from the International Organization for Standardization. </li>
+<li>ISO 27034 describes the minimum requirements for application security control.</li>
+<li>ISO 24772 is a standard around information technology programming languages, which provides guidance to avoiding vulnerabilities and programming languages through language selection and use. </li>
+</ul>
+<h4 id="pci-dss-pci-data-security-standard"><a aria-hidden="true" class="anchor-heading icon-link" href="#pci-dss-pci-data-security-standard"></a>PCI-DSS PCI Data Security Standard</h4>
+<ul>
+<li>Mandated by the card brands but administered by the Payment Card Industry Security Standards Council.</li>
+<li>Increase controls around cardholder data to reduce credit card fraud.</li>
+</ul>
+<h4 id="nist-800-53"><a aria-hidden="true" class="anchor-heading icon-link" href="#nist-800-53"></a>NIST 800-53</h4>
+<ul>
+<li>A special publication provides a catalog of security and privacy controls for all US federal information systems except those related to national security.</li>
+<li>Published by the National Institute of Standards and Technology (non-regulator agency of the United States Department of Commerce).</li>
+</ul>
+<h4 id="gramm-leach-bliley-act-glba"><a aria-hidden="true" class="anchor-heading icon-link" href="#gramm-leach-bliley-act-glba"></a>Gramm-Leach-Bliley Act (GLBA)</h4>
+<ul>
+<li>Known as Financial Services Modernization Act of 1999.</li>
+<li>More strict governmental boundaries between financial institutions to limit companies share and provide information with each other.</li>
+</ul>
+<h4 id="health-insurance-portability-and-accountability-1996-hipaa"><a aria-hidden="true" class="anchor-heading icon-link" href="#health-insurance-portability-and-accountability-1996-hipaa"></a>Health Insurance Portability and Accountability 1996 (HIPAA)</h4>
+<ul>
+<li>Created to modernize the flow of healthcare information.
+<ul>
+<li>How personally identifiable information maintained by the healthcare and healthcare insurance industries could be protected from fraud and theft.</li>
+<li>Address limitations on healthcare insurance cover.</li>
+</ul>
+</li>
+</ul>
+<h4 id="sarbanes-oxley-act-of-2002-sox"><a aria-hidden="true" class="anchor-heading icon-link" href="#sarbanes-oxley-act-of-2002-sox"></a>Sarbanes-Oxley Act of 2002 (SOX)</h4>
+<ul>
+<li>A United States federal law that set new or expanded requirements for all US public company boards, management, and public accounting firms.
+<ul>
+<li>Many provisions also applied to privately held companies, such as the willful destruction of evidence to impede a federal investigation.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/IBM-cybersecurity/notes/bjsh4qgh9mn5m4y6pyinjce">Fundamentals</a></li>
+</ul>

@@ -1,0 +1,119 @@
+<h1 id="python"><a aria-hidden="true" class="anchor-heading icon-link" href="#python"></a>Python</h1>
+<h1 id="python-basics"><a aria-hidden="true" class="anchor-heading icon-link" href="#python-basics"></a>Python Basics</h1>
+<ul class="contains-task-list">
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Understand what the benefits are of using Python.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Describe the basic syntax of Python.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Describe Python data structures.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Describe the basic syntax of conditions and branching.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Understand functions and methods of Python scripting.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Describe Python Libraries.</p>
+</li>
+</ul>
+<hr>
+<h2 id="benefits-of-using-python"><a aria-hidden="true" class="anchor-heading icon-link" href="#benefits-of-using-python"></a>Benefits of Using Python</h2>
+<p>Worldwide, Python is the most popular language, Python gew the most in the last 5 years (19.4%) and Java lost the most (-7.2%).</p>
+<ol>
+<li>Open Source</li>
+<li>Easy to learn and implement</li>
+<li>Portable</li>
+<li>High Level</li>
+<li>Can be used for almost anything in cybersecurity</li>
+<li>Extensive libraries</li>
+</ol>
+<h2 id="getting-started-with-python"><a aria-hidden="true" class="anchor-heading icon-link" href="#getting-started-with-python"></a>Getting Started with Python</h2>
+<ul>
+<li>Variables</li>
+<li><code>>>></code></li>
+<li>PEP8</li>
+<li>.py</li>
+</ul>
+<h3 id="data-types"><a aria-hidden="true" class="anchor-heading icon-link" href="#data-types"></a>Data Types</h3>
+<h4 id="data-structures"><a aria-hidden="true" class="anchor-heading icon-link" href="#data-structures"></a>Data Structures</h4>
+<p><img src="https://miro.medium.com/max/3576/1*QfI8H_8HplGa1v9IrrWjBA.png" alt="Data"></p>
+<h3 id="conditions-and-branching"><a aria-hidden="true" class="anchor-heading icon-link" href="#conditions-and-branching"></a>Conditions and Branching</h3>
+<h4 id="if-else"><a aria-hidden="true" class="anchor-heading icon-link" href="#if-else"></a>If-Else</h4>
+<p>To trigger a command, given a certain condition, we can use <code>if</code>, <code>elif</code>, <code>else</code> statements:</p>
+<p><img src="https://cdn.educba.com/academy/wp-content/uploads/2019/09/If-Else-Statement-in-Python.png" alt="if-else-statement"></p>
+<ul>
+<li><code>if</code> establishing the first condition.</li>
+<li><code>elif</code> is used when many conditions are possible.</li>
+<li><code>else</code> will execute its command if none of the <code>if</code> and <code>elif</code> conditions were met.</li>
+</ul>
+<h4 id="for-loops"><a aria-hidden="true" class="anchor-heading icon-link" href="#for-loops"></a>For Loops</h4>
+<p><img src="https://cdn.techbeamers.com/wp-content/uploads/2018/08/Python-For-Loop-Flowchart.png" alt="for-loop"></p>
+<ul>
+<li>Loops allow to iterate a task.</li>
+<li>For loops allow to execute a block of statements multiple times.</li>
+</ul>
+<pre class="language-python"><code class="language-python"><span class="token keyword">for</span> element <span class="token keyword">in</span> sequence<span class="token punctuation">:</span>
+    block of statements
+</code></pre>
+<h4 id="while-loops"><a aria-hidden="true" class="anchor-heading icon-link" href="#while-loops"></a>While Loops</h4>
+<p><img src="https://files.realpython.com/media/t.899f357dd948.png" alt="while-loop"></p>
+<ul>
+<li>For loops execute a statement a set number of times.</li>
+<li>While loops run only if a condition is met.</li>
+</ul>
+<pre class="language-python"><code class="language-python"><span class="token keyword">while</span> condition<span class="token punctuation">:</span>
+    block of statements
+</code></pre>
+<pre class="language-python"><code class="language-python">i <span class="token operator">=</span> <span class="token number">0</span>
+<span class="token keyword">while</span> <span class="token punctuation">(</span>L<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>L<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    i <span class="token operator">=</span> i<span class="token operator">+</span><span class="token number">1</span>
+</code></pre>
+<h4 id="functions--methods"><a aria-hidden="true" class="anchor-heading icon-link" href="#functions--methods"></a>Functions &#x26; Methods</h4>
+<p>A function is a named sequence of statements that performs a desired operation.</p>
+<ul>
+<li>Python has many built-in functions:
+<ul>
+<li>type(4) → int</li>
+<li>len([1,2,3]) → 3</li>
+<li>sum([1,2,3]) → 1+2+3=6</li>
+<li>float(6) → 6.0</li>
+<li>print("Hello World") → 'Hello World'</li>
+</ul>
+</li>
+</ul>
+<p>Define own function with:</p>
+<pre class="language-python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">function_name</span><span class="token punctuation">(</span>input_parameters<span class="token punctuation">)</span>
+    body of function
+    <span class="token keyword">return</span> output
+</code></pre>
+<ul>
+<li>Functions allow to write own chain of commands, simplifying the readability.</li>
+<li>Reusable, define once... Use many times.</li>
+</ul>
+<p>A method is a function that "belongs to" an object.</p>
+<ul>
+<li>Methods are a set of procedures for interacting with the data in an object.</li>
+<li>Methods are similar to functions, but there are some differences.</li>
+</ul>
+<h3 id="libraries"><a aria-hidden="true" class="anchor-heading icon-link" href="#libraries"></a>Libraries</h3>
+<h4 id="scientific-computing"><a aria-hidden="true" class="anchor-heading icon-link" href="#scientific-computing"></a>Scientific Computing:</h4>
+<ul>
+<li>Pandas (data structure &#x26; tools)</li>
+<li>NumPy (arrays &#x26; matrices)</li>
+<li>SciPy (integrals, solving differential equations, optimization)</li>
+</ul>
+<h4 id="visualization"><a aria-hidden="true" class="anchor-heading icon-link" href="#visualization"></a>Visualization:</h4>
+<ul>
+<li>Matplotlib (most popular for plots &#x26; graphs)</li>
+<li>Seaborn (heat maps, time series &#x26; violin plots)</li>
+</ul>
+<h4 id="algorithmic"><a aria-hidden="true" class="anchor-heading icon-link" href="#algorithmic"></a>Algorithmic</h4>
+<ul>
+<li>Scikit-learn (tools for statistical modeling: regression, classification, clustering...)</li>
+<li>StatsModels (explore data, estimate statistical models, and perform statistical tests)</li>
+</ul>

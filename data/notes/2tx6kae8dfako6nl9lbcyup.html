@@ -1,0 +1,342 @@
+<h1 id="data"><a aria-hidden="true" class="anchor-heading icon-link" href="#data"></a>Data</h1>
+<h1 id="data-files"><a aria-hidden="true" class="anchor-heading icon-link" href="#data-files"></a>Data Files</h1>
+<ul class="contains-task-list">
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn about the different file systems.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn what method are used for gathering and preserving the integrity of files.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn about what metadata from files can be useful.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn what techniques forensic tool-kits can perform for data analysis.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn about the different volatile and non-volatile data in Operating Systems.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn about the different Operating Systems.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn about what log information may be useful.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn about the different components of an application and how they are meaningful to a forensic analyst.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn about the different types of applications that provide meaningful forensic data.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn what considerations are taken when collecting application data.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Review TCP/IP basics and how it relates to forensics.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn about the different sources of network traffic.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn about examining and analyzing network traffic.</p>
+</li>
+</ul>
+<hr>
+<p>A file can be of many data types, including a document, an image, a video, or an application. Successful forensic processing computer media depends on the ability to collect, examine, and analyze the files that reside on the media. - <em>NIST 800-86</em></p>
+<h2 id="file-systems"><a aria-hidden="true" class="anchor-heading icon-link" href="#file-systems"></a>File Systems</h2>
+<p>A file system defines the way that files are named, stored, organized, and accessed on logical volumes.</p>
+<h3 id="windows"><a aria-hidden="true" class="anchor-heading icon-link" href="#windows"></a>Windows</h3>
+<p>Windows is a widely used OS designed by Microsoft. The file systems used by Windows:</p>
+<ul>
+<li>FAT
+<ul>
+<li>12</li>
+<li>16</li>
+<li>32</li>
+</ul>
+</li>
+<li>NTFS</li>
+<li>ReFS</li>
+</ul>
+<p>Investigators can search out evidence by analyzing the following important locations of Windows:</p>
+<ul>
+<li>Recycle Bin</li>
+<li>Registry</li>
+<li>Thumbs.db</li>
+<li>Files</li>
+<li>Browser History</li>
+<li>Print Spooling</li>
+</ul>
+<h3 id="unix"><a aria-hidden="true" class="anchor-heading icon-link" href="#unix"></a>UNIX</h3>
+<ul>
+<li>EXT
+<ul>
+<li>2</li>
+<li>3</li>
+<li>4</li>
+</ul>
+</li>
+<li>ReiserFS</li>
+<li>XFS</li>
+<li>JFS</li>
+<li>Btrfs</li>
+</ul>
+<h3 id="macos"><a aria-hidden="true" class="anchor-heading icon-link" href="#macos"></a>macOS</h3>
+<p>Mac OS X is the UNIX-based operating system that contains a Mach 3 micro-kernel and a FreeBSD based subsystem. Its user interface is Apple like, whereas the underlying architecture is UNIX like.</p>
+<ul>
+<li>
+<p>Mac OS X offers a novel technique to create a forensic duplicate. To do so, the perpetrator's computer should be placed into a "Target Disk Mode." Using this mode, the forensic examiner creates a forensic duplicate of perpetrator's hard disk with the help of a FireWire cable connection between the two PCs.</p>
+</li>
+<li>
+<p>HFS+</p>
+</li>
+<li>
+<p>APFS</p>
+</li>
+</ul>
+<h3 id="linux"><a aria-hidden="true" class="anchor-heading icon-link" href="#linux"></a>Linux</h3>
+<p>Linux is an open source, UNIX-like, ad elegantly designed operating system that is compatible with personal computers, supercomputers, server, mobile devices, netbooks, and laptops.</p>
+<ul>
+<li>Unlike other OSs, Linux holds many file systems of the ext family, including ext2, ext3, and ext4.</li>
+<li>Linux can provide an empirical evidence if the Linux embedded machine is recovered from a crime scene. In this  case, forensic investigators should analyze the following folders and directories.
+<ul>
+<li><code>/etc[%SystemRoot%/System32/config]</code> contains system configurations directory that holds separate configuration files for each application.</li>
+<li><code>/var/log</code> directory contains application logs and security logs (kept for 4-5 weeks).</li>
+<li><code>/home/$USER</code> holds user data and configuration information.</li>
+<li><code>/etc/passwd</code> has user account information.</li>
+</ul>
+</li>
+</ul>
+<h3 id="what-is-not-there"><a aria-hidden="true" class="anchor-heading icon-link" href="#what-is-not-there"></a>What is not There</h3>
+<ul>
+<li><strong>Deleted files</strong> - When a file is deleted, it is typically not erased from the media; instead, the information in the directory's data structure that points to the location of the file is marked as deleted.</li>
+<li><strong>Slack Space</strong> - If a file requires less space than the file allocation unit size, an entire file allocation unit is still reserved for the file.</li>
+<li><strong>Free Space</strong> - Free space is the area on media that is not allocated to any partition. The free space may still contain pieces of data.</li>
+<li><strong>MAC Data</strong> - Important to know as much information about relevant files as possible. Recording the Modification, Access, and Creation times of files allows analysts to help establish a timeline of the incident.
+<ol>
+<li>Modification Time</li>
+<li>Access Time</li>
+<li>Creation Time</li>
+</ol>
+</li>
+</ul>
+<h2 id="logical-backup"><a aria-hidden="true" class="anchor-heading icon-link" href="#logical-backup"></a>Logical Backup</h2>
+<p>A logical backup copies the directories and files of a logical volume. It does not capture other data that may be present on the media, such as deleted files or residual data stored in slack space.</p>
+<ul>
+<li>Can be used on live system if using a standard backup software.</li>
+<li>May be resource intensive.</li>
+</ul>
+<h2 id="imaging"><a aria-hidden="true" class="anchor-heading icon-link" href="#imaging"></a>Imaging</h2>
+<p>Generates a bit-for-bit copy of the original media, including free space and slack space. Bit stream images require more storage space and take longer to perform logical backups.</p>
+<ul>
+<li>If evidence is needed for legal or HR reasons, a full bit stream image should be taken, and all analysis done on the duplicate.</li>
+<li>Disk-to-Disk vs Disk-to-File</li>
+<li>Should not be used on a live system since data is always changing.</li>
+</ul>
+<h2 id="tools-for-techniques"><a aria-hidden="true" class="anchor-heading icon-link" href="#tools-for-techniques"></a>Tools for Techniques</h2>
+<p>Many forensic products allow the analyst to perform a wide range of processes to analyze files and application, as well as collecting files, reading disk images, and extracting data from files.</p>
+<ol>
+<li>File Viewers</li>
+<li>Un-compressing files</li>
+<li>GUI for Data Structures</li>
+<li>Identifying Known Files</li>
+<li>String Searches &#x26; Pattern Matches</li>
+<li>Metadata</li>
+</ol>
+<h2 id="operating-system-data"><a aria-hidden="true" class="anchor-heading icon-link" href="#operating-system-data"></a>Operating System Data</h2>
+<blockquote>
+<p>OS data exists in both non-volatile and volatile states. Non-volatile data refers to data that persists even after a computer is powered down, such as a filesystem stored on a hard drive. Volatile data refers to data on a live system that is lost after a computer is powered down, such as the current network connections to and from the system. - <em>NIST 800-86</em></p>
+</blockquote>
+<h3 id="volatile"><a aria-hidden="true" class="anchor-heading icon-link" href="#volatile"></a>Volatile</h3>
+<ul>
+<li>Slack Space</li>
+<li>Free Space</li>
+<li>Networking Configuration/Connections</li>
+<li>Running Processes</li>
+<li>Open Files</li>
+<li>Login Sessions</li>
+<li>Operating System Time</li>
+</ul>
+<h4 id="collection--prioritization-of-volatile-data"><a aria-hidden="true" class="anchor-heading icon-link" href="#collection--prioritization-of-volatile-data"></a>Collection &#x26; Prioritization of Volatile Data</h4>
+<ol>
+<li>Network Connections</li>
+<li>Login Sessions</li>
+<li>Contents of Memory</li>
+<li>Running Processes</li>
+<li>Open Files</li>
+<li>Network Configuration</li>
+<li>Operating System Time</li>
+</ol>
+<h3 id="non-volatile"><a aria-hidden="true" class="anchor-heading icon-link" href="#non-volatile"></a>Non-Volatile</h3>
+<ul>
+<li>Configuration Files</li>
+<li>Logs</li>
+<li>Application files</li>
+<li>Data Files</li>
+<li>Swap Files</li>
+<li>Dump Files</li>
+<li>Hibernation Files</li>
+<li>Temporary Files</li>
+</ul>
+<h4 id="collecting-non-volatile-data"><a aria-hidden="true" class="anchor-heading icon-link" href="#collecting-non-volatile-data"></a>Collecting Non-Volatile Data</h4>
+<ol>
+<li>Consider Power-Down Options</li>
+<li>File System Data Collected</li>
+<li>Users and Groups</li>
+<li>Passwords</li>
+<li>Network Shares</li>
+<li>Logs
+<ul>
+<li>Other logs can be collected depending on the incident under analysis.
+<ol>
+<li>Network Hack - Collect logs of all the network devices lying in the route of the hacked device and the perimeter router (ISP router). firewall rule base may also be required in this case.</li>
+<li>Unauthorized Access - Save the web server logs, application server logs, application logs, router or switch logs, firewall logs, database logs, IDS logs etc.</li>
+<li>Trojan / Virus / Worm Attack - Save the antivirus logs apart from the event logs (pertaining to the antivirus).</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="application-data"><a aria-hidden="true" class="anchor-heading icon-link" href="#application-data"></a>Application Data</h2>
+<blockquote>
+<p>OSs, files and networks are all needed to support applications" OSs to run the applications, networks to send application data between systems, and files to store application data, configuration settings, and logs. From a forensic perspective, applications bring together files, OSs, and networks. - NIST 800-86</p>
+</blockquote>
+<h3 id="application-components"><a aria-hidden="true" class="anchor-heading icon-link" href="#application-components"></a>Application Components</h3>
+<ul>
+<li>Config Settings
+<ul>
+<li>Configuration File</li>
+<li>Runtime Options</li>
+<li>Added to Source Code</li>
+</ul>
+</li>
+<li>Authentication
+<ul>
+<li>External Authentication</li>
+<li>Proprietary Authentication</li>
+<li>Pass-through Authentication</li>
+<li>Host/User Environment</li>
+</ul>
+</li>
+<li>Logs
+<ul>
+<li>Event</li>
+<li>Audit</li>
+<li>Error</li>
+<li>Installation</li>
+<li>Debugging</li>
+</ul>
+</li>
+<li>Data
+<ul>
+<li>Can live temporarily in memory and/or permanently in files.</li>
+<li>File format may be generic or proprietary.</li>
+<li>Data may be stored in databases.</li>
+<li>Some applications create temp files during session or improper shut down.</li>
+</ul>
+</li>
+<li>Supporting Files
+<ul>
+<li>Documentation</li>
+<li>Links</li>
+<li>Graphics</li>
+</ul>
+</li>
+<li>App Architecture
+<ul>
+<li>Local</li>
+<li>Client/Server</li>
+<li>Peer-to-Peer</li>
+</ul>
+</li>
+</ul>
+<h3 id="types-of-applications"><a aria-hidden="true" class="anchor-heading icon-link" href="#types-of-applications"></a>Types of Applications</h3>
+<p>Certain types of applications are more likely to be the focus of forensic analysis, including e-mail, web usage, interactive messaging, file sharing, document usage, security applications, and data concealment tools.</p>
+<ul>
+<li>
+<p>Email: From end-to-end, information regarding a single e-mail message may be recorded in several places - the sender's system, each email server that handles the message, and the recipient's system, as well as the antivirus, spam, and content filtering servers." - <em>NIST 800-45</em></p>
+</li>
+<li>
+<p>Web usage</p>
+<ul>
+<li>Web data from Host: Typically, the richest sources of information regarding Web usage the hosts running the Web Browsers.
+<ul>
+<li>Favorite websites</li>
+<li>History with time stamps of websites visited</li>
+<li>Cached web data files</li>
+<li>Cookies</li>
+</ul>
+</li>
+<li>Web data from Server: Another good source of web usage information is web servers, which typically keep logs of the requests they receive.
+<ul>
+<li>Timestamps</li>
+<li>IP addresses</li>
+<li>Web browser version</li>
+<li>Type of request</li>
+<li>Resource requested</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Interactive Communications</p>
+<ul>
+<li>Group Chat: Typically uses a client/server architecture. The most popular standard group chat protocol for simple text-based communication is Internet Relay Chat (IRC).</li>
+<li>Instant Messaging Applications: IM application configuration settings may contain user information, lists of users that the user has communicated with, file transfer information, and archived messages or chat sessions.</li>
+<li>Audio &#x26; Video:
+<ul>
+<li>Technologies such as Voice over IP (VoIP) permit people to conduct telephone conversations over networks such as the Internet.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>File Sharing</p>
+</li>
+<li>
+<p>Document Usage</p>
+</li>
+<li>
+<p>Security Applications</p>
+</li>
+<li>
+<p>Data Concealment Tools</p>
+</li>
+</ul>
+<h4 id="collecting-application-data"><a aria-hidden="true" class="anchor-heading icon-link" href="#collecting-application-data"></a>Collecting Application Data</h4>
+<ul>
+<li>Filesystem</li>
+<li>Volatile OS Data</li>
+<li>Network Traffic</li>
+</ul>
+<h2 id="network-data"><a aria-hidden="true" class="anchor-heading icon-link" href="#network-data"></a>Network Data</h2>
+<blockquote>
+<p>Analysis can use data from network traffic to reconstruct and analyze network-based attacks and inappropriate network usage, as well as to troubleshoot various types of operational problems... The term network traffic refers to computer network communications that are carried over wired or wireless networks between hosts. - <em>NIST 800-86</em></p>
+</blockquote>
+<h3 id="tcpip"><a aria-hidden="true" class="anchor-heading icon-link" href="#tcpip"></a>TCP/IP</h3>
+<p>Application Layer
+: Sends and receives data for particular applications, such as Domain Name System (DNS), Hypertext Transfer Protocol (HTTP), and Simple Mail Transfer Protocol (SMTP).</p>
+<p>Transport Layer
+: Provides connection-oriented or connection-less services for transporting application layer services between networks. The transport layer can optionally ensure the reliability of communications. TCP and UDP are commonly used transport layer protocols.</p>
+<p>Internet Protocol Layer (also known as Network Layer)
+: Routes packets across network as IP is the fundamental network layer protocol for TCP/IP. Other commonly used protocols at the network layer are Internet Control Message Protocol (ICMP) and Internet Group Management Protocol (IGMP).</p>
+<p>Hardware Layer (also known as Data Link Layer)
+: Handles communications on the physical network components. The best known data link layer protocol is Ethernet.</p>
+<h4 id="sources-of-network-data"><a aria-hidden="true" class="anchor-heading icon-link" href="#sources-of-network-data"></a>Sources of Network Data</h4>
+<p>These sources collectively capture important data from all four TCP/IP layers.</p>
+<ul>
+<li>Firewalls &#x26; Routers</li>
+<li>Packet Sniffers &#x26; Protocol Analyzers</li>
+<li>Intrusion Detection System</li>
+<li>Security Event Management Software</li>
+<li>Network Forensic Analysis Tools</li>
+<li>Remote Access</li>
+</ul>
+<h3 id="attacker-identification"><a aria-hidden="true" class="anchor-heading icon-link" href="#attacker-identification"></a>Attacker Identification</h3>
+<ul>
+<li>Contact IP Address Owner - Can help identify who is responsible for an IP address. Usually an escalation.</li>
+<li>Seek ISP Assistance - Requires court order and is only done to assist in the most serious attacks.</li>
+<li>Send Network Traffic - Not recommended for organizations.</li>
+<li>History of IP address - Can look for trends of suspicious activity.</li>
+<li>Application Content - Data packets could contain information about the attacker's identity.</li>
+</ul>

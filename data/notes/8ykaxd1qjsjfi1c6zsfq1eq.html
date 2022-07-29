@@ -1,0 +1,271 @@
+<h1 id="cryptography-encryption"><a aria-hidden="true" class="anchor-heading icon-link" href="#cryptography-encryption"></a>Cryptography Encryption</h1>
+<h1 id="introduction-to-cryptography"><a aria-hidden="true" class="anchor-heading icon-link" href="#introduction-to-cryptography"></a>Introduction to Cryptography</h1>
+<ul class="contains-task-list">
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Define cryptography and encryption.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Describe the related Open Web Application Security Project (OWASP) Top 10 project and SANS Institute Top 25 cryptographic weaknesses.</p>
+</li>
+<li>
+<p>Describe encryption and common types of encryption algorithms.</p>
+</li>
+<li>
+<p>Define cryptographic terms including hash function and digital signatures.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Describe common pitfalls of cryptography.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Describe the digital state of data: Data at Rest.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Describe the digital state of data: Data in Use.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Describe the digital state of data: Data in Transit.</p>
+</li>
+</ul>
+<hr>
+<p>Cryptography
+: Encryption and related cryptographic mechanisms (hashing, digital signing) safeguard customer data and its integrity, and prevent unauthorized access to it.</p>
+<h2 id="owasp-top-10"><a aria-hidden="true" class="anchor-heading icon-link" href="#owasp-top-10"></a>OWASP Top 10</h2>
+<ul>
+<li>Missing and faulty crypto consistently appears on OWASP Top 10 list.</li>
+</ul>
+<h2 id="sans-top-25"><a aria-hidden="true" class="anchor-heading icon-link" href="#sans-top-25"></a>SANS Top 25</h2>
+<ul>
+<li>Cryptographic weaknesses feature prominently on SANS Top 25 list.</li>
+</ul>
+<h2 id="crypto-vulnerabilities-in-the-news"><a aria-hidden="true" class="anchor-heading icon-link" href="#crypto-vulnerabilities-in-the-news"></a>Crypto Vulnerabilities in the News</h2>
+<ul>
+<li>Crypto vulnerabilities frequently contribute to hacks and data leaks.</li>
+<li><a href="https://www.bleepingcomputer.com/news/security/twitter-admits-recording-plaintext-passwords-in-internal-logs-just-like-github/">Bug in Twitter internal software led to passwords stored in plaintext.</a></li>
+<li><a href="https://www.databreaches.net/coplin-health-systems-notifies-43000-patients-after-laptop-stolen-from-employees-car/">Coplin Health Systems lost control of un-encrypted data of 43,000 patients when a laptop was stolen from an employee's car.</a></li>
+</ul>
+<hr>
+<h2 id="cryptography-basics---terminology"><a aria-hidden="true" class="anchor-heading icon-link" href="#cryptography-basics---terminology"></a>Cryptography Basics - Terminology</h2>
+<p>Encryption
+: Process of encoding data in a way that only authorized parties can access it.</p>
+<ul>
+<li>Encryption provides <em>Confidentiality</em>, but not <em>Integrity</em>.</li>
+<li>Data can be encrypted
+<ul>
+<li>At rest</li>
+<li>In use</li>
+<li>In transit</li>
+</ul>
+</li>
+<li>Sensitive business and personal data should be encrypted <strong>at all times, everywhere.</strong></li>
+<li>Importance has risen dramatically in recent years.</li>
+</ul>
+<h3 id="common-encryption-algorithms"><a aria-hidden="true" class="anchor-heading icon-link" href="#common-encryption-algorithms"></a>Common Encryption Algorithms</h3>
+<ul>
+<li>Symmetric Key (AES, DES, IDEA, ...)</li>
+<li>Public Key (RSA, Elliptic Curve, DH, ...)</li>
+</ul>
+<p><img src="https://1.bp.blogspot.com/-gyqO5PbitmM/WEMgAFfdMSI/AAAAAAAABD0/SbYlTPkRDEkiUe_Asvpsyst65RFgH6OHQCLcB/s1600/SymmKeyVsPubKey.jpg" alt="encryption"></p>
+<p>Hash Function
+: Maps data of arbitrary size to data of a fixed size.</p>
+<ul>
+<li>Hashing provides <em>Integrity</em>, but not <em>Confidentiality</em>.</li>
+<li>Original data deliberately hard to reconstruct.</li>
+<li>Used for <em>integrity checking</em> and sensitive data storage (e.g. passwords).</li>
+</ul>
+<p>Data Signature
+: A mathematical scheme for verifying the authenticity of digital messages and documents.</p>
+<ul>
+<li>Uses hashing and public key encryption.</li>
+<li>Ensure <em>authentication, non-repudiation, and integrity</em>.</li>
+</ul>
+<p><img src="https://cdn.educba.com/academy/wp-content/uploads/2019/11/Digital-Signature-Cryptography-2.png" alt="signature"></p>
+<hr>
+<h2 id="cryptography-pitfalls"><a aria-hidden="true" class="anchor-heading icon-link" href="#cryptography-pitfalls"></a>Cryptography Pitfalls</h2>
+<h3 id="missing-encryption-of-data-and-communications"><a aria-hidden="true" class="anchor-heading icon-link" href="#missing-encryption-of-data-and-communications"></a>Missing Encryption of Data and Communications</h3>
+<ul>
+<li>Products handle sensitive business and personal data.</li>
+<li>Data is often the most valuable asset that the business has.</li>
+<li>When you store or transmit it in clear text, it can be easily leaked or stolen.</li>
+<li>Today, there is no excuse for not encrypting data that is stored or transmitted.</li>
+<li>Cryptographic technology is mature, tested, and is available for all environments.</li>
+</ul>
+<p><strong>RECOMMENDATION</strong> - Encrypt all sensitive data you are handling (and also ensure its integrity).</p>
+<ul>
+<li>Some product owners do not encrypt stored data because "<em>users don't have access to the file system</em>".</li>
+<li>There are plenty of vulnerabilities out there that may allow exposure of files stored on the file system.</li>
+<li>Physical machine running the application may be stolen, hard disk can then be accessed directly.</li>
+</ul>
+<p><strong>RECOMMENDATION</strong> - Have to assume that hte files containing sensitive information may be exposed and analyzed.</p>
+<h3 id="implementing-own-crypto"><a aria-hidden="true" class="anchor-heading icon-link" href="#implementing-own-crypto"></a>Implementing Own Crypto</h3>
+<ul>
+<li>Often, developers use Base64 encoding, simple xor encoding, and similar obfuscation schemes.</li>
+<li>Also, see products implement their own cryptographic algorithms.</li>
+</ul>
+<p><strong>RECOMMENDATION</strong> - Rely on proven cryptography, that was scrutinized by thousands of mathematicians and cryptographers. Follow recommendations of National Institute of Standards and Technology (NIST).</p>
+<h3 id="relying-on-algorithms-being-secret"><a aria-hidden="true" class="anchor-heading icon-link" href="#relying-on-algorithms-being-secret"></a>Relying on Algorithms Being Secret</h3>
+<ul>
+<li>"Attackers will never know our internal algorithms."
+<ul>
+<li>They can and will be discovered; only a question of motivation.</li>
+</ul>
+</li>
+<li>A whole branch of hacking - <strong>Reverse Engineering</strong> - is devoted to discovering hidden algorithms and data.</li>
+<li>Application shipped only in compiled form can be "de-compiled".
+<ul>
+<li>Attackers may analyze trial/free versions of the product, or get copies on the Dark Web.</li>
+</ul>
+</li>
+</ul>
+<p><a href="https://www.clearswift.com/resources/press-releases/new-research-reveals-more-third-employees-willing-sell-private-company-data-and-proprietary">The Clearswift-sponsored survey polled more than 500 internet technology decision makers and 4,000 employees in the United States, Europe, and Australia, and discovered that</a>:</p>
+<pre><code>25 percent of employees would sell company data, risking both their jobs and criminal convictions, for less than $8000;
+3 percent of employees would sell private information for as little as $155;
+18 percent would accept an offer of $1550;
+35 percent of employees were open to bribes as the offer reached $77,500;
+65 percent of employees said they wouldn’t sell data for any price.
+</code></pre>
+<ul>
+<li>"Security by obscurity" is not a good defense mechanism.
+<ul>
+<li>All algorithms that keep us safe today are open source and very well-studied: AES, RSA, SHA*, ...</li>
+</ul>
+</li>
+</ul>
+<p><strong>RECOMMENDATION</strong> - Always assume that algorithms will be known the the adversary.</p>
+<ul>
+<li>Kerckhoff's Principle - <em>"A crypto-system should be secure even if everything about the system, except the key, is public knowledge."</em></li>
+</ul>
+<h3 id="using-hardcodedpredictableweak-keys"><a aria-hidden="true" class="anchor-heading icon-link" href="#using-hardcodedpredictableweak-keys"></a>Using Hardcoded/Predictable/Weak Keys</h3>
+<ul>
+<li>Not safeguarding keys renders crypto mechanisms useless.</li>
+<li>When the passwords and keys hardcoded in the product or stored plaintext in the config file, they can be easily discovered by an attacker.</li>
+<li>An easily guessed key can be found by trying commonly used passwords.</li>
+<li>When keys are generated randomly, they have to be generated from cryptographically-secure source of randomness, not the regular RNG.</li>
+</ul>
+<p><strong>RECOMMENDATION</strong> - Rely on hard to guess, randomly generated keys and passwords that are stored securely.</p>
+<h3 id="ignoring-encryption-export-regulation-rules"><a aria-hidden="true" class="anchor-heading icon-link" href="#ignoring-encryption-export-regulation-rules"></a>Ignoring Encryption Export Regulation Rules</h3>
+<ul>
+<li>Encryption is export controlled.</li>
+<li>All code that...
+<ul>
+<li><strong>contains</strong> encryption (closed or open-source).</li>
+<li><strong>calls</strong> encryption algorithms in another library or component.</li>
+<li><strong>directs</strong> encryption functionality in another product... must be classified for export <strong><em>before</em></strong> being released.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="encrypting-data-at-rest"><a aria-hidden="true" class="anchor-heading icon-link" href="#encrypting-data-at-rest"></a>Encrypting Data at Rest</h2>
+<ul>
+<li>The rule of thumb is to encrypt all sensitive data at rest: in files, config files, databases, backups.</li>
+<li>Symmetric key encryption is most commonly used.</li>
+<li>Follow NIST guidelines for selecting appropriate algorithm - Currently it is AES (with CBC mode) and Triple DES.</li>
+</ul>
+<h2 id="pitfalls-and-recommendations"><a aria-hidden="true" class="anchor-heading icon-link" href="#pitfalls-and-recommendations"></a>Pitfalls and Recommendations</h2>
+<ul>
+<li>Some algorithms are outdated and no longer considered secure.
+<ul>
+<li>Examples include DES, RC4, and others.</li>
+</ul>
+</li>
+<li>Use hardcoded/easily guessed/insufficiently random keys.
+<ul>
+<li>Select cryptographically-random keys, do not reuse keys for different installs.</li>
+</ul>
+</li>
+<li>Storing keys in a clear text in proximity to data they protect ("key under the doormat").
+<ul>
+<li>Store keys in secure keystores.</li>
+</ul>
+</li>
+<li>Using initialization vectors (IVs) incorrectly.
+<ul>
+<li>Use a new <em>random</em> IV every time.</li>
+</ul>
+</li>
+<li>Preferable to select the biggest key size you can handle (but watch out for export restrictions).</li>
+</ul>
+<h2 id="encrypting-data-in-use"><a aria-hidden="true" class="anchor-heading icon-link" href="#encrypting-data-in-use"></a>Encrypting Data in Use</h2>
+<ul>
+<li>Unfortunately a rarely-followed practice.</li>
+<li>Memory could be leaked by attacker.
+<ul>
+<li>Famous 2014 Heartbleed defect leaked memory of processes that used OpenSSL.</li>
+</ul>
+</li>
+<li>The idea is to keep data encrypted up until it must be used.</li>
+<li>Decrypt data as needed, and then promptly erase it in memory after use.</li>
+<li>Keep all sensitive data (data, keys, passwords) encrypted except a brief moment of use.</li>
+<li>Consider <strong><strong>Homomorphic encryption</strong></strong> if it can be applied to your application.</li>
+</ul>
+<h2 id="encrypting-data-in-transit"><a aria-hidden="true" class="anchor-heading icon-link" href="#encrypting-data-in-transit"></a>Encrypting Data in Transit</h2>
+<ul>
+<li>Today, there is no excuse for communicating in clear text.</li>
+<li>There is an industry consensus about; Firefox and Chrome now mark HTTP sites as insecure.</li>
+<li>Attackers can easily snoop on unprotected communications.</li>
+<li>All communications (not just HTTP) should be encrypted, including: RPC, database connections, and others.</li>
+<li>TLS/SSL is most commonly used protocol.
+<ul>
+<li>Public key crypto (RSA, DH) for authentication and key exchange; Symmetric key crypto to encrypt the data.</li>
+<li>Server Digital Certificate references certificate authority (CA) and the public key.</li>
+</ul>
+</li>
+<li>Sometimes just symmetric key encryption is employed (but requires pre-sharing of keys).</li>
+</ul>
+<h2 id="additional-pitfalls"><a aria-hidden="true" class="anchor-heading icon-link" href="#additional-pitfalls"></a>Additional Pitfalls</h2>
+<h3 id="using-self-signed-certificates"><a aria-hidden="true" class="anchor-heading icon-link" href="#using-self-signed-certificates"></a>Using self-signed certificates</h3>
+<ul>
+<li>Less problematic for internal communications but still dangerous.</li>
+<li>Use properly generated certificates verified by established CA.</li>
+</ul>
+<h3 id="accepting-arbitrary-certificates"><a aria-hidden="true" class="anchor-heading icon-link" href="#accepting-arbitrary-certificates"></a>Accepting arbitrary certificates</h3>
+<ul>
+<li>Attacker can issue their own certificate and snoop on communications (MitM attacks).</li>
+<li>Do not accept arbitrary certificates without verification.</li>
+</ul>
+<h3 id="not-using-certificate-pinning"><a aria-hidden="true" class="anchor-heading icon-link" href="#not-using-certificate-pinning"></a>Not using certificate pinning</h3>
+<ul>
+<li>Attacker may present a properly generated certificate and still snoop on communications.</li>
+<li><em>Certificate pinning</em> can help - presented certificate is checked against a set of expected certificates.</li>
+</ul>
+<h3 id="using-outdated-versions-of-the-protocol-or-insecure-cipher-suites"><a aria-hidden="true" class="anchor-heading icon-link" href="#using-outdated-versions-of-the-protocol-or-insecure-cipher-suites"></a>Using outdated versions of the protocol or insecure cipher suites</h3>
+<ul>
+<li>Old versions of SSL/TLS are vulnerable (DROWN, POODLE, BEAST, CRIME, BREACH, and other attacks).</li>
+<li>**TLS v1.1-1.3 are safe to use (1.2 is recommended, with 1.3 coming).</li>
+<li>Review TLS support; there are tools to help you:
+<ul>
+<li>Nessus, Qualys SSL Server Test (external only), sslscan, sslyze.</li>
+</ul>
+</li>
+</ul>
+<h3 id="allow-tls-downgrade-to-insecure-versions-or-even-to-http"><a aria-hidden="true" class="anchor-heading icon-link" href="#allow-tls-downgrade-to-insecure-versions-or-even-to-http"></a>Allow TLS downgrade to insecure versions, or even to HTTP</h3>
+<ul>
+<li>Lock down versions of TLS that you support and do not allow downgrade; disable HTTP support altogether.</li>
+</ul>
+<h3 id="not-safeguarding-private-keys"><a aria-hidden="true" class="anchor-heading icon-link" href="#not-safeguarding-private-keys"></a>Not Safeguarding Private Keys</h3>
+<ul>
+<li>Do not share private keys between different customers, store them in secure keystores.</li>
+</ul>
+<h4 id="additional-recommendations"><a aria-hidden="true" class="anchor-heading icon-link" href="#additional-recommendations"></a>Additional Recommendations</h4>
+<h5 id="consider-implementing-forward-secrecy"><a aria-hidden="true" class="anchor-heading icon-link" href="#consider-implementing-forward-secrecy"></a>Consider Implementing Forward Secrecy</h5>
+<ul>
+<li>Some cipher suites protect past sessions against future compromises of secret keys or passwords.</li>
+</ul>
+<h5 id="do-not-use-compression-under-tls"><a aria-hidden="true" class="anchor-heading icon-link" href="#do-not-use-compression-under-tls"></a>Do not use compression under TLS</h5>
+<ul>
+<li>CRIME/BREACH attacks showed that using compression with TLS for changing resources may lead to sensitive data exposure.</li>
+</ul>
+<h5 id="implement-http-strict-transport-security-hsts"><a aria-hidden="true" class="anchor-heading icon-link" href="#implement-http-strict-transport-security-hsts"></a>Implement HTTP Strict Transport Security (HSTS)</h5>
+<ul>
+<li>Implement Strict-Transport-Security header on all communications.</li>
+</ul>
+<h5 id="stay-informed-of-latest-security-news"><a aria-hidden="true" class="anchor-heading icon-link" href="#stay-informed-of-latest-security-news"></a>Stay Informed of Latest Security News</h5>
+<ul>
+<li>A protocol or cipher suite that is secure today may be broken in the future.</li>
+</ul>
+<hr>
+<strong>Children</strong>
+<ol>
+<li><a href="/IBM-cybersecurity/notes/s4pb2fsqnhn3juvfg31nlx4">Digital Signatures</a></li>
+<li><a href="/IBM-cybersecurity/notes/0fne3cpmfljfulwoqcenf7k">Hashing</a></li>
+<li><a href="/IBM-cybersecurity/notes/06obwk18k40kw2ywrzqo68q">Quantum Computers</a></li>
+</ol>

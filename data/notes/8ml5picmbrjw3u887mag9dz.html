@@ -1,0 +1,159 @@
+<h1 id="digital-forensics"><a aria-hidden="true" class="anchor-heading icon-link" href="#digital-forensics"></a>Digital Forensics</h1>
+<h1 id="forensics-overview"><a aria-hidden="true" class="anchor-heading icon-link" href="#forensics-overview"></a>Forensics Overview</h1>
+<ul class="contains-task-list">
+<li class="task-list-item">
+<p><input type="checkbox" disabled> What are digital forensics?</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> What types of data do forensics deal with?</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> What is the objective and need for digital forensics?</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> What are the steps to the forensic process?</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> What are the different types of data?</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> What are the three steps of data acquisition?</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> What role does chain of custody have in data collection?</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> What obstacles are faced during examination?</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Review considerations when conducting an analysis.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn about the components that make up a forensic report.</p>
+</li>
+</ul>
+<hr>
+<h2 id="what-are-forensics"><a aria-hidden="true" class="anchor-heading icon-link" href="#what-are-forensics"></a>What are Forensics?</h2>
+<p>Digital Forensics
+: Also known as computer and network forensics, has many definitions. Generally, it is considered the application of science to the identification, collection, examination, and analysis of data while preserving the integrity of the information and maintaining a strict chain of custody for the data.</p>
+<h3 id="types-of-data"><a aria-hidden="true" class="anchor-heading icon-link" href="#types-of-data"></a>Types of Data</h3>
+<p>The first step in the forensic process is to identify potential sources of data and acquire data from them. The most obvious and common sources of data are desktop computers, servers, network storage devices, and laptops.</p>
+<ol>
+<li>CDs/DVDs</li>
+<li>Internal &#x26; External Drives</li>
+<li>Volatile data</li>
+<li>Network Activity</li>
+<li>Application Usage</li>
+<li>Portable Digital Devices</li>
+<li>Externally Owned Property</li>
+<li>Computer at Home Office</li>
+<li>Alternate Sources of Data</li>
+<li>Logs</li>
+<li>Keystroke Monitoring</li>
+</ol>
+<h3 id="need-for-forensics"><a aria-hidden="true" class="anchor-heading icon-link" href="#need-for-forensics"></a>Need for Forensics</h3>
+<ul>
+<li>Criminal Investigation</li>
+<li>Incident Handling</li>
+<li>Operational Troubleshooting</li>
+<li>Log Monitoring</li>
+<li>Data Recovery</li>
+<li>Data Acquisition</li>
+<li>Due Diligence/Regulatory Compliance</li>
+</ul>
+<h2 id="objectives-of-digital-forensics"><a aria-hidden="true" class="anchor-heading icon-link" href="#objectives-of-digital-forensics"></a>Objectives of Digital Forensics</h2>
+<ul>
+<li>Helps to recover, analyze, and preserve computer and related materials in such a manner that i helps the investigation agency to present them as evidence in a court of law. IT helps to postulate the motive behind the crime and identity of the main culprit.</li>
+<li>Designing procedures at as suspected crime scene which helps you to ensure that the digital evidence obtained is not corrupted.</li>
+<li>Data acquisition and duplication: Recovering deleted files and deleted partitions from digital media to extract the evidence and validate them.</li>
+<li>Helps you to identify the evidence quickly, and also allows you to estimate the potential impact of the malicious activity on the victim.</li>
+<li>Producing a computer forensic report which offers a complete report on the investigation process.</li>
+<li>Preserving the evidence by following the chain of custody.</li>
+</ul>
+<h2 id="forensic-process"><a aria-hidden="true" class="anchor-heading icon-link" href="#forensic-process"></a>Forensic Process</h2>
+<p>Collection
+: Identify, label, record and acquire data from the possible sources, while preserving the integrity of the data.</p>
+<p>Examination
+: Processing large amounts of collected data to assess and extract data of particular interest.</p>
+<p>Analysis
+: Analyze the results of the examination, using legally justifiable methods and techniques.</p>
+<p>Reporting
+: Reporting the results of the analysis.</p>
+<h3 id="data-collection--examination---steps-to-collect-data"><a aria-hidden="true" class="anchor-heading icon-link" href="#data-collection--examination---steps-to-collect-data"></a>Data Collection &#x26; Examination - Steps to Collect Data</h3>
+<ul>
+<li>Develop a plan to acquire the data.
+<ul>
+<li>Create a plan that prioritizes the sources, establishing the order in which the data should be acquired.</li>
+</ul>
+</li>
+<li>Acquire the Data.
+<ul>
+<li>Use forensic tools to collect the volatile data, duplicate non-volatile data sources, and securing the original data sources.</li>
+</ul>
+</li>
+<li>Verify the integrity of the data.
+<ul>
+<li>Forensic tools can create hash values for the original source so the duplicate can be verified as being complete and un-tampered with.</li>
+</ul>
+</li>
+</ul>
+<h4 id="chain-of-custody"><a aria-hidden="true" class="anchor-heading icon-link" href="#chain-of-custody"></a>Chain of Custody</h4>
+<p>A clearly defined chain of custody should be followed to avoid allegations of mishandling or tampering of evidence. This involves keeping a log of every person who had physical custody of the evidence, documenting the actions that they performed on the evidence and at what time, storing the evidence in a secure location when it is not being used, making a copy of the evidence and performing examination and analysis using only the copied evidence, and verifying the integrity of the original and copied evidence.</p>
+<h4 id="examination"><a aria-hidden="true" class="anchor-heading icon-link" href="#examination"></a>Examination</h4>
+<p>Bypassing Controls
+: Operating systems and applications may have data compression, encryption, or ACLs</p>
+<p>A Sea of Data
+: Hard drives may have hundreds of thousands of files, not all of which are relevant.</p>
+<p>Tools
+: There are various tools and techniques that exist to help filter and exclude data from searches to expedite the process.</p>
+<h3 id="analysis--reporting"><a aria-hidden="true" class="anchor-heading icon-link" href="#analysis--reporting"></a>Analysis &#x26; Reporting</h3>
+<p>The analysis should include identifying people, places, items, and events, and determining how these elements are related so that a conclusion can be reached.</p>
+<ul>
+<li><strong>Putting the pieces together</strong> - Coordination between multiple sources of data is crucial in making a complete picture of what happened in the incident. NIST provides the example of an IDS log linking an event to a host, the host audit logs linking the event to a specific user account, and the host IDS log indicating what actions that user performed.</li>
+</ul>
+<h4 id="solved-with-forensics"><a aria-hidden="true" class="anchor-heading icon-link" href="#solved-with-forensics"></a>Solved with Forensics</h4>
+<ul>
+<li><strong>BTK Killer, Dennis Rader</strong> - A floppy disk Rader sent to police revealed his true identity.</li>
+<li><strong>Dr. Conrad Murray's lethal prescriptions</strong> - Investigators discovered documentation on Dr. Murray's computer showing his authorization of lethal amounts of the drugs.</li>
+<li><strong>The Craigslist Killer, Phillip Markoff</strong> - Investigators tracked the IP address from the emails used in the Craigslist correspondence.</li>
+</ul>
+<h4 id="writing-forensic-report"><a aria-hidden="true" class="anchor-heading icon-link" href="#writing-forensic-report"></a>Writing Forensic Report</h4>
+<p>A case summary is meant to form the basis of opinions. While there are a variety of laws that relate to expert reports, the general rules are:</p>
+<ul>
+<li>If it is not in your report, you cannot testify about it.</li>
+<li>Your report needs to details the basis for your conclusions.</li>
+<li>Details every test conducted, the methods and tools used, and the results.</li>
+</ul>
+<h5 id="report-composition"><a aria-hidden="true" class="anchor-heading icon-link" href="#report-composition"></a>Report Composition</h5>
+<ol>
+<li>Overview/Case Summary</li>
+<li>Forensic Acquisition &#x26; Examination Preparation</li>
+<li>Findings &#x26; Report (Analysis)</li>
+<li>Conclusion</li>
+</ol>
+<p><a href="https://www.sans.org/blog/intro-to-report-writing-for-digital-forensics/">Intro to Report Writing for Digital Forensics Example</a></p>
+<h5 id="sans-institute---general-best-practices"><a aria-hidden="true" class="anchor-heading icon-link" href="#sans-institute---general-best-practices"></a>SANS Institute - General Best Practices</h5>
+<ol>
+<li>Take screenshots</li>
+<li>Bookmark evidence via forensic application of choice</li>
+<li>Use built-in logging/reporting options within your forensic tool</li>
+<li>Highlight and exporting data items into .csv or .txt files</li>
+<li>Use a digital audio recorder vs. handwritten notes when necessary</li>
+</ol>
+<p>According to the former director of the Defense Computer Forensics Laboratory, Ken Zatyko, digital forensics includes:</p>
+<ul>
+<li><strong>Proper search authority</strong>: Investigators cannot commence without the proper legal authority.</li>
+<li><strong>Chain of custody</strong>: Necessary to keep track of who was holding the evidence at any time.</li>
+<li><strong>Use of validated tools</strong>: Tools used in digital forensics should be validated to ensure they work correctly.
+<ul>
+<li>Creating an image of a disk should ensure the forensic image is identical to the data on the disk.</li>
+</ul>
+</li>
+<li><strong>Repeatability</strong>: The findings of digital forensics can be reproduced with the proper skills and tools are available.</li>
+<li><strong>Reporting</strong>: Investigation is concluded with a report that shows the evidence related to the case that was discovered.</li>
+</ul>
+<hr>
+<strong>Children</strong>
+<ol>
+<li><a href="/IBM-cybersecurity/notes/2tx6kae8dfako6nl9lbcyup">Data</a></li>
+</ol>

@@ -1,0 +1,159 @@
+<h1 id="pos"><a aria-hidden="true" class="anchor-heading icon-link" href="#pos"></a>POS</h1>
+<h1 id="point-of-sale-breach-overview"><a aria-hidden="true" class="anchor-heading icon-link" href="#point-of-sale-breach-overview"></a>Point of Sale Breach Overview</h1>
+<ul class="contains-task-list">
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn what a Point of Sale (PoS) breach is.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn about PoS systems and their security standards.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn how malware makes its way onto PoS devices.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn about the different families of PoS malware.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn what happens to the stolen information.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Understand the timeline of events of the Point of Sale (POS) attack.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn about what actions were taken by the threat actors.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn what the impacts are from a POS attack.</p>
+</li>
+</ul>
+<hr>
+<p><a href="https://us.norton.com/internetsecurity-id-theft-pos-malware-data-breaches-and-why-they-keep-happening.html">The main objective of point of sale (POS) breaches is to steal your 16-digit credit card numbers. Sixty percent of Point of Sale (POS) transactions are performed via credit card, which means big business for cyber-criminals (individual credit cards can be sold for up to 100 dollars apiece). The industries most affected by POS data breaches are usually restaurants, retail stores, grocery stores and hotels. The mainstream media tends to cover stories when the big brand retailers fall victim to these attacks, but data breaches actually happen more frequently to small and medium sized businesses because they are easier to compromise than the computer networks of large retailers. - Norton Internet Security</a></p>
+<h2 id="point-of-sale"><a aria-hidden="true" class="anchor-heading icon-link" href="#point-of-sale"></a>Point of Sale</h2>
+<p><a href="https://www.giac.org/paper/gsec/35318/point-sale-pos-systems-security/121485">The term Point of Sale (POS) is used to describe the technology used by a consumer to provide their payment information in exchange for a good or service. POS technology has actually been around for many years with the first cash register dating back to 1879 (Abell, 2009). However, it wasn't until the mid-70s that this technology was converted from a mechanical to an electrical form. - Wes Whitteker, 2014</a></p>
+<h2 id="pos-security"><a aria-hidden="true" class="anchor-heading icon-link" href="#pos-security"></a>PoS Security</h2>
+<p>The Payment Card Industry Data Security Standard (PCI DSS) is the main payment card industry information security standard. It was created in 2006 by the PCI security standards council (SSC).</p>
+<ul>
+<li>Led by American Express, Discover Financial Services, JCB International, MasterCard, and Visa Inc.</li>
+<li>The goal is to protect cardholder data and sensitive authentication data wherever it is processed, stored or transmitted.</li>
+</ul>
+<h3 id="pci-dss---security-controls--processes-for-pci-dss-requirements"><a aria-hidden="true" class="anchor-heading icon-link" href="#pci-dss---security-controls--processes-for-pci-dss-requirements"></a>PCI DSS - Security Controls &#x26; Processes for PCI DSS Requirements</h3>
+<p>Merchants, service providers, and other entities involved with payment card processing must never store sensitive authentication data after authorization.</p>
+<p>This includes the 3-or 4-digit security code printed on the front or back of a card, the data stored on a card's magnetic stripe or chip (also called Full Track Data) - and personal identification numbers (PIN) entered by the cardholder.</p>
+<ol>
+<li>Build and maintain a secure network and systems.</li>
+<li>Protect cardholder data.</li>
+<li>Maintain a vulnerability management program.</li>
+<li>Implement a strong access control measures.</li>
+<li>Regularly monitor and test networks.</li>
+<li>Maintain an information security policy.</li>
+</ol>
+<h4 id="requirements"><a aria-hidden="true" class="anchor-heading icon-link" href="#requirements"></a>Requirements</h4>
+<ul>
+<li>Install and maintain a firewall configuration to protect cardholder data.</li>
+<li>Do not use vendor-supplied defaults for system passwords and other security parameters.</li>
+<li>Protect stored card cardholder data.</li>
+<li>Encrypt transmission of cardholder data across open, public networks.</li>
+<li>Use and regularly update antivirus software.</li>
+<li>Develop and maintain secure systems and applications.</li>
+<li>Restrict access to cardholder data by business need-to-know.</li>
+<li>Assign a unique ID to each person with computer access.</li>
+<li>Restrict physical access to cardholder data.</li>
+<li>Track and monitor all access to network resources and cardholder data.</li>
+<li>Regularly test security systems and processes.</li>
+<li>Maintain a policy that addresses information security.</li>
+</ul>
+<h4 id="compliance-is-not-enough"><a aria-hidden="true" class="anchor-heading icon-link" href="#compliance-is-not-enough"></a>Compliance is Not Enough</h4>
+<p><a href="https://blog.ingenico.us/blog/why-pci-compliance-isnt-enough">In 2018, cyber attacks increased by 32 percent in the first few months of the year compared to the same period in 2017.  Threats from criminals are constantly evolving and becoming more sophisticated. Being only PCI Compliant is not enough, and businesses need to take additional security measures to protect sensitive cardholder data and their payment technology investment. Here are a few ways businesses can protect their payment infrastructure:</a></p>
+<p>Semi-Integrated Payment Approach
+: Reduces the communication between the terminal and the electronic cash register (ECR) to non-sensitive commands. Sensitive data is isolated, encrypted and directly sent from the terminal to the intended processing hosts or gateway.</p>
+<p>Point-to-Point Encryption (P2PE)
+: Helps protect card data while it is on the move during the payment process.</p>
+<p>Tokenization
+: Helps protect the card data at rest. It replaces the sensitive information with a secure encrypted token protecting from cyber criminals when the data is at rest.</p>
+<ul>
+<li>Current PCI standards do not allow businesses to save and store credit card details unless tokenized on PoS systems or databases after the transaction.</li>
+</ul>
+<p>Mobile Device Management (MDM)
+: Many businesses use consumer-grade mobile devices to work with their POS systems. MDM is a type of security that allows businesses to remotely deploy and securely manage their mobile POS solutions.</p>
+<p>Employee Education
+: Effective training of employees to be aware of possibilities regarding basic security protocols to prevent mistakes and protect business of threats.</p>
+<h2 id="pos-malware"><a aria-hidden="true" class="anchor-heading icon-link" href="#pos-malware"></a>PoS Malware</h2>
+<p><a href="http://www.trendmicro.com.ph/cloud-content/us/pdfs/security-intelligence/white-papers/wp-pos-system-breaches.pdf">PoS systems require some sort of connection to a network in order to contact external credit card processors. This is necessary in order to validate credit card transactions. How this connection is provided may depend on the store in question. For small businesses, this may be provided via a cellular data connection. Sufficiently skilled and determined attackers can thus go after a business’s PoS terminals on a large scale and compromise the credit cards of thousands of users at a time. The same network connectivity can also be leveraged to help exfiltrate any stolen information.</a></p>
+<ul>
+<li>PoS malware specifically target the RAM to steal the un-encrypted information - a process called 'RAM scraping'.</li>
+<li>Industry uses end-to-end encryption of sensitive payment data - which comes from the card's magnetic strip or chip - when it is transmitted, received or stored. Decryption only occurs in the PoS device's random-access memory (RAM), where it is processed.
+<ul>
+<li>Most PoS run on Windows or Linux, making them small computers.</li>
+<li>Once inside, the PoS malware can select which data to steal and upload to a remote server... most PoS malware come equipped with backdoor and command-and-control features.</li>
+</ul>
+</li>
+</ul>
+<h3 id="types-of-malware"><a aria-hidden="true" class="anchor-heading icon-link" href="#types-of-malware"></a>Types of Malware</h3>
+<p>PoS malware is rarely used without the aid of other malware. These are the most common and readily available families of PoS malware.</p>
+<p>Alina
+: Scans the system's memory to check if the contents match regular expressions, which indicate the presence of card information that can be stolen.</p>
+<p>vSkimmer
+: If it does not find its server, it checks for the presence of a removable drive with the label 'KARTOXA007'. If this drive is found, it drops a file that contains any stolen information into it, allowing a method of offline data exfiltration.</p>
+<p>Dexter
+: Steals various system information and installs a key-logger onto affected systems.</p>
+<p>FYSNA
+: Using the Tor network to communicate with its C&#x26;C server makes detection and investigation difficult by masking all of the network traffic made by the malware extremely difficult to analyze.</p>
+<p>Decebel
+: Checks if sand-boxing or analysis tools are present on a machine before running. This allows to make detection and analysis more difficult.</p>
+<p>BlackPOS
+: Uses FTP to upload information to a server of the attackers' choosing. Allows attackers to consolidate stolen data from multiple PoS terminals on a single server.</p>
+<h3 id="where-is-the-data"><a aria-hidden="true" class="anchor-heading icon-link" href="#where-is-the-data"></a>Where is the Data?</h3>
+<p>Criminals sell the info to brokers who buy the payment card information in bulk and sell the information to 'carders' who use a carder website to obtain payment information which they will purchase pre-paid credit cards with.</p>
+<ul>
+<li>Those credit cards will be used to buy gift cards, which are used to buy goods and sell for profit. The items are shipped to a re-shipper, making the transaction from end to end very difficult to follow.</li>
+</ul>
+<h2 id="best-prevention-practices"><a aria-hidden="true" class="anchor-heading icon-link" href="#best-prevention-practices"></a>Best Prevention Practices</h2>
+<ul>
+<li>Actively monitor POS network for changes.</li>
+<li>Using compliant, best-of-class, end-to-end encryption around cardholder data.</li>
+<li>Limiting the hosts that can communicate with POS systems.</li>
+<li>Adopting chip-card enabled POS terminals.</li>
+<li>Utilizing employee screening and training to minimize insider threats.</li>
+<li>Training employees to immediately detect and report possible signs of tampering.</li>
+</ul>
+<h2 id="case-study---home-depot"><a aria-hidden="true" class="anchor-heading icon-link" href="#case-study---home-depot"></a>Case Study - Home Depot</h2>
+<ul>
+<li>The attack was completed using stolen credentials from one of the retailer's vendors.</li>
+<li>Those credentials were used to obtain access to the network, privileges elevated and access to POS systems to record credit card details.</li>
+<li>The malware infection went unnoticed for 5 months between April and September 2014.</li>
+</ul>
+<h3 id="timeline"><a aria-hidden="true" class="anchor-heading icon-link" href="#timeline"></a>Timeline</h3>
+<ol>
+<li>Stolen credentials were used to obtain access to the network...</li>
+<li>Privileges were subsequently elevated.</li>
+<li>Access to the POS system was obtained and malware was downloaded to record credit card details.</li>
+<li>The malware infection went unnoticed for five months between April and September 2014.</li>
+<li>Home Depot began an investigation on September 2nd.</li>
+<li>On September 8th, 2014, Home Depot released a statement indicating that its payment card systems were breached.</li>
+</ol>
+<h3 id="vulnerabilities"><a aria-hidden="true" class="anchor-heading icon-link" href="#vulnerabilities"></a>Vulnerabilities</h3>
+<p>The attackers exploited a zero-day vulnerability in Windows, which allowed them to pivot from the vendor-specific environment to the Home Depot corporate environment.</p>
+<ul>
+<li>Lack of regularly scheduled scan</li>
+<li>Did not have proper configuration of the software, or hardware POS terminals and the lack of network segregation.</li>
+<li>Credentials were not properly managed.</li>
+<li>Lack of monitoring capabilities led to a 5 month delay.</li>
+</ul>
+<h3 id="cost"><a aria-hidden="true" class="anchor-heading icon-link" href="#cost"></a>Cost</h3>
+<ul>
+<li>56 million payment cards stolen.</li>
+<li>$19.5 million payout to customers that had been impacted by the breach, including credit monitoring services.</li>
+<li>A minimum of $134.5 million to credit card companies and banks.</li>
+<li>The total cost of the retail data breach is approximately $179 million, not including legal fees.</li>
+<li>Expected total cost is close to $200 million.</li>
+</ul>
+<h3 id="prevention"><a aria-hidden="true" class="anchor-heading icon-link" href="#prevention"></a>Prevention</h3>
+<ul>
+<li>Chip-and-PIN card is embedded with security chip in addition to the traditional mag-stripe.</li>
+<li>Vendors began promoting an alternative method to payment cards using mobile payment methods, like Apple Pay and Google Wallet.</li>
+<li>Additional security was also provided by point-to-point (P2P) encryption.
+<ul>
+<li>Risk still remains with P2P encryption if someone to install a credit card skimmer on the actual pin-pad - which is still occurring.</li>
+</ul>
+</li>
+</ul>

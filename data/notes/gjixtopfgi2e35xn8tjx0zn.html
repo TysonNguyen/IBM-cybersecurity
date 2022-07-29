@@ -1,0 +1,70 @@
+<h1 id="net-analyzer"><a aria-hidden="true" class="anchor-heading icon-link" href="#net-analyzer"></a>Net Analyzer</h1>
+<h1 id="network-protocol-analyzers"><a aria-hidden="true" class="anchor-heading icon-link" href="#network-protocol-analyzers"></a>Network Protocol Analyzers</h1>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Learn what network protocol analyzers are.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Learn about Wireshark as the predominate network protocol analyzer.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Understand the packet capture file format.</li>
+</ul>
+<hr>
+<blockquote>
+<p>A protocol analyzer (also known as sniffer, packet analyzer, network analyzer, or traffic analyzer) can capture data in transit for the purpose of analysis and review. Sniffers allow an attacker to inject themselves in a conversation between a digital source and destination in hopes of capturing useful data.</p>
+</blockquote>
+<h2 id="sniffers"><a aria-hidden="true" class="anchor-heading icon-link" href="#sniffers"></a>Sniffers</h2>
+<p>Sniffers operate at the data link layer of the OSI model.</p>
+<ul>
+<li>They do not have to play by the same rules as the applications and services that reside further up the stack.</li>
+<li>Sniffers can capture everything on the wire and record it for later review.</li>
+<li>Allow user to see all of the data contained in the packet.</li>
+</ul>
+<p><img src="https://s7280.pcdn.co/wp-content/uploads/2018/06/osi-model-7-layers-1.png" alt="osi"></p>
+<h3 id="wireshark"><a aria-hidden="true" class="anchor-heading icon-link" href="#wireshark"></a>WireShark</h3>
+<p>Wireshark intercepts traffic and converts that binary traffic into human-readable format.</p>
+<ul>
+<li>Makes it easy to identify what traffic is crossing your network.
+<ul>
+<li>Amount of data</li>
+<li>Frequency</li>
+<li>Latency between hops and so on.</li>
+</ul>
+</li>
+<li>Network administrators use it to trouble network problems.</li>
+<li>Network security engineers use it to examine security problems.</li>
+<li>QA engineers use it to verify network applications.</li>
+<li>Developers use it to debug protocol implementations.</li>
+<li>People use it to learn network protocol internals.</li>
+</ul>
+<h4 id="features"><a aria-hidden="true" class="anchor-heading icon-link" href="#features"></a>Features</h4>
+<ul>
+<li>Deep inspection of hundreds of protocols, with more being added all the time.</li>
+<li>Live capture and offline analysis.</li>
+<li>Standard three-pane packet browser.</li>
+<li>Multi-platform: Runs on Windows, Linux, OS X, FreeBSD, NetBSD, etc.</li>
+<li>Captured network data can be browsed via a GUI, or via the TTY-mode TShark utility.</li>
+<li>The most powerful display filters in the industry.</li>
+<li>Rich VOIP analysis.</li>
+<li>Read/write many different capture file formats.</li>
+<li>Capture files compressed with gzip can be decompressed on the fly.</li>
+<li>Live data can be read from many media sources.</li>
+<li>Decryption support for many protocols, including IPsec, ISAKMP, Kerberos, SNMPv3, SSL/TLS, WEP, and WPA/WPA2.</li>
+<li>Coloring rules can be applied to the packet list for quick, intuitive analysis.</li>
+<li>Output can be exported to XML, PostScript*, CSV, or plain text.</li>
+</ul>
+<h3 id="packet-capture-pcap"><a aria-hidden="true" class="anchor-heading icon-link" href="#packet-capture-pcap"></a>Packet Capture (PCAP)</h3>
+<p>PCAP is a valuable resource for file analysis and to monitor your network traffic. Packet collection tools like Wireshark allow you to collect network traffic and translate it into a format that is human-readable.</p>
+<ul>
+<li>Most common for monitoring bandwidth usage...
+<ul>
+<li>Identify rogue DHCP servers</li>
+<li>Detecting malware</li>
+<li>DNS resolution</li>
+<li>Incident response</li>
+</ul>
+</li>
+</ul>
+<p>Wireshark uses .pcap files to record packet data that has been pulled from a network scan. Packet data is recorded in files with the .pcap file extension and can be used to find performance problems and cyberattacks on the network.</p>
+<ul>
+<li>Libpcap</li>
+<li>WinPcap</li>
+<li>PCapng</li>
+<li>Npcap</li>
+</ul>

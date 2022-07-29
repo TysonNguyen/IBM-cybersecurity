@@ -1,0 +1,63 @@
+<h1 id="hashing"><a aria-hidden="true" class="anchor-heading icon-link" href="#hashing"></a>Hashing</h1>
+<h1 id="hashing-1"><a aria-hidden="true" class="anchor-heading icon-link" href="#hashing-1"></a>Hashing</h1>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Describe hashing and its purpose in encryption.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Describe common pitfalls of using hashing.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Describe additional considerations when using hashing.</li>
+<li class="task-list-item"><input type="checkbox" disabled> Define Message Authentication Codes (MACs).</li>
+</ul>
+<hr>
+<p>Hashing is used for a variety of purposes:</p>
+<ul>
+<li>Validating passwords (salted hashes).</li>
+<li>Verifying data/code <em>integrity</em> (message authentication codes and keyed hashes).</li>
+<li>Verifying data/code <em>integrity</em> and <em>authenticity</em> (digital signatures).</li>
+<li>Use secure hash functions (follow NIST recommendations):
+<ul>
+<li><strong>SHA-2 (SHA-256, SHA-384, SHA-512, etc) and SHA-3</strong>.</li>
+</ul>
+</li>
+</ul>
+<h2 id="pitfalls"><a aria-hidden="true" class="anchor-heading icon-link" href="#pitfalls"></a>Pitfalls</h2>
+<h3 id="using-weak-or-obsolete-functions"><a aria-hidden="true" class="anchor-heading icon-link" href="#using-weak-or-obsolete-functions"></a>Using Weak or Obsolete Functions</h3>
+<ul>
+<li>Hash functions for which it is practical to generate <em>collisions</em> (two or more different inputs that correspond to the same hash value) are not considered robust.</li>
+<li><strong>MD5</strong> has been known to be broken for more than 10 years, collisions are fairly easily generated.</li>
+<li><strong>SHA-1</strong> was recently proven to be unreliable.
+<ul>
+<li><a href="https://security.googleblog.com/2017/02/announcing-first-sha1-collision.html">Google proof of SHA-1 collisions.</a></li>
+</ul>
+</li>
+</ul>
+<h3 id="using-predictable-plaintext"><a aria-hidden="true" class="anchor-heading icon-link" href="#using-predictable-plaintext"></a>Using Predictable Plaintext</h3>
+<ul>
+<li>Not quite a cryptography problem, but password can be discovered through brute-forcing.</li>
+</ul>
+<h3 id="using-unsalted-hashes-when-validating-passwords"><a aria-hidden="true" class="anchor-heading icon-link" href="#using-unsalted-hashes-when-validating-passwords"></a>Using Unsalted Hashes when Validating Passwords</h3>
+<ul>
+<li>Even for large problem spaces, rainbow tables can be used to crack hashes.</li>
+<li>When <em>salt</em> (a random byte sequence, at least 8 bytes recommended) is added to the plaintext the resulting hash is completely different, and rainbow tables will no longer help.
+<ul>
+<li>Use <em>key stretching functions</em> with a large number of iterations.
+<ul>
+<li>Deliberately slow (controlled by number of iterations) in order to make brute-forcing attacks impractical, both online and offline (aim for 750ms to complete the operation).</li>
+</ul>
+</li>
+<li>Future proof hashes - include an algorithm identifier to allow seamless upgrade in the future if the current algorithm becomes obsolete.</li>
+</ul>
+</li>
+</ul>
+<p><img src="https://cdn.guidingtech.com/media/assets/WordPress-Import/2016/10/HASH_AND_SALT.png" alt="salt"></p>
+<h2 id="message-authentication-codes-macs"><a aria-hidden="true" class="anchor-heading icon-link" href="#message-authentication-codes-macs"></a>Message Authentication Codes (MACs)</h2>
+<p><img src="https://www.computertechreviews.com/wp-content/uploads/2019/12/maxresdefault-2.jpg" alt="MACs"></p>
+<ul>
+<li>MACs confirm that the data block came from the stated sender and has not been changed.</li>
+<li>Hash-based MACs (HMACs) are based on crypto hash functions (e.g. HMAC-SHA256 or HMAC-SHA3).</li>
+<li>They generate a hash of the message with the help of the secret key.
+<ul>
+<li>If the key is not known, attacker cannot alter the message and be able to generate another valid HMAC.</li>
+</ul>
+</li>
+<li>HMACs help when data may be maliciously altered while under temporary attacker's control (e.g. cookies, or transmitted messages).</li>
+<li>Even encrypted data should be protected by HMACs to avoid <em>bit-flipping attacks</em>.</li>
+</ul>

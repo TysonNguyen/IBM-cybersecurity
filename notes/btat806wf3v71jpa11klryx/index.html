@@ -1,0 +1,241 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width"/><meta charSet="utf-8"/><link rel="icon" href="/favicon.ico"/><title>Penetration Test</title><meta name="robots" content="index,follow"/><meta name="googlebot" content="index,follow"/><meta name="description" content="Personal Knowledge Space"/><meta property="og:title" content="Penetration Test"/><meta property="og:description" content="Personal Knowledge Space"/><meta property="og:url" content="https://tysonnguyen.github.io/IBM-cybersecurity/notes/btat806wf3v71jpa11klryx/"/><meta property="og:type" content="article"/><meta property="article:published_time" content="5/21/2022"/><meta property="article:modified_time" content="5/21/2022"/><link rel="canonical" href="https://tysonnguyen.github.io/IBM-cybersecurity/notes/btat806wf3v71jpa11klryx/"/><meta name="next-head-count" content="14"/><link rel="preload" href="/IBM-cybersecurity/_next/static/css/0aeb6c71ee87f6df.css" as="style"/><link rel="stylesheet" href="/IBM-cybersecurity/_next/static/css/0aeb6c71ee87f6df.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/IBM-cybersecurity/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/IBM-cybersecurity/_next/static/chunks/webpack-b7a0bb0748951285.js" defer=""></script><script src="/IBM-cybersecurity/_next/static/chunks/framework-bb5c596eafb42b22.js" defer=""></script><script src="/IBM-cybersecurity/_next/static/chunks/main-3d5e78ffcdd2778f.js" defer=""></script><script src="/IBM-cybersecurity/_next/static/chunks/pages/_app-b0ef1900ae658bfa.js" defer=""></script><script src="/IBM-cybersecurity/_next/static/chunks/78-13ae6acd5ce7ca5b.js" defer=""></script><script src="/IBM-cybersecurity/_next/static/chunks/373-2f3879190a46a3d9.js" defer=""></script><script src="/IBM-cybersecurity/_next/static/chunks/pages/notes/%5Bid%5D-69449972c2a725d8.js" defer=""></script><script src="/IBM-cybersecurity/_next/static/NXb5WjKoAzTxCthMfgKQk/_buildManifest.js" defer=""></script><script src="/IBM-cybersecurity/_next/static/NXb5WjKoAzTxCthMfgKQk/_ssgManifest.js" defer=""></script><script src="/IBM-cybersecurity/_next/static/NXb5WjKoAzTxCthMfgKQk/_middlewareManifest.js" defer=""></script></head><body><div id="__next" data-reactroot=""><section class="ant-layout" style="width:100%;min-height:100%"><header class="ant-layout-header" style="position:fixed;isolation:isolate;z-index:1;width:100%;border-bottom:1px solid #d4dadf;height:64px;padding:0 24px 0 2px"><div class="ant-row ant-row-center" style="max-width:992px;justify-content:space-between;margin:0 auto"><div style="display:flex" class="ant-col ant-col-xs-20 ant-col-sm-4"></div><div class="ant-col gutter-row ant-col-xs-0 ant-col-sm-20 ant-col-md-20 ant-col-lg-19"><div class="ant-select ant-select-lg ant-select-auto-complete ant-select-single ant-select-allow-clear ant-select-show-search" style="width:100%"><div class="ant-select-selector"><span class="ant-select-selection-search"><input type="search" autoComplete="off" class="ant-select-selection-search-input" role="combobox" aria-haspopup="listbox" aria-owns="undefined_list" aria-autocomplete="list" aria-controls="undefined_list" aria-activedescendant="undefined_list_0" value=""/></span><span class="ant-select-selection-placeholder">For full text search please use the &#x27;?&#x27; prefix. e.g. ? Onboarding</span></div></div></div><div style="display:none;align-items:center;justify-content:center" class="ant-col ant-col-xs-4 ant-col-sm-4 ant-col-md-0 ant-col-lg-0"><span role="img" aria-label="menu" style="font-size:24px" tabindex="-1" class="anticon anticon-menu"><svg viewBox="64 64 896 896" focusable="false" data-icon="menu" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"></path></svg></span></div></div></header><section class="ant-layout site-layout" style="margin-top:64px"><section class="ant-layout site-layout"><div class="site-layout-sidebar" style="flex:0 0 auto;width:calc(max((100% - 992px) / 2, 0px) + 200px);min-width:200px;padding-left:calc((100% - 992px) / 2)"><aside class="ant-layout-sider ant-layout-sider-dark" style="position:fixed;overflow:auto;height:calc(100vh - 64px);background-color:transparent;flex:0 0 200px;max-width:200px;min-width:200px;width:200px"><div class="ant-layout-sider-children"></div></aside></div><section class="ant-layout side-layout-main" style="max-width:1200px;display:initial"><main class="ant-layout-content main-content" role="main" style="padding:0 24px"><div class="ant-row"><div class="ant-col ant-col-24"><div class="ant-row" style="margin-left:-10px;margin-right:-10px"><div style="padding-left:10px;padding-right:10px" class="ant-col ant-col-xs-24 ant-col-md-18"><div><h1 id="penetration-test"><a aria-hidden="true" class="anchor-heading icon-link" href="#penetration-test"></a>Penetration Test</h1>
+<h1 id="introduction-to-penetration-testing"><a aria-hidden="true" class="anchor-heading icon-link" href="#introduction-to-penetration-testing"></a>Introduction to Penetration Testing</h1>
+<ul class="contains-task-list">
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn what pentesting (penetration testing) is and why it's important.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Understand the different types of pentesting.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Review the different approaches to pentesting.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Understanding the planning phase of penetration testing.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Consider the ramifications of a real attack.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn what vulnerability analysis is and its role in pentesting.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn about different methods of gathering information.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Understand what role social engineering plays in discovering information.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn about different scanning tools.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn about different methods of gaining access to a system:</p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> Passive</li>
+<li class="task-list-item"><input type="checkbox" disabled> Active</li>
+<li class="task-list-item"><input type="checkbox" disabled> Offline</li>
+<li class="task-list-item"><input type="checkbox" disabled> Without technology</li>
+</ul>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Understand the phases of a pentest attack.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn what types of vulnerabilities are exploited.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn about the Executive Summary and what information it details.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Learn about the Technical Report and its benefits.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> What are the industry-leading tools used for penetration testing?</p>
+</li>
+</ul>
+<h2 id="what-is-penetration-testing"><a aria-hidden="true" class="anchor-heading icon-link" href="#what-is-penetration-testing"></a>What is Penetration Testing?</h2>
+<p>Penetration Testing
+: Security testing in which assessors mimic real-world attacks to identify methods for circumventing the security features of an application, system, or network. It often involves launching real attacks on real systems and data that use tools and techniques commonly used by attackers.</p>
+<h3 id="what-is-the-importance-of-pentesting"><a aria-hidden="true" class="anchor-heading icon-link" href="#what-is-the-importance-of-pentesting"></a>What is the Importance of Pentesting?</h3>
+<p>With cyber attacks becoming the norm, it is more important than ever to undertake regular vulnerability scans and penetration testing to identify vulnerabilities and ensure the cyber controls are working.</p>
+<h3 id="operating-systems"><a aria-hidden="true" class="anchor-heading icon-link" href="#operating-systems"></a>Operating Systems</h3>
+<p>Desktop</p>
+<ul>
+<li>Windows</li>
+<li>Unix</li>
+<li>Linux</li>
+<li>MacOS</li>
+<li>Chrome</li>
+<li>Ubuntu</li>
+</ul>
+<p>Mobile</p>
+<ul>
+<li>iOS</li>
+<li>Android</li>
+<li>Blackberry OS</li>
+<li>Windows Mobile</li>
+<li>WebOS</li>
+<li>Symbian OS</li>
+</ul>
+<h3 id="approaches"><a aria-hidden="true" class="anchor-heading icon-link" href="#approaches"></a>Approaches</h3>
+<p>No two penetration tests are going to be the same because each company uses different tools, systems, and applications.</p>
+<ul>
+<li>Internal vs. external.</li>
+<li>Web &#x26; mobile application assessments.</li>
+<li>Social engineering.</li>
+<li>Wireless network, embedded device &#x26; IoT.</li>
+<li>ICS penetration.</li>
+</ul>
+<h3 id="penetration-testing-phases"><a aria-hidden="true" class="anchor-heading icon-link" href="#penetration-testing-phases"></a>Penetration Testing Phases</h3>
+<ol>
+<li>Planning</li>
+<li>Discovery</li>
+<li>Attack</li>
+<li>Report</li>
+</ol>
+<h4 id="planning"><a aria-hidden="true" class="anchor-heading icon-link" href="#planning"></a>Planning</h4>
+<ul>
+<li>Setting objectives
+<ul>
+<li>What are the goals of the pentest?</li>
+<li>What are your targets?</li>
+</ul>
+</li>
+<li>Establishing boundaries
+<ul>
+<li>There are legal and ethical ramifications to consider.</li>
+<li>Since the attacks are real they have the potential to interrupt availability of key functions and services.</li>
+</ul>
+</li>
+<li>Informing Need-to-know employees.
+<ul>
+<li>Since there will always be some social engineering, it might be wise to inform local security so no one is arrested during the test.</li>
+</ul>
+</li>
+</ul>
+<h4 id="discovery"><a aria-hidden="true" class="anchor-heading icon-link" href="#discovery"></a>Discovery</h4>
+<p>Vulnerability Analysis
+: Vulnerability scanning can help identify outdated software versions, missing patches, and missing patches, and misconfigurations, and validate compliance with or deviations from an organization's security policy. This is done by identifying the operating systems and major software applications running on the hosts and matching them with information on known vulnerabilities stored in the scanners' vulnerability databases.</p>
+<h5 id="google-dorks"><a aria-hidden="true" class="anchor-heading icon-link" href="#google-dorks"></a>Google Dorks</h5>
+<p>A Google Dork query, sometimes referred to as dork, is a search string that uses advanced search operators to find information that is not readily available on a website.</p>
+<p>Data can be found using Google Dorks:</p>
+<ul>
+<li>Admin login pages</li>
+<li>Username and passwords</li>
+<li>Vulnerable entities</li>
+<li>Sensitive documents</li>
+<li>Government/military data</li>
+<li>Email lists</li>
+<li>Bank account details and lots more...</li>
+</ul>
+<h5 id="passive-vs-active"><a aria-hidden="true" class="anchor-heading icon-link" href="#passive-vs-active"></a>Passive vs. Active</h5>
+<ul>
+<li>Monitoring employees.</li>
+<li>Listening to network traffic.</li>
+<li>Network mapping.</li>
+<li>Port scanning.</li>
+<li>Password cracking.</li>
+</ul>
+<p><strong>Passive-Online</strong></p>
+<p>Wire Sniffing
+: Capturing data packet across the computer network.</p>
+<p>Man in the Middle
+: Hijacking a session in real-time to obtain access.</p>
+<p>Replay Attack
+: A valid data transmission is maliciously or fraudulently repeated or delayed.</p>
+<p><strong>Active-Online</strong></p>
+<p>Password Guessing
+: Also known as "brute force attack".</p>
+<p>Trojan/Spyware/Keyloggers
+: A spy software which collects different types of data from the session.</p>
+<p>Hash Injection
+: Authenticate to a remote server or service using the underlying NTLM or LanMan hash of a user's password.</p>
+<p>Phishing
+: Users are tricked into clicking a malicious link, which can lead to the installation of malware, a ransomware attack, or disclosure of information.</p>
+<p><strong>Offline Attacks</strong></p>
+<p>Pre-Computed Hashes
+: Data structure that uses a hash function to store, order and/or access data in an array.</p>
+<p>Distributed Network Attack (DNA)
+: A password cracking system sold by AccessData. DNA can perform brute-force cracking of 40-bit RC2/RC4 keys. For longer keys, DNA can attempt password cracking.</p>
+<ul>
+<li>Computationally infeasible to attempt a brute-force attack on a 128-bit key.</li>
+<li>DNA can mine suspects hard drive for potential passwords.</li>
+</ul>
+<p>Rainbow
+: A table is precomputed table for reversing cryptographic hash functions, usually for cracking password hashes.</p>
+<p><strong>Tech-less Discovery</strong></p>
+<p>Social Engineering
+: A general term related to the act of deceiving the user to surrender enough information to obtain access and/or data.</p>
+<p>Shoulder Surfing
+: Active spying by obtaining Optic access to the premises and view the access input.</p>
+<p>Dumpster Diving
+: Retrieval of information by examining the trash in search of discarded but not destroyed information.</p>
+<h4 id="attack-phases"><a aria-hidden="true" class="anchor-heading icon-link" href="#attack-phases"></a>Attack Phases</h4>
+<ol>
+<li>Discovery Phase</li>
+<li>Gaining Access
+<ul>
+<li>Enough data has been gathered in the discovery phase to make an informed attempt to access the target.</li>
+</ul>
+</li>
+<li>Escalating Privileges
+<ul>
+<li>If only user-level access was the obtained in the last step, the tester will now seek to gain complete control of the system (administrator-level access). </li>
+</ul>
+</li>
+<li>System Browsing
+<ul>
+<li>The information gathering process begins again to identify mechanisms to gain access to additional systems.</li>
+</ul>
+</li>
+<li>Install Additional Tools
+<ul>
+<li>Additional penetration. Testing tools are installed to gain additional information or access it through a combination of both.</li>
+</ul>
+</li>
+</ol>
+<h5 id="exploited-vulnerabilities"><a aria-hidden="true" class="anchor-heading icon-link" href="#exploited-vulnerabilities"></a>Exploited Vulnerabilities</h5>
+<p>Categorized by the National Institute of Standards and technology. These are the categories that most vulnerabilities can be broken down. </p>
+<ul>
+<li>Misconfigurations </li>
+<li>Kernel Flaws</li>
+<li>Insufficient iInput Validations</li>
+<li>Symbolic Links</li>
+<li>File Descriptor Attacks</li>
+<li>Race Conditions</li>
+<li>Buffer Overflows</li>
+<li>Incorrect file and directory permissions</li>
+</ul>
+<h4 id="reporting"><a aria-hidden="true" class="anchor-heading icon-link" href="#reporting"></a>Reporting</h4>
+<h5 id="executive-summary"><a aria-hidden="true" class="anchor-heading icon-link" href="#executive-summary"></a>Executive Summary</h5>
+<p>Communicate to the reader the specific goals of the penetration testing and the high level findings of the testing exercise.</p>
+<ol>
+<li>Background</li>
+<li>Overall Posture</li>
+<li>Risk Ranking</li>
+<li>General Findings</li>
+<li>Recommendations</li>
+<li>Road map</li>
+</ol>
+<h5 id="technical-review"><a aria-hidden="true" class="anchor-heading icon-link" href="#technical-review"></a>Technical Review</h5>
+<h6 id="introduction"><a aria-hidden="true" class="anchor-heading icon-link" href="#introduction"></a>Introduction</h6>
+<h6 id="scope"><a aria-hidden="true" class="anchor-heading icon-link" href="#scope"></a>Scope</h6>
+<h6 id="vulnerability-assessment"><a aria-hidden="true" class="anchor-heading icon-link" href="#vulnerability-assessment"></a>Vulnerability Assessment</h6>
+<h6 id="vulnerability-confirmation"><a aria-hidden="true" class="anchor-heading icon-link" href="#vulnerability-confirmation"></a>Vulnerability Confirmation</h6>
+<h6 id="post-exploitation"><a aria-hidden="true" class="anchor-heading icon-link" href="#post-exploitation"></a>Post Exploitation</h6>
+<h6 id="risk--exposure"><a aria-hidden="true" class="anchor-heading icon-link" href="#risk--exposure"></a>Risk / Exposure</h6>
+<h2 id="writing-a-penetration-testing-report"><a aria-hidden="true" class="anchor-heading icon-link" href="#writing-a-penetration-testing-report"></a>Writing a Penetration Testing Report</h2>
+<p><a href="https://www.sans.org/white-papers/33343/">https://www.sans.org/white-papers/33343/</a></p>
+<h2 id="tools"><a aria-hidden="true" class="anchor-heading icon-link" href="#tools"></a>Tools</h2>
+<p>ibm.biz/kalilinux
+ibz.biz/nmap-org
+ibm.biz/JTRipper
+ibm.biz/metasploit
+ibm.biz/wireshark
+ibm.biz/hackthebox
+ibm.biz/lamewalkthrough</p>
+<hr>
+<strong>Children</strong>
+<ol>
+<li><a href="/IBM-cybersecurity/notes/bjsh4qgh9mn5m4y6pyinjce">Fundamentals</a></li>
+</ol></div></div><div style="padding-left:10px;padding-right:10px" class="ant-col ant-col-xs-0 ant-col-md-6"><div><div class=""><div class="ant-anchor-wrapper dendron-toc" style="max-height:calc(100vh - 64px);z-index:1"><div class="ant-anchor"><div class="ant-anchor-ink"><span class="ant-anchor-ink-ball"></span></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#introduction-to-penetration-testing" title="Introduction to Penetration Testing">Introduction to Penetration Testing</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#what-is-penetration-testing" title="What is Penetration Testing?">What is Penetration Testing?</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#what-is-the-importance-of-pentesting" title="What is the Importance of Pentesting?">What is the Importance of Pentesting?</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#operating-systems" title="Operating Systems">Operating Systems</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#approaches" title="Approaches">Approaches</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#penetration-testing-phases" title="Penetration Testing Phases">Penetration Testing Phases</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#planning" title="Planning">Planning</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#discovery" title="Discovery">Discovery</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#google-dorks" title="Google Dorks">Google Dorks</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#passive-vs-active" title="Passive vs. Active">Passive vs. Active</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#attack-phases" title="Attack Phases">Attack Phases</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#exploited-vulnerabilities" title="Exploited Vulnerabilities">Exploited Vulnerabilities</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#reporting" title="Reporting">Reporting</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#executive-summary" title="Executive Summary">Executive Summary</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#technical-review" title="Technical Review">Technical Review</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#introduction" title="Introduction">Introduction</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#scope" title="Scope">Scope</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#vulnerability-assessment" title="Vulnerability Assessment">Vulnerability Assessment</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#vulnerability-confirmation" title="Vulnerability Confirmation">Vulnerability Confirmation</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#post-exploitation" title="Post Exploitation">Post Exploitation</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#risk--exposure" title="Risk / Exposure">Risk / Exposure</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#writing-a-penetration-testing-report" title="Writing a Penetration Testing Report">Writing a Penetration Testing Report</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#tools" title="Tools">Tools</a></div></div></div></div></div></div></div></div></div></main><div class="ant-divider ant-divider-horizontal" role="separator"></div><footer class="ant-layout-footer" style="padding:0 24px 24px"></footer></section></section></section></section></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"note":{"id":"btat806wf3v71jpa11klryx","title":"Penetration Test","desc":"","updated":1653132326262,"created":1653132297591,"custom":{},"fname":"penetration-test","type":"note","vault":{"fsPath":"vault"},"contentHash":"a7a7f83d561839bc918cf15af3433c2a","links":[],"anchors":{"introduction-to-penetration-testing":{"type":"header","text":"Introduction to Penetration Testing","value":"introduction-to-penetration-testing","line":8,"column":0,"depth":1},"what-is-penetration-testing":{"type":"header","text":"What is Penetration Testing?","value":"what-is-penetration-testing","line":36,"column":0,"depth":2},"what-is-the-importance-of-pentesting":{"type":"header","text":"What is the Importance of Pentesting?","value":"what-is-the-importance-of-pentesting","line":41,"column":0,"depth":3},"operating-systems":{"type":"header","text":"Operating Systems","value":"operating-systems","line":45,"column":0,"depth":3},"approaches":{"type":"header","text":"Approaches","value":"approaches","line":63,"column":0,"depth":3},"penetration-testing-phases":{"type":"header","text":"Penetration Testing Phases","value":"penetration-testing-phases","line":73,"column":0,"depth":3},"planning":{"type":"header","text":"Planning","value":"planning","line":80,"column":0,"depth":4},"discovery":{"type":"header","text":"Discovery","value":"discovery","line":91,"column":0,"depth":4},"google-dorks":{"type":"header","text":"Google Dorks","value":"google-dorks","line":96,"column":0,"depth":5},"passive-vs-active":{"type":"header","text":"Passive vs. Active","value":"passive-vs-active","line":110,"column":0,"depth":5},"attack-phases":{"type":"header","text":"Attack Phases","value":"attack-phases","line":168,"column":0,"depth":4},"exploited-vulnerabilities":{"type":"header","text":"Exploited Vulnerabilities","value":"exploited-vulnerabilities","line":180,"column":0,"depth":5},"reporting":{"type":"header","text":"Reporting","value":"reporting","line":193,"column":0,"depth":4},"executive-summary":{"type":"header","text":"Executive Summary","value":"executive-summary","line":195,"column":0,"depth":5},"technical-review":{"type":"header","text":"Technical Review","value":"technical-review","line":206,"column":0,"depth":5},"introduction":{"type":"header","text":"Introduction","value":"introduction","line":208,"column":0,"depth":6},"scope":{"type":"header","text":"Scope","value":"scope","line":209,"column":0,"depth":6},"vulnerability-assessment":{"type":"header","text":"Vulnerability Assessment","value":"vulnerability-assessment","line":210,"column":0,"depth":6},"vulnerability-confirmation":{"type":"header","text":"Vulnerability Confirmation","value":"vulnerability-confirmation","line":211,"column":0,"depth":6},"post-exploitation":{"type":"header","text":"Post Exploitation","value":"post-exploitation","line":212,"column":0,"depth":6},"risk--exposure":{"type":"header","text":"Risk / Exposure","value":"risk--exposure","line":213,"column":0,"depth":6},"writing-a-penetration-testing-report":{"type":"header","text":"Writing a Penetration Testing Report","value":"writing-a-penetration-testing-report","line":215,"column":0,"depth":2},"tools":{"type":"header","text":"Tools","value":"tools","line":219,"column":0,"depth":2}},"children":["bjsh4qgh9mn5m4y6pyinjce"],"parent":"3ipqfkgudo2s73dwa256ca0","data":{}},"body":"\u003ch1 id=\"penetration-test\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#penetration-test\"\u003e\u003c/a\u003ePenetration Test\u003c/h1\u003e\n\u003ch1 id=\"introduction-to-penetration-testing\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#introduction-to-penetration-testing\"\u003e\u003c/a\u003eIntroduction to Penetration Testing\u003c/h1\u003e\n\u003cul class=\"contains-task-list\"\u003e\n\u003cli class=\"task-list-item\"\u003e\n\u003cp\u003e\u003cinput type=\"checkbox\" disabled\u003e Learn what pentesting (penetration testing) is and why it's important.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli class=\"task-list-item\"\u003e\n\u003cp\u003e\u003cinput type=\"checkbox\" disabled\u003e Understand the different types of pentesting.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli class=\"task-list-item\"\u003e\n\u003cp\u003e\u003cinput type=\"checkbox\" disabled\u003e Review the different approaches to pentesting.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli class=\"task-list-item\"\u003e\n\u003cp\u003e\u003cinput type=\"checkbox\" disabled\u003e Understanding the planning phase of penetration testing.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli class=\"task-list-item\"\u003e\n\u003cp\u003e\u003cinput type=\"checkbox\" disabled\u003e Consider the ramifications of a real attack.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli class=\"task-list-item\"\u003e\n\u003cp\u003e\u003cinput type=\"checkbox\" disabled\u003e Learn what vulnerability analysis is and its role in pentesting.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli class=\"task-list-item\"\u003e\n\u003cp\u003e\u003cinput type=\"checkbox\" disabled\u003e Learn about different methods of gathering information.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli class=\"task-list-item\"\u003e\n\u003cp\u003e\u003cinput type=\"checkbox\" disabled\u003e Understand what role social engineering plays in discovering information.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli class=\"task-list-item\"\u003e\n\u003cp\u003e\u003cinput type=\"checkbox\" disabled\u003e Learn about different scanning tools.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli class=\"task-list-item\"\u003e\n\u003cp\u003e\u003cinput type=\"checkbox\" disabled\u003e Learn about different methods of gaining access to a system:\u003c/p\u003e\n\u003cul class=\"contains-task-list\"\u003e\n\u003cli class=\"task-list-item\"\u003e\u003cinput type=\"checkbox\" disabled\u003e Passive\u003c/li\u003e\n\u003cli class=\"task-list-item\"\u003e\u003cinput type=\"checkbox\" disabled\u003e Active\u003c/li\u003e\n\u003cli class=\"task-list-item\"\u003e\u003cinput type=\"checkbox\" disabled\u003e Offline\u003c/li\u003e\n\u003cli class=\"task-list-item\"\u003e\u003cinput type=\"checkbox\" disabled\u003e Without technology\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli class=\"task-list-item\"\u003e\n\u003cp\u003e\u003cinput type=\"checkbox\" disabled\u003e Understand the phases of a pentest attack.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli class=\"task-list-item\"\u003e\n\u003cp\u003e\u003cinput type=\"checkbox\" disabled\u003e Learn what types of vulnerabilities are exploited.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli class=\"task-list-item\"\u003e\n\u003cp\u003e\u003cinput type=\"checkbox\" disabled\u003e Learn about the Executive Summary and what information it details.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli class=\"task-list-item\"\u003e\n\u003cp\u003e\u003cinput type=\"checkbox\" disabled\u003e Learn about the Technical Report and its benefits.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli class=\"task-list-item\"\u003e\n\u003cp\u003e\u003cinput type=\"checkbox\" disabled\u003e What are the industry-leading tools used for penetration testing?\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"what-is-penetration-testing\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#what-is-penetration-testing\"\u003e\u003c/a\u003eWhat is Penetration Testing?\u003c/h2\u003e\n\u003cp\u003ePenetration Testing\n: Security testing in which assessors mimic real-world attacks to identify methods for circumventing the security features of an application, system, or network. It often involves launching real attacks on real systems and data that use tools and techniques commonly used by attackers.\u003c/p\u003e\n\u003ch3 id=\"what-is-the-importance-of-pentesting\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#what-is-the-importance-of-pentesting\"\u003e\u003c/a\u003eWhat is the Importance of Pentesting?\u003c/h3\u003e\n\u003cp\u003eWith cyber attacks becoming the norm, it is more important than ever to undertake regular vulnerability scans and penetration testing to identify vulnerabilities and ensure the cyber controls are working.\u003c/p\u003e\n\u003ch3 id=\"operating-systems\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#operating-systems\"\u003e\u003c/a\u003eOperating Systems\u003c/h3\u003e\n\u003cp\u003eDesktop\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eWindows\u003c/li\u003e\n\u003cli\u003eUnix\u003c/li\u003e\n\u003cli\u003eLinux\u003c/li\u003e\n\u003cli\u003eMacOS\u003c/li\u003e\n\u003cli\u003eChrome\u003c/li\u003e\n\u003cli\u003eUbuntu\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eMobile\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eiOS\u003c/li\u003e\n\u003cli\u003eAndroid\u003c/li\u003e\n\u003cli\u003eBlackberry OS\u003c/li\u003e\n\u003cli\u003eWindows Mobile\u003c/li\u003e\n\u003cli\u003eWebOS\u003c/li\u003e\n\u003cli\u003eSymbian OS\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"approaches\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#approaches\"\u003e\u003c/a\u003eApproaches\u003c/h3\u003e\n\u003cp\u003eNo two penetration tests are going to be the same because each company uses different tools, systems, and applications.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eInternal vs. external.\u003c/li\u003e\n\u003cli\u003eWeb \u0026#x26; mobile application assessments.\u003c/li\u003e\n\u003cli\u003eSocial engineering.\u003c/li\u003e\n\u003cli\u003eWireless network, embedded device \u0026#x26; IoT.\u003c/li\u003e\n\u003cli\u003eICS penetration.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"penetration-testing-phases\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#penetration-testing-phases\"\u003e\u003c/a\u003ePenetration Testing Phases\u003c/h3\u003e\n\u003col\u003e\n\u003cli\u003ePlanning\u003c/li\u003e\n\u003cli\u003eDiscovery\u003c/li\u003e\n\u003cli\u003eAttack\u003c/li\u003e\n\u003cli\u003eReport\u003c/li\u003e\n\u003c/ol\u003e\n\u003ch4 id=\"planning\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#planning\"\u003e\u003c/a\u003ePlanning\u003c/h4\u003e\n\u003cul\u003e\n\u003cli\u003eSetting objectives\n\u003cul\u003e\n\u003cli\u003eWhat are the goals of the pentest?\u003c/li\u003e\n\u003cli\u003eWhat are your targets?\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eEstablishing boundaries\n\u003cul\u003e\n\u003cli\u003eThere are legal and ethical ramifications to consider.\u003c/li\u003e\n\u003cli\u003eSince the attacks are real they have the potential to interrupt availability of key functions and services.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eInforming Need-to-know employees.\n\u003cul\u003e\n\u003cli\u003eSince there will always be some social engineering, it might be wise to inform local security so no one is arrested during the test.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch4 id=\"discovery\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#discovery\"\u003e\u003c/a\u003eDiscovery\u003c/h4\u003e\n\u003cp\u003eVulnerability Analysis\n: Vulnerability scanning can help identify outdated software versions, missing patches, and missing patches, and misconfigurations, and validate compliance with or deviations from an organization's security policy. This is done by identifying the operating systems and major software applications running on the hosts and matching them with information on known vulnerabilities stored in the scanners' vulnerability databases.\u003c/p\u003e\n\u003ch5 id=\"google-dorks\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#google-dorks\"\u003e\u003c/a\u003eGoogle Dorks\u003c/h5\u003e\n\u003cp\u003eA Google Dork query, sometimes referred to as dork, is a search string that uses advanced search operators to find information that is not readily available on a website.\u003c/p\u003e\n\u003cp\u003eData can be found using Google Dorks:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eAdmin login pages\u003c/li\u003e\n\u003cli\u003eUsername and passwords\u003c/li\u003e\n\u003cli\u003eVulnerable entities\u003c/li\u003e\n\u003cli\u003eSensitive documents\u003c/li\u003e\n\u003cli\u003eGovernment/military data\u003c/li\u003e\n\u003cli\u003eEmail lists\u003c/li\u003e\n\u003cli\u003eBank account details and lots more...\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch5 id=\"passive-vs-active\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#passive-vs-active\"\u003e\u003c/a\u003ePassive vs. Active\u003c/h5\u003e\n\u003cul\u003e\n\u003cli\u003eMonitoring employees.\u003c/li\u003e\n\u003cli\u003eListening to network traffic.\u003c/li\u003e\n\u003cli\u003eNetwork mapping.\u003c/li\u003e\n\u003cli\u003ePort scanning.\u003c/li\u003e\n\u003cli\u003ePassword cracking.\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003e\u003cstrong\u003ePassive-Online\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003eWire Sniffing\n: Capturing data packet across the computer network.\u003c/p\u003e\n\u003cp\u003eMan in the Middle\n: Hijacking a session in real-time to obtain access.\u003c/p\u003e\n\u003cp\u003eReplay Attack\n: A valid data transmission is maliciously or fraudulently repeated or delayed.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eActive-Online\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003ePassword Guessing\n: Also known as \"brute force attack\".\u003c/p\u003e\n\u003cp\u003eTrojan/Spyware/Keyloggers\n: A spy software which collects different types of data from the session.\u003c/p\u003e\n\u003cp\u003eHash Injection\n: Authenticate to a remote server or service using the underlying NTLM or LanMan hash of a user's password.\u003c/p\u003e\n\u003cp\u003ePhishing\n: Users are tricked into clicking a malicious link, which can lead to the installation of malware, a ransomware attack, or disclosure of information.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eOffline Attacks\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003ePre-Computed Hashes\n: Data structure that uses a hash function to store, order and/or access data in an array.\u003c/p\u003e\n\u003cp\u003eDistributed Network Attack (DNA)\n: A password cracking system sold by AccessData. DNA can perform brute-force cracking of 40-bit RC2/RC4 keys. For longer keys, DNA can attempt password cracking.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eComputationally infeasible to attempt a brute-force attack on a 128-bit key.\u003c/li\u003e\n\u003cli\u003eDNA can mine suspects hard drive for potential passwords.\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eRainbow\n: A table is precomputed table for reversing cryptographic hash functions, usually for cracking password hashes.\u003c/p\u003e\n\u003cp\u003e\u003cstrong\u003eTech-less Discovery\u003c/strong\u003e\u003c/p\u003e\n\u003cp\u003eSocial Engineering\n: A general term related to the act of deceiving the user to surrender enough information to obtain access and/or data.\u003c/p\u003e\n\u003cp\u003eShoulder Surfing\n: Active spying by obtaining Optic access to the premises and view the access input.\u003c/p\u003e\n\u003cp\u003eDumpster Diving\n: Retrieval of information by examining the trash in search of discarded but not destroyed information.\u003c/p\u003e\n\u003ch4 id=\"attack-phases\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#attack-phases\"\u003e\u003c/a\u003eAttack Phases\u003c/h4\u003e\n\u003col\u003e\n\u003cli\u003eDiscovery Phase\u003c/li\u003e\n\u003cli\u003eGaining Access\n\u003cul\u003e\n\u003cli\u003eEnough data has been gathered in the discovery phase to make an informed attempt to access the target.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eEscalating Privileges\n\u003cul\u003e\n\u003cli\u003eIf only user-level access was the obtained in the last step, the tester will now seek to gain complete control of the system (administrator-level access). \u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eSystem Browsing\n\u003cul\u003e\n\u003cli\u003eThe information gathering process begins again to identify mechanisms to gain access to additional systems.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eInstall Additional Tools\n\u003cul\u003e\n\u003cli\u003eAdditional penetration. Testing tools are installed to gain additional information or access it through a combination of both.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\n\u003ch5 id=\"exploited-vulnerabilities\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#exploited-vulnerabilities\"\u003e\u003c/a\u003eExploited Vulnerabilities\u003c/h5\u003e\n\u003cp\u003eCategorized by the National Institute of Standards and technology. These are the categories that most vulnerabilities can be broken down. \u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eMisconfigurations \u003c/li\u003e\n\u003cli\u003eKernel Flaws\u003c/li\u003e\n\u003cli\u003eInsufficient iInput Validations\u003c/li\u003e\n\u003cli\u003eSymbolic Links\u003c/li\u003e\n\u003cli\u003eFile Descriptor Attacks\u003c/li\u003e\n\u003cli\u003eRace Conditions\u003c/li\u003e\n\u003cli\u003eBuffer Overflows\u003c/li\u003e\n\u003cli\u003eIncorrect file and directory permissions\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch4 id=\"reporting\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#reporting\"\u003e\u003c/a\u003eReporting\u003c/h4\u003e\n\u003ch5 id=\"executive-summary\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#executive-summary\"\u003e\u003c/a\u003eExecutive Summary\u003c/h5\u003e\n\u003cp\u003eCommunicate to the reader the specific goals of the penetration testing and the high level findings of the testing exercise.\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003eBackground\u003c/li\u003e\n\u003cli\u003eOverall Posture\u003c/li\u003e\n\u003cli\u003eRisk Ranking\u003c/li\u003e\n\u003cli\u003eGeneral Findings\u003c/li\u003e\n\u003cli\u003eRecommendations\u003c/li\u003e\n\u003cli\u003eRoad map\u003c/li\u003e\n\u003c/ol\u003e\n\u003ch5 id=\"technical-review\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#technical-review\"\u003e\u003c/a\u003eTechnical Review\u003c/h5\u003e\n\u003ch6 id=\"introduction\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#introduction\"\u003e\u003c/a\u003eIntroduction\u003c/h6\u003e\n\u003ch6 id=\"scope\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#scope\"\u003e\u003c/a\u003eScope\u003c/h6\u003e\n\u003ch6 id=\"vulnerability-assessment\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#vulnerability-assessment\"\u003e\u003c/a\u003eVulnerability Assessment\u003c/h6\u003e\n\u003ch6 id=\"vulnerability-confirmation\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#vulnerability-confirmation\"\u003e\u003c/a\u003eVulnerability Confirmation\u003c/h6\u003e\n\u003ch6 id=\"post-exploitation\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#post-exploitation\"\u003e\u003c/a\u003ePost Exploitation\u003c/h6\u003e\n\u003ch6 id=\"risk--exposure\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#risk--exposure\"\u003e\u003c/a\u003eRisk / Exposure\u003c/h6\u003e\n\u003ch2 id=\"writing-a-penetration-testing-report\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#writing-a-penetration-testing-report\"\u003e\u003c/a\u003eWriting a Penetration Testing Report\u003c/h2\u003e\n\u003cp\u003e\u003ca href=\"https://www.sans.org/white-papers/33343/\"\u003ehttps://www.sans.org/white-papers/33343/\u003c/a\u003e\u003c/p\u003e\n\u003ch2 id=\"tools\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#tools\"\u003e\u003c/a\u003eTools\u003c/h2\u003e\n\u003cp\u003eibm.biz/kalilinux\nibz.biz/nmap-org\nibm.biz/JTRipper\nibm.biz/metasploit\nibm.biz/wireshark\nibm.biz/hackthebox\nibm.biz/lamewalkthrough\u003c/p\u003e\n\u003chr\u003e\n\u003cstrong\u003eChildren\u003c/strong\u003e\n\u003col\u003e\n\u003cli\u003e\u003ca href=\"/IBM-cybersecurity/notes/bjsh4qgh9mn5m4y6pyinjce\"\u003eFundamentals\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e","noteIndex":{"id":"3ipqfkgudo2s73dwa256ca0","title":"Brain","desc":"","updated":1654212603514,"created":1651706375099,"custom":{"nav_order":0,"permalink":"/"},"fname":"root","type":"note","vault":{"fsPath":"vault"},"contentHash":"a83b284bd096f5e390fe503b2b0b07c7","links":[{"type":"ref","from":{"fname":"root","id":"3ipqfkgudo2s73dwa256ca0","vaultName":"vault"},"value":"cybersecurity","position":{"start":{"line":5,"column":1,"offset":76},"end":{"line":5,"column":19,"offset":94},"indent":[]},"xvault":false,"to":{"fname":"cybersecurity"}}],"anchors":{"welcome-to-tysons-vault":{"type":"header","text":"Welcome to Tyson's Vault!","value":"welcome-to-tysons-vault","line":7,"column":0,"depth":1},"lookup":{"type":"header","text":"Lookup","value":"lookup","line":14,"column":0,"depth":2}},"children":["nkcab8fkftjfz927no2dyac","cl0utj7thwjp7bsmxe4v5va","o9kgllk4dy29wx2figqoz1w","5vhy4yxl34a7p6064a13u49","ce290z98noyy6eb5pniawk9","txeqnq5eaictderxvuifqr6","pn4fankyf3uifous1txqj5m","8ykaxd1qjsjfi1c6zsfq1eq","017vb349bxpq76wq69sai1u","wcuptt9dpzdx06nt9l6myuv","iulpmov883qv6tpqkgvbno8","8ml5picmbrjw3u887mag9dz","pd3512leoloo1qll6fr2j0o","e77elhqi5fhnpz5kdvxeudb","9k9gs0zqcs40mq2fsi5nesj","zegnyfq64amprq2yq9rnu3e","op8gluer5gorswd1xkdwwis","btat806wf3v71jpa11klryx","kldz5ejn1lvhsujdm2nyog7","9gc4nxd14um87nyud8e9ubt","ptonz0zapnutyahjkedfn8f","ixopv5geql8hlgkwk20pxow","3cschspue6elfiqxcd17tul","0f8xutu1gmbnw7xt51tim9v","87sb4tbzuopxpz736rwtx5b","d9ibeadgk68z3q2qjgsqida","woqkmy53oegpxi1ia3jl833","6ltznv32t1szgyl74knpxly","16md0j2hj1k5477uu3kclcb","2o3i5a96njb0vlfr61lslzi"],"parent":null,"data":{},"body":"# Welcome to Tyson's Vault!\n\nThis is my place store all my cool knowledge.\n\n![[cybersecurity]]\n\n\n## Lookup\n\nThis section contains useful links to related resources.\n\n- [Getting Started Guide](https://link.dendron.so/6b25)\n- [Discord](https://link.dendron.so/6b23)\n- [Home Page](https://wiki.dendron.so/)\n- [Github](https://link.dendron.so/6b24)\n- [Developer Docs](https://docs.dendron.so/)\n"},"collectionChildren":null,"customHeadContent":null,"config":{"version":5,"dev":{"enablePreviewV2":true},"commands":{"lookup":{"note":{"selectionMode":"extract","confirmVaultOnCreate":true,"vaultSelectionModeOnCreate":"smart","leaveTrace":false,"bubbleUpCreateNew":true,"fuzzThreshold":0.2}},"randomNote":{},"insertNote":{"initialValue":"templates"},"insertNoteLink":{"aliasMode":"none","enableMultiSelect":false},"insertNoteIndex":{"enableMarker":false},"copyNoteLink":{},"templateHierarchy":"template"},"workspace":{"vaults":[{"fsPath":"vault"}],"journal":{"dailyDomain":"daily","name":"journal","dateFormat":"y.MM.dd","addBehavior":"childOfDomain"},"scratch":{"name":"scratch","dateFormat":"y.MM.dd.HHmmss","addBehavior":"asOwnDomain"},"task":{"name":"","dateFormat":"","addBehavior":"childOfCurrent","statusSymbols":{"":" ","wip":"w","done":"x","assigned":"a","moved":"m","blocked":"b","delegated":"l","dropped":"d","pending":"y"},"prioritySymbols":{"H":"high","M":"medium","L":"low"},"todoIntegration":false,"createTaskSelectionType":"selection2link","taskCompleteStatus":["done","x"]},"graph":{"zoomSpeed":1,"createStub":false},"enableAutoCreateOnDefinition":false,"enableXVaultWikiLink":false,"enableRemoteVaultInit":true,"enableUserTags":true,"enableHashTags":true,"workspaceVaultSyncMode":"noCommit","enableAutoFoldFrontmatter":false,"enableEditorDecorations":true,"maxPreviewsCached":10,"maxNoteLength":204800,"enableFullHierarchyNoteTitle":false,"enableHandlebarTemplates":false,"templateHierarchy":"template","enableSmartRefs":true,"dendronVersion":"0.83.0"},"preview":{"theme":"dark","enableFMTitle":true,"enableNoteTitleForLink":true,"enableFrontmatterTags":true,"enableHashesForFMTags":false,"enableMermaid":true,"enablePrettyRefs":true,"enableKatex":true,"automaticallyShowPreview":false},"publishing":{"logoPath":"https://clipground.com/images/cyber-logo-3.jpg","theme":"dark","siteUrl":"https://tysonnguyen.github.io","assetsPrefix":"/IBM-cybersecurity","enableFMTitle":true,"enableNoteTitleForLink":true,"enableMermaid":true,"enablePrettyRefs":true,"enableKatex":true,"copyAssets":true,"siteHierarchies":["root"],"writeStubs":false,"siteRootDir":"docs","seo":{"title":"Cybersecurity","description":"Personal Knowledge Space"},"github":{"enableEditLink":true,"editLinkText":"Edit this page on GitHub","editBranch":"main","editViewMode":"tree","editRepository":"https://github.com/TysonNguyen/IBM-cybersecurity"},"enableSiteLastModified":true,"enableFrontmatterTags":true,"enableHashesForFMTags":false,"enableRandomlyColoredTags":true,"enablePrettyLinks":true,"duplicateNoteBehavior":{"action":"useVault","payload":["vault"]},"enableTaskNotes":true,"siteFaviconPath":"favicon.ico","siteIndex":"root"}}},"__N_SSG":true},"page":"/notes/[id]","query":{"id":"btat806wf3v71jpa11klryx"},"buildId":"NXb5WjKoAzTxCthMfgKQk","assetPrefix":"/IBM-cybersecurity","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>

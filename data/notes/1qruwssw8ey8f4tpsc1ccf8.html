@@ -1,0 +1,178 @@
+<h1 id="malware"><a aria-hidden="true" class="anchor-heading icon-link" href="#malware"></a>Malware</h1>
+<h1 id="real-world-case-studies"><a aria-hidden="true" class="anchor-heading icon-link" href="#real-world-case-studies"></a>Real World Case Studies</h1>
+<ul class="contains-task-list">
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Analyze the Target attack scenario.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Look at the attack vulnerabilities, the cost of the breach and several prevention techniques.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Investigate the anatomy of a Watering Hole attack.</p>
+</li>
+</ul>
+<hr>
+<h2 id="target-attack-timeline"><a aria-hidden="true" class="anchor-heading icon-link" href="#target-attack-timeline"></a>Target Attack Timeline</h2>
+<p><a href="https://en.wikipedia.org/wiki/Target_Corporation">In December 2013, a data breach of Target's systems affected up to 110 million customers. Compromised customer information included names, phone numbers, email and mailing addresses. In March 2015, Target reached a class-action settlement with affected consumers for $10 million (plus class-action attorney fees).</a></p>
+<p><a href="https://en.wikipedia.org/wiki/Target_Corporation#Customer_privacy">In May 2016, Target settled with affected banks and credit unions for 39 million (class- action attorney fees), of which $19 million would be disbursed by a MasterCard program.</a> - Wikipedia</p>
+<h3 id="situation"><a aria-hidden="true" class="anchor-heading icon-link" href="#situation"></a>Situation</h3>
+<blockquote>
+<p>In November and December 2013, cyber thieves executed a successful cyber attack against Target, one of the largest retail companies in the United States. The attackers surreptitiously gained access to Target’s computer network, stole the financial and personal information of as many as 110 million Target customers, and then removed this sensitive information from Target’s network to a server in Eastern Europe.</p>
+</blockquote>
+<blockquote>
+<p>John Mulligan, Target’s Executive Vice President and Chief Financial Officer, testified that his company “had in place multiple layers of protection, including firewalls, malware detection software, intrusion detection and prevention capabilities and data loss prevention tools.”38 He further stated that Target had been certified in September 2013 as compliant with the Payment Card Industry Data Security Standards (PCI-DSS), 39 which credit card companies require before allowing merchants to process credit and debit card payments.</p>
+<ul>
+<li>"Kill Chain" Analysis of the 2013 Target Data Breach; Committee on Commerce, Science and Transportation</li>
+</ul>
+</blockquote>
+<h3 id="kill-chain-timeline"><a aria-hidden="true" class="anchor-heading icon-link" href="#kill-chain-timeline"></a>Kill Chain Timeline</h3>
+<p><img src="https://d3i71xaburhd42.cloudfront.net/42b87d76acce25631266051b02cedd88d83c5ab9/2-Figure1-1.png" alt="timeline"></p>
+<h4 id="first-trigger---already-compromised"><a aria-hidden="true" class="anchor-heading icon-link" href="#first-trigger---already-compromised"></a>First Trigger - Already Compromised</h4>
+<ul>
+<li>Fire eye event on Nov. 30.
+<ul>
+<li>False positive prone users do not fully trust.</li>
+</ul>
+</li>
+<li>No additional activity information.
+<ul>
+<li>What traffic preceded and followed, from and to where?</li>
+</ul>
+</li>
+<li>Business context of critical assets exposed?
+<ul>
+<li>Network context where attackers could reach critical assets?</li>
+</ul>
+</li>
+<li>No business process for to triage and analyze was defined.</li>
+<li>The attack was ignored.</li>
+</ul>
+<h4 id="more-alerts---no-linkage"><a aria-hidden="true" class="anchor-heading icon-link" href="#more-alerts---no-linkage"></a>More Alerts - No Linkage</h4>
+<ul>
+<li>More alerts with different areas of network.</li>
+<li>Not correlated with other activity or in the context of the business or network.</li>
+<li>Not enough visibility or context.</li>
+<li>Still ignored.</li>
+</ul>
+<h4 id="doj-notification---40-million-records-gone"><a aria-hidden="true" class="anchor-heading icon-link" href="#doj-notification---40-million-records-gone"></a>DOJ Notification - 40 million Records Gone</h4>
+<ul>
+<li>Too late</li>
+<li>Nightmare business scenario</li>
+</ul>
+<h3 id="target-attack-vulnerabilities"><a aria-hidden="true" class="anchor-heading icon-link" href="#target-attack-vulnerabilities"></a>Target Attack Vulnerabilities</h3>
+<ul>
+<li>Attackers took advantage of weak security at a Target vendor, gaining a foothold in Target's inner network.
+<ul>
+<li>Recon</li>
+<li>Weaponize</li>
+<li>Deliver</li>
+</ul>
+</li>
+<li>Target missed warnings from its anti-intrusion software that attackers were installing malware in its network.
+<ul>
+<li>Deliver</li>
+<li>Exploit</li>
+</ul>
+</li>
+<li>Attackers took advantage of weak controls within Target's network and successfully maneuvered into the network's most sensitive areas.
+<ul>
+<li>Deliver</li>
+<li>Exploit</li>
+<li>Install</li>
+</ul>
+</li>
+<li>Target missed information provided by its anti-intrusion software about the attackers' escape plan, allowing attackers to steal as many as 110 million customer records.
+<ul>
+<li>Command &#x26; Control</li>
+<li>Action</li>
+</ul>
+</li>
+</ul>
+<h4 id="cost"><a aria-hidden="true" class="anchor-heading icon-link" href="#cost"></a>Cost</h4>
+<ul>
+<li>May of 2017, Target to pay $18.5 million to settle claims by 47 states and the District of Columbia and resolve a multi-state investigation into a massive data breach in late 2013.</li>
+<li>According to the Star Tribute in 2019:
+<ul>
+<li>Target noted that it reached a settlement in a class-action lawsuit brought by banks for about $58 million in May 2016.</li>
+<li>It also reached confidential settlements with major card issuers such as Visa, Mastercard, American Express, Discover as well as a number of individual banks.</li>
+<li>In total, Target has reported that it incurred about $292 million in expenses related to its data brach, about 90 million of which were offset by insurance.</li>
+</ul>
+</li>
+</ul>
+<h4 id="prevention"><a aria-hidden="true" class="anchor-heading icon-link" href="#prevention"></a>Prevention</h4>
+<ul>
+<li>Security logs and events</li>
+<li>Network flow data</li>
+<li>Vulnerability data</li>
+<li>Network topology</li>
+<li>Asset profile with business context, risk, ownership</li>
+<li>Correlation rules</li>
+<li>User behavioral analysis</li>
+<li>Increased incident relevance</li>
+<li>One incident case and analysis workflow</li>
+<li>Integrated forensics - Rapid confirmation of attack</li>
+<li>Massive reduction of window exposure</li>
+</ul>
+<h2 id="watering-hole-attack"><a aria-hidden="true" class="anchor-heading icon-link" href="#watering-hole-attack"></a>Watering Hole Attack</h2>
+<p>Watering Hole
+: The attacker compromises a site likely to be visited by a particular target group, rather than attacking the target group directly.</p>
+<ul>
+<li>July 2012, several high-profile institutions in the financial and technology sectors were victimized by a 'watering hole' attack.</li>
+<li>July 13-15, 2012 - Customers of the bank are redirected to a malicious download site when they visit to do their online banking.</li>
+<li>July 15-18, 2012 - Infections are detected at several companies.</li>
+</ul>
+<h3 id="vulnerable-hosts-infected"><a aria-hidden="true" class="anchor-heading icon-link" href="#vulnerable-hosts-infected"></a>Vulnerable Hosts Infected</h3>
+<p>Attackers used different variants of the <strong>Gh0st RAT</strong> remote access Trojan horse, making detection very hard.</p>
+<h4 id="variant-a"><a aria-hidden="true" class="anchor-heading icon-link" href="#variant-a"></a>Variant A</h4>
+<ul>
+<li>Exploited a known Microsoft vulnerability (CVE-2012-1889, 6/12/2012).</li>
+<li>Path for all Microsoft operation systems was released on 7/10/2012.</li>
+<li>Variant was not recognized by any AV vendor.</li>
+</ul>
+<h4 id="variant-b"><a aria-hidden="true" class="anchor-heading icon-link" href="#variant-b"></a>Variant B</h4>
+<ul>
+<li>Exploited a known Java vulnerability (CVE-2012-1723, 6/16/2012).</li>
+<li>Patch was released by Oracle 6/12/2012.</li>
+<li>Variant was recognized by McAfee VSE as of July 2017, 2012.</li>
+</ul>
+<h3 id="host-response"><a aria-hidden="true" class="anchor-heading icon-link" href="#host-response"></a>Host Response</h3>
+<p>After being infected, compromised hosts made contact with a remote command and control server in China.</p>
+<ul>
+<li>Infected machines attempt to communicate with one of two Chinese command and control (C&#x26;C) servers, 58.64.155.57 and 58.64.155.59, on ports 53, 80, and 443.</li>
+<li>If communications are successfully established, the C&#x26;C server gains complete, real-time control of a system on the protected network.</li>
+<li>The malware, a remote access Trojan, allows a remote attack to access data, log system activity, capture key logs, take screenshots, activate the system's camera, and record from the system's microphone.
+<ul>
+<li>The remote attacker can also drop additional downloads and programs on the controlled machine, and use it as a launching point for further attacks.</li>
+</ul>
+</li>
+</ul>
+<h3 id="risk-of-delayed-response-to-attack"><a aria-hidden="true" class="anchor-heading icon-link" href="#risk-of-delayed-response-to-attack"></a>Risk of Delayed Response to Attack</h3>
+<p>The infected machine becomes the new launch point of deepening the penetration.</p>
+<ul>
+<li>The infected machine 'legitimately' distributes more malware inside the enterprise network to gain a stronger foothold if detected.</li>
+<li>The malware's first goal is to obtain privileged user identities, which it then uses to gain access to valuable assets inside the enterprise network.</li>
+<li>Most attacks use ports and scans that typically are not executed from either the infected machines or user IDs.</li>
+<li>After valuable assets are found, they are slowly exfiltrated to not raise any suspicion.</li>
+</ul>
+<h2 id="apply-big-data-to-security-intelligence-and-threat-management"><a aria-hidden="true" class="anchor-heading icon-link" href="#apply-big-data-to-security-intelligence-and-threat-management"></a>Apply Big Data to Security Intelligence and Threat Management</h2>
+<h3 id="collection-storage-and-processing"><a aria-hidden="true" class="anchor-heading icon-link" href="#collection-storage-and-processing"></a>Collection, Storage, and Processing</h3>
+<ul>
+<li>Collection and integration</li>
+<li>Size and speed</li>
+<li>Enrichment and correlation</li>
+</ul>
+<h3 id="analytics-and-workflow"><a aria-hidden="true" class="anchor-heading icon-link" href="#analytics-and-workflow"></a>Analytics and Workflow</h3>
+<ul>
+<li>Visualization</li>
+<li>Unstructured analysis</li>
+<li>Learning and prediction</li>
+<li>Customization</li>
+<li>Sharing and export</li>
+</ul>
+<h3 id="global-intelligence"><a aria-hidden="true" class="anchor-heading icon-link" href="#global-intelligence"></a>Global Intelligence</h3>
+<ul>
+<li>Campaign identification</li>
+<li>IP reputation covering attacker, industry, and region</li>
+<li>Comparisons</li>
+<li>Anomaly detection</li>
+</ul>

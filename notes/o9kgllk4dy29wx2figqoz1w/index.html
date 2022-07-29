@@ -1,0 +1,403 @@
+<!DOCTYPE html><html><head><meta name="viewport" content="width=device-width"/><meta charSet="utf-8"/><link rel="icon" href="/favicon.ico"/><title>SIEM</title><meta name="robots" content="index,follow"/><meta name="googlebot" content="index,follow"/><meta name="description" content="Personal Knowledge Space"/><meta property="og:title" content="SIEM"/><meta property="og:description" content="Personal Knowledge Space"/><meta property="og:url" content="https://tysonnguyen.github.io/IBM-cybersecurity/notes/o9kgllk4dy29wx2figqoz1w/"/><meta property="og:type" content="article"/><meta property="article:published_time" content="5/22/2022"/><meta property="article:modified_time" content="5/22/2022"/><link rel="canonical" href="https://tysonnguyen.github.io/IBM-cybersecurity/notes/o9kgllk4dy29wx2figqoz1w/"/><meta name="next-head-count" content="14"/><link rel="preload" href="/IBM-cybersecurity/_next/static/css/0aeb6c71ee87f6df.css" as="style"/><link rel="stylesheet" href="/IBM-cybersecurity/_next/static/css/0aeb6c71ee87f6df.css" data-n-g=""/><noscript data-n-css=""></noscript><script defer="" nomodule="" src="/IBM-cybersecurity/_next/static/chunks/polyfills-5cd94c89d3acac5f.js"></script><script src="/IBM-cybersecurity/_next/static/chunks/webpack-b7a0bb0748951285.js" defer=""></script><script src="/IBM-cybersecurity/_next/static/chunks/framework-bb5c596eafb42b22.js" defer=""></script><script src="/IBM-cybersecurity/_next/static/chunks/main-3d5e78ffcdd2778f.js" defer=""></script><script src="/IBM-cybersecurity/_next/static/chunks/pages/_app-b0ef1900ae658bfa.js" defer=""></script><script src="/IBM-cybersecurity/_next/static/chunks/78-13ae6acd5ce7ca5b.js" defer=""></script><script src="/IBM-cybersecurity/_next/static/chunks/373-2f3879190a46a3d9.js" defer=""></script><script src="/IBM-cybersecurity/_next/static/chunks/pages/notes/%5Bid%5D-69449972c2a725d8.js" defer=""></script><script src="/IBM-cybersecurity/_next/static/NXb5WjKoAzTxCthMfgKQk/_buildManifest.js" defer=""></script><script src="/IBM-cybersecurity/_next/static/NXb5WjKoAzTxCthMfgKQk/_ssgManifest.js" defer=""></script><script src="/IBM-cybersecurity/_next/static/NXb5WjKoAzTxCthMfgKQk/_middlewareManifest.js" defer=""></script></head><body><div id="__next" data-reactroot=""><section class="ant-layout" style="width:100%;min-height:100%"><header class="ant-layout-header" style="position:fixed;isolation:isolate;z-index:1;width:100%;border-bottom:1px solid #d4dadf;height:64px;padding:0 24px 0 2px"><div class="ant-row ant-row-center" style="max-width:992px;justify-content:space-between;margin:0 auto"><div style="display:flex" class="ant-col ant-col-xs-20 ant-col-sm-4"></div><div class="ant-col gutter-row ant-col-xs-0 ant-col-sm-20 ant-col-md-20 ant-col-lg-19"><div class="ant-select ant-select-lg ant-select-auto-complete ant-select-single ant-select-allow-clear ant-select-show-search" style="width:100%"><div class="ant-select-selector"><span class="ant-select-selection-search"><input type="search" autoComplete="off" class="ant-select-selection-search-input" role="combobox" aria-haspopup="listbox" aria-owns="undefined_list" aria-autocomplete="list" aria-controls="undefined_list" aria-activedescendant="undefined_list_0" value=""/></span><span class="ant-select-selection-placeholder">For full text search please use the &#x27;?&#x27; prefix. e.g. ? Onboarding</span></div></div></div><div style="display:none;align-items:center;justify-content:center" class="ant-col ant-col-xs-4 ant-col-sm-4 ant-col-md-0 ant-col-lg-0"><span role="img" aria-label="menu" style="font-size:24px" tabindex="-1" class="anticon anticon-menu"><svg viewBox="64 64 896 896" focusable="false" data-icon="menu" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"></path></svg></span></div></div></header><section class="ant-layout site-layout" style="margin-top:64px"><section class="ant-layout site-layout"><div class="site-layout-sidebar" style="flex:0 0 auto;width:calc(max((100% - 992px) / 2, 0px) + 200px);min-width:200px;padding-left:calc((100% - 992px) / 2)"><aside class="ant-layout-sider ant-layout-sider-dark" style="position:fixed;overflow:auto;height:calc(100vh - 64px);background-color:transparent;flex:0 0 200px;max-width:200px;min-width:200px;width:200px"><div class="ant-layout-sider-children"></div></aside></div><section class="ant-layout side-layout-main" style="max-width:1200px;display:initial"><main class="ant-layout-content main-content" role="main" style="padding:0 24px"><div class="ant-row"><div class="ant-col ant-col-24"><div class="ant-row" style="margin-left:-10px;margin-right:-10px"><div style="padding-left:10px;padding-right:10px" class="ant-col ant-col-xs-24 ant-col-md-18"><div><h1 id="siem"><a aria-hidden="true" class="anchor-heading icon-link" href="#siem"></a>SIEM</h1>
+<h1 id="siem-concepts"><a aria-hidden="true" class="anchor-heading icon-link" href="#siem-concepts"></a>SIEM Concepts</h1>
+<ul class="contains-task-list">
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Explore and understand the key terms of SIEM.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Explore the role of a SIEM in the network.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Understand the role of a SIEM in modern SOC.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Explore different SIEM vendors and their components.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Deep drive of QRadar from a Security Analysts point of view.</p>
+</li>
+<li class="task-list-item">
+<p><input type="checkbox" disabled> Describe User Behavior Analytics (UBA) use cases.</p>
+</li>
+</ul>
+<hr>
+<h2 id="siem-1"><a aria-hidden="true" class="anchor-heading icon-link" href="#siem-1"></a>SIEM</h2>
+<p>SIEM (System Information Event Management)
+: A data aggregator, search, and reporting system. SIEM gathers immense amounts of data from entire networked environment, consolidates and makes that data human accessible. With the data categorized and laid out, you can research data security breaches with as much detail as needed.</p>
+<p>Key Terms:</p>
+<ul>
+<li>Log Collection</li>
+<li>Normalization</li>
+<li>Correlation</li>
+<li>Aggregation</li>
+<li>Reporting</li>
+</ul>
+<ol>
+<li>A SIEM system collects logs and other security-related documentation for analysis.</li>
+<li>The core function is to manage network security by monitoring flows and events.</li>
+<li>It consolidates log events and network flow data from thousands of devices, endpoints and applications distributed throughout a network. It then uses an advanced Sense Analytics engine to normalize and correlate this data and identifies security offenses requiring investigation.</li>
+<li>A SIEM system cane be ruled-based or employ a statistical correlation engine to establish relationships between event log entries.</li>
+<li>Capture log event and network flow data in near real time and apply advanced analytics to reveal security offenses.</li>
+<li>It can be available on premises and in a cloud environment.</li>
+</ol>
+<h3 id="events--flows"><a aria-hidden="true" class="anchor-heading icon-link" href="#events--flows"></a>Events &#x26; Flows</h3>
+<p>Event
+: Typically a log of a specific action such as a user login, or a FW permit, occurs at a specific time and the event is logged at that time.</p>
+<p>Flows
+: A record of network activity between two hosts that can last for seconds to days depending on the activity within the session.</p>
+<ul>
+<li>For example, a web request might download multiple files such as images, ads, video, and last for 5 to 10 seconds, or a user who watches a Netflix movie might be in a network session that last up to a few hours.</li>
+</ul>
+<h3 id="data-collection"><a aria-hidden="true" class="anchor-heading icon-link" href="#data-collection"></a>Data Collection</h3>
+<p>Data Collection
+: The process of collecting flows and logs from different sources into a common repository.</p>
+<ul>
+<li>It can be performed by sending data directly into the SIEM or an external device can collect log data from the source and move it into the SIEM system on demand or scheduled.</li>
+<li>Consider CPU, memory, storage capacity, license, and number of sources.</li>
+</ul>
+<h3 id="normalization"><a aria-hidden="true" class="anchor-heading icon-link" href="#normalization"></a>Normalization</h3>
+<p>Normalization
+: Process involves turning raw data into a format that has fields such as IP address that the SIEM can use.</p>
+<ul>
+<li>Normalization involves parsing raw event data and preparing the data to display readable information.</li>
+<li>Normalization allows for predictable and consistent storage for all records, and indexes those records for fast searching and sorting.</li>
+</ul>
+<h3 id="license-throttling"><a aria-hidden="true" class="anchor-heading icon-link" href="#license-throttling"></a>License Throttling</h3>
+<p>License Throttling
+: Monitors the number of incoming events to the system to mange input queues and EPS licensing.</p>
+<h3 id="coalescing"><a aria-hidden="true" class="anchor-heading icon-link" href="#coalescing"></a>Coalescing</h3>
+<ul>
+<li>Events are parsed and then coalesced based on common attributes across events.
+<ul>
+<li>QRadar: Event coalescing starts after three events have been found with matching properties within a 10 second period.</li>
+</ul>
+</li>
+<li>Event data received by QRader is processed in to normalized fields, along with the original payload. Five properties are evaluated:
+<ul>
+<li>QID</li>
+<li>Source IP</li>
+<li>Destination IP</li>
+<li>Destination port</li>
+<li>Username</li>
+</ul>
+</li>
+</ul>
+<h3 id="offenses"><a aria-hidden="true" class="anchor-heading icon-link" href="#offenses"></a>Offenses</h3>
+<h4 id="event-correlation"><a aria-hidden="true" class="anchor-heading icon-link" href="#event-correlation"></a>Event Correlation</h4>
+<ul>
+<li>Logs</li>
+<li>IP Reputation</li>
+<li>Flows</li>
+<li>Geo Location</li>
+</ul>
+<h4 id="activity-baseline--anomaly-detection"><a aria-hidden="true" class="anchor-heading icon-link" href="#activity-baseline--anomaly-detection"></a>Activity Baseline &#x26; Anomaly Detection</h4>
+<ul>
+<li>User Activity</li>
+<li>Database Activity</li>
+<li>Application Activity</li>
+<li>Network Activity</li>
+</ul>
+<h4 id="offense-identification"><a aria-hidden="true" class="anchor-heading icon-link" href="#offense-identification"></a>Offense Identification</h4>
+<ul>
+<li>Credibility</li>
+<li>Severity</li>
+</ul>
+<h2 id="siem-deployment"><a aria-hidden="true" class="anchor-heading icon-link" href="#siem-deployment"></a>SIEM Deployment</h2>
+<h3 id="considerations"><a aria-hidden="true" class="anchor-heading icon-link" href="#considerations"></a>Considerations</h3>
+<ul>
+<li>Compliance</li>
+<li>Cost-Benefit</li>
+<li>Cybersecurity</li>
+</ul>
+<h3 id="events"><a aria-hidden="true" class="anchor-heading icon-link" href="#events"></a>Events</h3>
+<p>Event Collector
+: Collects event from local and remote log sources, and normalizes raw log source events to format for use by QRadar. The Event Collector bundles or coalesces identical events to conserve system usage and sends the data to the Event Processor.</p>
+<ul>
+<li>Can use bandwidth limiters and schedules to send events to the Event Processor to overcome WAN limitations such as intermittent connectivity.</li>
+<li>Bundles or coalesces identical events to conserve system usage and sends the data to the Event Processor.</li>
+</ul>
+<p>Event Processor
+: Processes events that are collected from one or more Event Collector components.</p>
+<ul>
+<li>Processes event by using the Custom Rules Engine (CRE).</li>
+</ul>
+<h3 id="flows"><a aria-hidden="true" class="anchor-heading icon-link" href="#flows"></a>Flows</h3>
+<p>Flow Collector
+: Generates flow data from raw packets that are collected from monitor ports such as SPANs, TAPs and monitor sessions, or from external flow sources such as netflow, sflow, jflow.</p>
+<ul>
+<li>Data is then converted to QRadar flow format and sent down the pipeline for processing.</li>
+</ul>
+<h4 id="flow-processor"><a aria-hidden="true" class="anchor-heading icon-link" href="#flow-processor"></a>Flow Processor</h4>
+<p>Flow De-duplication
+: A process that removes duplicate flows when multiple Flow Collectors provide data to Flow Processors appliances.</p>
+<p>Asymmetric Recombination
+: Responsible for combining two sides of each flow when data is provided asymmetrically. This process can recognize flows from each side and combine them in to one record. However, sometimes only one side of the flow exists.</p>
+<p>License Throttling
+: Monitors the number of incoming flows to the system to manage input queues and licensing.</p>
+<p>Forwarding
+: Applies routing rules for the system, such as sending flow data to offsite targets, external Syslog systems, JSON systems, and other SIEMs.</p>
+<h3 id="reasons-to-add-event-or-flow-collectors-to-all-in-one-deployment"><a aria-hidden="true" class="anchor-heading icon-link" href="#reasons-to-add-event-or-flow-collectors-to-all-in-one-deployment"></a>Reasons to Add Event or Flow Collectors to All-in-One Deployment</h3>
+<ul>
+<li>Data collection requirements exceed the collection capability of processor.</li>
+<li>Must collect events and flows at a different location than processor is installed.</li>
+<li>Monitoring packet-based flow sources.</li>
+<li>As deployment grows, the workload exceeds the processing capacity of the All-in-One appliance.</li>
+<li>Security operations center employs more analysts who do more concurrent searches.</li>
+<li>The types of monitored data, and the retention period for that data increases, which increases processing and storage requirements.</li>
+<li>As security analyst team grows, requires better search performance.</li>
+</ul>
+<h3 id="security-operations-center-soc"><a aria-hidden="true" class="anchor-heading icon-link" href="#security-operations-center-soc"></a>Security Operations Center (SOC)</h3>
+<p>Triad of security operations: People, Process and Technology</p>
+<p><img src="https://lh3.googleusercontent.com/XkV9_pyKmRnuXUzAFDdFggJIad1YDxzfoVf9grhfqKJNXEDqMttRH0792TeKZjEyP0ZLK_WOz-r8kNrjUBCgv5s1JvnvhoQ-9rZ_rdjcHkUkpjGBAACeS928xGryEycAV9POW8f8l8Ub4iFAvQ" alt="SOC"></p>
+<h2 id="siem-solutions---vendors"><a aria-hidden="true" class="anchor-heading icon-link" href="#siem-solutions---vendors"></a>SIEM Solutions - Vendors</h2>
+<blockquote>
+<p>The security information and event management (SIEM) market is defined by customers' need to analyze security event data in real time, which supports the early detection of attacks and breaches. SIEM systems collect, store, investigate, support mitigation and report on security data for incident response, forensics and regulatory compliance. The vendors included in this Magic Quadrant have products designed for this purpose, which they actively market and sell to the security buying center. </p>
+<ul>
+<li>2020 Garter.com Magic Quadrant Report</li>
+</ul>
+</blockquote>
+<h3 id="gartners-magic-quadrant-2022"><a aria-hidden="true" class="anchor-heading icon-link" href="#gartners-magic-quadrant-2022"></a>Gartner's Magic Quadrant (2022)</h3>
+<p><img src="https://aware-commons.s3.ap-south-1.amazonaws.com/static-files/sf-website/news/magic-quadrant-graph.png" alt="quad"></p>
+<h3 id="deployment"><a aria-hidden="true" class="anchor-heading icon-link" href="#deployment"></a>Deployment</h3>
+<h4 id="small"><a aria-hidden="true" class="anchor-heading icon-link" href="#small"></a>Small</h4>
+<p>Gartner defines a small deployment as one with around 300 log sources and about 1500 EPS (events per second).</p>
+<h4 id="medium"><a aria-hidden="true" class="anchor-heading icon-link" href="#medium"></a>Medium</h4>
+<p>A midsize deployment is considered to have up to 1000 log sources and 7000 EPS.</p>
+<h4 id="large"><a aria-hidden="true" class="anchor-heading icon-link" href="#large"></a>Large</h4>
+<p>A large deployment generally covers more than 1000 log sources with approximately 15000 EPS.</p>
+<h3 id="important-concepts"><a aria-hidden="true" class="anchor-heading icon-link" href="#important-concepts"></a>Important Concepts</h3>
+<p>SIEM
+: Combines security information (SIM) and security event management (SEM) to provide real-time analysis of security alerts generated by network hardware and applications.</p>
+<p>Rule
+: A programmed procedure that attempts to correlate events and generates new events that report on correlation when it occurs.</p>
+<p>Rule Threshold
+: The point at which a rule is triggered and a correlation event generated.</p>
+<p>Event Threshold
+: The number of times the event must occur before triggering the rule threshold.</p>
+<p>Rule Action
+: An automatic procedure that occurs when all rule conditions and threshold settings have been met.</p>
+<p>Trend
+: A resource that defines how and over what time period data will be aggregated and evaluated for trends. A trend executes a specified query on a defined schedule and time duration.</p>
+<p>Event
+: A log of a specific action such as a user login, or a FW permit, occurs at a specific time and the event is logged at that time.</p>
+<p>Flow
+: A record of network activity that can last for seconds, minutes, hours, or days, depending on the activity within the session.</p>
+<p>Data Collection
+: The process of collecting flows and logs from different sources into a common repository.</p>
+<p>Normalization
+: Involves turning raw data into a format that has fields such as an IP address that the SIEM can use.</p>
+<p>Licensing Throttling
+: Monitors the number of incoming events to the system to manage EPS and FPS licensing.</p>
+<p>Coalescing
+: Events are grouped based on common attributes.</p>
+<h3 id="ibm-qradar"><a aria-hidden="true" class="anchor-heading icon-link" href="#ibm-qradar"></a>IBM QRadar</h3>
+<ul>
+<li>Year 2004-205, Q1 Labs entered into the SIEm market modifying their NBAD platform (QFLOW) and in 2012, IBM bought them.</li>
+<li>Proprietary based on Ariel Data store and probably Ariel Query Language (AQL).</li>
+<li>Log correlation, Network Forensics, Intelligence Feeds, Vulnerability Management, Risk Manager.</li>
+</ul>
+<h4 id="vulnerability-manager"><a aria-hidden="true" class="anchor-heading icon-link" href="#vulnerability-manager"></a>Vulnerability Manager</h4>
+<ul>
+<li>
+<p>IBM® QRadar® Vulnerability Manager is a network scanning platform that detects vulnerabilities within the applications, systems, and devices on your network or within your DMZ.</p>
+</li>
+<li>
+<p>QRadar Vulnerability Manager uses security intelligence to help you manage and prioritize your network vulnerabilities. </p>
+<ul>
+<li>For example, you can use QRadar Vulnerability Manager to continuously monitor vulnerabilities, improve resource configuration, and identify software patches. You can also, prioritize security gaps by correlating vulnerability data with network flows, log data, firewall, and intrusion prevention system (IPS) data.</li>
+</ul>
+</li>
+</ul>
+<h4 id="user-behavior-analytics"><a aria-hidden="true" class="anchor-heading icon-link" href="#user-behavior-analytics"></a>User Behavior Analytics</h4>
+<ul>
+<li>
+<p>IBM® QRadar® User Behavior Analytics (UBA) analyzes user activity to detect malicious insiders and determine if a user’s credentials have been compromised. Security analysts can easily see risky users, view their anomalous activities and drill down into the underlying log and flow data that contributed to a user’s risk score.</p>
+</li>
+<li>
+<p>As an integrated component of the QRadar Security Intelligence Platform, UBA leverages out of the box behavioral rules and machine learning (ML) models to add user context to network, log, vulnerability and threat data to more quickly and accurately detect attacks.</p>
+</li>
+</ul>
+<h4 id="network-insights"><a aria-hidden="true" class="anchor-heading icon-link" href="#network-insights"></a>Network Insights</h4>
+<ul>
+<li>Analyzes network data in real-time to uncover an attacker's footprints and expose hidden security threats in many scenarios before they can damage your organization, including:
+<ul>
+<li>Phishing e-mails</li>
+<li>Malware</li>
+<li>Data Exfiltration</li>
+<li>Lateral movement</li>
+<li>DNS and other application abuse</li>
+<li>Compliance gaps</li>
+</ul>
+</li>
+</ul>
+<h3 id="arcsight-esm"><a aria-hidden="true" class="anchor-heading icon-link" href="#arcsight-esm"></a>ArcSight ESM</h3>
+<p>ArcSight ESM is a Security Information and Event Management (SIEM) solution that combines event correlation and security analytics to identify and prioritize threats in real-time and remediate incidents early. It is able to concentrate, normalize, analyze, and report the results of its analysis of security event data generated by various Intrusion Detection System (IDS) sensors and scanners in the operational environment. ArcSight ESM allows users to monitor events in real-time, correlate events.</p>
+<ul>
+<li>ArcSight Manager</li>
+<li>CORR-Engine (Correlation Optimized Retention and Retrieval Engine)</li>
+<li>ArcSight Console</li>
+<li>ArcSight Command Center (ACC)</li>
+<li>ESM Service Layer APIs</li>
+</ul>
+<h3 id="splunk"><a aria-hidden="true" class="anchor-heading icon-link" href="#splunk"></a>Splunk</h3>
+<p>Splunk software has been around since 2006 and the company has since grown to become and industry leader. Splunk's vision is to make machine data accessible, usable and valuable to everybody. The company offers a wide range of products to turn machine data into valuable information by monitoring and analyzing all activities. This is known as Operational Intelligence and is the unique value proposition of Splunk.</p>
+<ul>
+<li>Splunk offers many free technology add-ons that provides real value immediately.
+<ul>
+<li>For example, the Distributed Management Console (DMC) helps pull all the Splunk architecture management together in one set of dashboards.</li>
+</ul>
+</li>
+</ul>
+<h3 id="logrhythms-security-intelligence-platform"><a aria-hidden="true" class="anchor-heading icon-link" href="#logrhythms-security-intelligence-platform"></a>LogRhythm's Security Intelligence Platform</h3>
+<ul>
+<li>Platform Manager (PM) supports centralized management and administration for the LogRhythm implementation.</li>
+<li>Data Processor (DP) performs log collection and management.</li>
+<li>Data Indexer (DX) indexes data and metadata.</li>
+<li>AI Engine (AI) provides correlation and analysis capabilities.</li>
+<li>All-In-One (XM) combines the PM, DP, DX, and AI components.</li>
+<li>Network Monitor (NM) specializes in deep analysis of network traffic contents.</li>
+<li>Data Collector (DC) collects log data from remote systems and prepares it for secure transfer to the centralized LogRhythm Security Intelligence Platform implementation.</li>
+</ul>
+<h2 id="qradar-siem---industry-example"><a aria-hidden="true" class="anchor-heading icon-link" href="#qradar-siem---industry-example"></a>QRadar SIEM - Industry Example</h2>
+<p>Automated threat detection and prioritization and securing the cloud.</p>
+<ul>
+<li>Real-time correlation and behavioral anomaly detection.</li>
+<li>Threat intelligence and vulnerability insight.</li>
+<li>Machine learning, service and user profiling.</li>
+</ul>
+<h3 id="solve-challenges"><a aria-hidden="true" class="anchor-heading icon-link" href="#solve-challenges"></a>Solve Challenges</h3>
+<ul>
+<li>Protect any critical data.</li>
+<li>Effectively respond to incidents.</li>
+<li>Prove compliance.</li>
+</ul>
+<h3 id="automate-intelligence"><a aria-hidden="true" class="anchor-heading icon-link" href="#automate-intelligence"></a>Automate Intelligence</h3>
+<ul>
+<li>Apply automated analytics to detect, connect, prioritize and investigate threats with IBM Watson.</li>
+</ul>
+<h3 id="see-everything"><a aria-hidden="true" class="anchor-heading icon-link" href="#see-everything"></a>See Everything</h3>
+<ul>
+<li>Collect data across the entire environment.</li>
+</ul>
+<h3 id="deployment-models"><a aria-hidden="true" class="anchor-heading icon-link" href="#deployment-models"></a>Deployment Models</h3>
+<ul>
+<li>On PREM
+<ul>
+<li>HW, SW, VM</li>
+</ul>
+</li>
+<li>AS A SERVICE
+<ul>
+<li>SaaS, Managed Service</li>
+</ul>
+</li>
+<li>CLOUD
+<ul>
+<li>AWS, Azure, Google Cloud</li>
+</ul>
+</li>
+<li>HYBRID
+<ul>
+<li>On-prem, SaaS, IaaS</li>
+</ul>
+</li>
+</ul>
+<h2 id="user-behavior-analytics-1"><a aria-hidden="true" class="anchor-heading icon-link" href="#user-behavior-analytics-1"></a>User Behavior Analytics</h2>
+<h3 id="security-ecosystem"><a aria-hidden="true" class="anchor-heading icon-link" href="#security-ecosystem"></a>Security Ecosystem</h3>
+<p>Detecting insider threat requires a 360 degree view of both logs and flows.</p>
+<ul>
+<li>Threat Intel</li>
+<li>Network</li>
+<li>Cloud</li>
+<li>Identity &#x26; access</li>
+<li>Data</li>
+<li>Apps</li>
+<li>Mobile</li>
+<li>Endpoint</li>
+</ul>
+<h3 id="advantages-of-ibm-qradar-uba"><a aria-hidden="true" class="anchor-heading icon-link" href="#advantages-of-ibm-qradar-uba"></a>Advantages of IBM QRadar UBA</h3>
+<ul>
+<li>Complete visibility across end point, network and cloud infrastructure with both log and flow data.</li>
+<li>Avoids reloading and curating data faster time to insights, lowers operating cost, frees valuable resources.</li>
+<li>Out-of-the-box analytic models that leverage and extend the security operations platform.</li>
+<li>Single Security operation processes with integration of workflow system and other security solutions.</li>
+<li>Easily extend to third-party analytic models including existing insider threats use cases already implemented.</li>
+<li>Leverage UBA insights in other integrated security analytics solutions.</li>
+<li>Get more from QRadar ecosystem.</li>
+</ul>
+<h4 id="ibm-qradar-uba"><a aria-hidden="true" class="anchor-heading icon-link" href="#ibm-qradar-uba"></a>IBM QRadar UBA</h4>
+<p>160+ rule and ML driven use cases addressing 3 major insider vector threats.</p>
+<ul>
+<li>Compromised or stolen credentials.</li>
+<li>Careless or malicious insiders.</li>
+<li>Malware takeover of user accounts.</li>
+</ul>
+<h4 id="into-user-behavioral-analytics"><a aria-hidden="true" class="anchor-heading icon-link" href="#into-user-behavioral-analytics"></a>Into User Behavioral Analytics</h4>
+<p>Getting started with:</p>
+<ul>
+<li>Log sources input; parsing properly</li>
+<li>LDAP setup: reference maps</li>
+<li>User ID coalescing</li>
+<li>KYC &#x26; Align with Biz needs</li>
+<li>Config and tune UC</li>
+</ul>
+<p>Analytic Outcomes</p>
+<ol>
+<li>Focus on accounts and access.
+<ol>
+<li>Account anomalies</li>
+<li>Access deviations</li>
+</ol>
+</li>
+<li>Expand to user views with network &#x26; session data.
+<ol>
+<li>Surface abnormal user behavior</li>
+</ol>
+</li>
+<li>Build and compare to peer group
+<ol>
+<li>Detect users deviating from self or from peer groups</li>
+</ol>
+</li>
+</ol>
+<p>Data Intelligence</p>
+<ul>
+<li>LDAP, AD, Authentication Logs</li>
+<li>Proxy, Firewall, Web GW, VPN, IPDS, Flow</li>
+<li>Endpoint, SaaS Apps, Cloud</li>
+</ul>
+<h4 id="value-to-soc"><a aria-hidden="true" class="anchor-heading icon-link" href="#value-to-soc"></a>Value to SOC</h4>
+<h5 id="analyst-effectiveness"><a aria-hidden="true" class="anchor-heading icon-link" href="#analyst-effectiveness"></a>Analyst Effectiveness</h5>
+<ul>
+<li>Detect known and unknown threats.</li>
+<li>Reduce time to detection.</li>
+<li>Identify activities of interest quickly.</li>
+</ul>
+<h5 id="analyst-efficiency"><a aria-hidden="true" class="anchor-heading icon-link" href="#analyst-efficiency"></a>Analyst Efficiency</h5>
+<ul>
+<li>Expedite investigations.</li>
+<li>Reduce time to respond.</li>
+<li>Reduce deep data expertise.</li>
+</ul>
+<h5 id="roi"><a aria-hidden="true" class="anchor-heading icon-link" href="#roi"></a>ROI</h5>
+<ul>
+<li>Get more from investments.</li>
+<li>Leverage existing QRadar skills.</li>
+<li>Available at no charge.</li>
+</ul>
+<h5 id="time-to-value"><a aria-hidden="true" class="anchor-heading icon-link" href="#time-to-value"></a>Time to Value</h5>
+<ul>
+<li>Easy to acquire.</li>
+<li>Quick to deploy and configure.</li>
+<li>Easy to tune.</li>
+</ul>
+<hr>
+<strong>Children</strong>
+<ol>
+<li><a href="/IBM-cybersecurity/notes/2zlg7h80489ixsa5o7tayrj">AI</a></li>
+</ol>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/IBM-cybersecurity/notes/l9xnppid7xhd6dbt1uus1dj">Operations</a></li>
+</ul></div></div><div style="padding-left:10px;padding-right:10px" class="ant-col ant-col-xs-0 ant-col-md-6"><div><div class=""><div class="ant-anchor-wrapper dendron-toc" style="max-height:calc(100vh - 64px);z-index:1"><div class="ant-anchor"><div class="ant-anchor-ink"><span class="ant-anchor-ink-ball"></span></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#siem-concepts" title="SIEM Concepts">SIEM Concepts</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#siem" title="SIEM">SIEM</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#events--flows" title="Events &amp; Flows">Events &amp; Flows</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#data-collection" title="Data Collection">Data Collection</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#normalization" title="Normalization">Normalization</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#license-throttling" title="License Throttling">License Throttling</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#coalescing" title="Coalescing">Coalescing</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#offenses" title="Offenses">Offenses</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#event-correlation" title="Event Correlation">Event Correlation</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#activity-baseline--anomaly-detection" title="Activity Baseline &amp; Anomaly Detection">Activity Baseline &amp; Anomaly Detection</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#offense-identification" title="Offense Identification">Offense Identification</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#siem-deployment" title="SIEM Deployment">SIEM Deployment</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#considerations" title="Considerations">Considerations</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#events" title="Events">Events</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#flows" title="Flows">Flows</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#flow-processor" title="Flow Processor">Flow Processor</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#reasons-to-add-event-or-flow-collectors-to-all-in-one-deployment" title="Reasons to Add Event or Flow Collectors to All-in-One Deployment">Reasons to Add Event or Flow Collectors to All-in-One Deployment</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#security-operations-center-soc" title="Security Operations Center (SOC)">Security Operations Center (SOC)</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#siem-solutions---vendors" title="SIEM Solutions - Vendors">SIEM Solutions - Vendors</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#gartners-magic-quadrant-2022" title="Gartner&#x27;s Magic Quadrant (2022)">Gartner&#x27;s Magic Quadrant (2022)</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#deployment" title="Deployment">Deployment</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#small" title="Small">Small</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#medium" title="Medium">Medium</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#large" title="Large">Large</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#important-concepts" title="Important Concepts">Important Concepts</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#ibm-qradar" title="IBM QRadar">IBM QRadar</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#vulnerability-manager" title="Vulnerability Manager">Vulnerability Manager</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#user-behavior-analytics" title="User Behavior Analytics">User Behavior Analytics</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#network-insights" title="Network Insights">Network Insights</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#arcsight-esm" title="ArcSight ESM">ArcSight ESM</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#splunk" title="Splunk">Splunk</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#logrhythms-security-intelligence-platform" title="LogRhythm&#x27;s Security Intelligence Platform">LogRhythm&#x27;s Security Intelligence Platform</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#qradar-siem---industry-example" title="QRadar SIEM - Industry Example">QRadar SIEM - Industry Example</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#solve-challenges" title="Solve Challenges">Solve Challenges</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#automate-intelligence" title="Automate Intelligence">Automate Intelligence</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#see-everything" title="See Everything">See Everything</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#deployment-models" title="Deployment Models">Deployment Models</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#user-behavior-analytics-1" title="User Behavior Analytics">User Behavior Analytics</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#security-ecosystem" title="Security Ecosystem">Security Ecosystem</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#advantages-of-ibm-qradar-uba" title="Advantages of IBM QRadar UBA">Advantages of IBM QRadar UBA</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#ibm-qradar-uba" title="IBM QRadar UBA">IBM QRadar UBA</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#into-user-behavioral-analytics" title="Into User Behavioral Analytics">Into User Behavioral Analytics</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#value-to-soc" title="Value to SOC">Value to SOC</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#analyst-effectiveness" title="Analyst Effectiveness">Analyst Effectiveness</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#analyst-efficiency" title="Analyst Efficiency">Analyst Efficiency</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#roi" title="ROI">ROI</a></div><div class="ant-anchor-link"><a class="ant-anchor-link-title" href="#time-to-value" title="Time to Value">Time to Value</a></div></div></div></div></div></div></div></div></div></main><div class="ant-divider ant-divider-horizontal" role="separator"></div><footer class="ant-layout-footer" style="padding:0 24px 24px"></footer></section></section></section></section></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"note":{"id":"o9kgllk4dy29wx2figqoz1w","title":"SIEM","desc":"","updated":1653197997879,"created":1653197985092,"custom":{},"fname":"SIEM","type":"note","vault":{"fsPath":"vault"},"contentHash":"c359bb213e83b5add161946d3814d1bb","links":[{"from":{"fname":"security.operations","vaultName":"vault"},"type":"backlink","position":{"start":{"line":63,"column":5,"offset":4774},"end":{"line":63,"column":54,"offset":4823},"indent":[]},"value":"SIEM","alias":"More information about SOC and SIEM"}],"anchors":{"siem-concepts":{"type":"header","text":"SIEM Concepts","value":"siem-concepts","line":8,"column":0,"depth":1},"siem":{"type":"header","text":"SIEM","value":"siem","line":21,"column":0,"depth":2},"events--flows":{"type":"header","text":"Events \u0026 Flows","value":"events--flows","line":41,"column":0,"depth":3},"data-collection":{"type":"header","text":"Data Collection","value":"data-collection","line":51,"column":0,"depth":3},"normalization":{"type":"header","text":"Normalization","value":"normalization","line":59,"column":0,"depth":3},"license-throttling":{"type":"header","text":"License Throttling","value":"license-throttling","line":67,"column":0,"depth":3},"coalescing":{"type":"header","text":"Coalescing","value":"coalescing","line":72,"column":0,"depth":3},"offenses":{"type":"header","text":"Offenses","value":"offenses","line":83,"column":0,"depth":3},"event-correlation":{"type":"header","text":"Event Correlation","value":"event-correlation","line":85,"column":0,"depth":4},"activity-baseline--anomaly-detection":{"type":"header","text":"Activity Baseline \u0026 Anomaly Detection","value":"activity-baseline--anomaly-detection","line":92,"column":0,"depth":4},"offense-identification":{"type":"header","text":"Offense Identification","value":"offense-identification","line":99,"column":0,"depth":4},"siem-deployment":{"type":"header","text":"SIEM Deployment","value":"siem-deployment","line":104,"column":0,"depth":2},"considerations":{"type":"header","text":"Considerations","value":"considerations","line":106,"column":0,"depth":3},"events":{"type":"header","text":"Events","value":"events","line":112,"column":0,"depth":3},"flows":{"type":"header","text":"Flows","value":"flows","line":125,"column":0,"depth":3},"flow-processor":{"type":"header","text":"Flow Processor","value":"flow-processor","line":132,"column":0,"depth":4},"reasons-to-add-event-or-flow-collectors-to-all-in-one-deployment":{"type":"header","text":"Reasons to Add Event or Flow Collectors to All-in-One Deployment","value":"reasons-to-add-event-or-flow-collectors-to-all-in-one-deployment","line":146,"column":0,"depth":3},"security-operations-center-soc":{"type":"header","text":"Security Operations Center (SOC)","value":"security-operations-center-soc","line":156,"column":0,"depth":3},"siem-solutions---vendors":{"type":"header","text":"SIEM Solutions - Vendors","value":"siem-solutions---vendors","line":162,"column":0,"depth":2},"gartners-magic-quadrant-2022":{"type":"header","text":"Gartner's Magic Quadrant (2022)","value":"gartners-magic-quadrant-2022","line":167,"column":0,"depth":3},"deployment":{"type":"header","text":"Deployment","value":"deployment","line":171,"column":0,"depth":3},"small":{"type":"header","text":"Small","value":"small","line":173,"column":0,"depth":4},"medium":{"type":"header","text":"Medium","value":"medium","line":177,"column":0,"depth":4},"large":{"type":"header","text":"Large","value":"large","line":181,"column":0,"depth":4},"important-concepts":{"type":"header","text":"Important Concepts","value":"important-concepts","line":185,"column":0,"depth":3},"ibm-qradar":{"type":"header","text":"IBM QRadar","value":"ibm-qradar","line":223,"column":0,"depth":3},"vulnerability-manager":{"type":"header","text":"Vulnerability Manager","value":"vulnerability-manager","line":229,"column":0,"depth":4},"user-behavior-analytics":{"type":"header","text":"User Behavior Analytics","value":"user-behavior-analytics","line":236,"column":0,"depth":4},"network-insights":{"type":"header","text":"Network Insights","value":"network-insights","line":243,"column":0,"depth":4},"arcsight-esm":{"type":"header","text":"ArcSight ESM","value":"arcsight-esm","line":253,"column":0,"depth":3},"splunk":{"type":"header","text":"Splunk","value":"splunk","line":264,"column":0,"depth":3},"logrhythms-security-intelligence-platform":{"type":"header","text":"LogRhythm's Security Intelligence Platform","value":"logrhythms-security-intelligence-platform","line":271,"column":0,"depth":3},"qradar-siem---industry-example":{"type":"header","text":"QRadar SIEM - Industry Example","value":"qradar-siem---industry-example","line":281,"column":0,"depth":2},"solve-challenges":{"type":"header","text":"Solve Challenges","value":"solve-challenges","line":289,"column":0,"depth":3},"automate-intelligence":{"type":"header","text":"Automate Intelligence","value":"automate-intelligence","line":295,"column":0,"depth":3},"see-everything":{"type":"header","text":"See Everything","value":"see-everything","line":299,"column":0,"depth":3},"deployment-models":{"type":"header","text":"Deployment Models","value":"deployment-models","line":303,"column":0,"depth":3},"user-behavior-analytics-1":{"type":"header","text":"User Behavior Analytics","value":"user-behavior-analytics-1","line":314,"column":0,"depth":2},"security-ecosystem":{"type":"header","text":"Security Ecosystem","value":"security-ecosystem","line":316,"column":0,"depth":3},"advantages-of-ibm-qradar-uba":{"type":"header","text":"Advantages of IBM QRadar UBA","value":"advantages-of-ibm-qradar-uba","line":329,"column":0,"depth":3},"ibm-qradar-uba":{"type":"header","text":"IBM QRadar UBA","value":"ibm-qradar-uba","line":339,"column":0,"depth":4},"into-user-behavioral-analytics":{"type":"header","text":"Into User Behavioral Analytics","value":"into-user-behavioral-analytics","line":347,"column":0,"depth":4},"value-to-soc":{"type":"header","text":"Value to SOC","value":"value-to-soc","line":373,"column":0,"depth":4},"analyst-effectiveness":{"type":"header","text":"Analyst Effectiveness","value":"analyst-effectiveness","line":375,"column":0,"depth":5},"analyst-efficiency":{"type":"header","text":"Analyst Efficiency","value":"analyst-efficiency","line":381,"column":0,"depth":5},"roi":{"type":"header","text":"ROI","value":"roi","line":387,"column":0,"depth":5},"time-to-value":{"type":"header","text":"Time to Value","value":"time-to-value","line":393,"column":0,"depth":5}},"children":["2zlg7h80489ixsa5o7tayrj"],"parent":"3ipqfkgudo2s73dwa256ca0","data":{}},"body":"\u003ch1 id=\"siem\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#siem\"\u003e\u003c/a\u003eSIEM\u003c/h1\u003e\n\u003ch1 id=\"siem-concepts\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#siem-concepts\"\u003e\u003c/a\u003eSIEM Concepts\u003c/h1\u003e\n\u003cul class=\"contains-task-list\"\u003e\n\u003cli class=\"task-list-item\"\u003e\n\u003cp\u003e\u003cinput type=\"checkbox\" disabled\u003e Explore and understand the key terms of SIEM.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli class=\"task-list-item\"\u003e\n\u003cp\u003e\u003cinput type=\"checkbox\" disabled\u003e Explore the role of a SIEM in the network.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli class=\"task-list-item\"\u003e\n\u003cp\u003e\u003cinput type=\"checkbox\" disabled\u003e Understand the role of a SIEM in modern SOC.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli class=\"task-list-item\"\u003e\n\u003cp\u003e\u003cinput type=\"checkbox\" disabled\u003e Explore different SIEM vendors and their components.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli class=\"task-list-item\"\u003e\n\u003cp\u003e\u003cinput type=\"checkbox\" disabled\u003e Deep drive of QRadar from a Security Analysts point of view.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli class=\"task-list-item\"\u003e\n\u003cp\u003e\u003cinput type=\"checkbox\" disabled\u003e Describe User Behavior Analytics (UBA) use cases.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003chr\u003e\n\u003ch2 id=\"siem-1\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#siem-1\"\u003e\u003c/a\u003eSIEM\u003c/h2\u003e\n\u003cp\u003eSIEM (System Information Event Management)\n: A data aggregator, search, and reporting system. SIEM gathers immense amounts of data from entire networked environment, consolidates and makes that data human accessible. With the data categorized and laid out, you can research data security breaches with as much detail as needed.\u003c/p\u003e\n\u003cp\u003eKey Terms:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eLog Collection\u003c/li\u003e\n\u003cli\u003eNormalization\u003c/li\u003e\n\u003cli\u003eCorrelation\u003c/li\u003e\n\u003cli\u003eAggregation\u003c/li\u003e\n\u003cli\u003eReporting\u003c/li\u003e\n\u003c/ul\u003e\n\u003col\u003e\n\u003cli\u003eA SIEM system collects logs and other security-related documentation for analysis.\u003c/li\u003e\n\u003cli\u003eThe core function is to manage network security by monitoring flows and events.\u003c/li\u003e\n\u003cli\u003eIt consolidates log events and network flow data from thousands of devices, endpoints and applications distributed throughout a network. It then uses an advanced Sense Analytics engine to normalize and correlate this data and identifies security offenses requiring investigation.\u003c/li\u003e\n\u003cli\u003eA SIEM system cane be ruled-based or employ a statistical correlation engine to establish relationships between event log entries.\u003c/li\u003e\n\u003cli\u003eCapture log event and network flow data in near real time and apply advanced analytics to reveal security offenses.\u003c/li\u003e\n\u003cli\u003eIt can be available on premises and in a cloud environment.\u003c/li\u003e\n\u003c/ol\u003e\n\u003ch3 id=\"events--flows\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#events--flows\"\u003e\u003c/a\u003eEvents \u0026#x26; Flows\u003c/h3\u003e\n\u003cp\u003eEvent\n: Typically a log of a specific action such as a user login, or a FW permit, occurs at a specific time and the event is logged at that time.\u003c/p\u003e\n\u003cp\u003eFlows\n: A record of network activity between two hosts that can last for seconds to days depending on the activity within the session.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eFor example, a web request might download multiple files such as images, ads, video, and last for 5 to 10 seconds, or a user who watches a Netflix movie might be in a network session that last up to a few hours.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"data-collection\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#data-collection\"\u003e\u003c/a\u003eData Collection\u003c/h3\u003e\n\u003cp\u003eData Collection\n: The process of collecting flows and logs from different sources into a common repository.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eIt can be performed by sending data directly into the SIEM or an external device can collect log data from the source and move it into the SIEM system on demand or scheduled.\u003c/li\u003e\n\u003cli\u003eConsider CPU, memory, storage capacity, license, and number of sources.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"normalization\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#normalization\"\u003e\u003c/a\u003eNormalization\u003c/h3\u003e\n\u003cp\u003eNormalization\n: Process involves turning raw data into a format that has fields such as IP address that the SIEM can use.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eNormalization involves parsing raw event data and preparing the data to display readable information.\u003c/li\u003e\n\u003cli\u003eNormalization allows for predictable and consistent storage for all records, and indexes those records for fast searching and sorting.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"license-throttling\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#license-throttling\"\u003e\u003c/a\u003eLicense Throttling\u003c/h3\u003e\n\u003cp\u003eLicense Throttling\n: Monitors the number of incoming events to the system to mange input queues and EPS licensing.\u003c/p\u003e\n\u003ch3 id=\"coalescing\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#coalescing\"\u003e\u003c/a\u003eCoalescing\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eEvents are parsed and then coalesced based on common attributes across events.\n\u003cul\u003e\n\u003cli\u003eQRadar: Event coalescing starts after three events have been found with matching properties within a 10 second period.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eEvent data received by QRader is processed in to normalized fields, along with the original payload. Five properties are evaluated:\n\u003cul\u003e\n\u003cli\u003eQID\u003c/li\u003e\n\u003cli\u003eSource IP\u003c/li\u003e\n\u003cli\u003eDestination IP\u003c/li\u003e\n\u003cli\u003eDestination port\u003c/li\u003e\n\u003cli\u003eUsername\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"offenses\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#offenses\"\u003e\u003c/a\u003eOffenses\u003c/h3\u003e\n\u003ch4 id=\"event-correlation\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#event-correlation\"\u003e\u003c/a\u003eEvent Correlation\u003c/h4\u003e\n\u003cul\u003e\n\u003cli\u003eLogs\u003c/li\u003e\n\u003cli\u003eIP Reputation\u003c/li\u003e\n\u003cli\u003eFlows\u003c/li\u003e\n\u003cli\u003eGeo Location\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch4 id=\"activity-baseline--anomaly-detection\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#activity-baseline--anomaly-detection\"\u003e\u003c/a\u003eActivity Baseline \u0026#x26; Anomaly Detection\u003c/h4\u003e\n\u003cul\u003e\n\u003cli\u003eUser Activity\u003c/li\u003e\n\u003cli\u003eDatabase Activity\u003c/li\u003e\n\u003cli\u003eApplication Activity\u003c/li\u003e\n\u003cli\u003eNetwork Activity\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch4 id=\"offense-identification\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#offense-identification\"\u003e\u003c/a\u003eOffense Identification\u003c/h4\u003e\n\u003cul\u003e\n\u003cli\u003eCredibility\u003c/li\u003e\n\u003cli\u003eSeverity\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"siem-deployment\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#siem-deployment\"\u003e\u003c/a\u003eSIEM Deployment\u003c/h2\u003e\n\u003ch3 id=\"considerations\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#considerations\"\u003e\u003c/a\u003eConsiderations\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eCompliance\u003c/li\u003e\n\u003cli\u003eCost-Benefit\u003c/li\u003e\n\u003cli\u003eCybersecurity\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"events\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#events\"\u003e\u003c/a\u003eEvents\u003c/h3\u003e\n\u003cp\u003eEvent Collector\n: Collects event from local and remote log sources, and normalizes raw log source events to format for use by QRadar. The Event Collector bundles or coalesces identical events to conserve system usage and sends the data to the Event Processor.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eCan use bandwidth limiters and schedules to send events to the Event Processor to overcome WAN limitations such as intermittent connectivity.\u003c/li\u003e\n\u003cli\u003eBundles or coalesces identical events to conserve system usage and sends the data to the Event Processor.\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eEvent Processor\n: Processes events that are collected from one or more Event Collector components.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eProcesses event by using the Custom Rules Engine (CRE).\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"flows\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#flows\"\u003e\u003c/a\u003eFlows\u003c/h3\u003e\n\u003cp\u003eFlow Collector\n: Generates flow data from raw packets that are collected from monitor ports such as SPANs, TAPs and monitor sessions, or from external flow sources such as netflow, sflow, jflow.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eData is then converted to QRadar flow format and sent down the pipeline for processing.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch4 id=\"flow-processor\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#flow-processor\"\u003e\u003c/a\u003eFlow Processor\u003c/h4\u003e\n\u003cp\u003eFlow De-duplication\n: A process that removes duplicate flows when multiple Flow Collectors provide data to Flow Processors appliances.\u003c/p\u003e\n\u003cp\u003eAsymmetric Recombination\n: Responsible for combining two sides of each flow when data is provided asymmetrically. This process can recognize flows from each side and combine them in to one record. However, sometimes only one side of the flow exists.\u003c/p\u003e\n\u003cp\u003eLicense Throttling\n: Monitors the number of incoming flows to the system to manage input queues and licensing.\u003c/p\u003e\n\u003cp\u003eForwarding\n: Applies routing rules for the system, such as sending flow data to offsite targets, external Syslog systems, JSON systems, and other SIEMs.\u003c/p\u003e\n\u003ch3 id=\"reasons-to-add-event-or-flow-collectors-to-all-in-one-deployment\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#reasons-to-add-event-or-flow-collectors-to-all-in-one-deployment\"\u003e\u003c/a\u003eReasons to Add Event or Flow Collectors to All-in-One Deployment\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eData collection requirements exceed the collection capability of processor.\u003c/li\u003e\n\u003cli\u003eMust collect events and flows at a different location than processor is installed.\u003c/li\u003e\n\u003cli\u003eMonitoring packet-based flow sources.\u003c/li\u003e\n\u003cli\u003eAs deployment grows, the workload exceeds the processing capacity of the All-in-One appliance.\u003c/li\u003e\n\u003cli\u003eSecurity operations center employs more analysts who do more concurrent searches.\u003c/li\u003e\n\u003cli\u003eThe types of monitored data, and the retention period for that data increases, which increases processing and storage requirements.\u003c/li\u003e\n\u003cli\u003eAs security analyst team grows, requires better search performance.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"security-operations-center-soc\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#security-operations-center-soc\"\u003e\u003c/a\u003eSecurity Operations Center (SOC)\u003c/h3\u003e\n\u003cp\u003eTriad of security operations: People, Process and Technology\u003c/p\u003e\n\u003cp\u003e\u003cimg src=\"https://lh3.googleusercontent.com/XkV9_pyKmRnuXUzAFDdFggJIad1YDxzfoVf9grhfqKJNXEDqMttRH0792TeKZjEyP0ZLK_WOz-r8kNrjUBCgv5s1JvnvhoQ-9rZ_rdjcHkUkpjGBAACeS928xGryEycAV9POW8f8l8Ub4iFAvQ\" alt=\"SOC\"\u003e\u003c/p\u003e\n\u003ch2 id=\"siem-solutions---vendors\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#siem-solutions---vendors\"\u003e\u003c/a\u003eSIEM Solutions - Vendors\u003c/h2\u003e\n\u003cblockquote\u003e\n\u003cp\u003eThe security information and event management (SIEM) market is defined by customers' need to analyze security event data in real time, which supports the early detection of attacks and breaches. SIEM systems collect, store, investigate, support mitigation and report on security data for incident response, forensics and regulatory compliance. The vendors included in this Magic Quadrant have products designed for this purpose, which they actively market and sell to the security buying center. \u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003e2020 Garter.com Magic Quadrant Report\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/blockquote\u003e\n\u003ch3 id=\"gartners-magic-quadrant-2022\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#gartners-magic-quadrant-2022\"\u003e\u003c/a\u003eGartner's Magic Quadrant (2022)\u003c/h3\u003e\n\u003cp\u003e\u003cimg src=\"https://aware-commons.s3.ap-south-1.amazonaws.com/static-files/sf-website/news/magic-quadrant-graph.png\" alt=\"quad\"\u003e\u003c/p\u003e\n\u003ch3 id=\"deployment\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#deployment\"\u003e\u003c/a\u003eDeployment\u003c/h3\u003e\n\u003ch4 id=\"small\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#small\"\u003e\u003c/a\u003eSmall\u003c/h4\u003e\n\u003cp\u003eGartner defines a small deployment as one with around 300 log sources and about 1500 EPS (events per second).\u003c/p\u003e\n\u003ch4 id=\"medium\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#medium\"\u003e\u003c/a\u003eMedium\u003c/h4\u003e\n\u003cp\u003eA midsize deployment is considered to have up to 1000 log sources and 7000 EPS.\u003c/p\u003e\n\u003ch4 id=\"large\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#large\"\u003e\u003c/a\u003eLarge\u003c/h4\u003e\n\u003cp\u003eA large deployment generally covers more than 1000 log sources with approximately 15000 EPS.\u003c/p\u003e\n\u003ch3 id=\"important-concepts\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#important-concepts\"\u003e\u003c/a\u003eImportant Concepts\u003c/h3\u003e\n\u003cp\u003eSIEM\n: Combines security information (SIM) and security event management (SEM) to provide real-time analysis of security alerts generated by network hardware and applications.\u003c/p\u003e\n\u003cp\u003eRule\n: A programmed procedure that attempts to correlate events and generates new events that report on correlation when it occurs.\u003c/p\u003e\n\u003cp\u003eRule Threshold\n: The point at which a rule is triggered and a correlation event generated.\u003c/p\u003e\n\u003cp\u003eEvent Threshold\n: The number of times the event must occur before triggering the rule threshold.\u003c/p\u003e\n\u003cp\u003eRule Action\n: An automatic procedure that occurs when all rule conditions and threshold settings have been met.\u003c/p\u003e\n\u003cp\u003eTrend\n: A resource that defines how and over what time period data will be aggregated and evaluated for trends. A trend executes a specified query on a defined schedule and time duration.\u003c/p\u003e\n\u003cp\u003eEvent\n: A log of a specific action such as a user login, or a FW permit, occurs at a specific time and the event is logged at that time.\u003c/p\u003e\n\u003cp\u003eFlow\n: A record of network activity that can last for seconds, minutes, hours, or days, depending on the activity within the session.\u003c/p\u003e\n\u003cp\u003eData Collection\n: The process of collecting flows and logs from different sources into a common repository.\u003c/p\u003e\n\u003cp\u003eNormalization\n: Involves turning raw data into a format that has fields such as an IP address that the SIEM can use.\u003c/p\u003e\n\u003cp\u003eLicensing Throttling\n: Monitors the number of incoming events to the system to manage EPS and FPS licensing.\u003c/p\u003e\n\u003cp\u003eCoalescing\n: Events are grouped based on common attributes.\u003c/p\u003e\n\u003ch3 id=\"ibm-qradar\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#ibm-qradar\"\u003e\u003c/a\u003eIBM QRadar\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eYear 2004-205, Q1 Labs entered into the SIEm market modifying their NBAD platform (QFLOW) and in 2012, IBM bought them.\u003c/li\u003e\n\u003cli\u003eProprietary based on Ariel Data store and probably Ariel Query Language (AQL).\u003c/li\u003e\n\u003cli\u003eLog correlation, Network Forensics, Intelligence Feeds, Vulnerability Management, Risk Manager.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch4 id=\"vulnerability-manager\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#vulnerability-manager\"\u003e\u003c/a\u003eVulnerability Manager\u003c/h4\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003eIBM® QRadar® Vulnerability Manager is a network scanning platform that detects vulnerabilities within the applications, systems, and devices on your network or within your DMZ.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eQRadar Vulnerability Manager uses security intelligence to help you manage and prioritize your network vulnerabilities. \u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eFor example, you can use QRadar Vulnerability Manager to continuously monitor vulnerabilities, improve resource configuration, and identify software patches. You can also, prioritize security gaps by correlating vulnerability data with network flows, log data, firewall, and intrusion prevention system (IPS) data.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch4 id=\"user-behavior-analytics\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#user-behavior-analytics\"\u003e\u003c/a\u003eUser Behavior Analytics\u003c/h4\u003e\n\u003cul\u003e\n\u003cli\u003e\n\u003cp\u003eIBM® QRadar® User Behavior Analytics (UBA) analyzes user activity to detect malicious insiders and determine if a user’s credentials have been compromised. Security analysts can easily see risky users, view their anomalous activities and drill down into the underlying log and flow data that contributed to a user’s risk score.\u003c/p\u003e\n\u003c/li\u003e\n\u003cli\u003e\n\u003cp\u003eAs an integrated component of the QRadar Security Intelligence Platform, UBA leverages out of the box behavioral rules and machine learning (ML) models to add user context to network, log, vulnerability and threat data to more quickly and accurately detect attacks.\u003c/p\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch4 id=\"network-insights\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#network-insights\"\u003e\u003c/a\u003eNetwork Insights\u003c/h4\u003e\n\u003cul\u003e\n\u003cli\u003eAnalyzes network data in real-time to uncover an attacker's footprints and expose hidden security threats in many scenarios before they can damage your organization, including:\n\u003cul\u003e\n\u003cli\u003ePhishing e-mails\u003c/li\u003e\n\u003cli\u003eMalware\u003c/li\u003e\n\u003cli\u003eData Exfiltration\u003c/li\u003e\n\u003cli\u003eLateral movement\u003c/li\u003e\n\u003cli\u003eDNS and other application abuse\u003c/li\u003e\n\u003cli\u003eCompliance gaps\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"arcsight-esm\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#arcsight-esm\"\u003e\u003c/a\u003eArcSight ESM\u003c/h3\u003e\n\u003cp\u003eArcSight ESM is a Security Information and Event Management (SIEM) solution that combines event correlation and security analytics to identify and prioritize threats in real-time and remediate incidents early. It is able to concentrate, normalize, analyze, and report the results of its analysis of security event data generated by various Intrusion Detection System (IDS) sensors and scanners in the operational environment. ArcSight ESM allows users to monitor events in real-time, correlate events.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eArcSight Manager\u003c/li\u003e\n\u003cli\u003eCORR-Engine (Correlation Optimized Retention and Retrieval Engine)\u003c/li\u003e\n\u003cli\u003eArcSight Console\u003c/li\u003e\n\u003cli\u003eArcSight Command Center (ACC)\u003c/li\u003e\n\u003cli\u003eESM Service Layer APIs\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"splunk\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#splunk\"\u003e\u003c/a\u003eSplunk\u003c/h3\u003e\n\u003cp\u003eSplunk software has been around since 2006 and the company has since grown to become and industry leader. Splunk's vision is to make machine data accessible, usable and valuable to everybody. The company offers a wide range of products to turn machine data into valuable information by monitoring and analyzing all activities. This is known as Operational Intelligence and is the unique value proposition of Splunk.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eSplunk offers many free technology add-ons that provides real value immediately.\n\u003cul\u003e\n\u003cli\u003eFor example, the Distributed Management Console (DMC) helps pull all the Splunk architecture management together in one set of dashboards.\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"logrhythms-security-intelligence-platform\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#logrhythms-security-intelligence-platform\"\u003e\u003c/a\u003eLogRhythm's Security Intelligence Platform\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003ePlatform Manager (PM) supports centralized management and administration for the LogRhythm implementation.\u003c/li\u003e\n\u003cli\u003eData Processor (DP) performs log collection and management.\u003c/li\u003e\n\u003cli\u003eData Indexer (DX) indexes data and metadata.\u003c/li\u003e\n\u003cli\u003eAI Engine (AI) provides correlation and analysis capabilities.\u003c/li\u003e\n\u003cli\u003eAll-In-One (XM) combines the PM, DP, DX, and AI components.\u003c/li\u003e\n\u003cli\u003eNetwork Monitor (NM) specializes in deep analysis of network traffic contents.\u003c/li\u003e\n\u003cli\u003eData Collector (DC) collects log data from remote systems and prepares it for secure transfer to the centralized LogRhythm Security Intelligence Platform implementation.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"qradar-siem---industry-example\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#qradar-siem---industry-example\"\u003e\u003c/a\u003eQRadar SIEM - Industry Example\u003c/h2\u003e\n\u003cp\u003eAutomated threat detection and prioritization and securing the cloud.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eReal-time correlation and behavioral anomaly detection.\u003c/li\u003e\n\u003cli\u003eThreat intelligence and vulnerability insight.\u003c/li\u003e\n\u003cli\u003eMachine learning, service and user profiling.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"solve-challenges\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#solve-challenges\"\u003e\u003c/a\u003eSolve Challenges\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eProtect any critical data.\u003c/li\u003e\n\u003cli\u003eEffectively respond to incidents.\u003c/li\u003e\n\u003cli\u003eProve compliance.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"automate-intelligence\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#automate-intelligence\"\u003e\u003c/a\u003eAutomate Intelligence\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eApply automated analytics to detect, connect, prioritize and investigate threats with IBM Watson.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"see-everything\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#see-everything\"\u003e\u003c/a\u003eSee Everything\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eCollect data across the entire environment.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"deployment-models\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#deployment-models\"\u003e\u003c/a\u003eDeployment Models\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eOn PREM\n\u003cul\u003e\n\u003cli\u003eHW, SW, VM\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eAS A SERVICE\n\u003cul\u003e\n\u003cli\u003eSaaS, Managed Service\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eCLOUD\n\u003cul\u003e\n\u003cli\u003eAWS, Azure, Google Cloud\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003cli\u003eHYBRID\n\u003cul\u003e\n\u003cli\u003eOn-prem, SaaS, IaaS\u003c/li\u003e\n\u003c/ul\u003e\n\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch2 id=\"user-behavior-analytics-1\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#user-behavior-analytics-1\"\u003e\u003c/a\u003eUser Behavior Analytics\u003c/h2\u003e\n\u003ch3 id=\"security-ecosystem\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#security-ecosystem\"\u003e\u003c/a\u003eSecurity Ecosystem\u003c/h3\u003e\n\u003cp\u003eDetecting insider threat requires a 360 degree view of both logs and flows.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eThreat Intel\u003c/li\u003e\n\u003cli\u003eNetwork\u003c/li\u003e\n\u003cli\u003eCloud\u003c/li\u003e\n\u003cli\u003eIdentity \u0026#x26; access\u003c/li\u003e\n\u003cli\u003eData\u003c/li\u003e\n\u003cli\u003eApps\u003c/li\u003e\n\u003cli\u003eMobile\u003c/li\u003e\n\u003cli\u003eEndpoint\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch3 id=\"advantages-of-ibm-qradar-uba\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#advantages-of-ibm-qradar-uba\"\u003e\u003c/a\u003eAdvantages of IBM QRadar UBA\u003c/h3\u003e\n\u003cul\u003e\n\u003cli\u003eComplete visibility across end point, network and cloud infrastructure with both log and flow data.\u003c/li\u003e\n\u003cli\u003eAvoids reloading and curating data faster time to insights, lowers operating cost, frees valuable resources.\u003c/li\u003e\n\u003cli\u003eOut-of-the-box analytic models that leverage and extend the security operations platform.\u003c/li\u003e\n\u003cli\u003eSingle Security operation processes with integration of workflow system and other security solutions.\u003c/li\u003e\n\u003cli\u003eEasily extend to third-party analytic models including existing insider threats use cases already implemented.\u003c/li\u003e\n\u003cli\u003eLeverage UBA insights in other integrated security analytics solutions.\u003c/li\u003e\n\u003cli\u003eGet more from QRadar ecosystem.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch4 id=\"ibm-qradar-uba\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#ibm-qradar-uba\"\u003e\u003c/a\u003eIBM QRadar UBA\u003c/h4\u003e\n\u003cp\u003e160+ rule and ML driven use cases addressing 3 major insider vector threats.\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eCompromised or stolen credentials.\u003c/li\u003e\n\u003cli\u003eCareless or malicious insiders.\u003c/li\u003e\n\u003cli\u003eMalware takeover of user accounts.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch4 id=\"into-user-behavioral-analytics\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#into-user-behavioral-analytics\"\u003e\u003c/a\u003eInto User Behavioral Analytics\u003c/h4\u003e\n\u003cp\u003eGetting started with:\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eLog sources input; parsing properly\u003c/li\u003e\n\u003cli\u003eLDAP setup: reference maps\u003c/li\u003e\n\u003cli\u003eUser ID coalescing\u003c/li\u003e\n\u003cli\u003eKYC \u0026#x26; Align with Biz needs\u003c/li\u003e\n\u003cli\u003eConfig and tune UC\u003c/li\u003e\n\u003c/ul\u003e\n\u003cp\u003eAnalytic Outcomes\u003c/p\u003e\n\u003col\u003e\n\u003cli\u003eFocus on accounts and access.\n\u003col\u003e\n\u003cli\u003eAccount anomalies\u003c/li\u003e\n\u003cli\u003eAccess deviations\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003cli\u003eExpand to user views with network \u0026#x26; session data.\n\u003col\u003e\n\u003cli\u003eSurface abnormal user behavior\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003cli\u003eBuild and compare to peer group\n\u003col\u003e\n\u003cli\u003eDetect users deviating from self or from peer groups\u003c/li\u003e\n\u003c/ol\u003e\n\u003c/li\u003e\n\u003c/ol\u003e\n\u003cp\u003eData Intelligence\u003c/p\u003e\n\u003cul\u003e\n\u003cli\u003eLDAP, AD, Authentication Logs\u003c/li\u003e\n\u003cli\u003eProxy, Firewall, Web GW, VPN, IPDS, Flow\u003c/li\u003e\n\u003cli\u003eEndpoint, SaaS Apps, Cloud\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch4 id=\"value-to-soc\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#value-to-soc\"\u003e\u003c/a\u003eValue to SOC\u003c/h4\u003e\n\u003ch5 id=\"analyst-effectiveness\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#analyst-effectiveness\"\u003e\u003c/a\u003eAnalyst Effectiveness\u003c/h5\u003e\n\u003cul\u003e\n\u003cli\u003eDetect known and unknown threats.\u003c/li\u003e\n\u003cli\u003eReduce time to detection.\u003c/li\u003e\n\u003cli\u003eIdentify activities of interest quickly.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch5 id=\"analyst-efficiency\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#analyst-efficiency\"\u003e\u003c/a\u003eAnalyst Efficiency\u003c/h5\u003e\n\u003cul\u003e\n\u003cli\u003eExpedite investigations.\u003c/li\u003e\n\u003cli\u003eReduce time to respond.\u003c/li\u003e\n\u003cli\u003eReduce deep data expertise.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch5 id=\"roi\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#roi\"\u003e\u003c/a\u003eROI\u003c/h5\u003e\n\u003cul\u003e\n\u003cli\u003eGet more from investments.\u003c/li\u003e\n\u003cli\u003eLeverage existing QRadar skills.\u003c/li\u003e\n\u003cli\u003eAvailable at no charge.\u003c/li\u003e\n\u003c/ul\u003e\n\u003ch5 id=\"time-to-value\"\u003e\u003ca aria-hidden=\"true\" class=\"anchor-heading icon-link\" href=\"#time-to-value\"\u003e\u003c/a\u003eTime to Value\u003c/h5\u003e\n\u003cul\u003e\n\u003cli\u003eEasy to acquire.\u003c/li\u003e\n\u003cli\u003eQuick to deploy and configure.\u003c/li\u003e\n\u003cli\u003eEasy to tune.\u003c/li\u003e\n\u003c/ul\u003e\n\u003chr\u003e\n\u003cstrong\u003eChildren\u003c/strong\u003e\n\u003col\u003e\n\u003cli\u003e\u003ca href=\"/IBM-cybersecurity/notes/2zlg7h80489ixsa5o7tayrj\"\u003eAI\u003c/a\u003e\u003c/li\u003e\n\u003c/ol\u003e\n\u003chr\u003e\n\u003cstrong\u003eBacklinks\u003c/strong\u003e\n\u003cul\u003e\n\u003cli\u003e\u003ca href=\"/IBM-cybersecurity/notes/l9xnppid7xhd6dbt1uus1dj\"\u003eOperations\u003c/a\u003e\u003c/li\u003e\n\u003c/ul\u003e","noteIndex":{"id":"3ipqfkgudo2s73dwa256ca0","title":"Brain","desc":"","updated":1654212603514,"created":1651706375099,"custom":{"nav_order":0,"permalink":"/"},"fname":"root","type":"note","vault":{"fsPath":"vault"},"contentHash":"a83b284bd096f5e390fe503b2b0b07c7","links":[{"type":"ref","from":{"fname":"root","id":"3ipqfkgudo2s73dwa256ca0","vaultName":"vault"},"value":"cybersecurity","position":{"start":{"line":5,"column":1,"offset":76},"end":{"line":5,"column":19,"offset":94},"indent":[]},"xvault":false,"to":{"fname":"cybersecurity"}}],"anchors":{"welcome-to-tysons-vault":{"type":"header","text":"Welcome to Tyson's Vault!","value":"welcome-to-tysons-vault","line":7,"column":0,"depth":1},"lookup":{"type":"header","text":"Lookup","value":"lookup","line":14,"column":0,"depth":2}},"children":["nkcab8fkftjfz927no2dyac","cl0utj7thwjp7bsmxe4v5va","o9kgllk4dy29wx2figqoz1w","5vhy4yxl34a7p6064a13u49","ce290z98noyy6eb5pniawk9","txeqnq5eaictderxvuifqr6","pn4fankyf3uifous1txqj5m","8ykaxd1qjsjfi1c6zsfq1eq","017vb349bxpq76wq69sai1u","wcuptt9dpzdx06nt9l6myuv","iulpmov883qv6tpqkgvbno8","8ml5picmbrjw3u887mag9dz","pd3512leoloo1qll6fr2j0o","e77elhqi5fhnpz5kdvxeudb","9k9gs0zqcs40mq2fsi5nesj","zegnyfq64amprq2yq9rnu3e","op8gluer5gorswd1xkdwwis","btat806wf3v71jpa11klryx","kldz5ejn1lvhsujdm2nyog7","9gc4nxd14um87nyud8e9ubt","ptonz0zapnutyahjkedfn8f","ixopv5geql8hlgkwk20pxow","3cschspue6elfiqxcd17tul","0f8xutu1gmbnw7xt51tim9v","87sb4tbzuopxpz736rwtx5b","d9ibeadgk68z3q2qjgsqida","woqkmy53oegpxi1ia3jl833","6ltznv32t1szgyl74knpxly","16md0j2hj1k5477uu3kclcb","2o3i5a96njb0vlfr61lslzi"],"parent":null,"data":{},"body":"# Welcome to Tyson's Vault!\n\nThis is my place store all my cool knowledge.\n\n![[cybersecurity]]\n\n\n## Lookup\n\nThis section contains useful links to related resources.\n\n- [Getting Started Guide](https://link.dendron.so/6b25)\n- [Discord](https://link.dendron.so/6b23)\n- [Home Page](https://wiki.dendron.so/)\n- [Github](https://link.dendron.so/6b24)\n- [Developer Docs](https://docs.dendron.so/)\n"},"collectionChildren":null,"customHeadContent":null,"config":{"version":5,"dev":{"enablePreviewV2":true},"commands":{"lookup":{"note":{"selectionMode":"extract","confirmVaultOnCreate":true,"vaultSelectionModeOnCreate":"smart","leaveTrace":false,"bubbleUpCreateNew":true,"fuzzThreshold":0.2}},"randomNote":{},"insertNote":{"initialValue":"templates"},"insertNoteLink":{"aliasMode":"none","enableMultiSelect":false},"insertNoteIndex":{"enableMarker":false},"copyNoteLink":{},"templateHierarchy":"template"},"workspace":{"vaults":[{"fsPath":"vault"}],"journal":{"dailyDomain":"daily","name":"journal","dateFormat":"y.MM.dd","addBehavior":"childOfDomain"},"scratch":{"name":"scratch","dateFormat":"y.MM.dd.HHmmss","addBehavior":"asOwnDomain"},"task":{"name":"","dateFormat":"","addBehavior":"childOfCurrent","statusSymbols":{"":" ","wip":"w","done":"x","assigned":"a","moved":"m","blocked":"b","delegated":"l","dropped":"d","pending":"y"},"prioritySymbols":{"H":"high","M":"medium","L":"low"},"todoIntegration":false,"createTaskSelectionType":"selection2link","taskCompleteStatus":["done","x"]},"graph":{"zoomSpeed":1,"createStub":false},"enableAutoCreateOnDefinition":false,"enableXVaultWikiLink":false,"enableRemoteVaultInit":true,"enableUserTags":true,"enableHashTags":true,"workspaceVaultSyncMode":"noCommit","enableAutoFoldFrontmatter":false,"enableEditorDecorations":true,"maxPreviewsCached":10,"maxNoteLength":204800,"enableFullHierarchyNoteTitle":false,"enableHandlebarTemplates":false,"templateHierarchy":"template","enableSmartRefs":true,"dendronVersion":"0.83.0"},"preview":{"theme":"dark","enableFMTitle":true,"enableNoteTitleForLink":true,"enableFrontmatterTags":true,"enableHashesForFMTags":false,"enableMermaid":true,"enablePrettyRefs":true,"enableKatex":true,"automaticallyShowPreview":false},"publishing":{"logoPath":"https://clipground.com/images/cyber-logo-3.jpg","theme":"dark","siteUrl":"https://tysonnguyen.github.io","assetsPrefix":"/IBM-cybersecurity","enableFMTitle":true,"enableNoteTitleForLink":true,"enableMermaid":true,"enablePrettyRefs":true,"enableKatex":true,"copyAssets":true,"siteHierarchies":["root"],"writeStubs":false,"siteRootDir":"docs","seo":{"title":"Cybersecurity","description":"Personal Knowledge Space"},"github":{"enableEditLink":true,"editLinkText":"Edit this page on GitHub","editBranch":"main","editViewMode":"tree","editRepository":"https://github.com/TysonNguyen/IBM-cybersecurity"},"enableSiteLastModified":true,"enableFrontmatterTags":true,"enableHashesForFMTags":false,"enableRandomlyColoredTags":true,"enablePrettyLinks":true,"duplicateNoteBehavior":{"action":"useVault","payload":["vault"]},"enableTaskNotes":true,"siteFaviconPath":"favicon.ico","siteIndex":"root"}}},"__N_SSG":true},"page":"/notes/[id]","query":{"id":"o9kgllk4dy29wx2figqoz1w"},"buildId":"NXb5WjKoAzTxCthMfgKQk","assetPrefix":"/IBM-cybersecurity","isFallback":false,"gsp":true,"scriptLoader":[]}</script></body></html>
