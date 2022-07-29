@@ -2,7 +2,7 @@
 id: nuj3aqp0hv7sf09tj7fr9qf
 title: Response
 desc: ''
-updated: 1653034661448
+updated: 1659049996192
 created: 1653034622726
 ---
 
@@ -47,6 +47,14 @@ Authorization is the process of allowing somebody to access a specific object.
 ---
 
 ## Incident Response
+
+A breach of security is known as an incident. Despite all threat models and secure system designs, incidents do happen. Actions taken to resolve and remediate the threat are known as Incident Response (IR) and are a whole career path in cybersecurity.
+
+Incidents are classified using a rating of urgency and impact. Urgency will be determined by the type of attack, where the impact will be determined by the affected system and what impact that has on business operations.
+
+![urgency-impact](https://tryhackme-images.s3.amazonaws.com/user-uploads/5de96d9ca744773ea7ef8c00/room-content/ab0cc8478b0bce9a400187f559d36dd6.png)
+
+An incident is responded to by a Computer Security Incident Response Team (CSIRT), which is a group of employees with technical knowledge about the systems and/or current incident.
 
 Incident Management
 : Computer security incident management involves the monitoring and detection of security events on a computer or a computer network and the execution of proper resources to those events. Means the information security or the incident management team will regularly check and monitor the security events occurring on a computer or in our network.
@@ -108,3 +116,5 @@ Identification of the actual incident to look at the affected areas of the netwo
 4. Communicate and build on lessons learned.
 5. Update key information, controls and processes.
 6. Perform trend analysis.
+
+![[incident-response]]

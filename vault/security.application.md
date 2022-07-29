@@ -2,7 +2,7 @@
 id: vewpabhrh45ba5ic00kqet3
 title: Application
 desc: ''
-updated: 1658531185310
+updated: 1659008169875
 created: 1653181053325
 ---
 
@@ -183,12 +183,37 @@ Threat Modeling
 
 - The purpose of threat modeling is to provide defenders with a systematic analysis of what controls or defenses need to be included, given the nature of the system, the probable attacker's profile, the most likely attack vectors, and the assets most desired by an attacker.
 
-- **STRIDE methodology** - Introduced in 1999 at Microsoft for developers to find threats in products.
+The threat modelling process is very similar to a risk assessment made in workplaces for employees and customers. The principles all return to:
+
+- Preparation
+- Identification
+- Mitigation
+- Review
+
+However, a complex process needs constant review and discussion with a dedicated team. An effective threat model includes:
+
+- Threat intelligence
+- Asset identification
+- Mitigation capabilities
+- Risk assessment
+
+To help with this, there are frameworks:
+
+- **STRIDE(Spoofing, Tampering, Repudiation, Information Disclosure, Denial of Service, and Elevation of privileges) methodology** - Introduced in 1999 at Microsoft for developers to find threats in products.
+  - _Spoofing_: Requires to authenticate requests and users accessing a system. Spoofing involves a malicious party falsely identifying itself as another.
+    - Access keys (such as API keys) or signatures via encryption helps remediate this threat.
+  - _Tampering_: Help provide integrity to the data. Data that is accessed must be kept integral and accurate.
+  - _Repudiation_: Dictates the use of services such as logging of activity for a system or application to track.
+  - _Information Disclosure:_ Applications or services that handle information of multiple users need to be appropriately configured to only show information relevant to the owner is shown.
+  - **Denial of Service**: Applications and services use up system resources, and measures in place so that the abuse of application/service won't result in down time.
+  - **Elevation of Privileges**: The worst-case scenario for an application or service. It means that a user who was able to escalate their authorization to that of a higher level of an administrator. This often leads to further exploitation or information disclosure.
 - **P.A.S.T.A** - Stands for process for attack simulation and threat analysis, which is a 7-step methodology.
 - **TRIKE** - Using threat models as a risk management tool to satisfy the security auditing process, threat models are based on requirements model.
   - Establish the stakeholder defined acceptable level of risk assigned to each asset class.
   - Analysis of the requirements model yields a threat model for which threats are enumerated and assigned risk values.
 - **VAST** - Visual agile and simple threat modeling and necessity of scaling the threat modeling process across the infrastructure and entire SDLC into Agile software development.
+
+![[security.response#Incident-Response]]
 
 ### Standards
 
